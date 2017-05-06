@@ -1,3 +1,7 @@
-## heroku用のスリープページ
+## 自己紹介ページ
 
-参考 : [herokusleep](https://github.com/notsobad-jp/herokusleep)
+last committed => 2017/05/08
+
+自己整理の一環で作成
+
+たまに更新する

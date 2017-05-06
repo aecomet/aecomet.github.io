@@ -1,0 +1,32 @@
+{
+  "name": "hiyoko3.github.io",
+  "version": "1.0.0",
+  "description": "last committed => 2017/05/08",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiyoko3/hiyoko3.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hiyoko3/hiyoko3.github.io/issues"
+  },
+  "homepage": "https://github.com/hiyoko3/hiyoko3.github.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "postcss-cssnext": "^2.10.0"
+  }
+}
