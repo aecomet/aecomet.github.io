@@ -1,15 +1,237 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>大柳達哉 プロフィール</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-    <script src="public/script.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="screen" rel="stylesheet" />
-    <link href="public/style.css" media="screen" rel="stylesheet" />
-</head>
-<body>
-    <p>Hello World!!</p>
-</body>
+<html lang="ja">
+  <head></head>
+  <meta charset="utf-8">
+  <title>大柳達哉 プロフィール</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="大柳達哉 プロフィール" name="title">
+  <meta content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="screen" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <link href="public/style.css" rel="stylesheet">
+  <script src="public/script.js" type="text/javascript"></script>
 </html>
+<body>
+  <header>
+    <nav class="red darken-2">
+      <div class="nav-wrapper"><a class="brand-logo" href="#" style="padding-left: 10px;">大柳達哉</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" id="nav-mobile">
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#achievement">実績</a></li>
+          <li><a href="#programing">プログラミングスキル</a></li>
+          <li><a href="#link">リンク</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li><a href="#profile">プロフィール</a></li>
+          <li><a href="#achievement">実績</a></li>
+          <li><a href="#programing">プログラミングスキル</a></li>
+          <li><a href="#link">リンク</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="white">
+    <div class="row">
+      <div class="col s12 m9">
+        <div class="card hoverable" id="profile">
+          <div class="card-content"><span class="card-title">プロフィール</span>
+            <table class="bordered highlight">
+              <tr>
+                <th>氏名</th>
+                <td>大柳達哉(Ohyanagi Tatsuya)</td>
+              </tr>
+              <tr>
+                <th>生年月日</th>
+                <td>1994年8月23日(平成6年8月23日)</td>
+              </tr>
+              <tr>
+                <th>出身地</th>
+                <td>福島県郡山市</td>
+              </tr>
+              <tr>
+                <th>居住地</th>
+                <td>茨城県日立市</td>
+              </tr>
+              <tr>
+                <th>趣味</th>
+                <td>ドライブ，映画鑑賞（アクション・SF），読書（SF・ミステリー），ランニング，アニメ鑑賞</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="card hoverable" id="achievement">
+          <div class="card-content"><span class="card-title">実績</span>
+            <div class="card-tabs"> 
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#degree">学位</a></li>
+                <li class="tab"><a href="#license">資格</a></li>
+                <li class="tab"><a href="#paper">論文</a></li>
+                <li class="tab"><a href="#school">学歴</a></li>
+                <li class="tab"><a href="#job">職歴</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="degree">
+                <table class="bordered highlight">
+                  <thead>
+                    <tr>
+                      <th>授与年月</th>
+                      <th>学位</th>
+                      <th>授与機関</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2017年3月</td>
+                      <td>学士（工学）</td>
+                      <td><a href="https://www.ibaraki.ac.jp/">茨城大学</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="license">
+                <table class="bordered highlight">
+                  <thead>
+                    <tr>
+                      <th>取得年月</th>
+                      <th>資格</th>
+                      <th>実施期間</th>
+                      <th>認定機関</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td>基本情報技術者</td>
+                      <td><a href="https://www.jitec.ipa.go.jp/1_11seido/ap.html">IPA(情報処理推進機構)</a></td>
+                      <td>経済産業省</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>応用情報技術者</td>
+                      <td><a href="https://www.jitec.ipa.go.jp/1_11seido/ap.html">IPA(情報処理推進機構)</a></td>
+                      <td>経済産業省</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="paper">
+                <ul>
+                  <li></li>
+                </ul>
+              </div>
+              <div id="school">
+                <table class="bordered highlight">
+                  <thead>
+                    <tr>
+                      <th>期間</th>
+                      <th>教育機関</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2010年4月　~ 2013年3月</td>
+                      <td><a href="http://www.koriyamahigashi-h.fks.ed.jp/">郡山東高校</a></td>
+                    </tr>
+                    <tr>
+                      <td>2013年4月 ~ 2017年3月</td>
+                      <td><a href="http://www.cis.ibaraki.ac.jp/">茨城大学工学部情報工学科</a></td>
+                    </tr>
+                    <tr>
+                      <td>2017年4月 ~ 現在</td>
+                      <td><a href="http://www.cis.ibaraki.ac.jp/">茨城大学大学院理工学研究科情報工学専攻</a>，博士課程前期，創生情報学コース</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="job">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>期間</th>
+                      <th>会社名</th>
+                      <th>雇用形態</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2015年10月~ 現在</td>
+                      <td><a href="http://www.unicast.ne.jp/">株式会社ユニキャスト</a></td>
+                      <td>インターンシップ</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card hoverable" id="programing">
+          <div class="card-content"><span class="card-title">プログラミングスキル</span>
+            <ul>
+              <li>Ruby
+                <dl>
+                  <dd>Ruby On Rails</dd>
+                </dl>
+              </li>
+              <li>PHP
+                <dl>
+                  <dd>Zend Framework</dd>
+                  <dd>Laravel</dd>
+                </dl>
+              </li>
+              <li>C</li>
+              <li>Java</li>
+              <li>Java（Android）</li>
+              <li>Python</li>
+              <li>HTML, CSS
+                <dl>
+                  <dd>Bootstrap</dd>
+                  <dd>Materialize</dd>
+                  <dd>Foundation</dd>
+                </dl>
+              </li>
+              <li>JavaScript
+                <dl>
+                  <dd>AngularJS</dd>
+                  <dd>Angular</dd>
+                  <dd>React.js</dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card hoverable" id="link">
+          <div class="card-content"><span class="card-title">リンク</span>
+            <ul>
+              <li><a href="http://www.ibaraki.ac.jp/index.html">茨城大学</a></li>
+              <li><a href="http://www.cis.ibaraki.ac.jp/">茨城大学院理工学研究科情報工学専攻</a></li>
+              <li><a href="http://cave.cis.ibaraki.ac.jp/">研究室</a></li>
+              <li><a href="https://github.com/hiyoko3">Github</a></li>
+              <li><a href="http://qiita.com/tatsuya_ooyanagi">Qiita</a></li>
+              <li><a href="https://www.facebook.com/tatsuya.ooyanagi.9?ref=bookmarks">FaceBook</a></li>
+              <li><a href="https://twitter.com/uc_hiyoko3">Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m3">
+        <div class="card hoverable blue-grey darken-1">
+          <div class="card-content white-text"><span class="card-title">Card Title</span>
+            <p>I am a very simple card. I am good at containing small bits of information.</p>I am convenient because I require little markup to use effectively.
+          </div>
+          <div class="card-action"><a href="#">This is a link</a><a href="#">This is a link</a></div>
+        </div>
+        <div id="page_top"><a>TOP</a></div>
+      </div>
+    </div>
+  </main>
+  <footer class="page-footer red darken-2">
+    <div class="footer-copyright">
+      <div class="container"><span class="left">© 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)</span><span class="right">Made by&nbsp;<a href="http://materializecss.com/">Materialize</a></span></div>
+    </div>
+  </footer>
+</body>

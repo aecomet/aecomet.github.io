@@ -1,1 +1,2 @@
 
+$(function(){var pageTopBtn=$('#page_top');$(window).scroll(function(){($(this).scrollTop()>150)?pageTopBtn.fadeIn():pageTopBtn.fadeOut();});pageTopBtn.click(function(){$("html,body").animate({scrollTop:0},'slow');});});
