@@ -7,8 +7,6 @@ html(lang="ja")
   meta(content="大柳達哉 プロフィール" name="title")
   meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
 
-  link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" media="screen" rel="stylesheet")
-  link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" media="screen" rel="stylesheet")
   link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
   link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css")
 
@@ -20,7 +18,7 @@ html(lang="ja")
 
 body
   header
-    nav.red.darken-2
+    nav.red.darken-1
       .nav-wrapper
         a.brand-logo(href="#" style="padding-left: 10px;") 大柳達哉
         a.button-collapse(href="#" data-activates="mobile-demo"): i.material-icons menu
@@ -35,7 +33,7 @@ body
           li: a(href="#programing") プログラミングスキル
           li: a(href="#link") リンク
 
-  main.white
+  main.grey.lighten-3
     .row
       .col.s12.m9
         .card.hoverable#profile
@@ -82,7 +80,7 @@ body
                     tr
                       td 2017年3月
                       td 学士（工学）
-                      td: a(href="https://www.ibaraki.ac.jp/") 茨城大学
+                      td: a(href="https://www.ibaraki.ac.jp/" target="_blank") 茨城大学
 
               #license
                 table.bordered.highlight
@@ -97,17 +95,22 @@ body
                     tr
                       td
                       td 基本情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html") IPA(情報処理推進機構)
+                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
                       td 経済産業省
                     tr
                       td
                       td 応用情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html") IPA(情報処理推進機構)
+                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
                       td 経済産業省
 
               #paper
                 ul
-                  li
+                  li(style="list-style-type: disc;")
+                    | Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata, “Construction of an Electronic Health Record System for supporting a Zoo Veterinarian”, Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676, November.2016
+                    span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
+                  li(style="list-style-type: disc;")
+                    | 大柳達哉，石田智行，“獣医師のための動物電子カルテシステムの提案”，可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016．
+                    span.new.badge.blue(data-badge-caption="研究会・全国大会（査読なし）")
 
               #school
                 table.bordered.highlight
@@ -118,14 +121,14 @@ body
                   tbody
                     tr
                       td 2010年4月　~ 2013年3月
-                      td: a(href="http://www.koriyamahigashi-h.fks.ed.jp/") 郡山東高校
+                      td: a(href="http://www.koriyamahigashi-h.fks.ed.jp/" target="_blank") 郡山東高校
                     tr
                       td 2013年4月 ~ 2017年3月
-                      td: a(href="http://www.cis.ibaraki.ac.jp/") 茨城大学工学部情報工学科
+                      td: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学工学部情報工学科
                     tr
                       td 2017年4月 ~ 現在
                       td
-                        a(href="http://www.cis.ibaraki.ac.jp/") 茨城大学大学院理工学研究科情報工学専攻
+                        a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
                         |，博士課程前期，創生情報学コース
 
               #job
@@ -138,7 +141,7 @@ body
                   tbody
                     tr
                       td 2015年10月~ 現在
-                      td: a(href="http://www.unicast.ne.jp/") 株式会社ユニキャスト
+                      td: a(href="http://www.unicast.ne.jp/" target="_blank") 株式会社ユニキャスト
                       td インターンシップ
 
         .card.hoverable#programing
@@ -156,7 +159,9 @@ body
               li C
               li Java
               li Java（Android）
-              li Python
+              li
+                | Python
+                span.new.badge.red(data-badge-caption="学習中")
               li HTML, CSS
                 dl
                   dd Bootstrap
@@ -165,40 +170,42 @@ body
 
               li JavaScript
                 dl
+                  dd JQuery
                   dd AngularJS
                   dd Angular
                   dd React.js
+                    span.new.badge.red(data-badge-caption="学習中")
 
         .card.hoverable#link
           .card-content
             span.card-title リンク
 
             ul
-              li: a(href="http://www.ibaraki.ac.jp/index.html") 茨城大学
-              li: a(href="http://www.cis.ibaraki.ac.jp/") 茨城大学院理工学研究科情報工学専攻
-              li: a(href="http://cave.cis.ibaraki.ac.jp/") 研究室
-              li: a(href="https://github.com/hiyoko3") Github
-              li: a(href="http://qiita.com/tatsuya_ooyanagi") Qiita
-              li: a(href="https://www.facebook.com/tatsuya.ooyanagi.9?ref=bookmarks") FaceBook
-              li: a(href="https://twitter.com/uc_hiyoko3") Twitter
+              li: a(href="http://www.ibaraki.ac.jp/index.html" target="_blank") 茨城大学
+              li: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学院理工学研究科情報工学専攻
+              li: a(href="http://cave.cis.ibaraki.ac.jp/" target="_blank") 研究室
+              li: a(href="https://github.com/hiyoko3" target="_blank") Github
+              li: a(href="http://qiita.com/tatsuya_ooyanagi" target="_blank") Qiita
+              li: a(href="https://www.facebook.com/tatsuya.ooyanagi.9?ref=bookmarks" target="_blank") FaceBook
+              li: a(href="https://twitter.com/uc_hiyoko3" target="_blank") Twitter
 
       .col.s12.m3
-        .card.hoverable.blue-grey.darken-1
-          .card-content.white-text
-            span.card-title Card Title
-            p I am a very simple card. I am good at containing small bits of information.
-            | I am convenient because I require little markup to use effectively.
-          .card-action
-            a(href="#") This is a link
-            a(href="#") This is a link
+        .card.hoverable.blue.lighten-5
+          .card-content
+            span.card-title Twitter
+            a.twitter-timeline(href="https://twitter.com/uc_hiyoko3" height="550px") Tweets by uc_hiyoko3
+            script(async src="//platform.twitter.com/widgets.js" charset="utf-8")
 
+        .card.hoverable.indigo.lighten-5
+          .card-content
+            span.card-title Facebook
+            .fb-page(data-href="https://www.facebook.com/tatsuya.ooyanagi.9" data-tabs="timeline,messages" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
 
-        #page_top: a TOP
+        #page-top: a TOP
 
-
-  footer.page-footer.red.darken-2
+  footer.page-footer.red.darken-1
     .footer-copyright
       .container
         span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
         span.right Made by&nbsp;
-          a(href="http://materializecss.com/") Materialize
+          a(href="http://materializecss.com/" target="_blank") Materialize
