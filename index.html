@@ -15,7 +15,7 @@
 </html>
 <body>
   <header>
-    <nav class="red darken-1">
+    <nav class="grey darken-4">
       <div class="nav-wrapper"><a class="brand-logo" href="#" style="padding-left: 10px;">大柳達哉</a><a class="button-collapse" href="#" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down" id="nav-mobile">
           <li><a href="#profile">プロフィール</a></li>
@@ -34,7 +34,7 @@
   </header>
   <main class="grey lighten-3">
     <div class="row">
-      <div class="col s12 m9">
+      <div class="col s12">
         <div class="card hoverable" id="profile">
           <div class="card-content"><span class="card-title">プロフィール</span>
             <table class="bordered highlight">
@@ -47,17 +47,28 @@
                 <td>1994年8月23日(平成6年8月23日)</td>
               </tr>
               <tr>
-                <th>出身地</th>
-                <td>福島県郡山市</td>
-              </tr>
-              <tr>
-                <th>居住地</th>
-                <td>茨城県日立市</td>
-              </tr>
-              <tr>
                 <th>趣味</th>
                 <td>ドライブ，映画鑑賞（アクション・SF），読書（SF・ミステリー），ランニング，アニメ鑑賞，プログラミング</td>
               </tr>
+              <tr>
+                <th>出身地</th>
+                <td>
+                  <div class="row map-row">福島県郡山市</div>
+                  <div class="row map-row">
+                    <div id="map-koriyama"></div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>居住地</th>
+                <td>
+                  <div class="row map-row">茨城県日立市</div>
+                  <div class="row map-row">
+                    <div id="map-hitachi"></div>
+                  </div>
+                </td>
+              </tr>
+
             </table>
           </div>
         </div>
@@ -158,10 +169,15 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>2015年10月~ 2017年5月</td>
+                      <td>2015年10月 ~ 2017年5月</td>
                       <td><a href="http://www.unicast.ne.jp/" target="_blank">株式会社ユニキャスト</a></td>
                       <td>インターンシップ</td>
                     </tr>
+                  <tr>
+                    <td>2017年8月 ~ 2017年9月</td>
+                    <td><a href="http://www.sony-videosound.co.jp/" target="_blank">ソニービデオ＆サウンドプロダクツ株式会社</a></td>
+                    <td>インターンシップ</td>
+                  </tr>
                   </tbody>
                 </table>
               </div>
@@ -170,35 +186,34 @@
         </div>
         <div class="card hoverable" id="programing">
           <div class="card-content"><span class="card-title">プログラミングスキル</span>
-            <ul>
-              <li>Ruby
+            <ul style="list-style-type: circle">
+              <li><h5>Ruby</h5>
                 <dl>
                   <dd>Ruby On Rails</dd>
                 </dl>
               </li>
-              <li>PHP
+              <li><h5>PHP</h5>
                 <dl>
                   <dd>Zend Framework</dd>
                   <dd>Laravel</dd>
+                  <dd>Slim3</dd>
                 </dl>
               </li>
-              <li>C</li>
-              <li>Java</li>
-              <li>Java（Android）</li>
-              <li>Python<span class="new badge red" data-badge-caption="学習中"></span></li>
-              <li>HTML, CSS
+              <li><h5>C / C++</h5></li>
+              <li><h5>Java（Android含む）</h5></li>
+              <li><h5>Python<span class="new badge red" data-badge-caption="学習中"></span></h5></li>
+              <li><h5>Go<span class="new badge red" data-badge-caption="学習中"></span></h5></li>
+              <li><h5>HTML, CSS</h5>
                 <dl>
                   <dd>Bootstrap</dd>
                   <dd>Materialize</dd>
-                  <dd>Foundation</dd>
                 </dl>
               </li>
-              <li>JavaScript
+              <li><h5>JavaScript</h5>
                 <dl>
                   <dd>JQuery</dd>
                   <dd>AngularJS</dd>
                   <dd>Angular</dd>
-                  <dd>React.js<span class="new badge red" data-badge-caption="学習中"></span></dd>
                 </dl>
               </li>
             </ul>
@@ -212,30 +227,27 @@
               <li><a href="http://cave.cis.ibaraki.ac.jp/" target="_blank">研究室</a></li>
               <li><a href="https://github.com/hiyoko3" target="_blank">Github</a></li>
               <li><a href="http://qiita.com/tatsuya_ooyanagi" target="_blank">Qiita</a></li>
-              <li><a href="https://www.facebook.com/tatsuya.ooyanagi.9?ref=bookmarks" target="_blank">FaceBook</a></li>
-              <li><a href="https://twitter.com/uc_hiyoko3" target="_blank">Twitter</a></li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="col s12 m3">
-        <div class="card hoverable blue lighten-5">
-          <div class="card-content"><span class="card-title">Twitter</span><a class="twitter-timeline" href="https://twitter.com/uc_hiyoko3" height="550px">Tweets by uc_hiyoko3</a>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div>
-        </div>
-        <div class="card hoverable indigo lighten-5">
-          <div class="card-content"><span class="card-title">Facebook</span>
-            <div class="fb-page" data-href="https://www.facebook.com/tatsuya.ooyanagi.9" data-tabs="timeline,messages" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-          </div>
-        </div>
+        <!--<div class="card hoverable blue lighten-5">-->
+          <!--<div class="card-content"><span class="card-title">Twitter</span><a class="twitter-timeline" href="https://twitter.com/uc_hiyoko3" height="550px">Tweets by uc_hiyoko3</a>-->
+            <!--<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="card hoverable indigo lighten-5">-->
+          <!--<div class="card-content"><span class="card-title">Facebook</span>-->
+            <!--<div class="fb-page" data-href="https://www.facebook.com/tatsuya.ooyanagi.9" data-tabs="timeline,messages" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>-->
+          <!--</div>-->
+        <!--</div>-->
         <div id="page-top"><a>TOP</a></div>
-      </div>
     </div>
   </main>
-  <footer class="page-footer red darken-1">
+  <footer class="page-footer grey darken-4">
     <div class="footer-copyright">
       <div class="container"><span class="left">© 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)</span><span class="right">Made by&nbsp;<a href="http://materializecss.com/" target="_blank">Materialize</a></span></div>
     </div>
   </footer>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap"></script>
 </body>

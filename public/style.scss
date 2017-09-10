@@ -7,6 +7,14 @@ main {
   .row {
     margin-bottom: 0;
     padding: 40px 0;
+    &.map-row {
+      padding: 10px 0;
+      #map-koriyama,
+      #map-hitachi {
+        height: 275px;
+        width: 100%;
+      }
+    }
   }
 
   ul {
@@ -15,6 +23,7 @@ main {
       padding: 2.5px;
     }
   }
+
 }
 
 #page-top {
