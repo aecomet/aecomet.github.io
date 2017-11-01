@@ -25,7 +25,7 @@ gulp.task("server", function () {
 
 gulp.task('pug', function() {
     return gulp.src(['./index.pug'])
-        .pipe(pug({pretty: true}))
+        .pipe(pug({pretty: false})) // reformat option
         .pipe(gulp.dest('./'))
         .pipe(browser.reload({stream: true}));
 });

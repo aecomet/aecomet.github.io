@@ -1,211 +1,206 @@
 doctype html
 html(lang="ja")
   head
-  meta(charset="utf-8")
-  title 大柳達哉 プロフィール
-  meta(name="viewport" content="width=device-width, initial-scale=1.0")
-  meta(content="大柳達哉 プロフィール" name="title")
-  meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
+    meta(charset="utf-8")
+    title 大柳達哉 プロフィール
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(content="大柳達哉 プロフィール" name="title")
+    meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
 
-  link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css")
+    link(href="public/style.css" rel="stylesheet")
+  body
+    header
+      nav.grey.darken-4
+        .nav-wrapper
+          a.brand-logo(href="#" style="padding-left: 10px;") 大柳達哉
+          a.button-collapse(href="#" data-activates="mobile-demo"): i.material-icons menu
+          ul#nav-mobile.right.hide-on-med-and-down
+            li: a(href="#profile") プロフィール
+            li: a(href="#achievement") 実績
+            li: a(href="#programing") プログラミングスキル
+            li: a(href="#link") リンク
+          ul#mobile-demo.side-nav
+            li: a(href="#profile") プロフィール
+            li: a(href="#achievement") 実績
+            li: a(href="#programing") プログラミングスキル
+            li: a(href="#link") リンク
 
-  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js")
+    main.grey.lighten-3
+      .row
+        .col.s12
+          .card.hoverable#profile
+            .card-content
+              span.card-title プロフィール
+              table.bordered.highlight
+                tr
+                  th 氏名
+                  td 大柳達哉(Ohyanagi Tatsuya)
+                tr
+                  th 生年月日
+                  td 1994年8月23日(平成6年8月23日)
+                tr
+                  th 出身地
+                  td 福島県郡山市
+                tr
+                  th 居住地
+                  td 茨城県日立市
+                tr
+                  th 趣味
+                  td ドライブ，映画鑑賞（アクション・SF），読書（SF・ミステリー），ランニング，アニメ鑑賞，プログラミング
+                tr
+                  th 出身地
+                  td
+                    .row.map-row 福島県郡山市
+                    .row.map-row
+                      #map-koriyama
+                tr
+                  th 居住地
+                  td
+                    .row.map-row 茨城県日立市
+                    .row.map-row
+                      #map-hitachi
 
-  link(href="public/style.css" rel="stylesheet")
-  script(src="public/script.js" type="text/javascript")
 
-body
-  header
-    nav.red.darken-1
-      .nav-wrapper
-        a.brand-logo(href="#" style="padding-left: 10px;") 大柳達哉
-        a.button-collapse(href="#" data-activates="mobile-demo"): i.material-icons menu
-        ul#nav-mobile.right.hide-on-med-and-down
-          li: a(href="#profile") プロフィール
-          li: a(href="#achievement") 実績
-          li: a(href="#programing") プログラミングスキル
-          li: a(href="#link") リンク
-        ul#mobile-demo.side-nav
-          li: a(href="#profile") プロフィール
-          li: a(href="#achievement") 実績
-          li: a(href="#programing") プログラミングスキル
-          li: a(href="#link") リンク
+          .card.hoverable#achievement
+            .card-content
+              span.card-title 実績
 
-  main.grey.lighten-3
-    .row
-      .col.s12.m9
-        .card.hoverable#profile
-          .card-content
-            span.card-title プロフィール
-            table.bordered.highlight
-              tr
-                th 氏名
-                td 大柳達哉(Ohyanagi Tatsuya)
-              tr
-                th 生年月日
-                td 1994年8月23日(平成6年8月23日)
-              tr
-                th 出身地
-                td 福島県郡山市
-              tr
-                th 居住地
-                td 茨城県日立市
-              tr
-                th 趣味
-                td ドライブ，映画鑑賞（アクション・SF），読書（SF・ミステリー），ランニング，アニメ鑑賞，プログラミング
+              .card-tabs
+                ul.tabs.tabs-fixed-width
+                  li.tab: a.active(href="#degree") 学位
+                  li.tab: a(href="#license") 資格
+                  li.tab: a(href="#paper") 論文
+                  li.tab: a(href="#school") 学歴
+                  li.tab: a(href="#job") 職歴
 
-        .card.hoverable#achievement
-          .card-content
-            span.card-title 実績
+              .card-content.grey.lighten-4
+                #degree
+                  table.bordered.highlight
+                    thead
+                      tr
+                        th 授与年月
+                        th 学位
+                        th 授与機関
+                    tbody
+                      tr
+                        td 2017年3月
+                        td 学士（工学）
+                        td: a(href="https://www.ibaraki.ac.jp/" target="_blank") 茨城大学
 
-            .card-tabs  
-              ul.tabs.tabs-fixed-width
-                li.tab: a.active(href="#degree") 学位
-                li.tab: a(href="#license") 資格
-                li.tab: a(href="#paper") 論文
-                li.tab: a(href="#school") 学歴
-                li.tab: a(href="#job") 職歴
+                #license
+                  table.bordered.highlight
+                    thead
+                      tr
+                        th 取得年月
+                        th 資格
+                        th 実施期間
+                        th 認定機関
 
-            .card-content.grey.lighten-4
-              #degree
-                table.bordered.highlight
-                  thead
-                    tr
-                      th 授与年月
-                      th 学位
-                      th 授与機関
-                  tbody
-                    tr
-                      td 2017年3月
-                      td 学士（工学）
-                      td: a(href="https://www.ibaraki.ac.jp/" target="_blank") 茨城大学
+                    tbody
+                      tr
+                        td 2015年5月18日
+                        td 基本情報技術者
+                        td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
+                        td 経済産業省
+                      tr
+                        td 2015年12月18日
+                        td 応用情報技術者
+                        td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
+                        td 経済産業省
 
-              #license
-                table.bordered.highlight
-                  thead
-                    tr
-                      th 取得年月
-                      th 資格
-                      th 実施期間
-                      th 認定機関
+                #paper
+                  ul
+                    li(style="list-style-type: disc;")
+                      | Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata, “Construction of an Electronic Health Record System for supporting a Zoo Veterinarian”, Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676, November.2016
+                      span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
+                    li(style="list-style-type: disc;")
+                      | 大柳達哉，石田智行，“獣医師のための動物電子カルテシステムの提案”，可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016．
+                      span.new.badge.blue(data-badge-caption="研究会・全国大会（査読なし）")
 
-                  tbody
-                    tr
-                      td 2015年5月18日
-                      td 基本情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
-                      td 経済産業省
-                    tr
-                      td 2015年12月18日
-                      td 応用情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
-                      td 経済産業省
+                #school
+                  table.bordered.highlight
+                    thead
+                      tr
+                        th 期間
+                        th 教育機関
+                    tbody
+                      tr
+                        td 2010年4月　~ 2013年3月
+                        td: a(href="http://www.koriyamahigashi-h.fks.ed.jp/" target="_blank") 郡山東高校
+                      tr
+                        td 2013年4月 ~ 2017年3月
+                        td: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学工学部情報工学科
+                      tr
+                        td 2017年4月 ~ 現在
+                        td
+                          a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
+                          |，博士課程前期，創生情報学コース
 
-              #paper
-                ul
-                  li(style="list-style-type: disc;")
-                    | Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata, “Construction of an Electronic Health Record System for supporting a Zoo Veterinarian”, Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676, November.2016
-                    span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
-                  li(style="list-style-type: disc;")
-                    | 大柳達哉，石田智行，“獣医師のための動物電子カルテシステムの提案”，可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016．
-                    span.new.badge.blue(data-badge-caption="研究会・全国大会（査読なし）")
+                #job
+                  table
+                    thead
+                      tr
+                        th 期間
+                        th 会社名
+                        th 雇用形態
+                    tbody
+                      tr
+                        td 2015年10月~ 2017年5月
+                        td: a(href="http://www.unicast.ne.jp/" target="_blank") 株式会社ユニキャスト
+                        td インターンシップ
+                      tr
+                        td 2017年8月 ~ 2017年9月
+                        td: a(href="http://www.sony-videosound.co.jp/" target="_blank") ソニービデオ＆サウンドプロダクツ株式会社
+                        td インターンシップ
 
-              #school
-                table.bordered.highlight
-                  thead
-                    tr
-                      th 期間
-                      th 教育機関
-                  tbody
-                    tr
-                      td 2010年4月　~ 2013年3月
-                      td: a(href="http://www.koriyamahigashi-h.fks.ed.jp/" target="_blank") 郡山東高校
-                    tr
-                      td 2013年4月 ~ 2017年3月
-                      td: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学工学部情報工学科
-                    tr
-                      td 2017年4月 ~ 現在
-                      td
-                        a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
-                        |，博士課程前期，創生情報学コース
+          .card.hoverable#programing
+            .card-content
+              span.card-title プログラミングスキル
 
-              #job
-                table
-                  thead
-                    tr
-                      th 期間
-                      th 会社名
-                      th 雇用形態
-                  tbody
-                    tr
-                      td 2015年10月~ 2017年5月
-                      td: a(href="http://www.unicast.ne.jp/" target="_blank") 株式会社ユニキャスト
-                      td インターンシップ
+              ul
+                li Ruby
+                  dl
+                    dd Ruby On Rails
+                li PHP
+                  dl
+                    dd Laravel
+                li C
+                li Java (Android)
+                li Python
+                li HTML, CSS
+                  dl
+                    dd Bootstrap
+                    dd Materialize
 
-        .card.hoverable#programing
-          .card-content
-            span.card-title プログラミングスキル
+                li JavaScript
+                  dl
+                    dd JQuery
+                    dd AngularJS
+                    dd Vue.js
 
-            ul
-              li Ruby
-                dl
-                  dd Ruby On Rails
-              li PHP
-                dl
-                  dd Zend Framework
-                  dd Laravel
-              li C
-              li Java
-              li Java（Android）
-              li
-                | Python
-                span.new.badge.red(data-badge-caption="学習中")
-              li HTML, CSS
-                dl
-                  dd Bootstrap
-                  dd Materialize
-                  dd Foundation
+          .card.hoverable#link
+            .card-content
+              span.card-title リンク
 
-              li JavaScript
-                dl
-                  dd JQuery
-                  dd AngularJS
-                  dd Angular
-                  dd React.js
-                    span.new.badge.red(data-badge-caption="学習中")
+              ul
+                li: a(href="http://www.ibaraki.ac.jp/index.html" target="_blank") 茨城大学
+                li: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学院理工学研究科情報工学専攻
+                li: a(href="http://cave.cis.ibaraki.ac.jp/" target="_blank") 研究室
+                li: a(href="https://github.com/hiyoko3" target="_blank") Github
+                li: a(href="http://qiita.com/tatsuya_ooyanagi" target="_blank") Qiita
 
-        .card.hoverable#link
-          .card-content
-            span.card-title リンク
+          #page-top: a TOP
 
-            ul
-              li: a(href="http://www.ibaraki.ac.jp/index.html" target="_blank") 茨城大学
-              li: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学院理工学研究科情報工学専攻
-              li: a(href="http://cave.cis.ibaraki.ac.jp/" target="_blank") 研究室
-              li: a(href="https://github.com/hiyoko3" target="_blank") Github
-              li: a(href="http://qiita.com/tatsuya_ooyanagi" target="_blank") Qiita
-              li: a(href="https://www.facebook.com/tatsuya.ooyanagi.9?ref=bookmarks" target="_blank") FaceBook
-              li: a(href="https://twitter.com/uc_hiyoko3" target="_blank") Twitter
-
-      .col.s12.m3
-        .card.hoverable.blue.lighten-5
-          .card-content
-            span.card-title Twitter
-            a.twitter-timeline(href="https://twitter.com/uc_hiyoko3" height="550px") Tweets by uc_hiyoko3
-            script(async src="//platform.twitter.com/widgets.js" charset="utf-8")
-
-        .card.hoverable.indigo.lighten-5
-          .card-content
-            span.card-title Facebook
-            .fb-page(data-href="https://www.facebook.com/tatsuya.ooyanagi.9" data-tabs="timeline,messages" data-width="500" data-height="600" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true")
-
-        #page-top: a TOP
-
-  footer.page-footer.red.darken-1
-    .footer-copyright
-      .container
-        span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
-        span.right Made by&nbsp;
-          a(href="http://materializecss.com/" target="_blank") Materialize
+    footer.page-footer.grey.darken-4
+      .footer-copyright
+        .container
+          span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
+          span.right Made by&nbsp;
+            a(href="http://materializecss.com/" target="_blank") Materialize
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js")
+    script(src="public/script.js" type="text/javascript")
