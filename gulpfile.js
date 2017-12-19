@@ -9,7 +9,12 @@ var pug = require('gulp-pug');
 var cssmin = require('gulp-cssmin');
 var jsmin = require('gulp-jsmin');
 
-var paths = {
+var assets = {
+    css: 'assets/**/*.scss',
+    js: 'assets/**/*.js'
+};
+
+var exports = {
     css: 'public/',
     js: 'public/'
 };
@@ -34,24 +39,24 @@ gulp.task('sass', function() {
     var processors = [
         cssnext()
     ];
-    return gulp.src(paths.css + '**/*.scss')
+    return gulp.src(assets.css)
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss(processors))
         .pipe(cssmin())
         .pipe(autoprefixer())
-        .pipe(gulp.dest(paths.css))
+        .pipe(gulp.dest(exports.css))
         .pipe(browser.reload({stream: true}));
 });
 
 gulp.task('js', function(){
-    return gulp.src(paths.js + '**/*.js')
+    return gulp.src(assets.js)
         .pipe(jsmin())
-        .pipe(gulp.dest(paths.js));
+        .pipe(gulp.dest(exports.js));
 });
 
 gulp.task("default", ["server", "sass", "pug", "js"], function () {
-    gulp.watch(paths.css + '**/*.scss', ["sass"]);
-    gulp.watch(paths.js + '**/*.js', ["js"]);
+    gulp.watch(assets.css, ["sass"]);
+    gulp.watch(assets.js, ["js"]);
     gulp.watch('./index.pug', ["pug"]);
 });

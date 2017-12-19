@@ -1,0 +1,18 @@
+.card {
+  overflow-y: visible !important;
+}
+
+#map-koriyama,
+#map-hitachi {
+  height: 200px;
+  width: 100%;
+}
+
+ul {
+  li {
+    margin: 7.5px auto;
+  }
+  span.badge {
+    padding: 2.5px;
+  }
+}
