@@ -34,7 +34,7 @@ function getAnime(){
 
     var $ul = document.querySelector('#anime-list');
     var fragment = document.createDocumentFragment();
-    $.getJSON('http://api.moemoe.tokyo/anime/v1/master/'+year+'/'+4)
+    $.getJSON('https://api.moemoe.tokyo/anime/v1/master/'+year+'/'+4)
         .done(function(data){
             for(var i = 0; i < data.length; i++){
                 var $li = document.createElement('li');
