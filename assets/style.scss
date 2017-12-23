@@ -1,5 +1,21 @@
-.card {
-  overflow-y: visible !important;
+main {
+  margin: 20px 5px;
+}
+
+.card .card-content {
+  padding: 12px;
+}
+
+.xs-small {
+  max-height: 150px;
+  min-height: 150px;
+  color: white;
+  a {
+    color: white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 #map-koriyama,
