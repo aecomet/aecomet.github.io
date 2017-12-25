@@ -8,18 +8,18 @@ html(lang="ja")
     meta(content="大柳達哉 プロフィール" name="title")
     meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
 
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
+    link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(href="public/style.css" rel="stylesheet")
   body.grey.lighten-5
     nav.nav-extended.grey.darken-3
       .nav-wrapper
         a.brand-logo(href="#") Portfolio
-        a.button-collapse(href="#" data-activates="mobile-nav"): i.material-icons menu
-        ul#nav-mobile.right.hide-on-med-and-down
+        //-a.button-collapse(href="#" data-activates="mobile-nav"): i.material-icons menu
+        //-ul#nav-mobile.right.hide-on-med-and-down
           li: a.dropdown-button(href="#" data-activates="dropdown-menu")
             i.material-icons.right menu
-        ul#mobile-nav.side-nav
+        //-ul#mobile-nav.side-nav
           li: a(href="#") English
       .nav-content
         ul.tabs.tans-transparent.grey.darken-4
@@ -28,7 +28,7 @@ html(lang="ja")
           li.tab: a(href="#programing").white-text プログラミング
           //-li.tab: a(href="#research").white-text 修士研究
           li.tab: a(href="#hobby").white-text 遊び場
-    ul#dropdown-menu.dropdown-content
+    //-ul#dropdown-menu.dropdown-content
       li: a(href="#") English
 
     main#profile
@@ -43,23 +43,30 @@ html(lang="ja")
         .col.s12
           h3 Profile
         .col.s12.m6
-          .card.small#my-info
-            .card-content
-              .card-body
-                table.bordered.centered
-                  tbody
-                    tr
-                      th 名前
-                      td 大柳達哉
-                    tr
-                      th 所属
-                      td 茨城大学院　博士課程前期　1年
-                    tr
-                      th 生年月日
-                      td 1994年(平成6年)8月23日
+          ul(data-collapsible="accordion").collapsible.popout
+            li
+              .collapsible-header
+                i.material-icons star
+                | 名前
+              .collapsible-body
+                p 大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）
+                p Tatsuya O(h)yanagi
+            li
+              .collapsible-header
+                i.material-icons language
+                | 所属
+              .collapsible-body
+                p 茨城大学 大学院院 理工学研究科 情報工学先行 博士課程前期　1年
+            li
+              .collapsible-header
+                i.material-icons history
+                | 生年月日
+              .collapsible-body
+                p 1994年(平成6年)8月23日
+                p 戌年
 
         .col.s6.m3
-          .card.small#birth
+          .card.hoverable.small#birth
             .card-media
               #map-koriyama
             .card-content
@@ -70,7 +77,7 @@ html(lang="ja")
                     td 福島県郡山市
 
         .col.s6.m3
-          .card.small#university
+          .card.hoverable.small#university
             .card-media
               #map-hitachi
             .card-content
@@ -81,24 +88,40 @@ html(lang="ja")
                     td 茨城県日立市
 
         .col.s12
-          h3 趣味
+          h3 趣味とか
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 ドライブ
+          a.modal-trigger(href="#drive-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link ドライブ
+        #drive-m.modal
+          .modal-content
+            p 目指せ，茨城県全域制覇！
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 映画鑑賞
-            //-ul
+          a.modal-trigger(href="#media-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link 映画・音楽鑑賞
+
+        #media-m.modal
+          .modal-content
+            ul
+              li J POP
+              li 邦楽ロック
+              li アニソン
+            ul
               li アクション
               li SF
-              li  ホラー
+              li ホラー
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 読書
-            //-ul
+          a.modal-trigger(href="#reading-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link 読書
+
+        #reading-m.modal
+          .modal-content
+            ul
               li SF
               li ミステリー
               li 歴史小説
@@ -106,43 +129,61 @@ html(lang="ja")
 
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 ランニング
+          a.modal-trigger(href="#running-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link ランニング
+
+        #running-m.modal
+          .modal-content
+            p 夜か午前に出没
+            p 来年あたりどこかの大会出てみようかな...
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 アニメ・ゲーム・漫画
-            //-p ポケモン
-            //-p ガンダム
+          a.modal-trigger(href="#sub-culture-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link アニメ・ゲーム・漫画
 
+        #sub-culture-m.modal
+          .modal-content
+            p ポケモン
+            p ガンダム
 
         .col.s6.m2
-          .card-panel.xs-small.center-align.blue.darken-1
-            h5 プログラミング
+          a.modal-trigger(href="#programing-m")
+            .card-panel.hoverable.xs-small.center-align.blue.darken-1
+              h5.card-w-link プログラミング
 
+        #programing-m.modal
+          .modal-content
+            p 詳細は別タブ参照
 
         .col.s12
           h3 Links
 
         .col.s6.m2
-          .card-panel.hoverable.xs-small.teal.darken-4.center-align
-            h5: a(href="http://www.ibaraki.ac.jp/index.html" target="_blank") 茨城大学
+          a(href="//www.ibaraki.ac.jp/index.html" target="_blank")
+            .card-panel.hoverable.xs-small.teal.darken-4.center-align
+              h5: span.card-w-link 茨城大学
 
         .col.s6.m2
-          .card-panel.hoverable.xs-small.purple.lighten-1.center-align
-            h5: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学院情報工学専攻
+          a(href="//www.cis.ibaraki.ac.jp/" target="_blank")
+            .card-panel.hoverable.xs-small.purple.lighten-1.center-align
+              h5: span.card-w-link 茨城大学院情報工学専攻
 
         .col.s6.m2
-          .card-panel.hoverable.xs-small.pink.lighten-3.center-align
-            h5: a(href="http://cave.cis.ibaraki.ac.jp/" target="_blank") 石田研究室
+          a(href="//cave.cis.ibaraki.ac.jp/" target="_blank")
+            .card-panel.hoverable.xs-small.pink.lighten-3.center-align
+              h5: span.card-w-link 石田研究室
 
         .col.s6.m2
-          .card-panel.hoverable.xs-small.grey.center-align
-            h5: a(href="https://github.com/hiyoko3" target="_blank") Github
+          a(href="//github.com/hiyoko3" target="_blank")
+            .card-panel.hoverable.xs-small.grey.center-align
+              h5: span.card-w-link Github
 
         .col.s6.m2
-          .card-panel.hoverable.xs-small.green.lighten-1.center-align
-            h5: a(href="http://qiita.com/tatsuya_ooyanagi" target="_blank") Qiita
+          a(href="//qiita.com/tatsuya_ooyanagi" target="_blank")
+            .card-panel.hoverable.xs-small.green.lighten-1.center-align
+              h5: span.card-w-link Qiita
 
 
     main#achievement
@@ -162,7 +203,7 @@ html(lang="ja")
                     tr
                       td 2017年3月
                       td 学士（工学）
-                      td: a(href="https://www.ibaraki.ac.jp/" target="_blank") 茨城大学
+                      td: a(href="//www.ibaraki.ac.jp/" target="_blank") 茨城大学
         .col.s12.m4
           .card.hoverable.large
             .card-content
@@ -180,12 +221,12 @@ html(lang="ja")
                     tr
                       td 2015年5月18日
                       td 基本情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
+                      td: a(href="//www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
                       td 経済産業省
                     tr
                       td 2015年12月18日
                       td 応用情報技術者
-                      td: a(href="https://www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
+                      td: a(href="//www.jitec.ipa.go.jp/1_11seido/ap.html" target="_blank") IPA(情報処理推進機構)
                       td 経済産業省
 
         .col.s12.m4
@@ -202,11 +243,11 @@ html(lang="ja")
                   tbody
                     tr
                       td 2015年10月~ 2017年5月
-                      td: a(href="http://www.unicast.ne.jp/" target="_blank") 株式会社ユニキャスト
+                      td: a(href="//www.unicast.ne.jp/" target="_blank") 株式会社ユニキャスト
                       td インターンシップ
                     tr
                       td 2017年8月 ~ 2017年9月
-                      td: a(href="http://www.sony-videosound.co.jp/" target="_blank") ソニービデオ＆サウンドプロダクツ株式会社
+                      td: a(href="//www.sony-videosound.co.jp/" target="_blank") ソニービデオ＆サウンドプロダクツ株式会社
                       td インターンシップ
 
         .col.s12.m6
@@ -222,14 +263,14 @@ html(lang="ja")
                   tbody
                     tr
                       td 2010年4月　~ 2013年3月
-                      td: a(href="http://www.koriyamahigashi-h.fks.ed.jp/" target="_blank") 郡山東高校
+                      td: a(href="//www.koriyamahigashi-h.fks.ed.jp/" target="_blank") 郡山東高校
                     tr
                       td 2013年4月 ~ 2017年3月
-                      td: a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学工学部情報工学科
+                      td: a(href="//www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学工学部情報工学科
                     tr
                       td 2017年4月 ~ 現在
                       td
-                        a(href="http://www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
+                        a(href="//www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
                         | ，博士課程前期，創生情報学コース
 
         .col.s12.m6
@@ -254,63 +295,72 @@ html(lang="ja")
         .col.s6.m3.white-text
           .card.small.yellow.darken-2
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title HTML, CSS, JavaScript
-              p Bootstrap
-              p Materialize
-              p JQuery
-              p AngularJS
-              p Vue 2
+              span.card-title
+                a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/HTML" target="_blank") HTML
+                | &nbsp;
+                a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/CSS" target="_blank") CSS
+                | &nbsp;
+                a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank") JavaScript
+              p: a.card-w-link(href="//getbootstrap.com/" target="_blank") Bootstrap
+              p: a.card-w-link(href="//materializecss.com/" target="_blank") Materialize
+              p: a.card-w-link(href="//jquery.com/" target="_blank") JQuery
+              p: a.card-w-link(href="//angularjs.org/" target="_blank") AngularJS
+              p: a.card-w-link(href="//vuejs.org/" target="_blank") Vue 2
+              p: a.card-w-link(href="//nodejs.org/ja/" target="_blank") Node.js
 
 
         .col.s6.m3.white-text
           .card.small.deep-purple.darken-1
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title PHP
-              p Laravel
-              p Slim3
+              span.card-title: a.card-w-link(href="//php.net/manual/ja/langref.php" target="_blank") PHP
+              p: a.card-w-link(href="//laravel.com/" target="_blank") Laravel
+              p: a.card-w-link(href="//www.slimframework.com/docs/" target="_blank") Slim3
 
         .col.s6.m3.white-text
           .card.small.red.lighten-1
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title Ruby
-              p Ruby On Rails
+              span.card-title: a.card-w-link(href="//www.ruby-lang.org/ja/" target="_blank") Ruby
+              p: a.card-w-link(href="//rubyonrails.org/" target="_blank") Ruby On Rails
 
         .col.s6.m3.white-text
           .card.small.green.darken-3
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title GO
+              span.card-title: a.card-w-link(href="//golang.org/" target="_blank") GO
               p チュートリアルレベル
 
         .col.s6.m3.white-text
           .card.small.lime.darken-2
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title C, C++
+              span.card-title
+                a.card-w-link(href="//www.ie.u-ryukyu.ac.jp/~e085739/c.refer.html" target="_blank") C
+                | &nbsp;
+                a.card-w-link(href="//devdocs.io/cpp/" target="_blank") C++
               p 大学の講義程度
 
         .col.s6.m3.white-text
           .card.small.grey.darken-1
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title Java
-              p Java (Android)も書けます．
+              span.card-title: a.card-w-link(href="//docs.oracle.com/javase/tutorial/tutorialLearningPaths.html#newtojava" target="_blank") Java
+              p: a.card-w-link(href="//developer.android.com/reference/org/w3c/dom/Document.html" target="_blank") Java (Android)
 
         .col.s6.m3.white-text
           .card.small.indigo.darken-3
             .card-media
-              .center-align: img(src="https://png.icons8.com/metro/100/000000/source-code.png")
+              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
-              span.card-title Python
+              span.card-title: a.card-w-link(href="//www.python.jp/about/" target="_blank") Python
               p チュートリアルレベル
 
     main#hobby
@@ -318,13 +368,28 @@ html(lang="ja")
         .col.s12
           h3 API実験場
           p 面白そうな API を使ってみたり使ってみなかったり
+
+        .col.s8
           .card-panel.large
-            h4.center-align 今期アニメ一覧
+            h4.center-align Hello World の始め方
+            p あなたもエンジニアの一歩を踏み出そう!
+            p.codepen(data-height="265" data-theme-id="light" data-slug-hash="dJOaye" data-default-tab="html,result" data-user="hiyoko_3" data-embed-version="2" data-pen-title="dJOaye" data-preview="true")
+              | See the Pen
+              a(href="https://codepen.io/hiyoko_3/pen/dJOaye/") dJOaye
+              | &nbsp;by ae.hiyoko_3 (
+              a(href="https://codepen.io/hiyoko_3") @hiyoko_3
+              | ) on
+              a(href="https://codepen.io") CodePen
+
+        .col.s4
+          .card-panel.large
+            h4.center-align 今期アニメ 自動取得
             ul#anime-list
 
             span.right
               | Presented By
-              a(href="https://qiita.com/AKB428/items/64938febfd4dcf6ea698#get-animev1mastercours") &nbsp;Anime RESTful API
+              a(href="//qiita.com/AKB428/items/64938febfd4dcf6ea698#get-animev1mastercours" target="_blank") &nbsp;Anime RESTful API
+
 
 
     .fixed-action-btn
@@ -335,10 +400,11 @@ html(lang="ja")
         .container
           span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
           span.right Made by&nbsp;
-            a(href="http://materializecss.com/" target="_blank") Materialize
+            a(href="//materializecss.com/" target="_blank") Materialize
             |  and
-            a(href="https://icons8.com")  Icons8
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap")
-    script(src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
+            a(href="//icons8.com" target="_blank")  Icons8
+    script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap")
+    script(src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
     script(src="public/script.js" type="text/javascript")
+    script(async src="//production-assets.codepen.io/assets/embed/ei.js")

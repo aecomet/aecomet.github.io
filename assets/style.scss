@@ -10,11 +10,13 @@ main {
   max-height: 150px;
   min-height: 150px;
   color: white;
-  a {
-    color: white;
-    &:hover {
-      text-decoration: underline;
-    }
+  border-radius: 3px;
+}
+
+.card-w-link {
+  color: white;
+  &:hover {
+    text-decoration: underline;
   }
 }
 

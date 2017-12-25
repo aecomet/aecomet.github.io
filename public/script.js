@@ -1,5 +1,5 @@
 
-$(function(){$(".button-collapse").sideNav();controlPagePosition();getAnime();});function controlPagePosition(){var pageTopBtn=$('#page-top');var height=150;if($(this).scrollTop()<height){pageTopBtn.hide();}
+$(function(){$('.modal').modal();controlPagePosition();getAnime();});function controlPagePosition(){var pageTopBtn=$('#page-top');var height=150;if($(this).scrollTop()<height){pageTopBtn.hide();}
 $(window).scroll(function(){($(this).scrollTop()>height)?pageTopBtn.fadeIn():pageTopBtn.fadeOut();});pageTopBtn.on('click',function(e){$("html,body").animate({scrollTop:0},500,'swing');});}
 function getAnime(){var date=new Date();var year=date.getFullYear();var month=date.getMonth()+1;var cour='';if(9<month&&month<13)
 cour=1;if(0<month&&month<4)

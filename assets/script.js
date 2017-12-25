@@ -1,5 +1,8 @@
 $(function () {
-    $(".button-collapse").sideNav();
+    // Enable Sidebar
+    // $(".button-collapse").sideNav();
+    // Enable Modal
+    $('.modal').modal();
     controlPagePosition();
     getAnime();
 });
