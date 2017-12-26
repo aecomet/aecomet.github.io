@@ -11,104 +11,115 @@ html(lang="ja")
     link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(href="public/style.css" rel="stylesheet")
-  body.grey.lighten-5
-    nav.nav-extended.grey.darken-3
+  body.white
+    nav.nav-extended.grey.lighten-3
       .nav-wrapper
-        a.brand-logo(href="#") Portfolio
-        //-a.button-collapse(href="#" data-activates="mobile-nav"): i.material-icons menu
-        //-ul#nav-mobile.right.hide-on-med-and-down
-          li: a.dropdown-button(href="#" data-activates="dropdown-menu")
-            i.material-icons.right menu
-        //-ul#mobile-nav.side-nav
-          li: a(href="#") English
+        a.brand-logo(href="#").black-text Portfolio
       .nav-content
-        ul.tabs.tans-transparent.grey.darken-4
-          li.tab: a(href="#profile").white-text Profile
-          li.tab: a(href="#achievement").white-text 実績
-          li.tab: a(href="#programing").white-text プログラミング
+        ul.tabs.tans-transparent.grey.lighten-4
+          li.tab: a(href="#profile").grey-text Profile
+          li.tab: a(href="#achievement").grey-text 実績
+          li.tab: a(href="#programing").grey-text プログラミング
           //-li.tab: a(href="#research").white-text 修士研究
-          li.tab: a(href="#hobby").white-text 遊び場
-    //-ul#dropdown-menu.dropdown-content
-      li: a(href="#") English
+          li.tab: a(href="#hobby").grey-text 遊び場
 
     main#profile
       .row
         .col.s12
           blockquote: h3 Hello World!
 
-          .card-panel
-            p まだまだコンテンツ増量中ですのでゆっくりしていってください
-            p 現在も改装中ですのでアップデートを楽しみにお待ちください(2017/12/23)．
+          p まだまだコンテンツ増量中ですのでゆっくりしていってください
+          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2017/12/26)．
 
+      .row
         .col.s12
           h3 Profile
-        .col.s12.m6
+        .col.s12
           ul(data-collapsible="accordion").collapsible.popout
             li
               .collapsible-header
-                i.material-icons star
+                i.material-icons person_pin
                 | 名前
               .collapsible-body
                 p 大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）
                 p Tatsuya O(h)yanagi
             li
               .collapsible-header
-                i.material-icons language
+                i.material-icons school
                 | 所属
               .collapsible-body
                 p 茨城大学 大学院院 理工学研究科 情報工学先行 博士課程前期　1年
             li
               .collapsible-header
-                i.material-icons history
+                i.material-icons cake
                 | 生年月日
               .collapsible-body
                 p 1994年(平成6年)8月23日
                 p 戌年
+            li
+              .collapsible-header
+                i.material-icons local_pizza
+                | 好物
+              .collapsible-body
+                p 寿司
+                p 抹茶
+                p あんこ
+                p そば
+                p ラーメン
+                p 書ききれん...
+            li
+              .collapsible-header
+                i.material-icons blur_on
+                | 好きな格言
+              .collapsible-body
+                .center-align
+                  .vertical-text 『果報は寝て待て』
 
-        .col.s6.m3
-          .card.hoverable.small#birth
-            .card-media
-              #map-koriyama
-            .card-content
-              table.centered
-                tbody
-                  tr
-                    th 出身地
-                    td 福島県郡山市
 
-        .col.s6.m3
-          .card.hoverable.small#university
-            .card-media
-              #map-hitachi
-            .card-content
-              table.centered
-                tbody
-                  tr
-                    th 所在地
-                    td 茨城県日立市
+        .col.s6
+          table.centered.bordered
+            tbody
+              tr
+                th 出身地
+                td 福島県郡山市
+          #map-koriyama
 
+
+        .col.s6
+          table.centered.bordered
+            tbody
+              tr
+                th 所在地
+                td 茨城県日立市
+          #map-hitachi
+
+      .row
         .col.s12
           h3 趣味とか
 
         .col.s6.m2
           a.modal-trigger(href="#drive-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link ドライブ
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text ドライブ
         #drive-m.modal
           .modal-content
             p 目指せ，茨城県全域制覇！
 
         .col.s6.m2
           a.modal-trigger(href="#media-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link 映画・音楽鑑賞
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text 芸術鑑賞
 
         #media-m.modal
           .modal-content
+            h4 音楽
             ul
               li J POP
               li 邦楽ロック
               li アニソン
+              li 吹奏楽
+            .divider
+            h4.mt-3 映画
             ul
               li アクション
               li SF
@@ -116,8 +127,8 @@ html(lang="ja")
 
         .col.s6.m2
           a.modal-trigger(href="#reading-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link 読書
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text 読書
 
         #reading-m.modal
           .modal-content
@@ -130,8 +141,8 @@ html(lang="ja")
 
         .col.s6.m2
           a.modal-trigger(href="#running-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link ランニング
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text ランニング
 
         #running-m.modal
           .modal-content
@@ -140,18 +151,19 @@ html(lang="ja")
 
         .col.s6.m2
           a.modal-trigger(href="#sub-culture-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link アニメ・ゲーム・漫画
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text サブカルチャー
 
         #sub-culture-m.modal
           .modal-content
+            h4 漫画・アニメ・ゲーム
             p ポケモン
             p ガンダム
 
         .col.s6.m2
           a.modal-trigger(href="#programing-m")
-            .card-panel.hoverable.xs-small.center-align.blue.darken-1
-              h5.card-w-link プログラミング
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.blue-text プログラミング
 
         #programing-m.modal
           .modal-content
@@ -162,28 +174,28 @@ html(lang="ja")
 
         .col.s6.m2
           a(href="//www.ibaraki.ac.jp/index.html" target="_blank")
-            .card-panel.hoverable.xs-small.teal.darken-4.center-align
-              h5: span.card-w-link 茨城大学
+            .hoverable.square-card.rotate-card.center-align
+              h5.teal-text 茨城大学
 
         .col.s6.m2
           a(href="//www.cis.ibaraki.ac.jp/" target="_blank")
-            .card-panel.hoverable.xs-small.purple.lighten-1.center-align
-              h5: span.card-w-link 茨城大学院情報工学専攻
+            .hoverable.square-card.rotate-card.center-align
+              h5.purple-text 情報工学専攻
 
         .col.s6.m2
           a(href="//cave.cis.ibaraki.ac.jp/" target="_blank")
-            .card-panel.hoverable.xs-small.pink.lighten-3.center-align
-              h5: span.card-w-link 石田研究室
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.pink-text 石田研究室
 
         .col.s6.m2
           a(href="//github.com/hiyoko3" target="_blank")
-            .card-panel.hoverable.xs-small.grey.center-align
-              h5: span.card-w-link Github
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.grey-text Github
 
         .col.s6.m2
           a(href="//qiita.com/tatsuya_ooyanagi" target="_blank")
-            .card-panel.hoverable.xs-small.green.lighten-1.center-align
-              h5: span.card-w-link Qiita
+            .hoverable.xs-small.square-card.rotate-card.center-align
+              h5.green-text.lighten-1 Qiita
 
 
     main#achievement
@@ -249,6 +261,10 @@ html(lang="ja")
                       td 2017年8月 ~ 2017年9月
                       td: a(href="//www.sony-videosound.co.jp/" target="_blank") ソニービデオ＆サウンドプロダクツ株式会社
                       td インターンシップ
+                    tr
+                      td 2017年12月 ~ 2018年1月
+                      td: a(href="http://www.hitachi.co.jp/rd/about/location/yrl/index.html") 日立製作所 横浜研究所
+                      td インターンシップ
 
         .col.s12.m6
           .card.hoverable.large
@@ -294,8 +310,6 @@ html(lang="ja")
 
         .col.s6.m3.white-text
           .card.small.yellow.darken-2
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title
                 a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/HTML" target="_blank") HTML
@@ -313,8 +327,6 @@ html(lang="ja")
 
         .col.s6.m3.white-text
           .card.small.deep-purple.darken-1
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title: a.card-w-link(href="//php.net/manual/ja/langref.php" target="_blank") PHP
               p: a.card-w-link(href="//laravel.com/" target="_blank") Laravel
@@ -322,24 +334,18 @@ html(lang="ja")
 
         .col.s6.m3.white-text
           .card.small.red.lighten-1
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title: a.card-w-link(href="//www.ruby-lang.org/ja/" target="_blank") Ruby
               p: a.card-w-link(href="//rubyonrails.org/" target="_blank") Ruby On Rails
 
         .col.s6.m3.white-text
           .card.small.green.darken-3
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title: a.card-w-link(href="//golang.org/" target="_blank") GO
               p チュートリアルレベル
 
         .col.s6.m3.white-text
           .card.small.lime.darken-2
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title
                 a.card-w-link(href="//www.ie.u-ryukyu.ac.jp/~e085739/c.refer.html" target="_blank") C
@@ -349,16 +355,12 @@ html(lang="ja")
 
         .col.s6.m3.white-text
           .card.small.grey.darken-1
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title: a.card-w-link(href="//docs.oracle.com/javase/tutorial/tutorialLearningPaths.html#newtojava" target="_blank") Java
               p: a.card-w-link(href="//developer.android.com/reference/org/w3c/dom/Document.html" target="_blank") Java (Android)
 
         .col.s6.m3.white-text
           .card.small.indigo.darken-3
-            .card-media
-              .center-align: img(src="//png.icons8.com/metro/100/000000/source-code.png")
             .card-content
               span.card-title: a.card-w-link(href="//www.python.jp/about/" target="_blank") Python
               p チュートリアルレベル
@@ -369,8 +371,8 @@ html(lang="ja")
           h3 API実験場
           p 面白そうな API を使ってみたり使ってみなかったり
 
-        .col.s8
-          .card-panel.large
+        .col.s12
+          .card-panel.medium
             h4.center-align Hello World の始め方
             p あなたもエンジニアの一歩を踏み出そう!
             p.codepen(data-height="265" data-theme-id="light" data-slug-hash="dJOaye" data-default-tab="html,result" data-user="hiyoko_3" data-embed-version="2" data-pen-title="dJOaye" data-preview="true")
@@ -381,8 +383,8 @@ html(lang="ja")
               | ) on
               a(href="https://codepen.io") CodePen
 
-        .col.s4
-          .card-panel.large
+        .col.s12
+          .card-panel
             h4.center-align 今期アニメ 自動取得
             ul#anime-list
 

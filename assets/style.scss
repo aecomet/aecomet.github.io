@@ -2,8 +2,23 @@ main {
   margin: 20px 5px;
 }
 
-.card .card-content {
-  padding: 12px;
+.square-card {
+  height: 150px;
+  width: 150px;
+  color: white;
+}
+
+.rotate-card {
+  margin: 20px auto;
+  transform: rotate(45deg);
+  h5 {
+    position: absolute;
+    top: 37px;
+    left: 48px;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
 }
 
 .xs-small {
@@ -22,7 +37,7 @@ main {
 
 #map-koriyama,
 #map-hitachi {
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
 
@@ -32,5 +47,24 @@ ul {
   }
   span.badge {
     padding: 2.5px;
+  }
+}
+
+.vertical-text {
+  font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
+  font-feature-settings: 'pkna';
+  font-size: 20px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  writing-mode: vertical-rl;
+  position:relative;
+  left:5px;
+  display:inline;
+  p {
+    text-indent: 1em;
+    margin-left: 30px;
+  }
+  ruby {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
   }
 }

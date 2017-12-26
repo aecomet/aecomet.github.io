@@ -1,6 +1,4 @@
 $(function () {
-    // Enable Sidebar
-    // $(".button-collapse").sideNav();
     // Enable Modal
     $('.modal').modal();
     controlPagePosition();
@@ -47,9 +45,10 @@ function getAnime(){
             $ul.appendChild(fragment);
         })
         .fail(function(data){
+            var $li = document.createElement('li');
+            $li.innerHTML = 'データの取得に失敗しました．通信環境を確認してください．';
             console.error(data.statusText);
         });
-
 }
 
 // Called By Google Maps JavaScript API
