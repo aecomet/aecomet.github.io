@@ -12,24 +12,24 @@ html(lang="ja")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(href="public/style.css" rel="stylesheet")
   body.white
-    nav.nav-extended.grey.lighten-3
+    nav.nav-extended.red.accent-3
       .nav-wrapper
-        a.brand-logo(href="#").black-text Portfolio
+        a.brand-logo(href="#") Portfolio
       .nav-content
         ul.tabs.tans-transparent.grey.lighten-4
           li.tab: a(href="#profile").grey-text Profile
           li.tab: a(href="#achievement").grey-text 実績
           li.tab: a(href="#programing").grey-text プログラミング
           //-li.tab: a(href="#research").white-text 修士研究
-          li.tab: a(href="#hobby").grey-text 遊び場
+          //-li.tab: a(href="#hobby").grey-text 遊び場
 
     main#profile
       .row
         .col.s12
-          blockquote: h3 Hello World!
+          blockquote: h4 Hello World!
 
           p まだまだコンテンツ増量中ですのでゆっくりしていってください
-          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2017/12/26)．
+          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2018/2/5)．
 
       .row
         .col.s12
@@ -48,7 +48,7 @@ html(lang="ja")
                 i.material-icons school
                 | 所属
               .collapsible-body
-                p 茨城大学 大学院院 理工学研究科 情報工学先行 博士課程前期　1年
+                p 茨城大学 大学院院 理工学研究科 情報工学専攻 博士課程前期　1年
             li
               .collapsible-header
                 i.material-icons cake
@@ -61,12 +61,13 @@ html(lang="ja")
                 i.material-icons local_pizza
                 | 好物
               .collapsible-body
+                h3 和食最高
                 p 寿司
+                p 天ぷら
                 p 抹茶
                 p あんこ
                 p そば
-                p ラーメン
-                p 書ききれん...
+                p オムライス
             li
               .collapsible-header
                 i.material-icons blur_on
@@ -287,7 +288,6 @@ html(lang="ja")
                       td 2017年4月 ~ 現在
                       td
                         a(href="//www.cis.ibaraki.ac.jp/" target="_blank") 茨城大学大学院理工学研究科情報工学専攻
-                        | ，博士課程前期，創生情報学コース
 
         .col.s12.m6
           .card.hoverable.large
@@ -295,6 +295,8 @@ html(lang="ja")
               span.card-title 投稿論文
               .card-body
                 ul
+                  //-li
+                    span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
                   li
                     | Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata, “Construction of an Electronic Health Record System for supporting a Zoo Veterinarian”, Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676, November.2016
                     span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
@@ -365,7 +367,7 @@ html(lang="ja")
               span.card-title: a.card-w-link(href="//www.python.jp/about/" target="_blank") Python
               p チュートリアルレベル
 
-    main#hobby
+    //-main#hobby
       .row
         .col.s12
           h3 API実験場
@@ -403,8 +405,7 @@ html(lang="ja")
           span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
           span.right Made by&nbsp;
             a(href="//materializecss.com/" target="_blank") Materialize
-            |  and
-            a(href="//icons8.com" target="_blank")  Icons8
+
     script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap")
     script(src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
     script(src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")

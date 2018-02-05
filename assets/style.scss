@@ -1,5 +1,10 @@
 main {
   margin: 20px 5px;
+  h3 {
+    &:before {
+      content: '$ ';
+    }
+  }
 }
 
 .square-card {
