@@ -20,8 +20,8 @@ html(lang="ja")
           li.tab: a(href="#profile").grey-text Profile
           li.tab: a(href="#achievement").grey-text 実績
           li.tab: a(href="#programing").grey-text プログラミング
-          //-li.tab: a(href="#research").white-text 修士研究
-          //-li.tab: a(href="#hobby").grey-text 遊び場
+          li.tab: a(href="#research").grey-text 研究
+          li.tab: a(href="#hobby").grey-text 遊び場
 
     main#profile
       .row
@@ -29,7 +29,7 @@ html(lang="ja")
           blockquote: h4 Hello World!
 
           p まだまだコンテンツ増量中ですのでゆっくりしていってください
-          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2018/2/5)．
+          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2018/2/20)．
 
       .row
         .col.s12
@@ -37,7 +37,7 @@ html(lang="ja")
         .col.s12
           ul(data-collapsible="accordion").collapsible.popout
             li
-              .collapsible-header
+              .collapsible-header.active
                 i.material-icons person_pin
                 | 名前
               .collapsible-body
@@ -48,7 +48,7 @@ html(lang="ja")
                 i.material-icons school
                 | 所属
               .collapsible-body
-                p 茨城大学 大学院院 理工学研究科 情報工学専攻 博士課程前期　1年
+                p 茨城大学 大学院院 理工学研究科 情報工学専攻 博士課程前期　2年
             li
               .collapsible-header
                 i.material-icons cake
@@ -61,13 +61,34 @@ html(lang="ja")
                 i.material-icons local_pizza
                 | 好物
               .collapsible-body
-                h3 和食最高
+                h5 和食が多いかも
                 p 寿司
                 p 天ぷら
                 p 抹茶
                 p あんこ
                 p そば
                 p オムライス
+            li
+              .collapsible-header
+                i.material-icons headset
+                | よく聴く音楽
+              .collapsible-body
+                p 福山雅治
+                p 東方神起
+                p SCANDAL
+                p L'arc〜en〜Ciel
+                p スピッツ
+                p やなぎなぎ
+                p 秦基博
+                p 柴咲コウ
+                p 吹奏楽
+            li
+              .collapsible-header
+                i.material-icons laptop
+                | 開発環境
+              .collapsible-body
+                p MacBook Pro Late2016 メモリ16G, SSD 512GB
+
             li
               .collapsible-header
                 i.material-icons blur_on
@@ -96,7 +117,7 @@ html(lang="ja")
 
       .row
         .col.s12
-          h3 趣味とか
+          h3 趣味
 
         .col.s6.m2
           a.modal-trigger(href="#drive-m")
@@ -104,27 +125,28 @@ html(lang="ja")
               h5.blue-text ドライブ
         #drive-m.modal
           .modal-content
-            p 目指せ，茨城県全域制覇！
+            p 土日にあてもなくふらりと行きます
 
         .col.s6.m2
-          a.modal-trigger(href="#media-m")
+          a.modal-trigger(href="#movie-m")
             .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text 芸術鑑賞
+              h5.blue-text 映画鑑賞
 
-        #media-m.modal
+        #movie-m.modal
           .modal-content
-            h4 音楽
+            h4 映画
             ul
-              li J POP
-              li 邦楽ロック
-              li アニソン
-              li 吹奏楽
-            .divider
-            h4.mt-3 映画
-            ul
-              li アクション
+              li
+                | アクション
+                p ワイルドスピード
+                p ミッションインポッシブル
+                p アウトロー
+                p オーシャンズシリーズ
               li SF
+                p バックトゥーザ・フューチャー
               li ホラー
+                p 和ホラー多め
+
 
         .col.s6.m2
           a.modal-trigger(href="#reading-m")
@@ -147,19 +169,80 @@ html(lang="ja")
 
         #running-m.modal
           .modal-content
-            p 夜か午前に出没
-            p 来年あたりどこかの大会出てみようかな...
+            p 夜か休日午前に出没
 
         .col.s6.m2
           a.modal-trigger(href="#sub-culture-m")
             .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text サブカルチャー
+              h5.blue-text 漫画/アニメ
 
         #sub-culture-m.modal
           .modal-content
-            h4 漫画・アニメ・ゲーム
-            p ポケモン
-            p ガンダム
+            h4 漫画・アニメ
+            div
+              h6 好きな漫画
+              p ワンピース
+              p 鬼滅の刃
+              p 炎炎の消防隊
+              p バトルスタディーズ
+              p あだち充作品
+
+              h6 好きなアニメ
+              p ポケモン（毎週見てる）
+              p ガンダム
+              table.highlight.bordered
+                thead
+                  tr
+                    th(colspan="2") 視聴有無
+                tbody
+                  tr
+                    td 初代
+                    td ○
+                  tr
+                    td Z
+                    td ○
+                  tr
+                    td ZZ
+                    td ×
+                  tr
+                    td 逆シャア
+                    td ○
+                  tr
+                    td ユニコーン
+                    td ○
+                  tr
+                    td F91
+                    td ○
+                  tr
+                    td V
+                    td ○
+                  tr
+                    td ∀
+                    td ○
+                  tr
+                    td W
+                    td ○
+                  tr
+                    td G
+                    td △
+                  tr
+                    td SEED, SEED DESTINY
+                    td ○
+                  tr
+                    td 00, 00 2nd
+                    td ○
+                  tr
+                    td AGE
+                    td ○
+                  tr
+                    td ビルドファイターズ, トライ
+                    td ○
+                  tr
+                    td Gレコ
+                    td ○
+                  tr
+                    td 鉄血
+                    td ○
 
         .col.s6.m2
           a.modal-trigger(href="#programing-m")
@@ -295,7 +378,8 @@ html(lang="ja")
               span.card-title 投稿論文
               .card-body
                 ul
-                  //-li
+                  li
+                    | Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida, ”Proposal of an Integrated Common Platform for Zoo Operation Support”, 23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018
                     span.new.badge.blue(data-badge-caption="国際会議（査読付き）")
                   li
                     | Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata, “Construction of an Electronic Health Record System for supporting a Zoo Veterinarian”, Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676, November.2016
@@ -303,6 +387,21 @@ html(lang="ja")
                   li
                     | 大柳達哉，石田智行，“獣医師のための動物電子カルテシステムの提案”，可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016．
                     span.new.badge.blue(data-badge-caption="研究会・全国大会（査読なし）")
+
+    main#research
+      .row
+        .col.s12
+          .card-panel
+            p ただいまコンテンツ作成中
+        //-.col.s12
+          .card
+            .card-content
+              span.card-title 卒業研究
+
+        //-.col.s12
+          .card
+            .card-content
+              span.card-title 修士研究
 
     main#programing
       .row
@@ -318,7 +417,7 @@ html(lang="ja")
                 | &nbsp;
                 a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/CSS" target="_blank") CSS
                 | &nbsp;
-                a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank") JavaScript
+                a.card-w-link(href="//developer.mozilla.org/ja/docs/Web/JavaScript" target="_blank") JS
               p: a.card-w-link(href="//getbootstrap.com/" target="_blank") Bootstrap
               p: a.card-w-link(href="//materializecss.com/" target="_blank") Materialize
               p: a.card-w-link(href="//jquery.com/" target="_blank") JQuery
@@ -367,7 +466,7 @@ html(lang="ja")
               span.card-title: a.card-w-link(href="//www.python.jp/about/" target="_blank") Python
               p チュートリアルレベル
 
-    //-main#hobby
+    main#hobby
       .row
         .col.s12
           h3 API実験場
@@ -385,7 +484,7 @@ html(lang="ja")
               | ) on
               a(href="https://codepen.io") CodePen
 
-        .col.s12
+        //-.col.s12
           .card-panel
             h4.center-align 今期アニメ 自動取得
             ul#anime-list

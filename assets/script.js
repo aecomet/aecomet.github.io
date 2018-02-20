@@ -2,7 +2,7 @@ $(function () {
     // Enable Modal
     $('.modal').modal();
     controlPagePosition();
-    getAnime();
+    // getAnime();
 });
 
 function controlPagePosition () {
@@ -19,6 +19,7 @@ function controlPagePosition () {
     });
 }
 
+// reference: https://qiita.com/AKB428/items/64938febfd4dcf6ea698
 function getAnime(){
     var date = new Date();
     var year = date.getFullYear();
@@ -35,7 +36,7 @@ function getAnime(){
 
     var $ul = document.querySelector('#anime-list');
     var fragment = document.createDocumentFragment();
-    $.getJSON('https://api.moemoe.tokyo/anime/v1/master/'+year+'/'+4)
+    $.getJSON('https://api.moemoe.tokyo/anime/v1/master/'+year+'/'+cour)
         .done(function(data){
             for(var i = 0; i < data.length; i++){
                 var $li = document.createElement('li');
