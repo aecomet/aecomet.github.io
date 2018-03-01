@@ -2,26 +2,27 @@ doctype html
 html(lang="ja")
   head
     meta(charset="utf-8")
-    title 大柳達哉 プロフィール
+    title ポートフォリオ
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(content="大柳達哉 プロフィール" name="title")
+    meta(content="ポートフォリオ" name="title")
     meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
 
     link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(href="public/style.css" rel="stylesheet")
-  body.white
-    nav.nav-extended.red.accent-3
+  body.grey.lighten-5
+    nav.nav-extended.indigo.darken-4
       .nav-wrapper
         a.brand-logo(href="#") Portfolio
       .nav-content
-        ul.tabs.tans-transparent.grey.lighten-4
-          li.tab: a(href="#profile").grey-text Profile
-          li.tab: a(href="#achievement").grey-text 実績
-          li.tab: a(href="#programing").grey-text プログラミング
-          li.tab: a(href="#research").grey-text 研究
-          li.tab: a(href="#hobby").grey-text 遊び場
+        ul.tabs.tans-transparent.white
+          li.tab: a(href="#profile").indigo-text Profile
+          li.tab: a(href="#achievement").indigo-text 実績
+          li.tab: a(href="#programing").indigo-text プログラミング
+          li.tab: a(href="#research").indigo-text 研究
+          //-li.tab: a(href="#development").indigo-text これまでの成果（物）
+          li.tab: a(href="#hobby").indigo-text 遊び場
 
     main#profile
       .row
@@ -29,7 +30,7 @@ html(lang="ja")
           blockquote: h4 Hello World!
 
           p まだまだコンテンツ増量中ですのでゆっくりしていってください
-          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2018/2/20)．
+          p 現在も改装中ですのでアップデートを楽しみにお待ちください(2018/3/1)．
 
       .row
         .col.s12
@@ -40,27 +41,27 @@ html(lang="ja")
               .collapsible-header.active
                 i.material-icons person_pin
                 | 名前
-              .collapsible-body
+              .collapsible-body.white
                 p 大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）
                 p Tatsuya O(h)yanagi
             li
               .collapsible-header
                 i.material-icons school
                 | 所属
-              .collapsible-body
+              .collapsible-body.white
                 p 茨城大学 大学院院 理工学研究科 情報工学専攻 博士課程前期　2年
             li
               .collapsible-header
                 i.material-icons cake
                 | 生年月日
-              .collapsible-body
+              .collapsible-body.white
                 p 1994年(平成6年)8月23日
                 p 戌年
             li
               .collapsible-header
                 i.material-icons local_pizza
                 | 好物
-              .collapsible-body
+              .collapsible-body.white
                 h5 和食が多いかも
                 p 寿司
                 p 天ぷら
@@ -72,7 +73,8 @@ html(lang="ja")
               .collapsible-header
                 i.material-icons headset
                 | よく聴く音楽
-              .collapsible-body
+              .collapsible-body.white
+                h5 邦楽
                 p 福山雅治
                 p 東方神起
                 p SCANDAL
@@ -81,19 +83,28 @@ html(lang="ja")
                 p やなぎなぎ
                 p 秦基博
                 p 柴咲コウ
+                h5 その他
                 p 吹奏楽
+
+            li
+              .collapsible-header
+                i.material-icons face
+                | 好きな有名人
+              .collapsible-body.white
+                p 明石家さんま
+
             li
               .collapsible-header
                 i.material-icons laptop
                 | 開発環境
-              .collapsible-body
+              .collapsible-body.white
                 p MacBook Pro Late2016 メモリ16G, SSD 512GB
 
             li
               .collapsible-header
                 i.material-icons blur_on
                 | 好きな格言
-              .collapsible-body
+              .collapsible-body.white
                 .center-align
                   .vertical-text 『果報は寝て待て』
 
@@ -105,6 +116,7 @@ html(lang="ja")
                 th 出身地
                 td 福島県郡山市
           #map-koriyama
+            span うまく表示されない場合はページを更新してください．
 
 
         .col.s6
@@ -114,6 +126,7 @@ html(lang="ja")
                 th 所在地
                 td 茨城県日立市
           #map-hitachi
+            span うまく表示されない場合はページを更新してください．
 
       .row
         .col.s12
@@ -134,17 +147,18 @@ html(lang="ja")
 
         #movie-m.modal
           .modal-content
-            h4 映画
             ul
               li
-                | アクション
+                h5 アクション
                 p ワイルドスピード
                 p ミッションインポッシブル
                 p アウトロー
                 p オーシャンズシリーズ
-              li SF
+              li
+                h5 SF
                 p バックトゥーザ・フューチャー
-              li ホラー
+              li
+                h5 ホラー
                 p 和ホラー多め
 
 
@@ -180,69 +194,17 @@ html(lang="ja")
           .modal-content
             h4 漫画・アニメ
             div
-              h6 好きな漫画
+              h5 好きな漫画
               p ワンピース
               p 鬼滅の刃
               p 炎炎の消防隊
               p バトルスタディーズ
               p あだち充作品
 
-              h6 好きなアニメ
-              p ポケモン（毎週見てる）
+              h5 好きなアニメ
+              p ポケモン
               p ガンダム
-              table.highlight.bordered
-                thead
-                  tr
-                    th(colspan="2") 視聴有無
-                tbody
-                  tr
-                    td 初代
-                    td ○
-                  tr
-                    td Z
-                    td ○
-                  tr
-                    td ZZ
-                    td ×
-                  tr
-                    td 逆シャア
-                    td ○
-                  tr
-                    td ユニコーン
-                    td ○
-                  tr
-                    td F91
-                    td ○
-                  tr
-                    td V
-                    td ○
-                  tr
-                    td ∀
-                    td ○
-                  tr
-                    td W
-                    td ○
-                  tr
-                    td G
-                    td △
-                  tr
-                    td SEED, SEED DESTINY
-                    td ○
-                  tr
-                    td 00, 00 2nd
-                    td ○
-                  tr
-                    td AGE
-                    td ○
-                  tr
-                    td ビルドファイターズ, トライ
-                    td ○
-                  tr
-                    td Gレコ
-                    td ○
-                  tr
-                    td 鉄血
-                    td ○
+
 
         .col.s6.m2
           a.modal-trigger(href="#programing-m")
@@ -314,6 +276,11 @@ html(lang="ja")
                       th 認定機関
 
                   tbody
+                    tr
+                      td 2013年9月17日
+                      td 普通自動車第一種運転免許
+                      td -
+                      td: a(href="https://www.pref.fukushima.lg.jp/sec/18.html") 福島県公安委員会
                     tr
                       td 2015年5月18日
                       td 基本情報技術者
@@ -390,18 +357,55 @@ html(lang="ja")
 
     main#research
       .row
+        //- .col.s12
+          .card-panel
+            p ただいまコンテンツ作成中
+        .col.s12
+          .card
+            .card-content
+              span 卒業研究
+              h6.card-title 「動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築」
+              | 動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．
+              br
+              | そこで本研究は，動物園業務統合型共通プラットフォームを構築した．
+              br
+              | 本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.
+              br
+              | これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．
+            .card-image.pb-3
+              .row
+                .col.offset-m2.m4.s12
+                  img.materialboxed(src="public/images/image_1.png" data-caption="動物園業務統合型共通プラットフォーム トップ画面" width="500" height="300")
+                .col.m4.s12
+                  img.materialboxed(src="public/images/image_2.png" data-caption="蓄積されたデータを活用しグラフ化も可能" width="500" height="300")
+
+
+        .col.s12
+          .card
+            .card-content
+              span 修士研究
+              h6.card-title 「自治体対策本部用災害エキスパートシステムの研究開発」
+              br
+              | 災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．
+              br
+              | そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．
+              br
+              | そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．
+              br
+              | これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．
+            .card-image.pb-3
+              .row
+                .col.offset-m2.m4.s12
+                  img.materialboxed(src="public/images/image_3.png" data-caption="災害支援エキスパートシステム 情報登録画面" width="500" height="300")
+                .col.m4.s12
+                  img.materialboxed(src="public/images/image_4.png" data-caption="災害支援エキスパートシステム 可視化画面（想定）" width="500" height="300")
+
+
+    //-main#development
+      .row
         .col.s12
           .card-panel
             p ただいまコンテンツ作成中
-        //-.col.s12
-          .card
-            .card-content
-              span.card-title 卒業研究
-
-        //-.col.s12
-          .card
-            .card-content
-              span.card-title 修士研究
 
     main#programing
       .row
@@ -498,10 +502,10 @@ html(lang="ja")
     .fixed-action-btn
       button.btn-floating.btn-large.waves-effect.waves-light.red.pulse#page-top: i.material-icons keyboard_arrow_up
 
-    footer.page-footer.grey.darken-3
+    footer.page-footer.indigo.darken-4
       .footer-copyright
         .container
-          span.left © 2017 Copyright : 大柳達哉(Ohyanagi Tatsuya)
+          span.left © 2017-2018 Copyright : 大柳達哉(Tatsuya Oyanagi)
           span.right Made by&nbsp;
             a(href="//materializecss.com/" target="_blank") Materialize
 
