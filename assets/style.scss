@@ -1,36 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 main {
   margin: 20px 5px;
   h3 {
     &:before {
-      content: '$ ';
+      content: '';
     }
   }
 }
 
-.square-card {
-  height: 150px;
-  width: 150px;
-  color: white;
-}
-
-.rotate-card {
-  margin: 20px auto;
-  transform: rotate(45deg);
-  h5 {
-    position: absolute;
-    top: 37px;
-    left: 48px;
-    right: 0;
-    bottom: 0;
-    transform: rotate(-45deg);
+.ul-links {
+  font-size:24px;
+  a:hover {
+    text-decoration: underline;
   }
-}
-
-.xs-small {
-  max-height: 150px;
-  min-height: 150px;
-  color: white;
-  border-radius: 3px;
 }
 
 .card-w-link {
@@ -76,4 +62,14 @@ ul {
 
 .pb-3 {
   padding-bottom: 12px;
+}
+
+@media only screen and (max-width: 767px) {
+  #map-koriyama,
+  #map-hitachi {
+    height: 200px;
+  }
+  h5 {
+    font-size: 20px;
+  }
 }

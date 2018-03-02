@@ -12,17 +12,17 @@ html(lang="ja")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
     link(href="public/style.css" rel="stylesheet")
   body.grey.lighten-5
-    nav.nav-extended.indigo.darken-4
+    nav.nav-extended.blue-grey.darken-4
       .nav-wrapper
         a.brand-logo(href="#") Portfolio
       .nav-content
         ul.tabs.tans-transparent.white
-          li.tab: a(href="#profile").indigo-text Profile
-          li.tab: a(href="#achievement").indigo-text 実績
-          li.tab: a(href="#programing").indigo-text プログラミング
-          li.tab: a(href="#research").indigo-text 研究
+          li.tab: a(href="#profile").blue-grey-text Profile
+          li.tab: a(href="#achievement").blue-grey-text 実績
+          li.tab: a(href="#programing").blue-grey-text プログラミング
+          li.tab: a(href="#research").blue-grey-text 研究
           //-li.tab: a(href="#development").indigo-text これまでの成果（物）
-          li.tab: a(href="#hobby").indigo-text 遊び場
+          li.tab: a(href="#hobby").blue-grey-text 遊び場
 
     main#profile
       .row
@@ -34,7 +34,7 @@ html(lang="ja")
 
       .row
         .col.s12
-          h3 Profile
+          h3.center-align Profile
         .col.s12
           ul(data-collapsible="accordion").collapsible.popout
             li
@@ -130,20 +130,32 @@ html(lang="ja")
 
       .row
         .col.s12
-          h3 趣味
+          h3.center-align 趣味
 
-        .col.s6.m2
-          a.modal-trigger(href="#drive-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text ドライブ
+        .col.offset-m2.m8.s12
+          .collection
+            a.collection-item.modal-trigger(href="#drive-m")
+              | ドライブ
+              span.secondary-content: i.material-icons send
+            a.collection-item.modal-trigger(href="#movie-m")
+              | 映画鑑賞
+              span.secondary-content: i.material-icons send
+            a.collection-item.modal-trigger(href="#reading-m")
+              | 読書
+              span.secondary-content: i.material-icons send
+            a.collection-item.modal-trigger(href="#running-m")
+              | ランニング
+              span.secondary-content: i.material-icons send
+            a.collection-item.modal-trigger(href="#sub-culture-m")
+              | 漫画/アニメ
+              span.secondary-content: i.material-icons send
+            a.collection-item.modal-trigger(href="#programing-m")
+              | プログラミング
+              span.secondary-content: i.material-icons send
+
         #drive-m.modal
           .modal-content
             p 土日にあてもなくふらりと行きます
-
-        .col.s6.m2
-          a.modal-trigger(href="#movie-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text 映画鑑賞
 
         #movie-m.modal
           .modal-content
@@ -161,12 +173,6 @@ html(lang="ja")
                 h5 ホラー
                 p 和ホラー多め
 
-
-        .col.s6.m2
-          a.modal-trigger(href="#reading-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text 読書
-
         #reading-m.modal
           .modal-content
             ul
@@ -175,20 +181,9 @@ html(lang="ja")
               li 歴史小説
               li ファンタジー小説
 
-
-        .col.s6.m2
-          a.modal-trigger(href="#running-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text ランニング
-
         #running-m.modal
           .modal-content
             p 夜か休日午前に出没
-
-        .col.s6.m2
-          a.modal-trigger(href="#sub-culture-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text 漫画/アニメ
 
         #sub-culture-m.modal
           .modal-content
@@ -205,44 +200,19 @@ html(lang="ja")
               p ポケモン
               p ガンダム
 
-
-        .col.s6.m2
-          a.modal-trigger(href="#programing-m")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.blue-text プログラミング
-
         #programing-m.modal
           .modal-content
             p 詳細は別タブ参照
 
         .col.s12
-          h3 Links
+          h3.center-align Links
 
-        .col.s6.m2
-          a(href="//www.ibaraki.ac.jp/index.html" target="_blank")
-            .hoverable.square-card.rotate-card.center-align
-              h5.teal-text 茨城大学
-
-        .col.s6.m2
-          a(href="//www.cis.ibaraki.ac.jp/" target="_blank")
-            .hoverable.square-card.rotate-card.center-align
-              h5.purple-text 情報工学専攻
-
-        .col.s6.m2
-          a(href="//cave.cis.ibaraki.ac.jp/" target="_blank")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.pink-text 石田研究室
-
-        .col.s6.m2
-          a(href="//github.com/hiyoko3" target="_blank")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.grey-text Github
-
-        .col.s6.m2
-          a(href="//qiita.com/tatsuya_ooyanagi" target="_blank")
-            .hoverable.xs-small.square-card.rotate-card.center-align
-              h5.green-text.lighten-1 Qiita
-
+          ul.ul-links.center-align
+            li: a(href="//www.ibaraki.ac.jp/index.html" target="_blank") 茨城大学
+            li: a(href="//www.cis.ibaraki.ac.jp/" target="_blank") 情報工学専攻
+            li: a(href="//cave.cis.ibaraki.ac.jp/" target="_blank") 石田研究室
+            li: a(href="//github.com/hiyoko3" target="_blank") Github
+            li: a(href="//qiita.com/tatsuya_oyanagi" target="_blank") Qiita
 
     main#achievement
       .row
@@ -279,7 +249,7 @@ html(lang="ja")
                     tr
                       td 2013年9月17日
                       td 普通自動車第一種運転免許
-                      td -
+                      td.center-align -
                       td: a(href="https://www.pref.fukushima.lg.jp/sec/18.html") 福島県公安委員会
                     tr
                       td 2015年5月18日
@@ -375,9 +345,9 @@ html(lang="ja")
             .card-image.pb-3
               .row
                 .col.offset-m2.m4.s12
-                  img.materialboxed(src="public/images/image_1.png" data-caption="動物園業務統合型共通プラットフォーム トップ画面" width="500" height="300")
+                  img.materialboxed(src="public/images/image_1.png" data-caption="動物園業務統合型共通プラットフォーム トップ画面" width="400" height="300")
                 .col.m4.s12
-                  img.materialboxed(src="public/images/image_2.png" data-caption="蓄積されたデータを活用しグラフ化も可能" width="500" height="300")
+                  img.materialboxed(src="public/images/image_2.png" data-caption="蓄積されたデータを活用しグラフ化も可能" width="400" height="300")
 
 
         .col.s12
@@ -396,9 +366,9 @@ html(lang="ja")
             .card-image.pb-3
               .row
                 .col.offset-m2.m4.s12
-                  img.materialboxed(src="public/images/image_3.png" data-caption="災害支援エキスパートシステム 情報登録画面" width="500" height="300")
+                  img.materialboxed(src="public/images/image_3.png" data-caption="災害支援エキスパートシステム 情報登録画面" width="300" height="300")
                 .col.m4.s12
-                  img.materialboxed(src="public/images/image_4.png" data-caption="災害支援エキスパートシステム 可視化画面（想定）" width="500" height="300")
+                  img.materialboxed(src="public/images/image_4.png" data-caption="災害支援エキスパートシステム 可視化画面（想定）" width="300" height="300")
 
 
     //-main#development
@@ -502,7 +472,7 @@ html(lang="ja")
     .fixed-action-btn
       button.btn-floating.btn-large.waves-effect.waves-light.red.pulse#page-top: i.material-icons keyboard_arrow_up
 
-    footer.page-footer.indigo.darken-4
+    footer.page-footer.blue-grey.darken-4
       .footer-copyright
         .container
           span.left © 2017-2018 Copyright : 大柳達哉(Tatsuya Oyanagi)
