@@ -12,7 +12,7 @@ const API = {
             qiitaDesc = document.querySelector('.qiita-desc'),
             qiitaImg = document.querySelector('.qiita-img');
         // http://qiita.com/api/v2/users/:user_id
-        $.getJSON('http://qiita.com/api/v2/users/tatsuya_oyanagi', {
+        $.getJSON('https://qiita.com/api/v2/users/tatsuya_oyanagi', {
             header: 'Authorization: Bearer ' + btoa(Key.Qiita.appId),
         }).done((data) => {
             qiitaName.innerHTML = data.name;
