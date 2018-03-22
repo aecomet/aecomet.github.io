@@ -74,6 +74,6 @@ gulp.task('js', function(){
 
 gulp.task("default", ["server", "sass", "pug", "js"], function () {
     gulp.watch(path.css + '/style.scss', ["sass"]);
-    gulp.watch(path.js + '/script.js', ["js"]);
-    gulp.watch('./index.pug', ["pug"]);
+    gulp.watch(path.js + '/**/**.js', ["js"]);
+    gulp.watch('**/**.pug', ["pug"]);
 });

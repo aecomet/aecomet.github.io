@@ -1,8 +1,14 @@
 // TODO: you must rename to 'Key.js'
 const Key = {
     Qiita: {
-        'appId': '',
-        'url': ''
+        appId: '',
+    },
+    Facebook: {
+        appId: '',
+        accessToken: '',
+    },
+    Github: {
+        accessToken: ''
     }
 };
 

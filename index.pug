@@ -19,13 +19,14 @@ html(lang="ja")
       .nav-content
         ul.tabs.tans-transparent.white
           li.tab: a(href="#profile").blue-grey-text Profile
+          li.tab: a(href="#sns").blue-grey-text 各種SNS
           li.tab: a(href="#achievement").blue-grey-text 実績
           li.tab: a(href="#programing").blue-grey-text プログラミング
           li.tab: a(href="#research").blue-grey-text 研究
-          //-li.tab: a(href="#development").indigo-text これまでの成果（物）
           li.tab: a(href="#hobby").blue-grey-text 遊び場
 
     include components/Profile
+    include components/SNS
     include components/Achievement
     include components/Programing
     include components/Research
