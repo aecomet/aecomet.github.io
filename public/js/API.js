@@ -48,7 +48,7 @@ const API = {
 
         let fragment = document.createDocumentFragment();
 
-        $.getJSON('https://api.github.com/user?access_token=' + Key.Github.accessToken)
+        $.getJSON('https://api.github.com/users/hiyoko3')
             .done((data) => {
                 ghName.innerHTML = data.name;
                 ghDesc.innerHTML = data.bio;
@@ -58,7 +58,7 @@ const API = {
                 console.error(data.statusText);
         });
 
-        $.getJSON('https://api.github.com/user/repos?access_token=' + Key.Github.accessToken)
+        $.getJSON('https://api.github.com/users/hiyoko3/repos')
             .done((data) => {
                 for (let i = 0; i < data.length; i++) {
                     if (!data[i].private) {
