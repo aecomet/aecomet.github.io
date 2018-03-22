@@ -1,20 +1,19 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var postcss = require('gulp-postcss');
-var cssnext = require('postcss-cssnext');
-var plumber = require("gulp-plumber");
-var autoprefixer = require("gulp-autoprefixer");
-var browser = require("browser-sync");
+// template
 var pug = require('gulp-pug');
-var cssmin = require('gulp-cssmin');
-var jsmin = require('gulp-jsmin');
+// script
+var uglify = require('gulp-uglify');
+// style
+var sass = require('gulp-sass');
+var autoprefixer = require("gulp-autoprefixer");
+var cleanCSS = require('gulp-clean-css');
+// browser
+var browser = require("browser-sync");
+// other
+var rename = require('gulp-rename');
+var sourcemaps = require('gulp-sourcemaps');
 
-var assets = {
-    css: 'assets/**/*.scss',
-    js: 'assets/**/*.js'
-};
-
-var exports = {
+var path = {
     css: 'public/',
     js: 'public/'
 };
@@ -36,27 +35,34 @@ gulp.task('pug', function() {
 });
 
 gulp.task('sass', function() {
-    var processors = [
-        cssnext()
-    ];
-    return gulp.src(assets.css)
-        .pipe(plumber())
+
+    return gulp.src(path.css + '/style.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
-        .pipe(postcss(processors))
-        .pipe(cssmin())
-        .pipe(autoprefixer())
-        .pipe(gulp.dest(exports.css))
+        .pipe(sourcemaps.write({includeContent: false}))
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(autoprefixer(['last 3 versions', 'ie >= 8', 'Android >= 4', 'iOS >= 8']))
+        .pipe(cleanCSS())
+        .pipe( rename({
+            extname: '.min.css'
+        }))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(path.css))
         .pipe(browser.reload({stream: true}));
 });
 
 gulp.task('js', function(){
-    return gulp.src(assets.js)
-        .pipe(jsmin())
-        .pipe(gulp.dest(exports.js));
+    return gulp.src(path.js + '/script.js')
+        .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(uglify())
+        .pipe(rename({extname: '.min.js'}))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest(path.js))
+        .pipe(browser.reload({stream: true}));
 });
 
 gulp.task("default", ["server", "sass", "pug", "js"], function () {
-    gulp.watch(assets.css, ["sass"]);
-    gulp.watch(assets.js, ["js"]);
+    gulp.watch(path.css + '/style.scss', ["sass"]);
+    gulp.watch(path.js + '/script.js', ["js"]);
     gulp.watch('./index.pug', ["pug"]);
 });

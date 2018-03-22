@@ -7,10 +7,11 @@ html(lang="ja")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(content="ポートフォリオ" name="title")
     meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
-
+    //- Style we need
     link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css")
-    link(href="public/style.css" rel="stylesheet")
+    //- My Style
+    link(href="public/style.min.css" rel="stylesheet")
   body.grey.lighten-5
     nav.nav-extended.blue-grey.darken-4
       .nav-wrapper
@@ -40,8 +41,10 @@ html(lang="ja")
           span.right Made by&nbsp;
             a(href="//materializecss.com/" target="_blank") Materialize
 
+    //- Script we need
     script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyD1V4KWmDxjepgjMDEPIqfX7KBunNgP4Tk&callback=initMap")
     script(src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous")
     script(src="//cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js")
-    script(src="public/script.js" type="text/javascript")
     script(async src="//production-assets.codepen.io/assets/embed/ei.js")
+    //- My Script
+    script(src="public/script.min.js" type="text/javascript")
