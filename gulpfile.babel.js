@@ -1,19 +1,21 @@
-var gulp = require('gulp');
+let gulp = require('gulp');
+require('babel-register');
 // template
-var pug = require('gulp-pug');
+let pug = require('gulp-pug');
 // script
-var uglify = require('gulp-uglify');
+let uglify = require('gulp-uglify');
+let babel = require('gulp-babel');
 // style
-var sass = require('gulp-sass');
-var autoprefixer = require("gulp-autoprefixer");
-var cleanCSS = require('gulp-clean-css');
+let sass = require('gulp-sass');
+let autoprefixer = require('gulp-autoprefixer');
+let cleanCSS = require('gulp-clean-css');
 // browser
-var browser = require("browser-sync");
+let browser = require('browser-sync');
 // other
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
+let rename = require('gulp-rename');
+let sourcemaps = require('gulp-sourcemaps');
 
-var path = {
+const path = {
     css: 'public/',
     js: 'public/'
 };
@@ -54,6 +56,7 @@ gulp.task('sass', function() {
 gulp.task('js', function(){
     return gulp.src(path.js + '/script.js')
         .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(babel())
         .pipe(uglify())
         .pipe(rename({extname: '.min.js'}))
         .pipe(sourcemaps.write('./'))

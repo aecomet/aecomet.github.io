@@ -1,4 +1,4 @@
-$(function () {
+$(() => {
     // Enable Modal
     $('.modal').modal();
     controlPagePosition();
