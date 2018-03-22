@@ -1,6 +1,7 @@
+// TODO: you must rename to 'Key.js'
 const Key = {
     Qiita: {
-        'appId': '111',
+        'appId': '',
         'url': ''
     }
 };

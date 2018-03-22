@@ -48,3 +48,18 @@ html(lang="ja")
     script(async src="//production-assets.codepen.io/assets/embed/ei.js")
     //- My Script
     script(src="public/script.min.js" type="text/javascript")
+    script.
+        // Called By Google Maps JavaScript API
+        function initMap() {
+            var POSITIONS = [
+                {id: "#map-koriyama", center: {lat: 34.648078, lng: 135.790295}},
+                {id: "#map-hitachi", center: {lat: 36.590654, lng: 140.662153}}
+            ];
+            for (var i = 0; i < POSITIONS.length; i++) {
+                var map = new google.maps.Map(document.querySelector(POSITIONS[i].id), {
+                    zoom: 16,
+                    center: POSITIONS[i].center
+                });
+                var marker = new google.maps.Marker({position: POSITIONS[i].center, map: map});
+            }
+        }

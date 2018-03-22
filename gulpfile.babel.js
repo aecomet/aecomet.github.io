@@ -4,7 +4,10 @@ require('babel-register');
 let pug = require('gulp-pug');
 // script
 let uglify = require('gulp-uglify');
-let babel = require('gulp-babel');
+let browserify = require('browserify');
+let babelify = require('babelify');
+let buffer = require('vinyl-buffer');
+let source = require('vinyl-source-stream');
 // style
 let sass = require('gulp-sass');
 let autoprefixer = require('gulp-autoprefixer');
@@ -14,6 +17,7 @@ let browser = require('browser-sync');
 // other
 let rename = require('gulp-rename');
 let sourcemaps = require('gulp-sourcemaps');
+
 
 const path = {
     css: 'public/',
@@ -54,11 +58,15 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function(){
-    return gulp.src(path.js + '/script.js')
+    return browserify({
+            entries: [path.js + '/script.js'],
+            transform: ['babelify']
+        })
+        .bundle()
+        .pipe(source('script.min.js'))
+        .pipe(buffer())
         .pipe(sourcemaps.init({loadMaps: true}))
-        .pipe(babel())
         .pipe(uglify())
-        .pipe(rename({extname: '.min.js'}))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(path.js))
         .pipe(browser.reload({stream: true}));
