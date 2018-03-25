@@ -64,7 +64,7 @@ const API = {
                     if (!data[i].private) {
                         let $li = document.createElement('li');
                         $li.classList.add('collection-item');
-                        $li.innerHTML = '<a href="' + data[i].html_url + '">' + data[i].full_name + '</a>';
+                        $li.innerHTML = '<a href="' + data[i].html_url + '" target="_blank">' + data[i].full_name + '</a>';
                         fragment.appendChild($li);
                     }
                 }

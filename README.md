@@ -1,16 +1,17 @@
 ## My portfolio
 
-### [View](https://hiyoko3.github.io/)
+### [Go to web page.](https://hiyoko3.github.io/)
 
 This page introduces my profile.
 
 Contents show below lines.
 
     - Base Info
+    - SNS data
     - Achievement
     - Programing Skill
     - My graduate research
-    - Hobby
+    - Others
     
 ## Development environment
 
@@ -29,6 +30,9 @@ Also, it uses the following tools and APIs.
 - node.js
 - pug/jade
 - sass
+- Facebook API
+- Qiita API
+- Github API
 
 ## How to set up and deploy
 
