@@ -1,0 +1,18 @@
+{
+  "ja": {
+    "header": [
+      "プロフィール",
+      "実績",
+      "大学関連",
+      "リンク"
+    ]
+  },
+  "en": {
+    "header": [
+      "Profile",
+      "Achievement",
+      "University",
+      "Link"
+    ]
+  }
+}
