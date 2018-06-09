@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.conf.js --inline --hotOnly | webpack --config webpack.conf.js --devtool source-map --watch",
     "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
+    "clear:hot": "rm dist/*.hot-update.*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

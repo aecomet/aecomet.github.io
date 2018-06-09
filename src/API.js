@@ -5,7 +5,7 @@
 import axiosBase from 'axios'
 
 /* === URL === */
-const baseURL = 'http://localhost:7777/static/data/'
+const baseURL = 'http://localhost:7777/'
 
 const axios = axiosBase.create({
     baseURL: `${baseURL}`,
