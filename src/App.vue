@@ -2,7 +2,7 @@
     v-app(app)
         v-toolbar(color="grey darken-4" :scroll-threshold="isHide" flat app dark dense scroll-off-screen)
             v-toolbar-side-icon
-            v-toolbar-title Portfolio
+            v-toolbar-title {{ $t('base.title') }}
             v-spacer
             v-toolbar-items.hidden-sm-and-down
                 v-tabs(slot="extension" v-model="tab" color="grey darken-4" slider-color="white" right)
@@ -10,8 +10,8 @@
             v-menu(transition="slide-x-transition")
                 v-btn(icon slot="activator" dark): v-icon more_vert
                 v-list
-                    v-list-tile(@click=""): v-list-tile-title JP
-                    v-list-tile(@click=""): v-list-tile-title EN
+                    v-list-tile(@click="changeLanguage('ja')"): v-list-tile-title JP
+                    v-list-tile(@click="changeLanguage('en')"): v-list-tile-title EN
 
         //- Main Contents
         v-content.grey.darken-4
@@ -26,6 +26,7 @@
 
 <script>
     'use strict'
+    let vm = null
 
     export default {
         components: {},
@@ -35,12 +36,17 @@
             tab: null
         }),
         props: {},
-        created () {},
-        mounted () {
-            console.warn(this.$t("data"))
-            console.warn(this.$t("base"))
+        created () {
+            vm = this
         },
-        methods: {},
+        mounted () {
+        },
+        methods: {
+            changeLanguage (code) {
+                vm.$i18n.locale = code
+                vm.$forceUpdate()
+            }
+        },
         computed: {
             isHide: (e) => (e.drawer) ? 10000 : 100
         }

@@ -1,5 +1,6 @@
 {
   "ja": {
+    "title": "ポートフォリオ",
     "header": [
       { "name": "プロフィール", "href": "/" },
       { "name": "学歴/職歴", "href": "/resume" },
@@ -9,6 +10,7 @@
     "not_found": "お探しのページは存在しません．"
   },
   "en": {
+    "title": "Portfolio",
     "header": [
       { "name": "Profile", "href": "/" },
       { "name": "Resume", "href": "/resume" },
