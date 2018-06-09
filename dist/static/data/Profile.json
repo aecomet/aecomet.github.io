@@ -1,0 +1,74 @@
+{
+  "ja": {
+    "introduction": "こんにちは，世界",
+    "profile": {
+      "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
+      "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
+      "favorite_foods": [
+        "寿司",
+        "天ぷら",
+        "蕎麦",
+        "甘いもの全般"
+      ],
+      "favorite_artists": [
+        "L'arc〜en〜Ciel",
+        "SCANDAL",
+        "福山雅治",
+        "東方神起",
+        "やなぎなぎ",
+        "柴咲コウ",
+        "桑田佳祐"
+      ],
+      "favorite_persons": [
+        "明石家さんま"
+      ],
+      "word": "果報は寝て待て",
+      "from": "福島県郡山市",
+      "stay": "茨城県日立市",
+      "hobbies": [
+        "映画鑑賞",
+        "読書",
+        "ランニング",
+        "ドライブ",
+        "アニメ / 漫画 / ゲーム",
+        "プログラミング"
+      ]
+    }
+  },
+  "en": {
+    "introduction": "Hello World",
+    "profile": {
+      "name": "Tatsuya Oyanagi",
+      "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
+      "favorite_foods": [
+        "Sushi",
+        "Tempura",
+        "Soba",
+        "Sweets"
+      ],
+      "favorite_artists": [
+        "L'arc〜en〜Ciel",
+        "SCANDAL",
+        "Masaharu Fukuyama",
+        "Tohoshinki",
+        "Yanaginagi",
+        "Koh Shibasaki",
+        "Keisuke Kuwata"
+      ],
+      "favorite_persons": [
+        "Sanma Akashiya"
+      ],
+      "word": "Everything comes to those who wait",
+      "from": "Koriyama city, Fukushima Prefecture",
+      "stay": "Hitachi city, Ibaraki Prefecture",
+      "hobbies": [
+        "Watching movies",
+        "Reading books",
+        "Running",
+        "Driving",
+        "Anime / Managa / Game",
+        "Programing"
+      ]
+    }
+  }
+}

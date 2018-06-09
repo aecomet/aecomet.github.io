@@ -1,5 +1,6 @@
 *.idea/
 node_modules/
 *.DS_Store
-*/**/Key.js
+*/Key.js
 package-lock.json
+*.hot-update.*

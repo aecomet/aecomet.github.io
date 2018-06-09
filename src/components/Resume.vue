@@ -1,11 +1,12 @@
 <template lang="pug">
-    v-layout(row wrap)#university
+    v-layout(row wrap)#resume
+        p resume
 
 </template>
 
 <script>
     export default {
-        name: "University"
+        name: "Resume"
     }
 </script>
 

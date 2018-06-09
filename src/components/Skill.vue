@@ -1,14 +1,13 @@
 <template lang="pug">
-    v-layout(row wrap)#links
-        p link
+    v-layout(row wrap)#skill
+        span skill
 
 </template>
 
 <script>
     'use strict'
-
     export default {
-        name: "Link",
+        name: "Skill",
         data: () => ({}),
         props: {},
         created () {},

@@ -6,11 +6,17 @@
             v-spacer
             v-toolbar-items.hidden-sm-and-down
                 v-tabs(slot="extension" v-model="tab" color="grey darken-4" slider-color="white" right)
-                    v-tab(v-for="i in 3" :key="i" :href="`#tab-${i}`") Item {{ i }}
+                    v-tab(v-for="(header, idx) in $t('base.header')" :key="idx" :href="`#tab-${idx}`" :to="header.href") {{ header.name }}
+            v-menu(transition="slide-x-transition")
+                v-btn(icon slot="activator" dark): v-icon more_vert
+                v-list
+                    v-list-tile(@click=""): v-list-tile-title JP
+                    v-list-tile(@click=""): v-list-tile-title EN
 
         //- Main Contents
         v-content.grey.darken-4
             v-container(fluid)
+                router-view
 
         //- footer
         v-footer(app).grey.darken-4
@@ -30,7 +36,10 @@
         }),
         props: {},
         created () {},
-        mounted () {},
+        mounted () {
+            console.warn(this.$t("data"))
+            console.warn(this.$t("base"))
+        },
         methods: {},
         computed: {
             isHide: (e) => (e.drawer) ? 10000 : 100

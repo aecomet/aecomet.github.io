@@ -53,6 +53,8 @@ let baseWebpack = {
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
+        /* === Copy Static files === */
+        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static'), to: path.join(__dirname, 'dist/static') } ]),
     ],
     // Output config
     output: {
