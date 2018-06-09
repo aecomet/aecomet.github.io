@@ -19,7 +19,9 @@ let baseWebpack = {
     // If mode is "development", javascript files output with adding source map.
     mode: environment,
     entry: {
-        app: path.resolve(__dirname, 'src/main.js') // The main javascript file
+        app: path.resolve(__dirname, 'src/main.js'), // The main javascript file
+        component: path.resolve(__dirname, 'src/components/index.js'), // The main javascript file
+        data: path.resolve(__dirname, 'src/static/data/index.js') // The main javascript file
     },
     optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
         splitChunks: {
@@ -35,6 +37,7 @@ let baseWebpack = {
         minimizer: []
     },
     plugins: [
+        new VueLoaderPlugin(),
         // === Compile `index.pug` === //
         new HTMLWebpackPlugin({
             filename: 'index.html',
@@ -54,7 +57,7 @@ let baseWebpack = {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
         /* === Copy Static files === */
-        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static'), to: path.join(__dirname, 'dist/static') } ]),
+        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
     ],
     // Output config
     output: {
@@ -147,7 +150,6 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 } else {
     baseWebpack.plugins = baseWebpack.plugins.concat([
         new HardSourceWebpackPlugin(),
-        new VueLoaderPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ])

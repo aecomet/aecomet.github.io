@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.conf.js --inline --hotOnly | webpack --config webpack.conf.js --devtool source-map --watch",
-    "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
-    "clear:hot": "rm dist/*.hot-update.*",
+    "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize || rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
+    "clear": "rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -12,18 +12,23 @@ import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
 
 // Components
-import Profile from '@/components/Profile'
-import Skill from '@/components/Skill'
-import Resume from '@/components/Resume'
-import Link from '@/components/Link'
-import NotFound from '@/components/NotFound'
+import {
+    Profile,
+    Resume,
+    Skill,
+    Link,
+    NotFound
+} from '@/components/index'
+
 
 // Initial Data
-import BaseJSON from '@/static/data/base.json'
-import ProfileJSON from '@/static/data/base.json'
-import ResumeJSON from '@/static/data/base.json'
-import SkillJSON from '@/static/data/base.json'
-import LinkJSON from '@/static/data/base.json'
+import {
+    BaseJSON,
+    ProfileJSON,
+    ResumeJSON,
+    SkillJSON,
+    LinkJSON
+} from '@/static/data/index'
 
 const messages = {
     ja: {

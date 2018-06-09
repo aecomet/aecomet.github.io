@@ -7,6 +7,7 @@
       { "name": "スキル", "href": "/skill" },
       { "name": "リンク", "href": "/link" }
     ],
+    "attribute": "大柳 達哉",
     "not_found": "お探しのページは存在しません．"
   },
   "en": {
@@ -17,6 +18,7 @@
       { "name": "Skill", "href": "/skill" },
       { "name": "Link", "href": "/link" }
     ],
+    "attribute": "Tatsuya Oyanagi",
     "not_found": "The page doesn't exist."
   }
 }

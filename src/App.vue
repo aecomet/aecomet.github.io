@@ -21,7 +21,7 @@
         //- footer
         v-footer(app).grey.darken-4
             v-layout(row).text-xs-right.pa-1
-                v-flex(xs12).white--text &copy; {{ new Date().getFullYear() }} Tatsuya Oyanagi
+                 v-flex(xs12).white--text.mr-3 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script>
