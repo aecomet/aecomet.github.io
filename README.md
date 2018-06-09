@@ -1,60 +1,38 @@
-## My portfolio
+# My portfolio
 
-### [Go to web page.](https://hiyoko3.github.io/)
+__[Production](https://hiyoko3.github.io/)__
 
-This page introduces my profile.
+This application introduces my portfolio.
 
-Contents show below lines.
-
-    - Base Info
-    - SNS data
-    - Achievement
-    - Programing Skill
-    - My graduate research
-    - Others
-    
 ## Development environment
 
-This app uses some technologies.
+Using some technologies.
 
 - HTML5
 - CSS3
 - JavaScript
+    - EcmaScript
 
-Also, it uses the following tools and APIs.
+## Developing tolls.
 
-- gulp
-- google maps API
-- code pen API
-- npm
-- node.js
-- pug/jade
-- sass
-- Facebook API
-- Qiita API
-- Github API
+- Webpack
 
-## How to set up and deploy
+## How to set up
 
-1. Clone from github
+1. Clone from a github
 
         $ git clone git@github.com:hiyoko3/hiyoko3.github.io.git
         
-2. Install packages
+2. Installing packages
 
         $ npm i
         
-3. Develop an app
+3. Developing an app
 
-        $ gulp
-        
+        $ npm run dev
+
     If browser start up, we can edit any codes.
-    
-4. Deploy
 
-        $ git add .
-        $ git commit
-        $ git push origin master
-        
-        
-        
+4. Building up the app
+
+        $ npm run build
