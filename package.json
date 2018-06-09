@@ -4,6 +4,8 @@
   "description": "last committed => 2017/05/08",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --config webpack.conf.js | webpack --config webpack.conf.js --devtool source-map --watch",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +19,7 @@
   },
   "homepage": "https://github.com/hiyoko3/hiyoko3.github.io#readme",
   "devDependencies": {
-    "autoprefixer": "^8.6.1",
+    "autoprefixer": "^8.6.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-plugin-istanbul": "^4.1.6",
@@ -28,7 +30,7 @@
     "babel-register": "^6.26.0",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
-    "extract-text-webpack-plugin": "^3.0.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "hard-source-webpack-plugin": "^0.7.5",
     "html-loader": "^0.5.5",
@@ -38,7 +40,9 @@
     "path": "^0.12.7",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
+    "raw-loader": "^0.5.1",
     "style-loader": "^0.21.0",
+    "stylus-loader": "^3.0.2",
     "uglify-es": "^3.3.9",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",

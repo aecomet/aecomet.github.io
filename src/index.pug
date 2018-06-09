@@ -7,7 +7,21 @@ html(lang="ja")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(content="ポートフォリオ" name="title")
     meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
-    //- Style we need
+    meta(name="theme-color" content="#4DBA87")
+
+    //- /* ==== iOS Theme ==== */
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black")
+    meta(name="apple-mobile-web-app-title" content="registerapp")
+    //- link(rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/apple-touch-icon-152x152.png")
+
+    //- /* ==== Windows Theme ==== */
+    //- meta(name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/msapplication-icon-144x144.png")
+    //- meta(name="msapplication-TileColor" content="#000000")
+
+    //- /* ==== Material Icons ==== */
     link(href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-    //- My Style
-  body.grey.lighten-5
+  body
+    noscript.
+      This is your fallback content in case JavaScript fails to load.
+    #app

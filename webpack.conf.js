@@ -3,12 +3,20 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+
+function assetsPath (_path) {
+    const assetsSubDirectory = 'static'
+    return path.posix.join(assetsSubDirectory, _path)
+}
 
 module.exports = {
     // If mode is "production", the app is optimized.
     // If mode is "development", javascript files output with adding source map.
-    mode: 'production',
-    entry: path.resolve(__dirname, 'src/main.js'), // The main javascript file
+    mode: 'development',
+    entry: {
+        app: path.resolve(__dirname, 'src/main.js') // The main javascript file
+    },
     optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
         splitChunks: {
             cacheGroups: {
@@ -21,13 +29,13 @@ module.exports = {
             }
         },
         minimizer: [
-            new UglifyJSPlugin({
-                uglifyOptions: {
-                    compress: {
-                        drop_console: true
-                    }
-                }
-            })
+            // new UglifyJSPlugin({
+            //     uglifyOptions: {
+            //         compress: {
+            //             drop_console: true
+            //         }
+            //     }
+            // })
         ]
     },
     plugins: [
@@ -45,12 +53,13 @@ module.exports = {
             },
             inject: true,
             chunksSortMode: 'dependency',
-            excludeChunks: [ 'auth' ]
             // serviceWorkerLoader: `<script>${fs.readFileSync(path.resolve(__dirname, 'src/service-worker-conf.js'), 'utf-8')}</script>`
         }),
+        new HardSourceWebpackPlugin(),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
+        // new webpack.HotModuleReplacementPlugin(),
     ],
     // Output config
     output: {
@@ -61,33 +70,41 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                use: 'vue-loader',
+                loader: 'vue-loader',
                 options: {
                     hotReload: false // disables Hot Reload
                 }
             },
             {
                 test: /(\.css$)/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader"
+                loader: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: 'css-loader'
                 })
             },
             {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url-loader?mimetype=image/svg+xml'
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: assetsPath('img/[name].[hash:7].[ext]')
+                }
             },
             {
-                test: /\.woff(\d+)?(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url-loader?mimetype=application/font-woff'
+                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: assetsPath('media/[name].[hash:7].[ext]')
+                }
             },
             {
-                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url-loader?mimetype=application/vnd.ms-fontobject'
-            },
-            {
-                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url-loader?mimetype=application/x-font-ttf'
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    name: assetsPath('fonts/[name].[hash:7].[ext]')
+                }
             },
             {
                 test: /\.html$/,
@@ -107,8 +124,11 @@ module.exports = {
                     }
                 ]
             },
-        ],
-
+            {
+                test: /\.styl$/,
+                loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+            }
+        ]
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
