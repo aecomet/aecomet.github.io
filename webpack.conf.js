@@ -1,19 +1,23 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const CopywebpackPlugin = require('copy-webpack-plugin');
 
-function assetsPath (_path) {
+function assetsPath(_path) {
     const assetsSubDirectory = 'static'
     return path.posix.join(assetsSubDirectory, _path)
 }
 
-module.exports = {
+const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
+
+let baseWebpack = {
     // If mode is "production", the app is optimized.
     // If mode is "development", javascript files output with adding source map.
-    mode: 'development',
+    mode: environment,
     entry: {
         app: path.resolve(__dirname, 'src/main.js') // The main javascript file
     },
@@ -28,18 +32,9 @@ module.exports = {
                 }
             }
         },
-        minimizer: [
-            // new UglifyJSPlugin({
-            //     uglifyOptions: {
-            //         compress: {
-            //             drop_console: true
-            //         }
-            //     }
-            // })
-        ]
+        minimizer: []
     },
     plugins: [
-        new VueLoaderPlugin(),
         // === Compile `index.pug` === //
         new HTMLWebpackPlugin({
             filename: 'index.html',
@@ -55,11 +50,9 @@ module.exports = {
             chunksSortMode: 'dependency',
             // serviceWorkerLoader: `<script>${fs.readFileSync(path.resolve(__dirname, 'src/service-worker-conf.js'), 'utf-8')}</script>`
         }),
-        new HardSourceWebpackPlugin(),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
-        // new webpack.HotModuleReplacementPlugin(),
     ],
     // Output config
     output: {
@@ -72,7 +65,7 @@ module.exports = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
-                    hotReload: false // disables Hot Reload
+                    hotReload: true // disables Hot Reload
                 }
             },
             {
@@ -137,18 +130,36 @@ module.exports = {
             '@': path.resolve(__dirname, 'src/')
         }
     },
-    // local server config
-    devServer : {
-        port            : 7777,                         // port number
-        progress        : true,                         // Show progress on console.
-        inline          : true,                         // The mode of inline.
-        clientLogLevel  : 'info',                       // The log level(none, error, warning, info)
-        contentBase     : path.join(__dirname, '/dist/'),    // Document root on server
-        publicPath      : '/dist/',                     // Temporary path on virtual memory
-        hot             : true,                         // use HMR
-        watchOptions    : {
-            poll            : true                      // ファイルの更新が正しく検知されない場合に利用
-        },
-    },
-    devtool: 'inline-source-map',
 };
+
+if (process.env.NODE_ENV === 'PRODUCTION') {
+    baseWebpack.optimization.minimizer.push(
+        new UglifyJSPlugin({
+            uglifyOptions: {
+                compress: {
+                    drop_console: true
+                }
+            }
+        })
+    )
+} else {
+    baseWebpack.plugins = baseWebpack.plugins.concat([
+        new HardSourceWebpackPlugin(),
+        new VueLoaderPlugin(),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
+    ])
+    baseWebpack['devtool'] = 'inline-source-map'
+    // local server config
+    baseWebpack['devServer'] = {
+        port: 7777,                         // port number
+        contentBase: path.join(__dirname, 'dist/'),    // Document root on server
+        // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
+        progress: true,                         // Show progress on console.
+        inline: true,                         // The mode of inline.
+        hot: true,                         // use HMR
+        clientLogLevel: 'info',                       // The log level(none, error, warning, info)
+    }
+}
+
+module.exports = baseWebpack

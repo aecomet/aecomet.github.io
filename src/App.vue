@@ -4,6 +4,12 @@
         v-content.grey.darken-3
             v-container(fluid)
                 p.white--text hello world
+                p.white--text hello world
+                p.white--text hello world
+                p.white--text hello world
+                p.white--text hello world
+                p.white--text piyo
+                p.white--text hoge
 </template>
 
 <script>

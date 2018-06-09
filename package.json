@@ -4,8 +4,8 @@
   "description": "last committed => 2017/05/08",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.conf.js | webpack --config webpack.conf.js --devtool source-map --watch",
-    "build": "",
+    "dev": "webpack-dev-server --config webpack.conf.js --inline --hotOnly | webpack --config webpack.conf.js --devtool source-map --watch",
+    "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.26.0",
+    "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
