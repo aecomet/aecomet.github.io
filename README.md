@@ -22,11 +22,11 @@ Using some technologies.
 1. Clone from a github
 
         $ git clone git@github.com:hiyoko3/hiyoko3.github.io.git
-        
+
 2. Installing packages
 
         $ npm i
-        
+
 3. Developing an app
 
         $ npm run dev
