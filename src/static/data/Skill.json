@@ -193,6 +193,15 @@
           "Django",
           "Django Rest Framework"
         ]
+      },
+      {
+        "name": "Database",
+        "experience": 60,
+        "remark": [
+          "MySQL",
+          "SQLite",
+          "Mongo DB"
+        ]
       }
     ]
   }
