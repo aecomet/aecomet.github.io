@@ -3,6 +3,20 @@
     "introduction": "こんにちは，世界",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
     "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
+    "univs": [
+      {
+        "name": "茨城大学",
+        "href": "http://www.ibaraki.ac.jp/index.html"
+      },
+      {
+        "name": "茨城大学院理工学研究科",
+        "href": "http://www.gse.ibaraki.ac.jp/"
+      },
+      {
+        "name": "情報工学専攻",
+        "href": "http://www.cis.ibaraki.ac.jp/"
+      }
+    ],
     "from": {
       "name": "福島県郡山市",
       "center": {
@@ -51,6 +65,20 @@
     "introduction": "Hello World",
     "name": "Tatsuya Oyanagi",
     "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
+    "univs": [
+      {
+        "name": "Ibaraki University",
+        "href": "http://www.ibaraki.ac.jp/index.html"
+      },
+      {
+        "name": "Graduate School of Science and Engineering",
+        "href": "http://www.gse.ibaraki.ac.jp/"
+      },
+      {
+        "name": "Major in Computer and Information Sciences",
+        "href": "http://www.cis.ibaraki.ac.jp/"
+      }
+    ],
     "from": {
       "name": "Koriyama city, Fukushima Prefecture",
       "center": {

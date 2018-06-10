@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8e1efb88e9e10d91d074"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ec50b18f03f5b868875a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1112,39 +1112,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Profile",
     data: () => ({
-        univs: [
-            {
-                name_ja: '茨城大学',
-                name_en: 'Ibaraki University',
-                href: 'http://www.ibaraki.ac.jp/index.html'
-            },
-            {
-                name_ja: '茨城大学院理工学研究科',
-                name_en: 'Graduate School of Science and Engineering',
-                href: 'http://www.gse.ibaraki.ac.jp/'
-            },
-            {
-                name_ja: '情報工学専攻',
-                name_en: 'Major in Computer and Information Sciences',
-                href: 'http://www.cis.ibaraki.ac.jp/'
-            }
-        ],
         opts: {
             zoom: 17,
             scrollWheel: false,
         }
     }),
     props: {},
-    created () {},
-    mounted () {},
+    created() {
+    },
+    mounted() {
+    },
     methods: {},
     computed: {}
 });
@@ -1161,6 +1144,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-cute-timeline */ "./node_modules/vue-cute-timeline/dist/vue-cute-timeline.js");
+/* harmony import */ var vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1168,8 +1178,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Resume"
+    name: "Resume",
+    components: {
+        Timeline: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["Timeline"],
+        TimelineItem: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["TimelineItem"],
+        TimelineTitle: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["TimelineTitle"]
+    },
+    data: () => ({}),
+    props: {},
+    created () {},
+    mounted () {},
+    methods: {},
+    computed: {}
 });
 
 
@@ -1509,118 +1533,105 @@ var render = function() {
             { attrs: { hover: "" } },
             [
               _c(
-                "v-container",
-                { attrs: { fluid: "", "grid-list-lg": "" } },
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
                 [
                   _c(
-                    "v-layout",
-                    { attrs: { row: "", wrap: "" } },
+                    "v-flex",
+                    { attrs: { md5: "", xs12: "" } },
                     [
+                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                        _c("span", { staticClass: "headline" }, [
+                          _vm._v("My Profile")
+                        ])
+                      ]),
+                      _c("v-card-text", { staticClass: "pa-2" }, [
+                        _c("div", { staticClass: "my-2 headline" }, [
+                          _vm._v(_vm._s(_vm.$t("profile.name")))
+                        ]),
+                        _c("div", { staticClass: "mt-3 my-2 title" }, [
+                          _vm._v(_vm._s(_vm.$t("profile.status")))
+                        ])
+                      ]),
                       _c(
-                        "v-flex",
-                        { attrs: { md5: "", xs12: "" } },
+                        "v-card-actions",
                         [
                           _c(
-                            "v-card-title",
-                            { attrs: { "primary-title": "" } },
-                            [
-                              _c("span", { staticClass: "headline" }, [
-                                _vm._v("My Profile")
-                              ])
-                            ]
-                          ),
-                          _c("v-card-text", { staticClass: "pa-2" }, [
-                            _c("div", { staticClass: "my-2 headline" }, [
-                              _vm._v(_vm._s(_vm.$t("profile.name")))
-                            ]),
-                            _c("div", { staticClass: "mt-3 my-2 title" }, [
-                              _vm._v(_vm._s(_vm.$t("profile.status")))
-                            ])
-                          ]),
-                          _c(
-                            "v-card-actions",
-                            [
-                              _c(
-                                "v-list",
+                            "v-list",
+                            {
+                              staticStyle: { width: "100%" },
+                              attrs: { light: "" }
+                            },
+                            _vm._l(_vm.$t("profile.univs"), function(u, idx) {
+                              return _c(
+                                "v-list-tile",
                                 {
-                                  staticStyle: { width: "100%" },
+                                  key: "univ-" + idx,
                                   attrs: {
-                                    "two-line": "",
-                                    dense: "",
-                                    light: ""
-                                  }
+                                    href: u.href,
+                                    target: "_blank",
+                                    avatar: "",
+                                    ripple: ""
+                                  },
+                                  on: { click: function($event) {} }
                                 },
-                                _vm._l(_vm.univs, function(u, idx) {
-                                  return _c(
-                                    "v-list-tile",
-                                    {
-                                      key: "univ-" + idx,
-                                      attrs: { href: u.href, target: "_blank" },
-                                      on: { click: function($event) {} }
-                                    },
+                                [
+                                  _c(
+                                    "v-list-tile-action",
+                                    [
+                                      _c("v-icon", { attrs: { color: "" } }, [
+                                        _vm._v("school")
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-list-tile-content",
                                     [
                                       _c(
-                                        "v-list-tile-content",
-                                        [
-                                          _c(
-                                            "v-list-tile-title",
-                                            { staticClass: "orange--text" },
-                                            [_vm._v(_vm._s(u.name_ja))]
-                                          ),
-                                          _c("v-list-tile-sub-title", [
-                                            _vm._v(_vm._s(u.name_en))
-                                          ])
-                                        ],
-                                        1
+                                        "v-list-tile-title",
+                                        { staticClass: "orange--text" },
+                                        [_vm._v(_vm._s(u.name))]
                                       )
                                     ],
                                     1
                                   )
-                                })
+                                ],
+                                1
                               )
-                            ],
-                            1
+                            })
                           )
                         ],
                         1
-                      ),
-                      _c(
-                        "v-flex",
-                        { attrs: { md7: "", xs12: "" } },
-                        [
-                          _c(
-                            "v-card-title",
-                            {
-                              staticClass: "text-xs-center",
-                              attrs: { "primary-title": "" }
-                            },
-                            [
-                              _c("span", { staticClass: "headline" }, [
-                                _vm._v("Hobby")
-                              ])
-                            ]
-                          ),
-                          _c("v-data-table", {
-                            staticClass: "elevation-1",
-                            attrs: {
-                              items: _vm.$t("profile.hobbies"),
-                              "hide-actions": "",
-                              "hide-headers": ""
-                            },
-                            scopedSlots: _vm._u([
-                              {
-                                key: "items",
-                                fn: function(props) {
-                                  return [
-                                    _c("td", [_vm._v(_vm._s(props.item))])
-                                  ]
-                                }
-                              }
-                            ])
-                          })
-                        ],
-                        1
                       )
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-flex",
+                    { attrs: { md7: "", xs12: "" } },
+                    [
+                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                        _c("span", { staticClass: "headline" }, [
+                          _vm._v("Hobby")
+                        ])
+                      ]),
+                      _c("v-data-table", {
+                        staticClass: "elevation-1",
+                        attrs: {
+                          items: _vm.$t("profile.hobbies"),
+                          "hide-actions": "",
+                          "hide-headers": ""
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "items",
+                            fn: function(props) {
+                              return [_c("td", [_vm._v(_vm._s(props.item))])]
+                            }
+                          }
+                        ])
+                      })
                     ],
                     1
                   )
@@ -1746,9 +1757,147 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-layout", { attrs: { row: "", wrap: "", id: "resume" } }, [
-    _c("p", [_vm._v("resume")])
-  ])
+  return _c(
+    "v-layout",
+    { attrs: { row: "", wrap: "", "justify-center": "", id: "resume" } },
+    [
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.schoolTitle")))
+          ]),
+          _c(
+            "timeline",
+            _vm._l(_vm.$t("resume.school"), function(school, idx) {
+              return _c(
+                "timeline-item",
+                { key: "school-" + idx, attrs: { hollow: school.hollow } },
+                [
+                  _c(
+                    "v-card",
+                    { staticClass: "pa-3", attrs: { flat: "", tile: "" } },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "subheading",
+                          attrs: { href: school.href }
+                        },
+                        [_vm._v(_vm._s(school.name))]
+                      ),
+                      _c("div", { staticClass: "caption" }, [
+                        _vm._v(
+                          _vm._s(school.start) + " - " + _vm._s(school.end)
+                        )
+                      ]),
+                      _c("div", { staticClass: "body-1" }, [
+                        _vm._v(_vm._s(school.remark))
+                      ])
+                    ]
+                  )
+                ],
+                1
+              )
+            })
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.paperTitle")))
+          ]),
+          _vm._l(_vm.$t("resume.paper"), function(p, idx) {
+            return _c(
+              "v-card",
+              {
+                key: "paper-" + idx,
+                staticClass: "pa-3",
+                attrs: { flat: "", tile: "" }
+              },
+              [
+                _c("div", { staticClass: "title mb-1" }, [
+                  _vm._v(_vm._s(p.title))
+                ]),
+                _c("div", { staticClass: "subheading grey--text" }, [
+                  _vm._v(_vm._s(p.subtitle))
+                ]),
+                _c("div", { staticClass: "subheading grey--text" }, [
+                  _vm._v(_vm._s(p.member))
+                ])
+              ]
+            )
+          })
+        ],
+        2
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.researchTitle")))
+          ]),
+          _vm._l(_vm.$t("resume.research"), function(r, idx) {
+            return _c(
+              "v-card",
+              {
+                key: "research-" + idx,
+                staticClass: "my-3 pa-3",
+                attrs: { hover: "" }
+              },
+              [
+                _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                  _c("span", { staticClass: "title" }, [
+                    _vm._v(_vm._s(r.title))
+                  ])
+                ]),
+                _c(
+                  "v-card-text",
+                  [
+                    _c(
+                      "v-layout",
+                      { attrs: { row: "", wrap: "", "justify-center": "" } },
+                      _vm._l(r.images, function(img, idx) {
+                        return _c(
+                          "v-flex",
+                          { key: "img-" + idx, attrs: { md6: "", xs12: "" } },
+                          [
+                            _c("div", { staticClass: "text-xs-center" }, [
+                              _c("img", {
+                                attrs: {
+                                  src: img.src,
+                                  alt: img.alt,
+                                  width: "400",
+                                  height: "300"
+                                }
+                              })
+                            ])
+                          ]
+                        )
+                      })
+                    ),
+                    _c("div", { staticClass: "body-1 mt-2" }, [
+                      _vm._v(_vm._s(r.abstract))
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          })
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1817,7 +1966,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -1826,8 +1975,7 @@ if (true) {
     } else {
       api.reload('7ba5bd90', component.options)
     }
-    module.hot.accept(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug");
-(function () {
+    module.hot.accept(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
       api.rerender('7ba5bd90', {
         render: _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2130,7 +2278,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2139,8 +2287,7 @@ if (true) {
     } else {
       api.reload('bf1681ae', component.options)
     }
-    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug");
-(function () {
+    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
       api.rerender('bf1681ae', {
         render: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2596,7 +2743,7 @@ module.exports = {"ja":{},"en":{}};
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"introduction":"こんにちは，世界","name":"大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）","status":"茨城大学 大学院院 理工学研究科 情報工学専攻","from":{"name":"福島県郡山市","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"茨城県日立市","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["映画鑑賞","読書","ランニング","ドライブ","アニメ / 漫画 / ゲーム","プログラミング"],"favorites":{"foods":["寿司","天ぷら","蕎麦","甘いもの全般"],"artists":["L'arc〜en〜Ciel","SCANDAL","福山雅治","東方神起","やなぎなぎ","柴咲コウ","桑田佳祐"],"persons":["明石家さんま"],"word":"果報は寝て待て"}},"en":{"introduction":"Hello World","name":"Tatsuya Oyanagi","status":"Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University","from":{"name":"Koriyama city, Fukushima Prefecture","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"Hitachi city, Ibaraki Prefecture","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["Watching movies","Reading books","Running","Driving","Anime / Managa / Game","Programing"],"favorites":{"foods":["Sushi","Tempura","Soba","Sweets"],"artists":["L'arc〜en〜Ciel","SCANDAL","Masaharu Fukuyama","Tohoshinki","Yanaginagi","Koh Shibasaki","Keisuke Kuwata"],"persons":["Sanma Akashiya"],"word":"Everything comes to those who wait"}}};
+module.exports = {"ja":{"introduction":"こんにちは，世界","name":"大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）","status":"茨城大学 大学院院 理工学研究科 情報工学専攻","univs":[{"name":"茨城大学","href":"http://www.ibaraki.ac.jp/index.html"},{"name":"茨城大学院理工学研究科","href":"http://www.gse.ibaraki.ac.jp/"},{"name":"情報工学専攻","href":"http://www.cis.ibaraki.ac.jp/"}],"from":{"name":"福島県郡山市","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"茨城県日立市","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["映画鑑賞","読書","ランニング","ドライブ","アニメ / 漫画 / ゲーム","プログラミング"],"favorites":{"foods":["寿司","天ぷら","蕎麦","甘いもの全般"],"artists":["L'arc〜en〜Ciel","SCANDAL","福山雅治","東方神起","やなぎなぎ","柴咲コウ","桑田佳祐"],"persons":["明石家さんま"],"word":"果報は寝て待て"}},"en":{"introduction":"Hello World","name":"Tatsuya Oyanagi","status":"Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University","univs":[{"name":"Ibaraki University","href":"http://www.ibaraki.ac.jp/index.html"},{"name":"Graduate School of Science and Engineering","href":"http://www.gse.ibaraki.ac.jp/"},{"name":"Major in Computer and Information Sciences","href":"http://www.cis.ibaraki.ac.jp/"}],"from":{"name":"Koriyama city, Fukushima Prefecture","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"Hitachi city, Ibaraki Prefecture","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["Watching movies","Reading books","Running","Driving","Anime / Managa / Game","Programing"],"favorites":{"foods":["Sushi","Tempura","Soba","Sweets"],"artists":["L'arc〜en〜Ciel","SCANDAL","Masaharu Fukuyama","Tohoshinki","Yanaginagi","Koh Shibasaki","Keisuke Kuwata"],"persons":["Sanma Akashiya"],"word":"Everything comes to those who wait"}}};
 
 /***/ }),
 
@@ -2607,7 +2754,7 @@ module.exports = {"ja":{"introduction":"こんにちは，世界","name":"大柳
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"school":[],"job":[],"paper":[],"research":[]},"en":{"school":[],"job":[],"paper":[],"research":[]}};
+module.exports = {"ja":{"schoolTitle":"学歴","school":[{"name":"福島県立郡山東高等学校","start":"2010年4月","end":"2013年3月","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":"","hollow":false},{"name":"茨城大学工学部情報工学科","start":"2013年4月","end":"2017年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得","hollow":false},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017年4月","end":"2019年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定","hollow":true}],"paperTitle":"投稿論文","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"研究テーマ","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]},"en":{"schoolTitle":"Education","school":[{"name":"福島県立郡山東高等学校","start":"2010年4月","end":"2013年3月","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":""},{"name":"茨城大学工学部情報工学科","start":"2013年4月","end":"2017年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得"},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017年4月","end":"2019年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定"}],"paperTitle":"Papers","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"Research Title","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]}};
 
 /***/ }),
 

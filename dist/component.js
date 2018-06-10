@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8e1efb88e9e10d91d074"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ec50b18f03f5b868875a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1028,39 +1028,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Profile",
     data: () => ({
-        univs: [
-            {
-                name_ja: '茨城大学',
-                name_en: 'Ibaraki University',
-                href: 'http://www.ibaraki.ac.jp/index.html'
-            },
-            {
-                name_ja: '茨城大学院理工学研究科',
-                name_en: 'Graduate School of Science and Engineering',
-                href: 'http://www.gse.ibaraki.ac.jp/'
-            },
-            {
-                name_ja: '情報工学専攻',
-                name_en: 'Major in Computer and Information Sciences',
-                href: 'http://www.cis.ibaraki.ac.jp/'
-            }
-        ],
         opts: {
             zoom: 17,
             scrollWheel: false,
         }
     }),
     props: {},
-    created () {},
-    mounted () {},
+    created() {
+    },
+    mounted() {
+    },
     methods: {},
     computed: {}
 });
@@ -1077,6 +1060,33 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-cute-timeline */ "./node_modules/vue-cute-timeline/dist/vue-cute-timeline.js");
+/* harmony import */ var vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1084,8 +1094,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "Resume"
+    name: "Resume",
+    components: {
+        Timeline: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["Timeline"],
+        TimelineItem: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["TimelineItem"],
+        TimelineTitle: vue_cute_timeline__WEBPACK_IMPORTED_MODULE_0__["TimelineTitle"]
+    },
+    data: () => ({}),
+    props: {},
+    created () {},
+    mounted () {},
+    methods: {},
+    computed: {}
 });
 
 
@@ -1229,118 +1253,105 @@ var render = function() {
             { attrs: { hover: "" } },
             [
               _c(
-                "v-container",
-                { attrs: { fluid: "", "grid-list-lg": "" } },
+                "v-layout",
+                { attrs: { row: "", wrap: "" } },
                 [
                   _c(
-                    "v-layout",
-                    { attrs: { row: "", wrap: "" } },
+                    "v-flex",
+                    { attrs: { md5: "", xs12: "" } },
                     [
+                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                        _c("span", { staticClass: "headline" }, [
+                          _vm._v("My Profile")
+                        ])
+                      ]),
+                      _c("v-card-text", { staticClass: "pa-2" }, [
+                        _c("div", { staticClass: "my-2 headline" }, [
+                          _vm._v(_vm._s(_vm.$t("profile.name")))
+                        ]),
+                        _c("div", { staticClass: "mt-3 my-2 title" }, [
+                          _vm._v(_vm._s(_vm.$t("profile.status")))
+                        ])
+                      ]),
                       _c(
-                        "v-flex",
-                        { attrs: { md5: "", xs12: "" } },
+                        "v-card-actions",
                         [
                           _c(
-                            "v-card-title",
-                            { attrs: { "primary-title": "" } },
-                            [
-                              _c("span", { staticClass: "headline" }, [
-                                _vm._v("My Profile")
-                              ])
-                            ]
-                          ),
-                          _c("v-card-text", { staticClass: "pa-2" }, [
-                            _c("div", { staticClass: "my-2 headline" }, [
-                              _vm._v(_vm._s(_vm.$t("profile.name")))
-                            ]),
-                            _c("div", { staticClass: "mt-3 my-2 title" }, [
-                              _vm._v(_vm._s(_vm.$t("profile.status")))
-                            ])
-                          ]),
-                          _c(
-                            "v-card-actions",
-                            [
-                              _c(
-                                "v-list",
+                            "v-list",
+                            {
+                              staticStyle: { width: "100%" },
+                              attrs: { light: "" }
+                            },
+                            _vm._l(_vm.$t("profile.univs"), function(u, idx) {
+                              return _c(
+                                "v-list-tile",
                                 {
-                                  staticStyle: { width: "100%" },
+                                  key: "univ-" + idx,
                                   attrs: {
-                                    "two-line": "",
-                                    dense: "",
-                                    light: ""
-                                  }
+                                    href: u.href,
+                                    target: "_blank",
+                                    avatar: "",
+                                    ripple: ""
+                                  },
+                                  on: { click: function($event) {} }
                                 },
-                                _vm._l(_vm.univs, function(u, idx) {
-                                  return _c(
-                                    "v-list-tile",
-                                    {
-                                      key: "univ-" + idx,
-                                      attrs: { href: u.href, target: "_blank" },
-                                      on: { click: function($event) {} }
-                                    },
+                                [
+                                  _c(
+                                    "v-list-tile-action",
+                                    [
+                                      _c("v-icon", { attrs: { color: "" } }, [
+                                        _vm._v("school")
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _c(
+                                    "v-list-tile-content",
                                     [
                                       _c(
-                                        "v-list-tile-content",
-                                        [
-                                          _c(
-                                            "v-list-tile-title",
-                                            { staticClass: "orange--text" },
-                                            [_vm._v(_vm._s(u.name_ja))]
-                                          ),
-                                          _c("v-list-tile-sub-title", [
-                                            _vm._v(_vm._s(u.name_en))
-                                          ])
-                                        ],
-                                        1
+                                        "v-list-tile-title",
+                                        { staticClass: "orange--text" },
+                                        [_vm._v(_vm._s(u.name))]
                                       )
                                     ],
                                     1
                                   )
-                                })
+                                ],
+                                1
                               )
-                            ],
-                            1
+                            })
                           )
                         ],
                         1
-                      ),
-                      _c(
-                        "v-flex",
-                        { attrs: { md7: "", xs12: "" } },
-                        [
-                          _c(
-                            "v-card-title",
-                            {
-                              staticClass: "text-xs-center",
-                              attrs: { "primary-title": "" }
-                            },
-                            [
-                              _c("span", { staticClass: "headline" }, [
-                                _vm._v("Hobby")
-                              ])
-                            ]
-                          ),
-                          _c("v-data-table", {
-                            staticClass: "elevation-1",
-                            attrs: {
-                              items: _vm.$t("profile.hobbies"),
-                              "hide-actions": "",
-                              "hide-headers": ""
-                            },
-                            scopedSlots: _vm._u([
-                              {
-                                key: "items",
-                                fn: function(props) {
-                                  return [
-                                    _c("td", [_vm._v(_vm._s(props.item))])
-                                  ]
-                                }
-                              }
-                            ])
-                          })
-                        ],
-                        1
                       )
+                    ],
+                    1
+                  ),
+                  _c(
+                    "v-flex",
+                    { attrs: { md7: "", xs12: "" } },
+                    [
+                      _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                        _c("span", { staticClass: "headline" }, [
+                          _vm._v("Hobby")
+                        ])
+                      ]),
+                      _c("v-data-table", {
+                        staticClass: "elevation-1",
+                        attrs: {
+                          items: _vm.$t("profile.hobbies"),
+                          "hide-actions": "",
+                          "hide-headers": ""
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "items",
+                            fn: function(props) {
+                              return [_c("td", [_vm._v(_vm._s(props.item))])]
+                            }
+                          }
+                        ])
+                      })
                     ],
                     1
                   )
@@ -1466,9 +1477,147 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-layout", { attrs: { row: "", wrap: "", id: "resume" } }, [
-    _c("p", [_vm._v("resume")])
-  ])
+  return _c(
+    "v-layout",
+    { attrs: { row: "", wrap: "", "justify-center": "", id: "resume" } },
+    [
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.schoolTitle")))
+          ]),
+          _c(
+            "timeline",
+            _vm._l(_vm.$t("resume.school"), function(school, idx) {
+              return _c(
+                "timeline-item",
+                { key: "school-" + idx, attrs: { hollow: school.hollow } },
+                [
+                  _c(
+                    "v-card",
+                    { staticClass: "pa-3", attrs: { flat: "", tile: "" } },
+                    [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "subheading",
+                          attrs: { href: school.href }
+                        },
+                        [_vm._v(_vm._s(school.name))]
+                      ),
+                      _c("div", { staticClass: "caption" }, [
+                        _vm._v(
+                          _vm._s(school.start) + " - " + _vm._s(school.end)
+                        )
+                      ]),
+                      _c("div", { staticClass: "body-1" }, [
+                        _vm._v(_vm._s(school.remark))
+                      ])
+                    ]
+                  )
+                ],
+                1
+              )
+            })
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.paperTitle")))
+          ]),
+          _vm._l(_vm.$t("resume.paper"), function(p, idx) {
+            return _c(
+              "v-card",
+              {
+                key: "paper-" + idx,
+                staticClass: "pa-3",
+                attrs: { flat: "", tile: "" }
+              },
+              [
+                _c("div", { staticClass: "title mb-1" }, [
+                  _vm._v(_vm._s(p.title))
+                ]),
+                _c("div", { staticClass: "subheading grey--text" }, [
+                  _vm._v(_vm._s(p.subtitle))
+                ]),
+                _c("div", { staticClass: "subheading grey--text" }, [
+                  _vm._v(_vm._s(p.member))
+                ])
+              ]
+            )
+          })
+        ],
+        2
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("resume.researchTitle")))
+          ]),
+          _vm._l(_vm.$t("resume.research"), function(r, idx) {
+            return _c(
+              "v-card",
+              {
+                key: "research-" + idx,
+                staticClass: "my-3 pa-3",
+                attrs: { hover: "" }
+              },
+              [
+                _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                  _c("span", { staticClass: "title" }, [
+                    _vm._v(_vm._s(r.title))
+                  ])
+                ]),
+                _c(
+                  "v-card-text",
+                  [
+                    _c(
+                      "v-layout",
+                      { attrs: { row: "", wrap: "", "justify-center": "" } },
+                      _vm._l(r.images, function(img, idx) {
+                        return _c(
+                          "v-flex",
+                          { key: "img-" + idx, attrs: { md6: "", xs12: "" } },
+                          [
+                            _c("div", { staticClass: "text-xs-center" }, [
+                              _c("img", {
+                                attrs: {
+                                  src: img.src,
+                                  alt: img.alt,
+                                  width: "400",
+                                  height: "300"
+                                }
+                              })
+                            ])
+                          ]
+                        )
+                      })
+                    ),
+                    _c("div", { staticClass: "body-1 mt-2" }, [
+                      _vm._v(_vm._s(r.abstract))
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          })
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1745,7 +1894,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -1754,8 +1903,7 @@ if (true) {
     } else {
       api.reload('bf1681ae', component.options)
     }
-    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug");
-(function () {
+    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
       api.rerender('bf1681ae', {
         render: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
