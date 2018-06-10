@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ec50b18f03f5b868875a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d83706cc8e6389e56bc9"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1012,11 +1012,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Link",
+    components: {},
     data: () => ({}),
     props: {},
     created () {},
@@ -1051,6 +1059,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "NotFound",
+    components: {},
     data: () => ({}),
     props: {},
     created () {},
@@ -1117,6 +1126,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Profile",
+    components: {},
     data: () => ({
         opts: {
             zoom: 17,
@@ -1440,9 +1450,74 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-layout", { attrs: { row: "", wrap: "", id: "links" } }, [
-    _c("p", [_vm._v("link")])
-  ])
+  return _c(
+    "v-layout",
+    { attrs: { row: "", wrap: "", "justify-center": "", id: "links" } },
+    [
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("link.laboratoryTitle")))
+          ]),
+          _c(
+            "v-card",
+            {
+              staticClass: "pa-3",
+              attrs: {
+                href: _vm.$t("link.laboratory.href"),
+                target: "_blank",
+                tile: ""
+              }
+            },
+            [
+              _c(
+                "div",
+                { staticClass: "text-xs-center title mb-1 orange--text" },
+                [_vm._v(_vm._s(_vm.$t("link.laboratory.name")))]
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("link.technologyTitle")))
+          ]),
+          _vm._l(_vm.$t("link.technologies"), function(l, idx) {
+            return _c(
+              "v-card",
+              {
+                key: "tech-" + idx,
+                staticClass: "pa-3",
+                attrs: {
+                  href: l.href,
+                  target: "_blank",
+                  ripple: "",
+                  flat: "",
+                  tile: ""
+                }
+              },
+              [
+                _c(
+                  "div",
+                  { staticClass: "text-xs-center title mb-1 orange--text" },
+                  [_vm._v(_vm._s(l.name))]
+                )
+              ]
+            )
+          })
+        ],
+        2
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2070,7 +2145,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2079,7 +2154,8 @@ if (true) {
     } else {
       api.reload('1d44cf2a', component.options)
     }
-    module.hot.accept(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
+    module.hot.accept(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug");
+(function () {
       api.rerender('1d44cf2a', {
         render: _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2732,7 +2808,7 @@ new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{},"en":{}};
+module.exports = {"ja":{"laboratoryTitle":"研究室","laboratory":{"name":"石田研究室","href":"https://glocalvision.net/ishilab/"},"technologyTitle":"参考","technologies":[{"name":"Github","href":"https://github.com/"},{"name":"Vue.js","href":"https://jp.vuejs.org/index.html"},{"name":"Google Material Design","href":"https://material.io/"},{"name":"Google APIs(Google Developers)","href":"https://developers.google.com/"},{"name":"Vuetify","href":"https://vuetifyjs.com/en/"},{"name":"Font Awesome","href":"https://fontawesome.com/"}]},"en":{"laboratoryTitle":"Laboratory","laboratory":{"name":"Ishilda Laboratory","href":"https://glocalvision.net/ishilab/"},"technologyTitle":"References","technologies":[{"name":"Github","href":"https://github.com/"},{"name":"Vue.js","href":"https://jp.vuejs.org/index.html"},{"name":"Google Material Design","href":"https://material.io/"},{"name":"Google APIs(Google Developers)","href":"https://developers.google.com/"},{"name":"Vuetify","href":"https://vuetifyjs.com/en/"},{"name":"Font Awesome","href":"https://fontawesome.com/"}]}};
 
 /***/ }),
 

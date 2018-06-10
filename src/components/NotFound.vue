@@ -12,6 +12,7 @@
 
     export default {
         name: "NotFound",
+        components: {},
         data: () => ({}),
         props: {},
         created () {},

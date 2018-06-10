@@ -44,6 +44,7 @@
 
     export default {
         name: "Profile",
+        components: {},
         data: () => ({
             opts: {
                 zoom: 17,
