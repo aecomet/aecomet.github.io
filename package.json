@@ -4,7 +4,7 @@
   "description": "last committed => 2017/05/08",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.conf.js --inline --hotOnly | webpack --config webpack.conf.js --devtool source-map --watch",
+    "dev": "webpack-dev-server --config webpack.conf.js --inline --hotOnly --history-api-fallback | webpack --config webpack.conf.js --devtool source-map --watch",
     "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize || rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
     "clear": "rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -59,6 +59,10 @@
     "webpack-hot-middleware": "^2.22.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/vue-fontawesome": "0.0.23",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "i18next": "^11.3.2",

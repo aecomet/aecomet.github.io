@@ -4,3 +4,5 @@ node_modules/
 src/modules/Key.js
 package-lock.json
 *.hot-update.*
+*.js.map
+*.css.map

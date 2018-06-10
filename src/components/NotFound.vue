@@ -1,6 +1,9 @@
 <template lang="pug">
-    v-layout(row wrap)#not-found
-        p.white--text {{ $t('base.not_found') }}
+    v-layout(row justify-center)#not-found
+        v-flex(md8 xs12).my-3
+            v-card(height="300px" hover tile)
+                v-card-title(primary-title)
+                    h3.headline {{ $t('base.not_found') }}
 
 </template>
 

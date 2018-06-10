@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "63c9baa826876be4f29a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7e1397e12c1f2c666d57"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -842,7 +842,7 @@ module.exports = {"ja":{"programing":[],"github":[],"qiita":[]},"en":{"programin
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"title":"ポートフォリオ","header":[{"name":"プロフィール","href":"/"},{"name":"学歴/職歴","href":"/resume"},{"name":"スキル","href":"/skill"},{"name":"リンク","href":"/link"}],"attribute":"大柳 達哉","not_found":"お探しのページは存在しません．"},"en":{"title":"Portfolio","header":[{"name":"Profile","href":"/"},{"name":"Resume","href":"/resume"},{"name":"Skill","href":"/skill"},{"name":"Link","href":"/link"}],"attribute":"Tatsuya Oyanagi","not_found":"The page doesn't exist."}};
+module.exports = {"ja":{"title":"ポートフォリオ","header":[{"name":"プロフィール","href":"/","icon":""},{"name":"学歴/職歴","href":"/resume","icon":""},{"name":"スキル","href":"/skill","icon":""},{"name":"リンク","href":"/link","icon":""}],"attribute":"大柳 達哉","not_found":"お探しのページは存在しません．","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"}]},"en":{"title":"Portfolio","header":[{"name":"Profile","href":"/","icon":""},{"name":"Resume","href":"/resume","icon":""},{"name":"Skill","href":"/skill","icon":""},{"name":"Link","href":"/link","icon":""}],"attribute":"Tatsuya Oyanagi","not_found":"The page doesn't exist.","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"}]}};
 
 /***/ }),
 

@@ -55,17 +55,25 @@ const Routes = [
     { path: '*', name: 'NotFound', component: NotFound }
 ]
 
-// CSS
+// CSS / Icon pack
 import '@/style.css'
 import 'vuetify/dist/vuetify.min.css'
+import fontawesome from '@fortawesome/fontawesome'
+import brands from '@fortawesome/fontawesome-free-brands'
+import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner'
+import '@fortawesome/fontawesome-free-solid'
 
 // Enable Vue Modules
 Vue.use(Vuetify)
 Vue.use(VueI18n)
 Vue.use(Router)
+fontawesome.library.add(brands, faSpinner)
 
 const router = new Router({
-    routes: Routes
+    routes: Routes,
+    mode: 'history',
+    linkActiveClass: 'active',
+    transitionOnLoad: true,
 })
 
 // Before process
@@ -90,5 +98,7 @@ new Vue({
     router,
     i18n,
     template: '<App/>',
-    components: { App }
+    components: {
+        App
+    }
 })
