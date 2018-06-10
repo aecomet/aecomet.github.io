@@ -1,8 +1,0 @@
-*.idea/
-node_modules/
-*.DS_Store
-src/modules/Key.js
-package-lock.json
-*.hot-update.*
-*.js.map
-*.css.map
