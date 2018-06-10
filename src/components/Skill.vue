@@ -19,7 +19,7 @@
                             .title.my-3 {{ p.name }}
                             v-progress-circular(color="red" :size="100" :width="15" :rotate="360" :value="p.experience") {{ p.experience }}
                         .text-xs-left.mt-2
-                            span(v-for="(chip, idx) in p.remark" :key="`chip-${idx}`"): v-chip( color="red" label outline) {{ chip }}
+                            span(v-for="(chip, idx) in p.remark" :key="`chip-${idx}`"): v-chip(color="red" label outline) {{ chip }}
 </template>
 
 <script>

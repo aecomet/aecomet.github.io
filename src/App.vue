@@ -58,7 +58,9 @@
                 vm.drawer = !vm.drawer
             },
             changeLanguage (code) {
+                if (vm.$i18n.locale === code) return
                 vm.$i18n.locale = code
+                vm.$t('resume.school').reverse()
                 vm.$forceUpdate()
             }
         },

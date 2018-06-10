@@ -1,10 +1,10 @@
 {
   "ja": {
-    "introduction": "こんにちは，世界",
+    "introduction": "こんにちは，世界!",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
     "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
-    "univs": [
+    "univ": [
       {
         "name": "茨城大学",
         "href": "http://www.ibaraki.ac.jp/index.html"
@@ -35,7 +35,7 @@
       }
     },
     "hobbyTitle": "趣味",
-    "hobbies": [
+    "hobby": [
       "映画鑑賞",
       "読書",
       "ランニング",
@@ -43,14 +43,17 @@
       "アニメ / 漫画 / ゲーム",
       "プログラミング"
     ],
-    "favorites": {
-      "foods": [
+    "favorite": {
+      "title": "その他",
+      "foodTitle": "好きな食べ物",
+      "food": [
         "寿司",
         "天ぷら",
         "蕎麦",
         "甘いもの全般"
       ],
-      "artists": [
+      "artistTitle": "よく聞くアーティスト",
+      "artist": [
         "L'arc〜en〜Ciel",
         "SCANDAL",
         "福山雅治",
@@ -59,18 +62,20 @@
         "柴咲コウ",
         "桑田佳祐"
       ],
-      "persons": [
+      "personTitle": "好きな芸能人",
+      "person": [
         "明石家さんま"
       ],
-      "word": "果報は寝て待て"
+      "wordTitle": "好きな言葉",
+      "word": "「果報は寝て待て」"
     }
   },
   "en": {
-    "introduction": "Hello World",
+    "introduction": "Hello World!",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
     "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
-    "univs": [
+    "univ": [
       {
         "name": "Ibaraki University",
         "href": "http://www.ibaraki.ac.jp/en/index.html"
@@ -101,7 +106,7 @@
       }
     },
     "hobbyTitle": "Hobby",
-    "hobbies": [
+    "hobby": [
       "Watching movies",
       "Reading books",
       "Running",
@@ -109,14 +114,17 @@
       "Anime / Managa / Game",
       "Programing"
     ],
-    "favorites": {
-      "foods": [
+    "favorite": {
+      "title": "Favorites",
+      "foodTitle": "Favorite Foods",
+      "food": [
         "Sushi",
         "Tempura",
         "Soba",
         "Sweets"
       ],
-      "artists": [
+      "artistTitle": "Favorite Artists",
+      "artist": [
         "L'arc〜en〜Ciel",
         "SCANDAL",
         "Masaharu Fukuyama",
@@ -125,10 +133,12 @@
         "Koh Shibasaki",
         "Keisuke Kuwata"
       ],
-      "persons": [
+      "personTitle": "Favorite Entertainer",
+      "person": [
         "Sanma Akashiya"
       ],
-      "word": "Everything comes to those who wait"
+      "wordTitle": "Favorite Word",
+      "word": "「Everything comes to those who wait」"
     }
   }
 }

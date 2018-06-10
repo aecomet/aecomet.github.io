@@ -1,7 +1,7 @@
 <template lang="pug">
     v-layout(row wrap justify-center)#resume
         v-flex(md10 xs12).my-3
-            .display-1.my-2.text-xs-center {{ $t('resume.schoolTitle')}}
+            .display-1.my-2.text-xs-center {{ $t('resume.schoolTitle') }}
             timeline
                 timeline-item(v-for="(school, idx) in $t('resume.school')" :key="`school-${idx}`" :hollow="school.hollow")
                     v-card(flat tile).pa-3
@@ -13,7 +13,9 @@
         v-flex(md10 xs12).my-3
             .display-1.my-2.text-xs-center {{ $t('resume.paperTitle')}}
             v-card(v-for="(p, idx) in $t('resume.paper')" :key="`paper-${idx}`" flat tile).pa-3
-                .title.mb-1 {{ p.title }}
+                .title.mb-1
+                    | {{ p.title }}
+                    v-chip(color="red" label outline) {{ p.tag }}
                 .subheading.grey--text {{ p.subtitle }}
                 .subheading.grey--text {{ p.member }}
 
