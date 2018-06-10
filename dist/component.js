@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7e1397e12c1f2c666d57"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8e1efb88e9e10d91d074"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -992,12 +992,72 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "Profile",
-    data: () => ({}),
+    data: () => ({
+        univs: [
+            {
+                name_ja: '茨城大学',
+                name_en: 'Ibaraki University',
+                href: 'http://www.ibaraki.ac.jp/index.html'
+            },
+            {
+                name_ja: '茨城大学院理工学研究科',
+                name_en: 'Graduate School of Science and Engineering',
+                href: 'http://www.gse.ibaraki.ac.jp/'
+            },
+            {
+                name_ja: '情報工学専攻',
+                name_en: 'Major in Computer and Information Sciences',
+                href: 'http://www.cis.ibaraki.ac.jp/'
+            }
+        ],
+        opts: {
+            zoom: 17,
+            scrollWheel: false,
+        }
+    }),
     props: {},
     created () {},
     mounted () {},
@@ -1151,9 +1211,238 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-layout", { attrs: { row: "", wrap: "", id: "profile" } }, [
-    _c("p", [_vm._v("profile")])
-  ])
+  return _c(
+    "v-layout",
+    { attrs: { row: "", wrap: "", "justify-center": "", id: "profile" } },
+    [
+      _c("v-flex", { staticClass: "my-5", attrs: { md10: "", xs12: "" } }, [
+        _c("blockquote", { staticClass: "display-1 text-xs-center" }, [
+          _vm._v(_vm._s(_vm.$t("profile.introduction")))
+        ])
+      ]),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c(
+            "v-card",
+            { attrs: { hover: "" } },
+            [
+              _c(
+                "v-container",
+                { attrs: { fluid: "", "grid-list-lg": "" } },
+                [
+                  _c(
+                    "v-layout",
+                    { attrs: { row: "", wrap: "" } },
+                    [
+                      _c(
+                        "v-flex",
+                        { attrs: { md5: "", xs12: "" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            { attrs: { "primary-title": "" } },
+                            [
+                              _c("span", { staticClass: "headline" }, [
+                                _vm._v("My Profile")
+                              ])
+                            ]
+                          ),
+                          _c("v-card-text", { staticClass: "pa-2" }, [
+                            _c("div", { staticClass: "my-2 headline" }, [
+                              _vm._v(_vm._s(_vm.$t("profile.name")))
+                            ]),
+                            _c("div", { staticClass: "mt-3 my-2 title" }, [
+                              _vm._v(_vm._s(_vm.$t("profile.status")))
+                            ])
+                          ]),
+                          _c(
+                            "v-card-actions",
+                            [
+                              _c(
+                                "v-list",
+                                {
+                                  staticStyle: { width: "100%" },
+                                  attrs: {
+                                    "two-line": "",
+                                    dense: "",
+                                    light: ""
+                                  }
+                                },
+                                _vm._l(_vm.univs, function(u, idx) {
+                                  return _c(
+                                    "v-list-tile",
+                                    {
+                                      key: "univ-" + idx,
+                                      attrs: { href: u.href, target: "_blank" },
+                                      on: { click: function($event) {} }
+                                    },
+                                    [
+                                      _c(
+                                        "v-list-tile-content",
+                                        [
+                                          _c(
+                                            "v-list-tile-title",
+                                            { staticClass: "orange--text" },
+                                            [_vm._v(_vm._s(u.name_ja))]
+                                          ),
+                                          _c("v-list-tile-sub-title", [
+                                            _vm._v(_vm._s(u.name_en))
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                })
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _c(
+                        "v-flex",
+                        { attrs: { md7: "", xs12: "" } },
+                        [
+                          _c(
+                            "v-card-title",
+                            {
+                              staticClass: "text-xs-center",
+                              attrs: { "primary-title": "" }
+                            },
+                            [
+                              _c("span", { staticClass: "headline" }, [
+                                _vm._v("Hobby")
+                              ])
+                            ]
+                          ),
+                          _c("v-data-table", {
+                            staticClass: "elevation-1",
+                            attrs: {
+                              items: _vm.$t("profile.hobbies"),
+                              "hide-actions": "",
+                              "hide-headers": ""
+                            },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "items",
+                                fn: function(props) {
+                                  return [
+                                    _c("td", [_vm._v(_vm._s(props.item))])
+                                  ]
+                                }
+                              }
+                            ])
+                          })
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md4: "", xs12: "" } },
+        [
+          _c(
+            "v-card",
+            { attrs: { hover: "" } },
+            [
+              _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                _c("span", { staticClass: "headline" }, [_vm._v("From")])
+              ]),
+              _c("v-card-text", [
+                _c("span", { staticClass: "subheading" }, [
+                  _vm._v(_vm._s(_vm.$t("profile.from.name")))
+                ])
+              ]),
+              _c(
+                "gmap-map",
+                {
+                  staticStyle: { height: "500px", width: "100%" },
+                  attrs: {
+                    center: _vm.$t("profile.from.center"),
+                    zoom: _vm.opts.zoom
+                  }
+                },
+                [
+                  _c("gmap-marker", {
+                    attrs: {
+                      position: _vm.$t("profile.from.center"),
+                      clickable: true,
+                      draggable: true
+                    },
+                    on: { click: function($event) {} }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c("v-flex", { staticClass: "my-3", attrs: { md1: "", xs0: "" } }),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md4: "", xs12: "" } },
+        [
+          _c(
+            "v-card",
+            { attrs: { hover: "" } },
+            [
+              _c("v-card-title", { attrs: { "primary-title": "" } }, [
+                _c("span", { staticClass: "headline" }, [_vm._v("Stay")])
+              ]),
+              _c("v-card-text", [
+                _c("span", { staticClass: "subheading" }, [
+                  _vm._v(_vm._s(_vm.$t("profile.stay.name")))
+                ])
+              ]),
+              _c(
+                "gmap-map",
+                {
+                  staticStyle: { height: "500px", width: "100%" },
+                  attrs: {
+                    center: _vm.$t("profile.stay.center"),
+                    zoom: _vm.opts.zoom
+                  }
+                },
+                [
+                  _c("gmap-marker", {
+                    attrs: {
+                      position: _vm.$t("profile.stay.center"),
+                      clickable: true,
+                      draggable: true
+                    },
+                    on: { click: function($event) {} }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1456,7 +1745,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -1465,7 +1754,8 @@ if (true) {
     } else {
       api.reload('bf1681ae', component.options)
     }
-    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
+    module.hot.accept(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug */ "./src/components/Profile.vue?vue&type=template&id=bf1681ae&scoped=true&lang=pug");
+(function () {
       api.rerender('bf1681ae', {
         render: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Profile_vue_vue_type_template_id_bf1681ae_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]

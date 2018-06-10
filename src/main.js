@@ -10,6 +10,7 @@ import App from './App'
 import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
+import * as VueGoogleMaps from 'vue2-google-maps';
 
 // Components
 import {
@@ -67,6 +68,15 @@ import '@fortawesome/fontawesome-free-solid'
 Vue.use(Vuetify)
 Vue.use(VueI18n)
 Vue.use(Router)
+Vue.use(VueGoogleMaps, {
+    load: {
+        key: 'AIzaSyC-9WiQjFhxE5DWsG_tJUArjc17lItzoxA',
+        // libraries: 'places', // This is required if you use the Autocomplete plugin
+        // OR: libraries: 'places,drawing'
+        // OR: libraries: 'places,drawing,visualization'
+        // (as you require)
+    }
+});
 fontawesome.library.add(brands, faSpinner)
 
 const router = new Router({

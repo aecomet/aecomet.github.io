@@ -18,12 +18,12 @@
             v-container(fluid)
                 router-view
 
-        //- footer
-        v-footer(height="auto" app light)
-            v-layout(row wrap justify-center)
-                v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" flat): font-awesome-icon(size="lg" :icon="['fab', link.icon]")
-                v-flex(xs12).text-xs-right.pa-1
-                   span.mr-3 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+                //- footer
+                v-footer(height="auto" app light absolute)
+                    v-layout(row wrap justify-center)
+                        v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" flat): font-awesome-icon(size="lg" :icon="['fab', link.icon]")
+                        v-flex(xs12).text-xs-right.pa-1
+                           span.mr-3 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script>
