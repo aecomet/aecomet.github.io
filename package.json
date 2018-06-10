@@ -9,7 +9,7 @@
     "clear": "rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
     "change:develop": "git stash && git checkout develop",
     "create:master": "git branch -D master ; git checkout -b master",
-    "release": "rm -r src && mv dist/** ./ && rm -r dist && git push origin master",
+    "release": "git pull origin master && rm -r src && mv dist/** ./ && rm -r dist && git push origin master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
