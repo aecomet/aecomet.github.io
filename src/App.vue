@@ -1,17 +1,24 @@
 <template lang="pug">
     v-app(app light)
-        v-toolbar(:scroll-threshold="isHide" app light dense scroll-off-screen)
-            v-toolbar-side-icon
+        v-toolbar(:scroll-threshold="isHide" app light dense scroll-off-screen clipped-left)
+            v-toolbar-side-icon(@click="changeDrawer" light)
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
             v-toolbar-items.hidden-sm-and-down
                 v-tabs(slot="extension" v-model="tab" slider-color="red" color="grey lighten-4" right)
-                    v-tab(v-for="(header, idx) in $t('base.header')" :key="idx" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
+                    v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
             v-menu(transition="slide-x-transition")
                 v-btn(slot="activator" icon light): v-icon more_vert
                 v-list
                     v-list-tile(@click="changeLanguage('ja')"): v-list-tile-title JP
                     v-list-tile(@click="changeLanguage('en')"): v-list-tile-title EN
+
+        //- Navigation Drawer
+        v-navigation-drawer(v-model="drawer" app light disable-resize-watcher clipped)
+            v-list(subheader dense)
+                v-list-tile(v-for="(nav, idx) in $t('base.content')" :key="`nav-${idx}`" :to="nav.href" @click="" avatar ripple)
+                    v-list-tile-content
+                        v-list-tile-title: span.subheading {{ nav.name }}
 
         //- Main Contents
         v-content.grey.lighten-5
@@ -37,7 +44,7 @@
         },
         name: 'app',
         data: () => ({
-            drawer: null,
+            drawer: false,
             tab: null
         }),
         props: {},
@@ -47,6 +54,9 @@
         mounted () {
         },
         methods: {
+            changeDrawer () {
+                vm.drawer = !vm.drawer
+            },
             changeLanguage (code) {
                 vm.$i18n.locale = code
                 vm.$forceUpdate()

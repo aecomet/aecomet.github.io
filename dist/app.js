@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ed311c9c4bdc0aba489c"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "50a90d5f60024299dd9c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -963,6 +963,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 let vm = null
@@ -974,7 +981,7 @@ let vm = null
     },
     name: 'app',
     data: () => ({
-        drawer: null,
+        drawer: false,
         tab: null
     }),
     props: {},
@@ -984,6 +991,9 @@ let vm = null
     mounted () {
     },
     methods: {
+        changeDrawer () {
+            vm.drawer = !vm.drawer
+        },
         changeLanguage (code) {
             vm.$i18n.locale = code
             vm.$forceUpdate()
@@ -1284,11 +1294,15 @@ var render = function() {
             app: "",
             light: "",
             dense: "",
-            "scroll-off-screen": ""
+            "scroll-off-screen": "",
+            "clipped-left": ""
           }
         },
         [
-          _c("v-toolbar-side-icon"),
+          _c("v-toolbar-side-icon", {
+            attrs: { light: "" },
+            on: { click: _vm.changeDrawer }
+          }),
           _c("v-toolbar-title", [_vm._v(_vm._s(_vm.$t("base.title")))]),
           _c("v-spacer"),
           _c(
@@ -1313,11 +1327,11 @@ var render = function() {
                     expression: "tab"
                   }
                 },
-                _vm._l(_vm.$t("base.header"), function(header, idx) {
+                _vm._l(_vm.$t("base.content"), function(header, idx) {
                   return _c(
                     "v-tab",
                     {
-                      key: idx,
+                      key: "header-" + idx,
                       staticStyle: { width: "120px" },
                       attrs: { href: "#tab-" + idx, to: header.href }
                     },
@@ -1373,6 +1387,55 @@ var render = function() {
               )
             ],
             1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: {
+            app: "",
+            light: "",
+            "disable-resize-watcher": "",
+            clipped: ""
+          },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
+        [
+          _c(
+            "v-list",
+            { attrs: { subheader: "", dense: "" } },
+            _vm._l(_vm.$t("base.content"), function(nav, idx) {
+              return _c(
+                "v-list-tile",
+                {
+                  key: "nav-" + idx,
+                  attrs: { to: nav.href, avatar: "", ripple: "" },
+                  on: { click: function($event) {} }
+                },
+                [
+                  _c(
+                    "v-list-tile-content",
+                    [
+                      _c("v-list-tile-title", [
+                        _c("span", { staticClass: "subheading" }, [
+                          _vm._v(_vm._s(nav.name))
+                        ])
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            })
           )
         ],
         1
@@ -2211,7 +2274,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2220,7 +2283,8 @@ if (true) {
     } else {
       api.reload('7ba5bd90', component.options)
     }
-    module.hot.accept(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
+    module.hot.accept(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug */ "./src/App.vue?vue&type=template&id=7ba5bd90&scoped=true&lang=pug");
+(function () {
       api.rerender('7ba5bd90', {
         render: _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _App_vue_vue_type_template_id_7ba5bd90_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2731,7 +2795,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2740,8 +2804,7 @@ if (true) {
     } else {
       api.reload('657525d1', component.options)
     }
-    module.hot.accept(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug");
-(function () {
+    module.hot.accept(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
       api.rerender('657525d1', {
         render: _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -3022,7 +3085,7 @@ module.exports = {"ja":{"certificationTitle":"資格","certificationHeader":[{"t
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"title":"ポートフォリオ","header":[{"name":"プロフィール","href":"/","icon":""},{"name":"学歴/職歴","href":"/resume","icon":""},{"name":"スキル","href":"/skill","icon":""},{"name":"リンク","href":"/link","icon":""}],"attribute":"大柳 達哉","not_found":"お探しのページは存在しません．","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"},{"name":"Google+","href":"https://plus.google.com/111810448005561033865/","icon":"google-plus"}]},"en":{"title":"Portfolio","header":[{"name":"Profile","href":"/","icon":""},{"name":"Resume","href":"/resume","icon":""},{"name":"Skill","href":"/skill","icon":""},{"name":"Link","href":"/link","icon":""}],"attribute":"Tatsuya Oyanagi","not_found":"The page doesn't exist.","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"},{"name":"Google+","href":"https://plus.google.com/111810448005561033865/","icon":"google-plus"}]}};
+module.exports = {"ja":{"title":"ポートフォリオ","content":[{"name":"プロフィール","href":"/","icon":""},{"name":"学歴/職歴","href":"/resume","icon":""},{"name":"スキル","href":"/skill","icon":""},{"name":"リンク","href":"/link","icon":""}],"attribute":"大柳 達哉","not_found":"お探しのページは存在しません．","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"},{"name":"Google+","href":"https://plus.google.com/111810448005561033865/","icon":"google-plus"}]},"en":{"title":"Portfolio","content":[{"name":"Profile","href":"/","icon":""},{"name":"Resume","href":"/resume","icon":""},{"name":"Skill","href":"/skill","icon":""},{"name":"Link","href":"/link","icon":""}],"attribute":"Tatsuya Oyanagi","not_found":"The page doesn't exist.","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"},{"name":"Facebook","href":"https://www.facebook.com/","icon":"facebook"},{"name":"Instagram","href":"https://www.instagram.com/","icon":"instagram"},{"name":"LinkedIn","href":"https://www.linkedin.com/in/%E9%81%94%E5%93%89-%E5%A4%A7%E6%9F%B3-a5ab72143/","icon":"linkedin-in"},{"name":"Google+","href":"https://plus.google.com/111810448005561033865/","icon":"google-plus"}]}};
 
 /***/ }),
 

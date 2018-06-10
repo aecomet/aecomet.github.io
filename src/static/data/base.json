@@ -1,7 +1,7 @@
 {
   "ja": {
     "title": "ポートフォリオ",
-    "header": [
+    "content": [
       { "name": "プロフィール", "href": "/", "icon": "" },
       { "name": "学歴/職歴", "href": "/resume", "icon": "" },
       { "name": "スキル", "href": "/skill", "icon": "" },
@@ -19,7 +19,7 @@
   },
   "en": {
     "title": "Portfolio",
-    "header": [
+    "content": [
       { "name": "Profile", "href": "/", "icon": "" },
       { "name": "Resume", "href": "/resume", "icon": "" },
       { "name": "Skill", "href": "/skill", "icon": "" },
