@@ -1,6 +1,7 @@
 {
   "ja": {
     "introduction": "こんにちは，世界",
+    "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
     "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
     "univs": [
@@ -18,6 +19,7 @@
       }
     ],
     "from": {
+      "title": "出身地",
       "name": "福島県郡山市",
       "center": {
         "lat": 34.648078,
@@ -25,12 +27,14 @@
       }
     },
     "stay": {
+      "title": "在住",
       "name": "茨城県日立市",
       "center": {
         "lat": 36.590654,
         "lng": 140.662153
       }
     },
+    "hobbyTitle": "趣味",
     "hobbies": [
       "映画鑑賞",
       "読書",
@@ -63,23 +67,25 @@
   },
   "en": {
     "introduction": "Hello World",
+    "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
     "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
     "univs": [
       {
         "name": "Ibaraki University",
-        "href": "http://www.ibaraki.ac.jp/index.html"
+        "href": "http://www.ibaraki.ac.jp/en/index.html"
       },
       {
         "name": "Graduate School of Science and Engineering",
-        "href": "http://www.gse.ibaraki.ac.jp/"
+        "href": "http://www.gse.ibaraki.ac.jp/en/index.html"
       },
       {
         "name": "Major in Computer and Information Sciences",
-        "href": "http://www.cis.ibaraki.ac.jp/"
+        "href": "http://www.cis.ibaraki.ac.jp/en/"
       }
     ],
     "from": {
+      "title": "From",
       "name": "Koriyama city, Fukushima Prefecture",
       "center": {
         "lat": 34.648078,
@@ -87,12 +93,14 @@
       }
     },
     "stay": {
+      "title": "Stay",
       "name": "Hitachi city, Ibaraki Prefecture",
       "center": {
         "lat": 36.590654,
         "lng": 140.662153
       }
     },
+    "hobbyTitle": "Hobby",
     "hobbies": [
       "Watching movies",
       "Reading books",

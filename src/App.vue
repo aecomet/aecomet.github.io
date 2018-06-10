@@ -6,7 +6,7 @@
             v-spacer
             v-toolbar-items.hidden-sm-and-down
                 v-tabs(slot="extension" v-model="tab" slider-color="red" color="grey lighten-4" right)
-                    v-tab(v-for="(header, idx) in $t('base.header')" :key="idx" :href="`#tab-${idx}`" :to="header.href") {{ header.name }}
+                    v-tab(v-for="(header, idx) in $t('base.header')" :key="idx" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
             v-menu(transition="slide-x-transition")
                 v-btn(slot="activator" icon light): v-icon more_vert
                 v-list

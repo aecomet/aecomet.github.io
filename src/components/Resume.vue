@@ -5,9 +5,9 @@
             timeline
                 timeline-item(v-for="(school, idx) in $t('resume.school')" :key="`school-${idx}`" :hollow="school.hollow")
                     v-card(flat tile).pa-3
-                        a(:href="school.href").subheading {{ school.name }}
-                        .caption {{ school.start }} - {{ school.end }}
-                        .body-1 {{ school.remark }}
+                        a(:href="school.href").title {{ school.name }}
+                        .body-1 {{ school.start }} - {{ school.end }}
+                        .subheading {{ school.remark }}
 
 
         v-flex(md10 xs12).my-3

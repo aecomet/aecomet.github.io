@@ -104,22 +104,22 @@
     "school": [
       {
         "name": "福島県立郡山東高等学校",
-        "start": "2010年4月",
-        "end": "2013年3月",
+        "start": "2010-4",
+        "end": "2013-3",
         "href": "http://www.koriyamahigashi-h.fks.ed.jp/",
         "remark": ""
       },
       {
         "name": "茨城大学工学部情報工学科",
-        "start": "2013年4月",
-        "end": "2017年3月",
+        "start": "2013-4",
+        "end": "2017-3",
         "href": "https://www.cis.ibaraki.ac.jp/",
         "remark": "学士（工学）取得"
       },
       {
         "name": "茨城大学大学院理工学研究科情報工学専攻",
-        "start": "2017年4月",
-        "end": "2019年3月",
+        "start": "2017-4",
+        "end": "2019-3",
         "href": "https://www.cis.ibaraki.ac.jp/",
         "remark": "修了予定"
       }

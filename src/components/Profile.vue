@@ -6,24 +6,24 @@
             v-card(hover)
                 v-layout(row wrap)
                     v-flex(md5 xs12)
-                        v-card-title(primary-title): span.headline My Profile
-                        v-card-text.pa-2
+                        v-card-title(primary-title): span.headline {{ $t('profile.profileTitle') }}
+                        v-card-text.pa-3
                             .my-2.headline {{ $t('profile.name') }}
-                            .mt-3.my-2.title {{ $t('profile.status') }}
+                            .my-4.title {{ $t('profile.status') }}
                         v-card-actions
                             v-list(style="width: 100%;" light)
                                 v-list-tile(v-for="(u, idx) in $t('profile.univs')" :key="`univ-${idx}`" @click="" :href="u.href" target="_blank" avatar ripple)
                                     v-list-tile-action: v-icon(color="") school
-                                    v-list-tile-content: v-list-tile-title.orange--text {{ u.name }}
+                                    v-list-tile-content: v-list-tile-title.orange--text.subheading {{ u.name }}
 
                     v-flex(md7 xs12)
-                        v-card-title(primary-title): span.headline Hobby
+                        v-card-title(primary-title): span.headline {{ $t('profile.hobbyTitle') }}
                         v-data-table(:items="$t('profile.hobbies')" hide-actions hide-headers).elevation-1
-                            template(slot="items" slot-scope="props"): td {{ props.item }}
+                            template(slot="items" slot-scope="props"): td: span.subheading {{ props.item }}
 
         v-flex(md4 xs12).my-3
             v-card(hover)
-                v-card-title(primary-title): span.headline From
+                v-card-title(primary-title): span.headline {{ $t('profile.from.title') }}
                 v-card-text: span.subheading {{ $t('profile.from.name') }}
                 gmap-map(:center="$t('profile.from.center')" :zoom="opts.zoom" style="height: 500px; width: 100%;")
                     gmap-marker(:position="$t('profile.from.center')" :clickable="true" :draggable="true" @click="")
@@ -32,7 +32,7 @@
 
         v-flex(md4 xs12).my-3
             v-card(hover)
-                v-card-title(primary-title): span.headline Stay
+                v-card-title(primary-title): span.headline {{ $t('profile.stay.title') }}
                 v-card-text: span.subheading {{ $t('profile.stay.name') }}
                 gmap-map(:center="$t('profile.stay.center')" :zoom="opts.zoom" style="height: 500px; width: 100%;")
                     gmap-marker(:position="$t('profile.stay.center')" :clickable="true" :draggable="true" @click="")

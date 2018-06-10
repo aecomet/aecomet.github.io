@@ -1,12 +1,199 @@
 {
   "ja": {
-    "programing": [],
-    "github": [],
-    "qiita": []
+    "certificationTitle": "資格",
+    "certificationHeader": [
+      {
+        "text": "取得年月日",
+        "value": "date",
+        "sortable": false
+      },
+      {
+        "text": "資格名",
+        "value": "name",
+        "sortable": false
+      }
+    ],
+    "certification": [
+      {
+        "date": "2013年9月17日",
+        "name": "普通自動車第一種運転免許"
+      },
+      {
+        "date": "2015年5月18日",
+        "name": "基本情報技術者"
+      },
+      {
+        "date": "2015年12月18日",
+        "name": "応用情報技術者"
+      }
+    ],
+    "programingTitle": "プログラミング経験",
+    "programing": [
+      {
+        "name": "PHP",
+        "experience": 70,
+        "remark": [
+          "Laravel",
+          "Slim3"
+        ]
+      },
+      {
+        "name": "HTML/CSS",
+        "experience": 70,
+        "remark": [
+          "Bootstrap 3, 4",
+          "Materialize",
+          "Bulma"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "experience": 80,
+        "remark": [
+          "jQuery",
+          "AngularJS",
+          "Vue.js",
+          "Node.js",
+          "React.js"
+        ]
+      },
+      {
+        "name": "Ruby",
+        "experience": 40,
+        "remark": [
+          "Ruby On Rails"
+        ]
+      },
+      {
+        "name": "Go lang",
+        "experience": 30,
+        "remark": [
+          "Gin"
+        ]
+      },
+      {
+        "name": "C / C++",
+        "experience": 20,
+        "remark": []
+      },
+      {
+        "name": "Java",
+        "experience": 50,
+        "remark": [
+          "Android(with Kotlin)"
+        ]
+      },
+      {
+        "name": "Python",
+        "experience": 60,
+        "remark": [
+          "Django",
+          "Django Rest Framework"
+        ]
+      },
+      {
+        "name": "Database",
+        "experience": 60,
+        "remark": [
+          "MySQL",
+          "SQLite",
+          "Mongo DB"
+        ]
+      }
+    ]
   },
   "en": {
-    "programing": [],
-    "github": [],
-    "qiita": []
+    "certificationTitle": "Certification",
+    "certificationHeader": [
+      {
+        "text": "Date",
+        "value": "date",
+        "sortable": false
+      },
+      {
+        "text": "Name",
+        "value": "name",
+        "sortable": false
+      }
+    ],
+    "certification": [
+      {
+        "date": "2013-9-17",
+        "name": "First-class drivers for normal vehicles"
+      },
+      {
+        "date": "2015-5-18",
+        "name": "Fundamental Information Technology Engineer Examination"
+      },
+      {
+        "date": "2015-12-18",
+        "name": "Applied Information Technology Engineer Examination"
+      }
+    ],
+    "programingTitle": "Programing Skill",
+    "programing": [
+      {
+        "name": "PHP",
+        "experience": 70,
+        "remark": [
+          "Laravel",
+          "Slim3"
+        ]
+      },
+      {
+        "name": "HTML/CSS",
+        "experience": 70,
+        "remark": [
+          "Bootstrap 3, 4",
+          "Materialize",
+          "Bulma"
+        ]
+      },
+      {
+        "name": "JavaScript",
+        "experience": 80,
+        "remark": [
+          "jQuery",
+          "AngularJS",
+          "Vue.js",
+          "Node.js",
+          "React.js"
+        ]
+      },
+      {
+        "name": "Ruby",
+        "experience": 40,
+        "remark": [
+          "Ruby On Rails"
+        ]
+      },
+      {
+        "name": "Go lang",
+        "experience": 30,
+        "remark": [
+          "Gin"
+        ]
+      },
+      {
+        "name": "C / C++",
+        "experience": 20,
+        "remark": []
+      },
+      {
+        "name": "Java",
+        "experience": 50,
+        "remark": [
+          "Android(with Kotlin)"
+        ]
+      },
+      {
+        "name": "Python",
+        "experience": 60,
+        "remark": [
+          "Django",
+          "Django Rest Framework"
+        ]
+      }
+    ]
   }
 }

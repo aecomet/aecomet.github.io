@@ -112,7 +112,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d83706cc8e6389e56bc9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ed311c9c4bdc0aba489c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -1224,6 +1224,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1300,6 +1318,7 @@ var render = function() {
                     "v-tab",
                     {
                       key: idx,
+                      staticStyle: { width: "120px" },
                       attrs: { href: "#tab-" + idx, to: header.href }
                     },
                     [_vm._v(_vm._s(header.name))]
@@ -1617,14 +1636,14 @@ var render = function() {
                     [
                       _c("v-card-title", { attrs: { "primary-title": "" } }, [
                         _c("span", { staticClass: "headline" }, [
-                          _vm._v("My Profile")
+                          _vm._v(_vm._s(_vm.$t("profile.profileTitle")))
                         ])
                       ]),
-                      _c("v-card-text", { staticClass: "pa-2" }, [
+                      _c("v-card-text", { staticClass: "pa-3" }, [
                         _c("div", { staticClass: "my-2 headline" }, [
                           _vm._v(_vm._s(_vm.$t("profile.name")))
                         ]),
-                        _c("div", { staticClass: "mt-3 my-2 title" }, [
+                        _c("div", { staticClass: "my-4 title" }, [
                           _vm._v(_vm._s(_vm.$t("profile.status")))
                         ])
                       ]),
@@ -1665,7 +1684,9 @@ var render = function() {
                                     [
                                       _c(
                                         "v-list-tile-title",
-                                        { staticClass: "orange--text" },
+                                        {
+                                          staticClass: "orange--text subheading"
+                                        },
                                         [_vm._v(_vm._s(u.name))]
                                       )
                                     ],
@@ -1688,7 +1709,7 @@ var render = function() {
                     [
                       _c("v-card-title", { attrs: { "primary-title": "" } }, [
                         _c("span", { staticClass: "headline" }, [
-                          _vm._v("Hobby")
+                          _vm._v(_vm._s(_vm.$t("profile.hobbyTitle")))
                         ])
                       ]),
                       _c("v-data-table", {
@@ -1702,7 +1723,13 @@ var render = function() {
                           {
                             key: "items",
                             fn: function(props) {
-                              return [_c("td", [_vm._v(_vm._s(props.item))])]
+                              return [
+                                _c("td", [
+                                  _c("span", { staticClass: "subheading" }, [
+                                    _vm._v(_vm._s(props.item))
+                                  ])
+                                ])
+                              ]
                             }
                           }
                         ])
@@ -1728,7 +1755,9 @@ var render = function() {
             { attrs: { hover: "" } },
             [
               _c("v-card-title", { attrs: { "primary-title": "" } }, [
-                _c("span", { staticClass: "headline" }, [_vm._v("From")])
+                _c("span", { staticClass: "headline" }, [
+                  _vm._v(_vm._s(_vm.$t("profile.from.title")))
+                ])
               ]),
               _c("v-card-text", [
                 _c("span", { staticClass: "subheading" }, [
@@ -1772,7 +1801,9 @@ var render = function() {
             { attrs: { hover: "" } },
             [
               _c("v-card-title", { attrs: { "primary-title": "" } }, [
-                _c("span", { staticClass: "headline" }, [_vm._v("Stay")])
+                _c("span", { staticClass: "headline" }, [
+                  _vm._v(_vm._s(_vm.$t("profile.stay.title")))
+                ])
               ]),
               _c("v-card-text", [
                 _c("span", { staticClass: "subheading" }, [
@@ -1856,18 +1887,15 @@ var render = function() {
                     [
                       _c(
                         "a",
-                        {
-                          staticClass: "subheading",
-                          attrs: { href: school.href }
-                        },
+                        { staticClass: "title", attrs: { href: school.href } },
                         [_vm._v(_vm._s(school.name))]
                       ),
-                      _c("div", { staticClass: "caption" }, [
+                      _c("div", { staticClass: "body-1" }, [
                         _vm._v(
                           _vm._s(school.start) + " - " + _vm._s(school.end)
                         )
                       ]),
-                      _c("div", { staticClass: "body-1" }, [
+                      _c("div", { staticClass: "subheading" }, [
                         _vm._v(_vm._s(school.remark))
                       ])
                     ]
@@ -1996,9 +2024,151 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("v-layout", { attrs: { row: "", wrap: "", id: "skill" } }, [
-    _c("span", [_vm._v("skill")])
-  ])
+  return _c(
+    "v-layout",
+    { attrs: { row: "", wrap: "", "justify-center": "", id: "skill" } },
+    [
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("skill.certificationTitle")))
+          ]),
+          _c(
+            "v-card",
+            { attrs: { tile: "", flat: "" } },
+            [
+              _c("v-data-table", {
+                staticClass: "elevation-1",
+                attrs: {
+                  headers: _vm.$t("skill.certificationHeader"),
+                  items: _vm.$t("skill.certification"),
+                  "hide-actions": ""
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "headerCell",
+                    fn: function(props) {
+                      return [
+                        _c("div", { staticClass: "text-xs-center title" }, [
+                          _vm._v(_vm._s(props.header.text))
+                        ])
+                      ]
+                    }
+                  },
+                  {
+                    key: "items",
+                    fn: function(props) {
+                      return [
+                        _c("td", [
+                          _c(
+                            "div",
+                            { staticClass: "text-xs-center subheading" },
+                            [_vm._v(_vm._s(props.item.date))]
+                          )
+                        ]),
+                        _c("td", [
+                          _c(
+                            "div",
+                            { staticClass: "text-xs-center subheading" },
+                            [_vm._v(_vm._s(props.item.name))]
+                          )
+                        ])
+                      ]
+                    }
+                  }
+                ])
+              })
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _c(
+        "v-flex",
+        { staticClass: "my-3", attrs: { md10: "", xs12: "" } },
+        [
+          _c("div", { staticClass: "display-1 my-2 text-xs-center" }, [
+            _vm._v(_vm._s(_vm.$t("skill.programingTitle")))
+          ]),
+          _c(
+            "v-card",
+            { staticClass: "py-1", attrs: { tile: "", flat: "" } },
+            [
+              _c(
+                "v-layout",
+                { attrs: { row: "", wrap: "", "justify-start": "" } },
+                _vm._l(_vm.$t("skill.programing"), function(p, idx) {
+                  return _c(
+                    "v-flex",
+                    {
+                      key: "programing-" + idx,
+                      staticClass: "pa-2",
+                      attrs: { md3: "", xs6: "" }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "text-xs-center" },
+                        [
+                          _c("div", { staticClass: "title my-3" }, [
+                            _vm._v(_vm._s(p.name))
+                          ]),
+                          _c(
+                            "v-progress-circular",
+                            {
+                              attrs: {
+                                color: "red",
+                                size: 100,
+                                width: 15,
+                                rotate: 360,
+                                value: p.experience
+                              }
+                            },
+                            [_vm._v(_vm._s(p.experience))]
+                          )
+                        ],
+                        1
+                      ),
+                      _c(
+                        "div",
+                        { staticClass: "text-xs-left mt-2" },
+                        _vm._l(p.remark, function(chip, idx) {
+                          return _c(
+                            "span",
+                            { key: "chip-" + idx },
+                            [
+                              _c(
+                                "v-chip",
+                                {
+                                  attrs: {
+                                    color: "red",
+                                    label: "",
+                                    outline: ""
+                                  }
+                                },
+                                [_vm._v(_vm._s(chip))]
+                              )
+                            ],
+                            1
+                          )
+                        })
+                      )
+                    ]
+                  )
+                })
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2145,7 +2315,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2154,8 +2324,7 @@ if (true) {
     } else {
       api.reload('1d44cf2a', component.options)
     }
-    module.hot.accept(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug");
-(function () {
+    module.hot.accept(/*! ./Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug */ "./src/components/Link.vue?vue&type=template&id=1d44cf2a&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
       api.rerender('1d44cf2a', {
         render: _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Link_vue_vue_type_template_id_1d44cf2a_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2562,7 +2731,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (true) {
-  var api = __webpack_require__(/*! ../../node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
+  var api = __webpack_require__(/*! ./node_modules/vue-hot-reload-api/dist/index.js */ "./node_modules/vue-hot-reload-api/dist/index.js")
   api.install(__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js"))
   if (api.compatible) {
     module.hot.accept()
@@ -2571,7 +2740,8 @@ if (true) {
     } else {
       api.reload('657525d1', component.options)
     }
-    module.hot.accept(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {
+    module.hot.accept(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug */ "./src/components/Skill.vue?vue&type=template&id=657525d1&scoped=true&lang=pug");
+(function () {
       api.rerender('657525d1', {
         render: _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["render"],
         staticRenderFns: _Skill_vue_vue_type_template_id_657525d1_scoped_true_lang_pug__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]
@@ -2819,7 +2989,7 @@ module.exports = {"ja":{"laboratoryTitle":"研究室","laboratory":{"name":"石�
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"introduction":"こんにちは，世界","name":"大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）","status":"茨城大学 大学院院 理工学研究科 情報工学専攻","univs":[{"name":"茨城大学","href":"http://www.ibaraki.ac.jp/index.html"},{"name":"茨城大学院理工学研究科","href":"http://www.gse.ibaraki.ac.jp/"},{"name":"情報工学専攻","href":"http://www.cis.ibaraki.ac.jp/"}],"from":{"name":"福島県郡山市","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"茨城県日立市","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["映画鑑賞","読書","ランニング","ドライブ","アニメ / 漫画 / ゲーム","プログラミング"],"favorites":{"foods":["寿司","天ぷら","蕎麦","甘いもの全般"],"artists":["L'arc〜en〜Ciel","SCANDAL","福山雅治","東方神起","やなぎなぎ","柴咲コウ","桑田佳祐"],"persons":["明石家さんま"],"word":"果報は寝て待て"}},"en":{"introduction":"Hello World","name":"Tatsuya Oyanagi","status":"Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University","univs":[{"name":"Ibaraki University","href":"http://www.ibaraki.ac.jp/index.html"},{"name":"Graduate School of Science and Engineering","href":"http://www.gse.ibaraki.ac.jp/"},{"name":"Major in Computer and Information Sciences","href":"http://www.cis.ibaraki.ac.jp/"}],"from":{"name":"Koriyama city, Fukushima Prefecture","center":{"lat":34.648078,"lng":135.790295}},"stay":{"name":"Hitachi city, Ibaraki Prefecture","center":{"lat":36.590654,"lng":140.662153}},"hobbies":["Watching movies","Reading books","Running","Driving","Anime / Managa / Game","Programing"],"favorites":{"foods":["Sushi","Tempura","Soba","Sweets"],"artists":["L'arc〜en〜Ciel","SCANDAL","Masaharu Fukuyama","Tohoshinki","Yanaginagi","Koh Shibasaki","Keisuke Kuwata"],"persons":["Sanma Akashiya"],"word":"Everything comes to those who wait"}}};
+module.exports = {"ja":{"introduction":"こんにちは，世界","profileTitle":"プロフィール","name":"大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）","status":"茨城大学 大学院院 理工学研究科 情報工学専攻","univs":[{"name":"茨城大学","href":"http://www.ibaraki.ac.jp/index.html"},{"name":"茨城大学院理工学研究科","href":"http://www.gse.ibaraki.ac.jp/"},{"name":"情報工学専攻","href":"http://www.cis.ibaraki.ac.jp/"}],"from":{"title":"出身地","name":"福島県郡山市","center":{"lat":34.648078,"lng":135.790295}},"stay":{"title":"在住","name":"茨城県日立市","center":{"lat":36.590654,"lng":140.662153}},"hobbyTitle":"趣味","hobbies":["映画鑑賞","読書","ランニング","ドライブ","アニメ / 漫画 / ゲーム","プログラミング"],"favorites":{"foods":["寿司","天ぷら","蕎麦","甘いもの全般"],"artists":["L'arc〜en〜Ciel","SCANDAL","福山雅治","東方神起","やなぎなぎ","柴咲コウ","桑田佳祐"],"persons":["明石家さんま"],"word":"果報は寝て待て"}},"en":{"introduction":"Hello World","profileTitle":"My Profile","name":"Tatsuya Oyanagi","status":"Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University","univs":[{"name":"Ibaraki University","href":"http://www.ibaraki.ac.jp/en/index.html"},{"name":"Graduate School of Science and Engineering","href":"http://www.gse.ibaraki.ac.jp/en/index.html"},{"name":"Major in Computer and Information Sciences","href":"http://www.cis.ibaraki.ac.jp/en/"}],"from":{"title":"From","name":"Koriyama city, Fukushima Prefecture","center":{"lat":34.648078,"lng":135.790295}},"stay":{"title":"Stay","name":"Hitachi city, Ibaraki Prefecture","center":{"lat":36.590654,"lng":140.662153}},"hobbyTitle":"Hobby","hobbies":["Watching movies","Reading books","Running","Driving","Anime / Managa / Game","Programing"],"favorites":{"foods":["Sushi","Tempura","Soba","Sweets"],"artists":["L'arc〜en〜Ciel","SCANDAL","Masaharu Fukuyama","Tohoshinki","Yanaginagi","Koh Shibasaki","Keisuke Kuwata"],"persons":["Sanma Akashiya"],"word":"Everything comes to those who wait"}}};
 
 /***/ }),
 
@@ -2830,7 +3000,7 @@ module.exports = {"ja":{"introduction":"こんにちは，世界","name":"大柳
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"schoolTitle":"学歴","school":[{"name":"福島県立郡山東高等学校","start":"2010年4月","end":"2013年3月","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":"","hollow":false},{"name":"茨城大学工学部情報工学科","start":"2013年4月","end":"2017年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得","hollow":false},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017年4月","end":"2019年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定","hollow":true}],"paperTitle":"投稿論文","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"研究テーマ","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]},"en":{"schoolTitle":"Education","school":[{"name":"福島県立郡山東高等学校","start":"2010年4月","end":"2013年3月","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":""},{"name":"茨城大学工学部情報工学科","start":"2013年4月","end":"2017年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得"},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017年4月","end":"2019年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定"}],"paperTitle":"Papers","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"Research Title","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]}};
+module.exports = {"ja":{"schoolTitle":"学歴","school":[{"name":"福島県立郡山東高等学校","start":"2010年4月","end":"2013年3月","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":"","hollow":false},{"name":"茨城大学工学部情報工学科","start":"2013年4月","end":"2017年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得","hollow":false},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017年4月","end":"2019年3月","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定","hollow":true}],"paperTitle":"投稿論文","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"研究テーマ","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]},"en":{"schoolTitle":"Education","school":[{"name":"福島県立郡山東高等学校","start":"2010-4","end":"2013-3","href":"http://www.koriyamahigashi-h.fks.ed.jp/","remark":""},{"name":"茨城大学工学部情報工学科","start":"2013-4","end":"2017-3","href":"https://www.cis.ibaraki.ac.jp/","remark":"学士（工学）取得"},{"name":"茨城大学大学院理工学研究科情報工学専攻","start":"2017-4","end":"2019-3","href":"https://www.cis.ibaraki.ac.jp/","remark":"修了予定"}],"paperTitle":"Papers","paper":[{"year":2017,"title":"蓄積された経験データを用いた災害支援エキスパートシステムの提案","subtitle":"第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018","member":"大柳達哉, 石田智行, 内田法彦, 柴田義孝","tag":"その他"},{"year":2017,"title":"蓄積された経験データを利用した災害支援エキスパートシステムの構築","subtitle":"第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018","member":"大柳達哉, 石田智行","tag":"その他"},{"year":2017,"title":"Proposal of an Integrated Common Platform for Zoo Operation Support","subtitle":"23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018","member":"Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida","tag":"国際会議（査読付き）"},{"year":2016,"title":"Construction of an Electronic Health Record System for supporting a Zoo Veterinarian","subtitle":"Proc. of the 11th International Conference on P2P, Parallel, Grid, Cloud and Internet Computing, pp667-676","member":"Tatsuya Ooyanagi, Misaki Iyobe, Tomoyuki Ishida, Noriki Uchida, Kaoru Sugita, Yoshitaka Shibata","tag":"国際会議（査読付き）"},{"year":2016,"title":"獣医師のための動物電子カルテシステムの提案","subtitle":"可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016","member":"大柳達哉, 石田智行","tag":"研究会・全国大会（査読なし）"}],"researchTitle":"Research Title","research":[{"class":"卒業研究","title":"動物園業務エンリッチメントを目的とした動物園業務統合型共通プラットフォームの構築","abstract":"動物園内部の業務はアナログ管理が多数存在しており，これは円滑かつ効率的な業務の妨げや，動物園内部における各種情報の連携を困難としている．そこで本研究は，動物園業務統合型共通プラットフォームを構築した．本プラットフォームは動物園業務全般の円滑かつ効率的な業務を支援することによる，動物園業務エンリッチメントを目的とする.これにより，動物園業務の各種情報を一元化による連携と円滑な業務支援を可能とする．","images":[{"src":"static/images/image_1.png","alt":"research-img-1"},{"src":"static/images/image_2.png","alt":"research-img-2"}]},{"class":"修士研究","title":"自治体対策本部用災害エキスパートシステムの研究開発","abstract":"災害時には立ち上がる災害対策本部では現場の状況や職員の経験によって対応速度が大きく左右される．そのような中，災害対策本部では紙媒体を用いた情報管理が行われている．そこで，本研究では自治体災害対策本部のための災害支援エキスパートシステムを開発する．これは過去の災害事例とその対応情報を蓄積しておき，被災時には規模が類似した事例を表示することで情報が整理しきれていない状況においても迅速に意思決定を行う．","images":[{"src":"static/images/image_3.png","alt":"research-img-3"},{"src":"static/images/image_4.png","alt":"research-img-4"}]}]}};
 
 /***/ }),
 
@@ -2841,7 +3011,7 @@ module.exports = {"ja":{"schoolTitle":"学歴","school":[{"name":"福島県立�
 /*! exports provided: ja, en, default */
 /***/ (function(module) {
 
-module.exports = {"ja":{"programing":[],"github":[],"qiita":[]},"en":{"programing":[],"github":[],"qiita":[]}};
+module.exports = {"ja":{"certificationTitle":"資格","certificationHeader":[{"text":"取得年月日","value":"date","sortable":false},{"text":"資格名","value":"name","sortable":false}],"certification":[{"date":"2013年9月17日","name":"普通自動車第一種運転免許"},{"date":"2015年5月18日","name":"基本情報技術者"},{"date":"2015年12月18日","name":"応用情報技術者"}],"programingTitle":"プログラミング経験","programing":[{"name":"PHP","experience":70,"remark":["Laravel","Slim3"]},{"name":"HTML/CSS","experience":70,"remark":["Bootstrap 3, 4","Materialize","Bulma"]},{"name":"JavaScript","experience":80,"remark":["jQuery","AngularJS","Vue.js","Node.js","React.js"]},{"name":"Ruby","experience":40,"remark":["Ruby On Rails"]},{"name":"Go lang","experience":30,"remark":["Gin"]},{"name":"C / C++","experience":20,"remark":[]},{"name":"Java","experience":50,"remark":["Android(with Kotlin)"]},{"name":"Python","experience":60,"remark":["Django","Django Rest Framework"]},{"name":"Database","experience":60,"remark":["MySQL","SQLite","Mongo DB"]}]},"en":{"certificationTitle":"Certification","certificationHeader":[{"text":"Date","value":"date","sortable":false},{"text":"Name","value":"name","sortable":false}],"certification":[{"date":"2013-9-17","name":"First-class drivers for normal vehicles"},{"date":"2015-5-18","name":"Fundamental Information Technology Engineer Examination"},{"date":"2015-12-18","name":"Applied Information Technology Engineer Examination"}],"programingTitle":"Programing Skill","programing":[{"name":"PHP","experience":70,"remark":["Laravel","Slim3"]},{"name":"HTML/CSS","experience":70,"remark":["Bootstrap 3, 4","Materialize","Bulma"]},{"name":"JavaScript","experience":80,"remark":["jQuery","AngularJS","Vue.js","Node.js","React.js"]},{"name":"Ruby","experience":40,"remark":["Ruby On Rails"]},{"name":"Go lang","experience":30,"remark":["Gin"]},{"name":"C / C++","experience":20,"remark":[]},{"name":"Java","experience":50,"remark":["Android(with Kotlin)"]},{"name":"Python","experience":60,"remark":["Django","Django Rest Framework"]}]}};
 
 /***/ }),
 
