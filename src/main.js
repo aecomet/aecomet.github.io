@@ -87,7 +87,10 @@ const router = new Router({
 })
 
 // Before process
-router.beforeResolve((to, from, next) => { next() })
+router.beforeResolve((to, from, next) => {
+    setTimeout(() => { window.scrollTo(0, 0) }, 100)
+    next()
+})
 
 // After process
 router.afterEach((to, from) => {})

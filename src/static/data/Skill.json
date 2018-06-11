@@ -31,7 +31,7 @@
     "programing": [
       {
         "name": "PHP",
-        "experience": 70,
+        "experience": 60,
         "remark": [
           "Laravel",
           "Slim3"
@@ -39,7 +39,7 @@
       },
       {
         "name": "HTML/CSS",
-        "experience": 70,
+        "experience": 60,
         "remark": [
           "Bootstrap 3, 4",
           "Materialize",
@@ -48,7 +48,7 @@
       },
       {
         "name": "JavaScript",
-        "experience": 80,
+        "experience": 65,
         "remark": [
           "jQuery",
           "AngularJS",
@@ -59,14 +59,14 @@
       },
       {
         "name": "Ruby",
-        "experience": 40,
+        "experience": 30,
         "remark": [
           "Ruby On Rails"
         ]
       },
       {
         "name": "Go lang",
-        "experience": 30,
+        "experience": 25,
         "remark": [
           "Gin"
         ]
@@ -78,14 +78,14 @@
       },
       {
         "name": "Java",
-        "experience": 50,
+        "experience": 35,
         "remark": [
           "Android(with Kotlin)"
         ]
       },
       {
         "name": "Python",
-        "experience": 60,
+        "experience": 40,
         "remark": [
           "Django",
           "Django Rest Framework"
@@ -93,7 +93,7 @@
       },
       {
         "name": "Database",
-        "experience": 60,
+        "experience": 50,
         "remark": [
           "MySQL",
           "SQLite",
@@ -134,7 +134,7 @@
     "programing": [
       {
         "name": "PHP",
-        "experience": 70,
+        "experience": 60,
         "remark": [
           "Laravel",
           "Slim3"
@@ -142,7 +142,7 @@
       },
       {
         "name": "HTML/CSS",
-        "experience": 70,
+        "experience": 60,
         "remark": [
           "Bootstrap 3, 4",
           "Materialize",
@@ -151,7 +151,7 @@
       },
       {
         "name": "JavaScript",
-        "experience": 80,
+        "experience": 65,
         "remark": [
           "jQuery",
           "AngularJS",
@@ -162,14 +162,14 @@
       },
       {
         "name": "Ruby",
-        "experience": 40,
+        "experience": 30,
         "remark": [
           "Ruby On Rails"
         ]
       },
       {
         "name": "Go lang",
-        "experience": 30,
+        "experience": 25,
         "remark": [
           "Gin"
         ]
@@ -181,14 +181,14 @@
       },
       {
         "name": "Java",
-        "experience": 50,
+        "experience": 35,
         "remark": [
           "Android(with Kotlin)"
         ]
       },
       {
         "name": "Python",
-        "experience": 60,
+        "experience": 40,
         "remark": [
           "Django",
           "Django Rest Framework"
@@ -196,7 +196,7 @@
       },
       {
         "name": "Database",
-        "experience": 60,
+        "experience": 50,
         "remark": [
           "MySQL",
           "SQLite",
