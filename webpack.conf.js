@@ -55,13 +55,11 @@ let baseWebpack = {
         }),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
-        }),
-        /* === Copy Static files === */
-        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
+        })
     ],
     // Output config
     output: {
-        path: path.resolve(__dirname, 'dist'), //  Output directory name
+        path: '', //  Output directory name
         filename: '[name].js' // Output filename
     },
     module: {
@@ -138,6 +136,11 @@ let baseWebpack = {
 };
 
 if (process.env.NODE_ENV === 'PRODUCTION') {
+    baseWebpack.output.path = path.resolve(__dirname, './')
+    baseWebpack.plugins = baseWebpack.plugins.concat([
+        /* === Copy Static files === */
+        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'static/images') } ])
+    ])
     baseWebpack.optimization.minimizer.push(
         new UglifyJSPlugin({
             uglifyOptions: {
@@ -148,10 +151,14 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         })
     )
 } else {
+    baseWebpack.output.path = path.resolve(__dirname, './dist')
+
     baseWebpack.plugins = baseWebpack.plugins.concat([
         new HardSourceWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        /* === Copy Static files === */
+        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
     // local server config
