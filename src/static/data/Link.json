@@ -1,0 +1,70 @@
+{
+  "ja": {
+    "laboratoryTitle": "研究室",
+    "laboratory": {
+      "name": "石田研究室",
+      "href": "https://glocalvision.net/ishilab/"
+    },
+    "technologyTitle": "参考",
+    "technologies": [
+      {
+        "name": "Github",
+        "href": "https://github.com/"
+      },
+      {
+        "name": "Vue.js",
+        "href": "https://jp.vuejs.org/index.html"
+      },
+      {
+        "name": "Google Material Design",
+        "href": "https://material.io/"
+      },
+      {
+        "name": "Google APIs(Google Developers)",
+        "href": "https://developers.google.com/"
+      },
+      {
+        "name": "Vuetify",
+        "href": "https://vuetifyjs.com/en/"
+      },
+      {
+        "name": "Font Awesome",
+        "href": "https://fontawesome.com/"
+      }
+    ]
+  },
+  "en": {
+    "laboratoryTitle": "Laboratory",
+    "laboratory": {
+      "name": "Ishilda Laboratory",
+      "href": "https://glocalvision.net/ishilab/"
+    },
+    "technologyTitle": "References",
+    "technologies": [
+      {
+        "name": "Github",
+        "href": "https://github.com/"
+      },
+      {
+        "name": "Vue.js",
+        "href": "https://jp.vuejs.org/index.html"
+      },
+      {
+        "name": "Google Material Design",
+        "href": "https://material.io/"
+      },
+      {
+        "name": "Google APIs(Google Developers)",
+        "href": "https://developers.google.com/"
+      },
+      {
+        "name": "Vuetify",
+        "href": "https://vuetifyjs.com/en/"
+      },
+      {
+        "name": "Font Awesome",
+        "href": "https://fontawesome.com/"
+      }
+    ]
+  }
+}

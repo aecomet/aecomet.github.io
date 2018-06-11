@@ -1,0 +1,144 @@
+{
+  "ja": {
+    "introduction": "こんにちは，世界!",
+    "profileTitle": "プロフィール",
+    "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
+    "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
+    "univ": [
+      {
+        "name": "茨城大学",
+        "href": "http://www.ibaraki.ac.jp/index.html"
+      },
+      {
+        "name": "茨城大学院理工学研究科",
+        "href": "http://www.gse.ibaraki.ac.jp/"
+      },
+      {
+        "name": "情報工学専攻",
+        "href": "http://www.cis.ibaraki.ac.jp/"
+      }
+    ],
+    "from": {
+      "title": "出身地",
+      "name": "福島県郡山市",
+      "center": {
+        "lat": 34.648078,
+        "lng": 135.790295
+      }
+    },
+    "stay": {
+      "title": "在住",
+      "name": "茨城県日立市",
+      "center": {
+        "lat": 36.590654,
+        "lng": 140.662153
+      }
+    },
+    "hobbyTitle": "趣味",
+    "hobby": [
+      "映画鑑賞",
+      "読書",
+      "ランニング",
+      "ドライブ",
+      "アニメ / 漫画 / ゲーム",
+      "プログラミング"
+    ],
+    "favorite": {
+      "title": "その他",
+      "foodTitle": "好きな食べ物",
+      "food": [
+        "寿司",
+        "天ぷら",
+        "蕎麦",
+        "甘いもの全般"
+      ],
+      "artistTitle": "よく聞くアーティスト",
+      "artist": [
+        "L'arc〜en〜Ciel",
+        "SCANDAL",
+        "福山雅治",
+        "東方神起",
+        "やなぎなぎ",
+        "柴咲コウ",
+        "桑田佳祐"
+      ],
+      "personTitle": "好きな芸能人",
+      "person": [
+        "明石家さんま"
+      ],
+      "wordTitle": "好きな言葉",
+      "word": "「果報は寝て待て」"
+    }
+  },
+  "en": {
+    "introduction": "Hello World!",
+    "profileTitle": "My Profile",
+    "name": "Tatsuya Oyanagi",
+    "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
+    "univ": [
+      {
+        "name": "Ibaraki University",
+        "href": "http://www.ibaraki.ac.jp/en/index.html"
+      },
+      {
+        "name": "Graduate School of Science and Engineering",
+        "href": "http://www.gse.ibaraki.ac.jp/en/index.html"
+      },
+      {
+        "name": "Major in Computer and Information Sciences",
+        "href": "http://www.cis.ibaraki.ac.jp/en/"
+      }
+    ],
+    "from": {
+      "title": "From",
+      "name": "Koriyama city, Fukushima Prefecture",
+      "center": {
+        "lat": 34.648078,
+        "lng": 135.790295
+      }
+    },
+    "stay": {
+      "title": "Stay",
+      "name": "Hitachi city, Ibaraki Prefecture",
+      "center": {
+        "lat": 36.590654,
+        "lng": 140.662153
+      }
+    },
+    "hobbyTitle": "Hobby",
+    "hobby": [
+      "Watching movies",
+      "Reading books",
+      "Running",
+      "Driving",
+      "Anime / Managa / Game",
+      "Programing"
+    ],
+    "favorite": {
+      "title": "Favorites",
+      "foodTitle": "Favorite Foods",
+      "food": [
+        "Sushi",
+        "Tempura",
+        "Soba",
+        "Sweets"
+      ],
+      "artistTitle": "Favorite Artists",
+      "artist": [
+        "L'arc〜en〜Ciel",
+        "SCANDAL",
+        "Masaharu Fukuyama",
+        "Tohoshinki",
+        "Yanaginagi",
+        "Koh Shibasaki",
+        "Keisuke Kuwata"
+      ],
+      "personTitle": "Favorite Entertainer",
+      "person": [
+        "Sanma Akashiya"
+      ],
+      "wordTitle": "Favorite Word",
+      "word": "「Everything comes to those who wait」"
+    }
+  }
+}
