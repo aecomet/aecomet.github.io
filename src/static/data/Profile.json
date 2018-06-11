@@ -1,9 +1,9 @@
 {
   "ja": {
-    "introduction": "こんにちは，世界!",
+    "introduction": "こんにちは，世界！",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
-    "status": "茨城大学 大学院院 理工学研究科 情報工学専攻",
+    "status": "茨城大学 大学院理工学研究科情報工学専攻",
     "univ": [
       {
         "name": "茨城大学",
@@ -71,7 +71,7 @@
     }
   },
   "en": {
-    "introduction": "Hello World!",
+    "introduction": "Hello, World!",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
     "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
