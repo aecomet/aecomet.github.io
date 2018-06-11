@@ -26,7 +26,7 @@
                 v-card-text
                     v-layout(row wrap justify-center)
                         v-flex(v-for="(img, idx) in r.images" :key="`img-${idx}`" md6 xs12)
-                            .text-xs-center: img(:src="img.src" :alt="img.alt" width="400" height="300")
+                            .text-xs-center: img(:src="img.src" :alt="img.alt" width="100%" height="auto")
                     .body-1.mt-2 {{ r.abstract }}
 
 </template>
