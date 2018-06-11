@@ -6,4 +6,4 @@ package-lock.json
 *.hot-update.*
 *.js.map
 *.css.map
-temp/
+dist/
