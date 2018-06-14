@@ -160,7 +160,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         new webpack.HotModuleReplacementPlugin(),
         /* === Copy Static files === */
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
-        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.join(__dirname, 'dist') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.join(__dirname, 'dist/service-worker.js') } ]),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
     // local server config

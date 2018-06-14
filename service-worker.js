@@ -4,17 +4,18 @@
 const CACHE_NAME = 'portfolio-sw-cache' // cache name
 const ORIGIN = location.protocol + '//' + location.hostname; // ORIGIN host
 let urlsToCache = [
-    `${ORIGIN}/`,
-    `${ORIGIN}/index.html`,
-    `${ORIGIN}/app.js`,
-    `${ORIGIN}/app.css`,
-    `${ORIGIN}/vendor.js`,
-    `${ORIGIN}/vendor.css`,
-    `${ORIGIN}/data.js`,
-    `${ORIGIN}/component.js`,
-    `${ORIGIN}/component.css`,
-    'https://maps.googleapi.com/maps/api/js/ViewportInfoService.GetViewportInfo'
+    `/`,
+    `/index.html`,
+    `/app.js`,
+    `/app.css`,
+    `/vendor.js`,
+    `/vendor.css`,
+    `/data.js`,
+    `/component.js`,
+    `/component.css`,
+    `https://maps.googleapi.com/maps/api/js?`
 ]
+// https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&1m2&1d34.6439916728885&2d135.78353990283597&2m2&1d34.65220002017185&2d135.79704395804413&2u17&4sja&5e0&6sm%40425000000&7b0&8e0&callback=_xdc_._a17soj&token=9344
 
 // install module
 self.addEventListener('install', e => {
