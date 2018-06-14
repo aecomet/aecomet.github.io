@@ -7,18 +7,20 @@ html(lang="ja")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(content="ポートフォリオ" name="title")
     meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
-    meta(name="theme-color" content="#4DBA87")
-    link(rel="shortcut icon" href="favicon.ico")
+    meta(name="theme-color" content="#fff799")
+    link(rel="icon" href="static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
+    link(rel="shortcut icon" href="static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
 
+    link(rel="manifest" href="manifest.json")
     //- /* ==== iOS Theme ==== */
     meta(name="apple-mobile-web-app-capable" content="yes")
     meta(name="apple-mobile-web-app-status-bar-style" content="black")
-    meta(name="apple-mobile-web-app-title" content="registerapp")
-    //- link(rel="apple-touch-icon" href="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/apple-touch-icon-152x152.png")
+    meta(name="apple-mobile-web-app-title" content="Portfolio")
+    link(rel="apple-touch-icon" href="static/images/icons/apple-touch-icon.png" sizes="152x152")
 
     //- /* ==== Windows Theme ==== */
-    //- meta(name="msapplication-TileImage" content="<%= htmlWebpackPlugin.files.publicPath %>static/img/icons/msapplication-icon-144x144.png")
-    //- meta(name="msapplication-TileColor" content="#000000")
+    meta(name="msapplication-TileImage" content="static/images/icons/apple-touch-icon.png")
+    meta(name="msapplication-TileColor" content="#fff799")
 
   body
     noscript.
