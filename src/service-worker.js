@@ -2,16 +2,18 @@
  * === Service Worker ===
  **/
 const CACHE_NAME = 'portfolio-sw-cache' // cache name
+const ORIGIN = location.protocol + '//' + location.hostname; // ORIGIN host
 let urlsToCache = [
-    '/',
-    '/index.html',
-    '/app.js',
-    '/app.css',
-    '/vendor.js',
-    '/vendor.css',
-    '/data.js',
-    '/component.js',
-    '/component.css',
+    `${ORIGIN}/`,
+    `${ORIGIN}/index.html`,
+    `${ORIGIN}/app.js`,
+    `${ORIGIN}/app.css`,
+    `${ORIGIN}/vendor.js`,
+    `${ORIGIN}/vendor.css`,
+    `${ORIGIN}/data.js`,
+    `${ORIGIN}/component.js`,
+    `${ORIGIN}/component.css`,
+    'https://maps.googleapi.com/maps/api/js/ViewportInfoService.GetViewportInfo'
 ]
 
 // install module
@@ -58,6 +60,20 @@ self.addEventListener('fetch', e => {
 })
 
 // update module
+const cacheWhiteList = [
+    CACHE_NAME
+]
+
 self.addEventListener('activate', e => {
-    // const cacheWhiteList = []
+    e.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cacheName => {
+                    if (cacheWhiteList.indexOf(cacheName) === -1) {
+                        return caches.delete(cacheName)
+                    }
+                })
+            )
+        })
+    )
 })
