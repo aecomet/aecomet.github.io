@@ -51,8 +51,22 @@ let baseWebpack = {
             },
             inject: true,
             chunksSortMode: 'dependency',
-            // serviceWorkerLoader: `<script>${fs.readFileSync(path.resolve(__dirname, 'src/service-worker-conf.js'), 'utf-8')}</script>`
         }),
+        // === Compile `404.pug` === //
+        // new HTMLWebpackPlugin({
+        //     filename: '404.html',
+        //     template: path.resolve(__dirname, 'src/404.pug'),
+        //     minify: {
+        //         html5: true,
+        //         minifyCSS: true,
+        //         collapseWhitespace: true,
+        //         removeComments: true,
+        //         removeEmptyAttributes: true
+        //     },
+        //     inject: true,
+        //     chunksSortMode: 'dependency',
+        //     excludeChunks: ['data', 'component']
+        // }),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         })
@@ -175,7 +189,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         inline: true,                         // The mode of inline.
         hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
-        historyApiFallback: true
+        historyApiFallback: false
     }
 }
 
