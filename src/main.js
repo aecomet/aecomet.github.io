@@ -115,3 +115,14 @@ new Vue({
         App
     }
 })
+
+// Checking support a `service worker`
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js').then(registration => {
+        console.log('Service Worker registration successful!')
+    }).catch(err => {
+        console.error('Service Worker registration failed:', err)
+    })
+} else {
+    console.warn('This browser doesn\'t use a service worker')
+}

@@ -139,7 +139,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     baseWebpack.output.path = path.resolve(__dirname, './')
     baseWebpack.plugins = baseWebpack.plugins.concat([
         /* === Copy Static files === */
-        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'static/images') } ])
+        new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'static/images') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.resolve(__dirname, 'service-worker.js') } ]),
     ])
     baseWebpack.optimization.minimizer.push(
         new UglifyJSPlugin({
@@ -158,7 +159,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         /* === Copy Static files === */
-        new CopywebpackPlugin([ { from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
+        new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.join(__dirname, 'dist') } ]),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
     // local server config
