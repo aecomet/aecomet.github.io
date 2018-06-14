@@ -116,6 +116,7 @@ new Vue({
     }
 })
 
+/* === Service Worker === */
 // Checking support a `service worker`
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js', { scope: '.' }).then(registration => {
@@ -125,4 +126,11 @@ if ('serviceWorker' in navigator) {
     })
 } else {
     console.warn('This browser doesn\'t use a service worker')
+}
+/* === Cache === */
+// Checking exist a cache
+if ('caches' in window) {
+    // caches.match(url).then(res => {
+    //
+    // })
 }

@@ -2,7 +2,6 @@
  * === Service Worker ===
  **/
 const CACHE_NAME = 'portfolio-sw-cache' // cache name
-const ORIGIN = location.protocol + '//' + location.hostname; // ORIGIN host
 let urlsToCache = [
     `/`,
     `/index.html`,
@@ -13,12 +12,19 @@ let urlsToCache = [
     `/data.js`,
     `/component.js`,
     `/component.css`,
-    `https://maps.googleapi.com/maps/api/js?`
+    `/static/images/image_1.png`,
+    `/static/images/image_2.png`,
+    `/static/images/image_3.png`,
+    `/static/images/image_4.png`,
+    `/favicon.ico`,
+    `/manifest.json`,
+    // `https://maps.googleapi.com/maps/api/js?`
 ]
 // https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&1m2&1d34.6439916728885&2d135.78353990283597&2m2&1d34.65220002017185&2d135.79704395804413&2u17&4sja&5e0&6sm%40425000000&7b0&8e0&callback=_xdc_._a17soj&token=9344
 
 // install module
 self.addEventListener('install', e => {
+    // console.log('[Service Worker]: Install')
     e.waitUntil(
         caches.open(CACHE_NAME).then(cache => {
             console.log('Opened cache')
@@ -29,35 +35,51 @@ self.addEventListener('install', e => {
 
 // fetch module
 self.addEventListener('fetch', e => {
-    e.respondWith(
-        caches.match(e.request).then(res => {
+    // console.log('[Service Worker]: fetch', e.request.url)
 
-            // If a response has the cache, it returns the data to client.
-            if (res) {
-                return res
-            }
+    if (e.request.url.indexOf('https://maps.googleapi.com/maps/api/js') === 0) {
+        e.respondWith(
+            fetch(e.request).then(res => {
+                return caches.open(DATA_CACHE_NAME).then(cache => {
+                    cache.put(e.request.url, res.clone())
+                    console.log('[Service Worker]: fetch&cached data')
+                    return res
+                })
+            })
+        )
+    } else {
+        e.respondWith(
+            caches.match(e.request).then(res => {
 
-            // network request
-            // TODO: you must use `clone`, because a request handles once only. So, you prepare two files.
-            const fetchRequest = e.request.clone()
-
-            return fetch(fetchRequest).then(response => {
-                // Checking a response whether it corrects.
-                if (!response || response.status !== 200 || response.type !== 'basic') {
-                    return response
+                // If a response has the cache, it returns the data to client.
+                if (res) {
+                    return res
                 }
 
+                // network request
                 // TODO: you must use `clone`, because a request handles once only. So, you prepare two files.
-                const responseToCache = response.clone()
+                const fetchRequest = e.request.clone()
 
-                caches.open(CACHE_NAME).then(cache => {
-                    cache.put(e.request, responseToCache) // Registering cache data
+                return fetch(fetchRequest).then(response => {
+                    // Checking a response whether it corrects.
+                    if (!response || response.status !== 200 || response.type !== 'basic') {
+                        return response
+                    }
+
+                    // TODO: you must use `clone`, because a request handles once only. So, you prepare two files.
+                    const responseToCache = response.clone()
+
+                    caches.open(CACHE_NAME).then(cache => {
+                        cache.put(e.request, responseToCache) // Registering cache data
+                    })
+
+                    return response
+                }).catch(err => {
+                    console.log('err', err)
                 })
-
-                return response
             })
-        })
-    )
+        )
+    }
 })
 
 // update module
@@ -66,6 +88,7 @@ const cacheWhiteList = [
 ]
 
 self.addEventListener('activate', e => {
+    // console.log('[Service Worker]: activate')
     e.waitUntil(
         caches.keys().then(cacheNames => {
             return Promise.all(

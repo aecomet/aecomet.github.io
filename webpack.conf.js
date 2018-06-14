@@ -68,7 +68,7 @@ let baseWebpack = {
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
-                    hotReload: true // disables Hot Reload
+                    hotReload: false // disables Hot Reload
                 }
             },
             {
@@ -141,6 +141,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         /* === Copy Static files === */
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'static/images') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.resolve(__dirname, 'service-worker.js') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/manifest.json'), to: path.resolve(__dirname, 'manifest.json') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'favicon.ico') } ]),
     ])
     baseWebpack.optimization.minimizer.push(
         new UglifyJSPlugin({
@@ -161,6 +163,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         /* === Copy Static files === */
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.join(__dirname, 'dist/service-worker.js') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/manifest.json'), to: path.resolve(__dirname, 'dist/manifest.json') } ]),
+        new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/favicon.ico'), to: path.resolve(__dirname, 'dist/favicon.ico') } ]),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
     // local server config
@@ -168,9 +172,9 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         port: 7777,                         // port number
         contentBase: path.join(__dirname, 'dist/'),    // Document root on server
         // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
-        progress: true,                         // Show progress on console.
+        progress: false,                         // Show progress on console.
         inline: true,                         // The mode of inline.
-        hot: true,                         // use HMR
+        hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
         historyApiFallback: true
     }
