@@ -80,6 +80,7 @@
         font-feature-settings: 'pkna';
         letter-spacing: 0.03em;
     }
+
     .vertical-text ruby {
         font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
     }

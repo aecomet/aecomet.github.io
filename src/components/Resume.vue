@@ -33,7 +33,7 @@
 
 <script>
     'use strict'
-    import { Timeline, TimelineItem, TimelineTitle } from 'vue-cute-timeline'
+    import {Timeline, TimelineItem, TimelineTitle} from 'vue-cute-timeline'
 
     export default {
         name: "Resume",
@@ -44,8 +44,10 @@
         },
         data: () => ({}),
         props: {},
-        created () {},
-        mounted () {},
+        created() {
+        },
+        mounted() {
+        },
         methods: {},
         computed: {}
     }

@@ -48,12 +48,13 @@ const messages = {
     }
 }
 
+const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
-    { path: '/', name: 'Profile', component: Profile },
-    { path: '/resume', name: 'Resume', component: Resume },
-    { path: '/skill', name: 'Skill', component: Skill },
-    { path: '/link', name: 'Link', component: Link },
-    { path: '*', name: 'NotFound', component: NotFound }
+    { path: '/', name: 'Profile', component: Profile, meta: { title: `${baseTitle} | プロフィール/Profile` } },
+    { path: '/resume', name: 'Resume', component: Resume, meta: { title: `${baseTitle} | 職歴・学歴/Resume` } },
+    { path: '/skill', name: 'Skill', component: Skill, meta: { title: `${baseTitle} | スキル/Skill` } },
+    { path: '/link', name: 'Link', component: Link, meta: { title: `${baseTitle} | リンク/Link` } },
+    { path: '*', name: 'NotFound', component: NotFound, meta: { title: `${baseTitle} | 404 Not found` } }
 ]
 
 // CSS / Icon pack
@@ -93,7 +94,11 @@ router.beforeResolve((to, from, next) => {
 })
 
 // After process
-router.afterEach((to, from) => {})
+router.afterEach((to, from) => {
+    if (to.meta && to.meta.title) {
+        document.title = to.meta.title
+    }
+})
 
 // Create a vueI18n instance:
 const i18n = new VueI18n({
