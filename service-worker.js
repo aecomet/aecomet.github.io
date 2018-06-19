@@ -24,16 +24,14 @@ let urlsToCache = [
     `/static/images/icons/apple-touch-icon.png`,
     `/static/images/icons/favicon.ico`,
     `/manifest.json`,
-    // `https://maps.googleapi.com/maps/api/js?`
 ]
-// https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&1m2&1d34.6439916728885&2d135.78353990283597&2m2&1d34.65220002017185&2d135.79704395804413&2u17&4sja&5e0&6sm%40425000000&7b0&8e0&callback=_xdc_._a17soj&token=9344
 
 // install module
 self.addEventListener('install', e => {
     // console.log('[Service Worker]: Install')
     e.waitUntil(
         caches.open(CACHE_NAME).then(cache => { // Open a cache storage
-            console.log('Opened cache')
+            // console.log('Opened cache')
             return cache.addAll(urlsToCache) // add data
         }).catch(err => {
             console.log('install err: ', err)

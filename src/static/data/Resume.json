@@ -31,20 +31,6 @@
     "paper": [
       {
         "year": 2017,
-        "title": "蓄積された経験データを用いた災害支援エキスパートシステムの提案",
-        "subtitle": "第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018",
-        "member": "大柳達哉, 石田智行, 内田法彦, 柴田義孝",
-        "tag": "その他"
-      },
-      {
-        "year": 2017,
-        "title": "蓄積された経験データを利用した災害支援エキスパートシステムの構築",
-        "subtitle": "第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018",
-        "member": "大柳達哉, 石田智行",
-        "tag": "その他"
-      },
-      {
-        "year": 2017,
         "title": "Proposal of an Integrated Common Platform for Zoo Operation Support",
         "subtitle": "23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018",
         "member": "Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida",
@@ -63,6 +49,23 @@
         "subtitle": "可視化情報学会全国講演会（日立2016）講演論文集，Vol.36, No.2, B107，Oct.2016",
         "member": "大柳達哉, 石田智行",
         "tag": "研究会・全国大会（査読なし）"
+      }
+    ],
+    "otherTitle": "その他",
+    "other": [
+      {
+        "year": 2017,
+        "title": "蓄積された経験データを用いた災害支援エキスパートシステムの提案",
+        "subtitle": "第34回テレイマージョン技術研究会研究会, pp.3-4, Mar.2018",
+        "member": "大柳達哉, 石田智行, 内田法彦, 柴田義孝",
+        "tag": "その他"
+      },
+      {
+        "year": 2017,
+        "title": "蓄積された経験データを利用した災害支援エキスパートシステムの構築",
+        "subtitle": "第11回学生サステナビリティフォーラム（ポスター発表）, Feb.2018",
+        "member": "大柳達哉, 石田智行",
+        "tag": "その他"
       }
     ],
     "researchTitle": "研究テーマ",
@@ -128,20 +131,6 @@
     "paper": [
       {
         "year": 2017,
-        "title": "Proposal of disaster support expert system using accumulated experience data",
-        "subtitle": "The 34th Tele-Immersion Technology Committee, Virtual Reality Society of Japan, pp.3-4, Mar.2018",
-        "member": "Tatsuya Oyanagi, Tomoyuki Ishida, Noriki Uchida, Yoshitaka Shibata",
-        "tag": "Other"
-      },
-      {
-        "year": 2017,
-        "title": "Construction of disaster support expert system using accumulated experience data",
-        "subtitle": "The 11th Student Sustainability Forum (Poster presentation), Ami Town, Ibaraki , Feb.2018",
-        "member": "Tatsuya Oyanagi, Tomoyuki Ishida",
-        "tag": "Other"
-      },
-      {
-        "year": 2017,
         "title": "Proposal of an Integrated Common Platform for Zoo Operation Support",
         "subtitle": "23rd International Symposium on Artificial Life and Robotics, 3rd International Symposium on BioComplexity, January.2018",
         "member": "Tatsuya Ohyanagi, Hayato Ito, Misaki Iyobe, Tomoyuki Ishida",
@@ -160,6 +149,23 @@
         "subtitle": "Visualization Information Society National Lecture (Hitachi 2016) lecture paper，Vol.36, No.2, B107，Oct.2016",
         "member": "Tatsuya Oyanagi, Tomoyuki Ishida",
         "tag": "Japan Conference（no-reviewed）"
+      }
+    ],
+    "otherTitle": "Others",
+    "other": [
+      {
+        "year": 2017,
+        "title": "Proposal of disaster support expert system using accumulated experience data",
+        "subtitle": "The 34th Tele-Immersion Technology Committee, Virtual Reality Society of Japan, pp.3-4, Mar.2018",
+        "member": "Tatsuya Oyanagi, Tomoyuki Ishida, Noriki Uchida, Yoshitaka Shibata",
+        "tag": "Other"
+      },
+      {
+        "year": 2017,
+        "title": "Construction of disaster support expert system using accumulated experience data",
+        "subtitle": "The 11th Student Sustainability Forum (Poster presentation), Ami Town, Ibaraki , Feb.2018",
+        "member": "Tatsuya Oyanagi, Tomoyuki Ishida",
+        "tag": "Other"
       }
     ],
     "researchTitle": "Research Title",

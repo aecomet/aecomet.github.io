@@ -23,7 +23,7 @@
         //- Main Contents
         v-content.grey.lighten-5
             v-container(fluid)
-                transition(name="fade" mode="out-in" :after-enter="afterEnter" appear): router-view
+                transition(name="fade" mode="out-in" appear): router-view
 
                 //- footer
                 v-footer(height="auto" app light absolute)

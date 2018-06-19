@@ -82,7 +82,7 @@ fontawesome.library.add(brands, faSpinner)
 
 const router = new Router({
     routes: Routes,
-    mode: 'history',
+    // mode: 'history',
     linkActiveClass: 'active',
     transitionOnLoad: true,
 })
@@ -125,7 +125,7 @@ new Vue({
 // Checking support a `service worker`
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./service-worker.js', { scope: '.' }).then(registration => {
-        console.log('Service Worker registration successful!')
+        // console.log('Service Worker registration successful!')
     }).catch(err => {
         console.error('Service Worker registration failed:', err)
     })
