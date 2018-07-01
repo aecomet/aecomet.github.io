@@ -162,7 +162,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         /* === Service Worker === */
         new ServiceWorkerWebpackPlugin({
             entry: path.join(__dirname, 'src/service-worker.js'),
-            filename: path.resolve(__dirname, 'service-worker.js'),
+            filename: 'service-worker.js',
             include: [ '*.js', '*.css', '*.html', 'manifest.json', '**/*.png', '**/*.ico' ],
         }),
     ])
@@ -204,7 +204,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         inline: true,                         // The mode of inline.
         hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
-        historyApiFallback: true
+        historyApiFallback: false
     }
 }
 
