@@ -9,8 +9,8 @@
                         v-card-title(primary-title): span.headline {{ $t('profile.profileTitle') }}
                         v-card-text.pa-3
                             .my-2.headline {{ $t('profile.name') }}
-                            .my-4.title {{ $t('profile.status') }}
-                        v-card-actions
+                            //- .my-4.title {{ $t('profile.status') }}
+                        //- v-card-actions
                             v-list(style="width: 100%;" light)
                                 v-list-tile(v-for="(u, idx) in $t('profile.univ')" :key="`univ-${idx}`" @click="" :href="u.href" target="_blank" avatar ripple)
                                     v-list-tile-action: v-icon(color="") school

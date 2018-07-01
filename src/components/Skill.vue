@@ -16,8 +16,10 @@
                 v-layout(row wrap justify-start)
                     v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" md3 xs6).pa-2
                         .text-xs-center
-                            .title.my-3 {{ p.name }}
-                            v-progress-circular(color="red" :size="100" :width="15" :rotate="360" :value="p.experience") {{ p.experience }}
+                            //- .title.my-3 {{ p.name }}
+                            //-v-progress-circular(color="red" :size="100" :width="15" :rotate="360" :value="p.experience") {{ p.experience }}
+                            .title.my-3
+                            v-progress-circular(color="red" :size="100" :width="15" :rotate="360" :value="p.experience") 0
                         .text-xs-left.mt-2
                             span(v-for="(chip, idx) in p.remark" :key="`chip-${idx}`"): v-chip(color="red" label outline) {{ chip }}
 </template>

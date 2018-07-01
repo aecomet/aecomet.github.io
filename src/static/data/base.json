@@ -3,7 +3,7 @@
     "title": "ポートフォリオ",
     "content": [
       { "name": "プロフィール", "href": "/", "icon": "" },
-      { "name": "学歴/職歴", "href": "/resume", "icon": "" },
+      { "name": "研究", "href": "/resume", "icon": "" },
       { "name": "スキル", "href": "/skill", "icon": "" },
       { "name": "リンク", "href": "/link", "icon": "" }
     ],

@@ -6,6 +6,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 
 function assetsPath(_path) {
     const assetsSubDirectory = 'static'
@@ -13,10 +14,12 @@ function assetsPath(_path) {
 }
 
 const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
+const watch = (process.env.NODE_ENV !== 'PRODUCTION');
 
 let baseWebpack = {
     // If mode is "production", the app is optimized.
     // If mode is "development", javascript files output with adding source map.
+    watch: watch,
     mode: environment,
     entry: {
         app: path.resolve(__dirname, 'src/main.js'), // The main javascript file
@@ -69,7 +72,7 @@ let baseWebpack = {
         // }),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
-        })
+        }),
     ],
     // Output config
     output: {
@@ -156,6 +159,12 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'static/images') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.resolve(__dirname, 'service-worker.js') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/manifest.json'), to: path.resolve(__dirname, 'manifest.json') } ]),
+        /* === Service Worker === */
+        new ServiceWorkerWebpackPlugin({
+            entry: path.join(__dirname, 'src/service-worker.js'),
+            filename: path.resolve(__dirname, 'service-worker.js'),
+            include: [ '*.js', '*.css', '*.html', 'manifest.json', '**/*.png', '**/*.ico' ],
+        }),
     ])
     baseWebpack.optimization.minimizer.push(
         new UglifyJSPlugin({
@@ -177,6 +186,12 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/static/images') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/service-worker.js'), to: path.join(__dirname, 'dist/service-worker.js') } ]),
         new CopywebpackPlugin([ { toType: 'file', from: path.join(__dirname, 'src/manifest.json'), to: path.resolve(__dirname, 'dist/manifest.json') } ]),
+        new ServiceWorkerWebpackPlugin({
+            entry: path.join(__dirname, 'src/service-worker.js'),
+            filename: 'service-worker.js',
+            exclude: [ '**/.*', '**/*.hot-update.*', '**/*.map' ],
+            include: [ '*.js', '*.css', '*.html', 'manifest.json', '**/*.png', '**/*.ico' ],
+        }),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
     // local server config
@@ -189,7 +204,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         inline: true,                         // The mode of inline.
         hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
-        historyApiFallback: false
+        historyApiFallback: true
     }
 }
 

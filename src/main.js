@@ -11,6 +11,7 @@ import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
 import * as VueGoogleMaps from 'vue2-google-maps';
+import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
 // Components
 import {
@@ -82,7 +83,7 @@ fontawesome.library.add(brands, faSpinner)
 
 const router = new Router({
     routes: Routes,
-    // mode: 'history',
+    mode: 'history',
     linkActiveClass: 'active',
     transitionOnLoad: true,
 })
@@ -123,12 +124,9 @@ new Vue({
 
 /* === Service Worker === */
 // Checking support a `service worker`
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js', { scope: '.' }).then(registration => {
-        // console.log('Service Worker registration successful!')
-    }).catch(err => {
-        console.error('Service Worker registration failed:', err)
-    })
+if ('serviceWorker' in navigator &&
+    (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+    const registration = runtime.register()
 } else {
     console.warn('This browser doesn\'t use a service worker')
 }
