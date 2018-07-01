@@ -9,10 +9,6 @@ let urlsToCache = [
     './',
 ]
 
-console.log(assets)
-console.log(CACHE_NAME)
-console.log(urlsToCache)
-
 urlsToCache = urlsToCache.map(path => {
     return new URL(path, location).toString()
 })
@@ -29,6 +25,7 @@ self.addEventListener('install', e => {
                 return cache.addAll(urlsToCache) // add data
             }).catch(err => {
                 console.log('install err: ', err)
+                throw err
             })
     )
 })
@@ -78,6 +75,7 @@ self.addEventListener('fetch', e => {
 // update module
 self.addEventListener('activate', e => {
     // console.log('[Service Worker]: activate')
+    console.log('caches.keys', caches.keys())
     e.waitUntil(
         caches.keys().then(keyList => {
             return Promise.all(

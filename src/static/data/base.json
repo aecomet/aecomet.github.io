@@ -2,10 +2,10 @@
   "ja": {
     "title": "ポートフォリオ",
     "content": [
-      { "name": "プロフィール", "href": "/", "icon": "" },
-      { "name": "研究", "href": "/resume", "icon": "" },
-      { "name": "スキル", "href": "/skill", "icon": "" },
-      { "name": "リンク", "href": "/link", "icon": "" }
+      { "name": "プロフィール", "href": "/", "icon": "person" },
+      { "name": "研究", "href": "/resume", "icon": "school" },
+      { "name": "スキル", "href": "/skill", "icon": "fitness_center" },
+      { "name": "リンク", "href": "/link", "icon": "link" }
     ],
     "attribute": "大柳 達哉",
     "not_found": "お探しのページは存在しません．",
@@ -20,10 +20,10 @@
   "en": {
     "title": "Portfolio",
     "content": [
-      { "name": "Profile", "href": "/", "icon": "" },
-      { "name": "Resume", "href": "/resume", "icon": "" },
-      { "name": "Skill", "href": "/skill", "icon": "" },
-      { "name": "Link", "href": "/link", "icon": "" }
+      { "name": "Profile", "href": "/", "icon": "person" },
+      { "name": "Resume", "href": "/resume", "icon": "school" },
+      { "name": "Skill", "href": "/skill", "icon": "fitness_center" },
+      { "name": "Link", "href": "/link", "icon": "link" }
     ],
     "attribute": "Tatsuya Oyanagi",
     "not_found": "The page doesn't exist.",

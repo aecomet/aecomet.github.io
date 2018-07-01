@@ -1,14 +1,17 @@
 <template lang="pug">
-    v-app(app light)
-        v-toolbar(:scroll-threshold="isHide" app light dense scroll-off-screen clipped-left)
-            v-toolbar-side-icon(@click="changeDrawer" light)
+    v-app(app :light="theme" :dark="!theme")
+        v-toolbar(:scroll-threshold="isHide" app :light="theme" :dark="!theme" dense scroll-off-screen clipped-left)
+            v-toolbar-side-icon(@click="changeDrawer" :light="theme" :dark="!theme")
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
             v-toolbar-items.hidden-sm-and-down
-                v-tabs(slot="extension" v-model="tab" slider-color="red" color="grey lighten-4" right)
-                    v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="changeLanguage('ja')" flat outline) 日本語
-            v-btn(v-else @click="changeLanguage('en')" flat outline) English
+                v-tabs(slot="extension" v-model="tab" slider-color="red" :light="theme" :dark="!theme" right)
+                    //- v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
+                    v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`"): v-btn(flat icon): v-icon {{ header.icon }}
+            span(style="margin: auto 5px").hidden-sm-and-down
+            v-btn(v-if="$i18n.locale !== 'ja'" @click="changeLanguage('ja')" icon flat): v-icon translate
+            v-btn(v-else @click="changeLanguage('en')" icon flat): v-icon translate
+            v-btn(@click="changeTheme" icon flat): v-icon brightness_4
             //- v-menu(transition="slide-x-transition")
                 v-btn(slot="activator" icon light): v-icon more_vert
                 v-list
@@ -16,19 +19,22 @@
                     v-list-tile(@click="changeLanguage('en')"): v-list-tile-title EN
 
         //- Navigation Drawer
-        v-navigation-drawer(v-model="drawer" app light disable-resize-watcher clipped)
+        v-navigation-drawer(v-model="drawer" app :light="theme" :dark="!theme" disable-resize-watcher clipped)
             v-list(subheader dense)
                 v-list-tile(v-for="(nav, idx) in $t('base.content')" :key="`nav-${idx}`" :to="nav.href" @click="" avatar ripple)
                     v-list-tile-content
-                        v-list-tile-title: span.subheading {{ nav.name }}
+                        v-list-tile-title
+                            span.subheading
+                                v-icon {{ nav.icon }}
+                                | &nbsp;{{ nav.name }}
 
         //- Main Contents
-        v-content.grey.lighten-5
+        v-content
             v-container(fluid)
                 transition(name="fade" mode="out-in" appear): router-view
 
                 //- footer
-        v-footer(height="auto" app light absolute)
+        v-footer(height="auto" app :light="theme" :dark="!theme" absolute)
             v-layout(row wrap justify-center)
                 v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" flat): font-awesome-icon(size="lg" :icon="['fab', link.icon]")
                 v-flex(xs12).text-xs-right.pa-1
@@ -47,16 +53,16 @@
         name: 'app',
         data: () => ({
             drawer: false,
-            tab: null
+            tab: null,
+            theme: true,
         }),
         props: {},
         created() {
             vm = this
         },
-        mounted() {
-        },
+        mounted() {},
         methods: {
-            changeDrawer() {
+            changeDrawer () {
                 vm.drawer = !vm.drawer
             },
             changeLanguage(code) {
@@ -64,6 +70,9 @@
                 vm.$i18n.locale = code
                 vm.$t('resume.school').reverse()
                 vm.$forceUpdate()
+            },
+            changeTheme () {
+                vm.theme = !vm.theme
             }
         },
         computed: {
