@@ -59,6 +59,11 @@
         props: {},
         created() {
             vm = this
+            if (vm.$ls.get('theme') !== undefined) {
+                vm.theme = vm.$ls.get('theme')
+            } else {
+                vm.$ls.set('theme', vm.theme)
+            }
         },
         mounted() {},
         methods: {
@@ -73,6 +78,7 @@
             },
             changeTheme () {
                 vm.theme = !vm.theme
+                vm.$ls.set('theme', vm.theme)
             }
         },
         computed: {

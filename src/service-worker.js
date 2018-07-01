@@ -75,12 +75,10 @@ self.addEventListener('fetch', e => {
 // update module
 self.addEventListener('activate', e => {
     // console.log('[Service Worker]: activate')
-    console.log('caches.keys', caches.keys())
     e.waitUntil(
         caches.keys().then(keyList => {
             return Promise.all(
                 keyList.map(key => {
-                    console.log('activate', key)
                     if (key !== CACHE_NAME) {
                         return caches.delete(key)
                     }

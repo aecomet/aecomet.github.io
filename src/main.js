@@ -12,6 +12,7 @@ import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
 import * as VueGoogleMaps from 'vue2-google-maps';
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+import LocalStorage from 'vue-ls'
 
 // Components
 import {
@@ -31,6 +32,13 @@ import {
     SkillJSON,
     LinkJSON
 } from '@/static/data/index'
+
+// set local storage config.
+const lsOptions = {
+    namespace: 'portfolio__', // key prefix
+    name: 'ls', // name variable Vue.[ls] or this.[$ls],
+    storage: 'local' // storage name session, local, memory
+}
 
 const messages = {
     ja: {
@@ -70,6 +78,7 @@ import '@fortawesome/fontawesome-free-solid'
 Vue.use(Vuetify)
 Vue.use(VueI18n)
 Vue.use(Router)
+Vue.use(LocalStorage, lsOptions)
 Vue.use(VueGoogleMaps, {
     load: {
         key: 'AIzaSyC-9WiQjFhxE5DWsG_tJUArjc17lItzoxA',
