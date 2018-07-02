@@ -64,6 +64,12 @@
             } else {
                 vm.$ls.set('theme', vm.theme)
             }
+
+            if (vm.$ls.get('lang')) {
+                vm.$i18n.locale = vm.$ls.get('lang')
+            } else {
+                vm.$ls.set('lang', vm.$i18n.locale)
+            }
         },
         mounted() {},
         methods: {
@@ -73,6 +79,7 @@
             changeLanguage(code) {
                 if (vm.$i18n.locale === code) return
                 vm.$i18n.locale = code
+                vm.$ls.set('lang', vm.$i18n.locale)
                 vm.$t('resume.school').reverse()
                 vm.$forceUpdate()
             },
