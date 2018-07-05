@@ -68,7 +68,7 @@ let baseWebpack = {
             },
             inject: true,
             chunksSortMode: 'dependency',
-            excludeChunks: ['data', 'component']
+            excludeChunks: ['app', 'vendor', 'data', 'component']
         }),
         new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
@@ -204,7 +204,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         inline: true,                         // The mode of inline.
         hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
-        historyApiFallback: true
+        historyApiFallback: false
     }
 }
 

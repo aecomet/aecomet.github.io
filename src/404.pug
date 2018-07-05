@@ -5,15 +5,19 @@ html(lang="ja")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Not Found
-    meta(http-equiv="refresh" content="0;URL=./")
+    //- meta(http-equiv="refresh" content="0;URL=./")
 
     script.
       let segmentCount = 1;
       let l = window.location;
+      let port = l.port ? ':' + l.port : ''
       l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
-          l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
-          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
-      );
+          `${l.protocol}//${l.hostname}${port}/?p=${l.pathname.split('/').slice(0, 1 + segmentCount).join('/')}`
+      )
+      // l.replace(
+      //     l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      //     l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+      //     l.pathname.split('/').slice(0, 1 + segmentCount).join('/').replace(/&/g, '~and~') +
+      //     (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      //     l.hash
+      // );
