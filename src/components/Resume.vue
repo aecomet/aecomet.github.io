@@ -28,7 +28,7 @@
                 .subheading.grey--text {{ o.subtitle }}
                 .subheading.grey--text {{ o.member }}
 
-        v-flex(md10 xs12).my-3
+        //-v-flex(md10 xs12).my-3
             .display-1.my-2.text-xs-center {{ $t('resume.researchTitle')}}
             v-card(v-for="(r, idx) in $t('resume.research')" :key="`research-${idx}`" hover).my-3.pa-3
                 v-card-title(primary-title): span.title {{ r.title }}

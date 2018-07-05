@@ -92,7 +92,7 @@ fontawesome.library.add(brands, faSpinner)
 
 const router = new Router({
     routes: Routes,
-    // mode: 'history',
+    mode: 'history',
     linkActiveClass: 'active',
     transitionOnLoad: true,
 })
