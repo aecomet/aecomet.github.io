@@ -3,14 +3,10 @@
         var q = {};
         l.search.slice(1).split('&').forEach(function (v) {
             var a = v.split('=');
-            q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+            q[a[0]] = a[1];
         });
         if (q.p !== undefined) {
-            window.history.replaceState(null, null,
-                l.pathname.slice(0, -1) + (q.p || '') +
-                (q.q ? ('?' + q.q) : '') +
-                l.hash
-            );
+            window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || ''));
         }
     }
 }(window.location))</script><link href="vendor.css" rel="stylesheet"><link href="app.css" rel="stylesheet"><link href="component.css" rel="stylesheet"></head><body><noscript>This is your fallback content in case JavaScript fails to load.</noscript><div id="app" hidden></div><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="app.js"></script><script type="text/javascript" src="component.js"></script><script type="text/javascript" src="data.js"></script></body></html>
