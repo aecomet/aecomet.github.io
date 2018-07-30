@@ -1,21 +1,20 @@
-# My portfolio
+## My Portfolio
 
-__[Production](https://hiyoko3.github.io/)__
+[![License: APL 2.0](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-This application introduces my portfolio.
+__[Welcome to access](https://hiyoko3.github.io/)__
+
+Hello! This is source codes that is my portfolio.
+The web page introduces my skills and history.
 
 ## Development environment
-
-Using some technologies.
 
 - HTML5
 - CSS3
 - JavaScript
+    - Vue.js
+    - Node.js(Webpack)
     - EcmaScript
-
-## Developing tolls.
-
-- Webpack
 
 ## How to set up
 
@@ -31,7 +30,7 @@ Using some technologies.
 
         $ npm run dev
 
-    If browser start up, we can edit any codes.
+    If the script completes, we can access `localhost:7777` or a local server you set up.
 
 4. Building up the app
 
