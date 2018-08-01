@@ -52,25 +52,18 @@
 
 </template>
 
-<script>
-    'use strict'
+<script lang="ts">
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
 
-    export default {
-        name: "Profile",
-        components: {},
-        data: () => ({
-            opts: {
-                zoom: 17,
-                scrollWheel: false,
-            }
-        }),
-        props: {},
-        created() {
-        },
-        mounted() {
-        },
-        methods: {},
-        computed: {}
+    @Component
+    export default class Profile extends Vue {
+        opts = {
+            zoom: 17,
+            scrollWheel: false,
+        }
+        created() {}
+        mounted() {}
     }
 </script>
 

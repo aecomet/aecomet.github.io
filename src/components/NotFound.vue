@@ -7,18 +7,14 @@
 
 </template>
 
-<script>
-    'use strict'
+<script lang="ts">
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
 
-    export default {
-        name: "NotFound",
-        components: {},
-        data: () => ({}),
-        props: {},
-        created () {},
-        mounted () {},
-        methods: {},
-        computed: {}
+    @Component
+    export default class NotFound extends Vue {
+        created () {}
+        mounted () {}
     }
 </script>
 

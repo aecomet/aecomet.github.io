@@ -1,7 +1,7 @@
 <template lang="pug">
     v-app(app :light="theme" :dark="!theme")
-        v-toolbar(:scroll-threshold="isHide" app :light="theme" :dark="!theme" dense scroll-off-screen clipped-left)
-            v-toolbar-side-icon(@click="changeDrawer" :light="theme" :dark="!theme")
+        v-toolbar(app :scroll-threshold="300" :light="theme" :dark="!theme" dense scroll-off-screen clipped-left)
+            v-toolbar-side-icon(@click="onChangeDrawer" :light="theme" :dark="!theme")
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
             v-toolbar-items.hidden-sm-and-down
@@ -9,14 +9,9 @@
                     //- v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
                     v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`"): v-btn(flat icon): v-icon {{ header.icon }}
             span(style="margin: auto 5px").hidden-sm-and-down
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="changeLanguage('ja')" icon flat): v-icon translate
-            v-btn(v-else @click="changeLanguage('en')" icon flat): v-icon translate
-            v-btn(@click="changeTheme" icon flat): v-icon brightness_4
-            //- v-menu(transition="slide-x-transition")
-                v-btn(slot="activator" icon light): v-icon more_vert
-                v-list
-                    v-list-tile(@click="changeLanguage('ja')"): v-list-tile-title JP
-                    v-list-tile(@click="changeLanguage('en')"): v-list-tile-title EN
+            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" icon flat): v-icon translate
+            v-btn(v-else @click="onChangeLanguage('en')" icon flat): v-icon translate
+            v-btn(@click="onChangeTheme" icon flat): v-icon brightness_4
 
         //- Navigation Drawer
         v-navigation-drawer(v-model="drawer" app :light="theme" :dark="!theme" disable-resize-watcher clipped)
@@ -33,7 +28,7 @@
             v-container(fluid)
                 transition(name="fade" mode="out-in" appear): router-view
 
-                //- footer
+        //- footer
         v-footer(height="auto" app :light="theme" :dark="!theme" absolute)
             v-layout(row wrap justify-center)
                 v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" flat): font-awesome-icon(size="lg" :icon="['fab', link.icon]")
@@ -41,22 +36,25 @@
                     span.mr-3 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
-<script>
+<script lang="ts">
     'use strict'
-    let vm = null
+    let vm:any = null
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
     import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
+    import { Prop } from 'vue-property-decorator';
 
-    export default {
-        components: {
-            FontAwesomeIcon
-        },
-        name: 'app',
-        data: () => ({
-            drawer: false,
-            tab: null,
-            theme: true,
-        }),
-        props: {},
+    @Component({
+        components: FontAwesomeIcon
+    })
+    export default class App extends Vue {
+        drawer: boolean = false
+        tab: any = null
+        theme: boolean = true
+
+        @Prop()
+
+
         created() {
             vm = this
             if (vm.$ls.get('theme') !== undefined) {
@@ -70,26 +68,25 @@
             } else {
                 vm.$ls.set('lang', vm.$i18n.locale)
             }
-        },
-        mounted() {},
-        methods: {
-            changeDrawer () {
-                vm.drawer = !vm.drawer
-            },
-            changeLanguage(code) {
-                if (vm.$i18n.locale === code) return
-                vm.$i18n.locale = code
-                vm.$ls.set('lang', vm.$i18n.locale)
-                vm.$t('resume.school').reverse()
-                vm.$forceUpdate()
-            },
-            changeTheme () {
-                vm.theme = !vm.theme
-                vm.$ls.set('theme', vm.theme)
-            }
-        },
-        computed: {
-            isHide: (e) => (e.drawer) ? 10000 : 100
+        }
+
+        mounted() {}
+
+        onChangeDrawer() {
+            vm.drawer = !vm.drawer
+        }
+
+        onChangeLanguage(code: any) {
+            if (vm.$i18n.locale === code) return
+            vm.$i18n.locale = code
+            vm.$ls.set('lang', vm.$i18n.locale)
+            vm.$t('resume.school').reverse()
+            vm.$forceUpdate()
+        }
+
+        onChangeTheme() {
+            vm.theme = !vm.theme
+            vm.$ls.set('theme', vm.theme)
         }
     }
 </script>

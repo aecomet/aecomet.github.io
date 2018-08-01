@@ -24,16 +24,14 @@
                             span(v-for="(chip, idx) in p.remark" :key="`chip-${idx}`"): v-chip(color="red" label outline) {{ chip }}
 </template>
 
-<script>
-    'use strict'
-    export default {
-        name: "Skill",
-        data: () => ({}),
-        props: {},
-        created () {},
-        mounted () {},
-        methods: {},
-        computed: {}
+<script lang="ts">
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
+
+    @Component
+    export default class Skill extends Vue {
+        created () {}
+        mounted () {}
     }
 </script>
 

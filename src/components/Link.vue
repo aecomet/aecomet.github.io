@@ -11,18 +11,14 @@
                 .text-xs-center.title.mb-1.orange--text {{ l.name }}
 </template>
 
-<script>
-    'use strict'
+<script lang="ts">
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
 
-    export default {
-        name: "Link",
-        components: {},
-        data: () => ({}),
-        props: {},
-        created () {},
-        mounted () {},
-        methods: {},
-        computed: {}
+    @Component
+    export default class Link extends Vue {
+        created () {}
+        mounted () {}
     }
 </script>
 

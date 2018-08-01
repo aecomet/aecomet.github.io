@@ -22,9 +22,9 @@ let baseWebpack = {
     watch: watch,
     mode: environment,
     entry: {
-        app: path.resolve(__dirname, 'src/main.js'), // The main javascript file
-        component: path.resolve(__dirname, 'src/components/index.js'), // The main javascript file
-        data: path.resolve(__dirname, 'src/static/data/index.js') // The main javascript file
+        app: path.resolve(__dirname, 'src/main.ts'), // The main javascript file
+        component: path.resolve(__dirname, 'src/components/index.ts'), // The main javascript file
+        data: path.resolve(__dirname, 'src/static/data/index.ts') // The main javascript file
     },
     optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
         splitChunks: {
@@ -89,6 +89,13 @@ let baseWebpack = {
                 }
             },
             {
+                test: /\.ts$/,
+                loader: 'ts-loader',
+                options: {
+                    appendTsSuffixTo: [/\.vue$/],
+                }
+            },
+            {
                 test: /(\.css$)/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
@@ -144,7 +151,7 @@ let baseWebpack = {
         ]
     },
     resolve: {
-        extensions: ['.js', '.vue', '.json'],
+        extensions: ['.js', '.ts', '.vue', '.json'],
         alias: {
             vue$: 'vue/dist/vue.esm.js',
             '@': path.resolve(__dirname, 'src/')

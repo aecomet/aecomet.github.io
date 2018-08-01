@@ -40,25 +40,21 @@
 
 </template>
 
-<script>
-    'use strict'
-    import {Timeline, TimelineItem, TimelineTitle} from 'vue-cute-timeline'
+<script lang="ts">
+    // import { Timeline, TimelineItem, TimelineTitle } from 'vue-cute-timeline'
+    import Vue from 'vue'
+    import Component from 'vue-class-component'
 
-    export default {
-        name: "Resume",
+    @Component({
         components: {
-            Timeline,
-            TimelineItem,
-            TimelineTitle
-        },
-        data: () => ({}),
-        props: {},
-        created() {
-        },
-        mounted() {
-        },
-        methods: {},
-        computed: {}
+            // Timeline,
+            // TimelineItem,
+            // TimelineTitle
+        }
+    })
+    export default class Resume extends Vue {
+        created() {}
+        mounted() {}
     }
 </script>
 

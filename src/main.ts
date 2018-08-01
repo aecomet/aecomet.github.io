@@ -6,7 +6,6 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
@@ -16,12 +15,13 @@ import LocalStorage from 'vue-ls'
 
 // Components
 import {
+    App,
     Profile,
     Resume,
     Skill,
     Link,
     NotFound
-} from '@/components/index'
+} from './components/'
 
 
 // Initial Data
@@ -31,7 +31,7 @@ import {
     ResumeJSON,
     SkillJSON,
     LinkJSON
-} from '@/static/data/index'
+} from './static/data/'
 
 // set local storage config.
 const lsOptions = {
@@ -67,7 +67,7 @@ const Routes = [
 ]
 
 // CSS / Icon pack
-import '@/style.css'
+import './style.css'
 import 'vuetify/dist/vuetify.min.css'
 import fontawesome from '@fortawesome/fontawesome'
 import brands from '@fortawesome/fontawesome-free-brands'
@@ -93,8 +93,7 @@ fontawesome.library.add(brands, faSpinner)
 const router = new Router({
     routes: Routes,
     mode: 'history',
-    linkActiveClass: 'active',
-    transitionOnLoad: true,
+    linkActiveClass: 'active'
 })
 
 // Before process
@@ -116,7 +115,7 @@ const i18n = new VueI18n({
     messages // set locale messages
 })
 
-Vue.config.lang = 'ja' // Set Language for i18n
+// Vue.config.lang = 'ja' // Set Language for i18n
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
