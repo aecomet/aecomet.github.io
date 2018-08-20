@@ -3,9 +3,8 @@
     "title": "ポートフォリオ",
     "content": [
       { "name": "プロフィール", "href": "/", "icon": "person" },
-      { "name": "研究", "href": "/resume", "icon": "school" },
-      { "name": "スキル", "href": "/skill", "icon": "fitness_center" },
-      { "name": "リンク", "href": "/link", "icon": "link" }
+      { "name": "成果物", "href": "/product", "icon": "work" },
+      { "name": "スキル", "href": "/skill", "icon": "fitness_center" }
     ],
     "attribute": "大柳 達哉",
     "not_found": "お探しのページは存在しません．",
@@ -21,9 +20,8 @@
     "title": "Portfolio",
     "content": [
       { "name": "Profile", "href": "/", "icon": "person" },
-      { "name": "Resume", "href": "/resume", "icon": "school" },
-      { "name": "Skill", "href": "/skill", "icon": "fitness_center" },
-      { "name": "Link", "href": "/link", "icon": "link" }
+      { "name": "Products", "href": "/products", "icon": "work" },
+      { "name": "Skills", "href": "/skill", "icon": "fitness_center" }
     ],
     "attribute": "Tatsuya Oyanagi",
     "not_found": "The page doesn't exist.",

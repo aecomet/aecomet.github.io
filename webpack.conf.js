@@ -211,7 +211,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         inline: true,                         // The mode of inline.
         hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
-        historyApiFallback: false
+        historyApiFallback: true
     }
 }
 

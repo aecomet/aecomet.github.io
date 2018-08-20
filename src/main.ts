@@ -17,9 +17,8 @@ import LocalStorage from 'vue-ls'
 import {
     App,
     Profile,
-    Resume,
+    Product,
     Skill,
-    Link,
     NotFound
 } from './components/'
 
@@ -60,19 +59,27 @@ const messages = {
 const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
     { path: '/', name: 'Profile', component: Profile, meta: { title: `${baseTitle} | プロフィール/Profile` } },
-    { path: '/resume', name: 'Resume', component: Resume, meta: { title: `${baseTitle} | 職歴・学歴/Resume` } },
-    { path: '/skill', name: 'Skill', component: Skill, meta: { title: `${baseTitle} | スキル/Skill` } },
-    { path: '/link', name: 'Link', component: Link, meta: { title: `${baseTitle} | リンク/Link` } },
+    { path: '/product', name: 'Products', component: Product, meta: { title: `${baseTitle} | 成果物/Products` } },
+    { path: '/skill', name: 'Skills', component: Skill, meta: { title: `${baseTitle} | スキル/Skills` } },
     { path: '*', name: 'NotFound', component: NotFound, meta: { title: `${baseTitle} | 404 Not found` } }
 ]
 
 // CSS / Icon pack
 import './style.css'
 import 'vuetify/dist/vuetify.min.css'
-import fontawesome from '@fortawesome/fontawesome'
-import brands from '@fortawesome/fontawesome-free-brands'
-import faSpinner from '@fortawesome/fontawesome-free-solid/faSpinner'
-import '@fortawesome/fontawesome-free-solid'
+
+// icon pack
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { far } from '@fortawesome/free-regular-svg-icons'
+import { fas, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+library.add(faCoffee)
+library.add(fas)
+library.add(far)
+library.add(fab)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 // Enable Vue Modules
 Vue.use(Vuetify)
@@ -88,8 +95,10 @@ Vue.use(VueGoogleMaps, {
         // (as you require)
     }
 });
-fontawesome.library.add(brands, faSpinner)
 
+/**
+ * Router
+ */
 const router = new Router({
     routes: Routes,
     mode: 'history',
@@ -109,6 +118,9 @@ router.afterEach((to, from) => {
     }
 })
 
+/**
+ * I18n
+ */
 // Create a vueI18n instance:
 const i18n = new VueI18n({
     locale: 'ja', // set locale
@@ -130,7 +142,9 @@ new Vue({
     }
 })
 
-/* === Service Worker === */
+/**
+ *  === Service Worker ===
+ */
 // Checking support a `service worker`
 if ('serviceWorker' in navigator &&
     (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {

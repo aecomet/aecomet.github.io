@@ -1,20 +1,21 @@
 <template lang="pug">
-    v-app(app :light="theme" :dark="!theme")
-        v-toolbar(app :scroll-threshold="300" :light="theme" :dark="!theme" dense scroll-off-screen clipped-left)
-            v-toolbar-side-icon(@click="onChangeDrawer" :light="theme" :dark="!theme")
+    v-app(:light="theme" :dark="!theme" app)
+        v-toolbar(:scroll-threshold="300" :light="theme" :dark="!theme" extended app scroll-off-screen)
+            //- v-toolbar-side-icon(@click="onChangeDrawer" :light="theme" :dark="!theme")
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
-            v-toolbar-items.hidden-sm-and-down
-                v-tabs(slot="extension" v-model="tab" slider-color="red" :light="theme" :dark="!theme" right)
-                    //- v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :href="`#tab-${idx}`" :to="header.href" style="width: 120px") {{ header.name }}
-                    v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`"): v-btn(flat icon): v-icon {{ header.icon }}
-            span(style="margin: auto 5px").hidden-sm-and-down
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" icon flat): v-icon translate
-            v-btn(v-else @click="onChangeLanguage('en')" icon flat): v-icon translate
-            v-btn(@click="onChangeTheme" icon flat): v-icon brightness_4
+            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" icon): v-icon g_translate
+            v-btn(v-else @click="onChangeLanguage('en')" icon): v-icon g_translate
+            v-btn(@click="onChangeTheme" icon): v-icon brightness_4
+
+            v-tabs(slot="extension" color="transparent" v-model="tab" :light="theme" :dark="!theme" height="63px" grow centered icons-and-text)
+                v-tabs-slider(color="blue")
+                v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
+                    span.caption {{ header.name }}
+                    v-icon {{ header.icon }}
 
         //- Navigation Drawer
-        v-navigation-drawer(v-model="drawer" app :light="theme" :dark="!theme" disable-resize-watcher clipped)
+        //- v-navigation-drawer(v-model="drawer" app :light="theme" :dark="!theme" disable-resize-watcher clipped)
             v-list(subheader dense)
                 v-list-tile(v-for="(nav, idx) in $t('base.content')" :key="`nav-${idx}`" :to="nav.href" @click="" avatar ripple)
                     v-list-tile-content
@@ -29,11 +30,14 @@
                 transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
-        v-footer(height="auto" app :light="theme" :dark="!theme" absolute)
-            v-layout(row wrap justify-center)
-                v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" flat): font-awesome-icon(size="lg" :icon="['fab', link.icon]")
-                v-flex(xs12).text-xs-right.pa-1
-                    span.mr-3 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+        v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
+            v-card(width="100%" flat tile).text-xs-center
+                v-card-text
+                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" icon flat large).mx-3: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
+                v-divider
+                v-card-text.pa-2
+                    span.mr-3.subheading &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+
 </template>
 
 <script lang="ts">
