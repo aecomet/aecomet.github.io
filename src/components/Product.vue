@@ -11,7 +11,9 @@
 
 
         v-flex(md10 xs12).my-3
-            .display-1.my-2.text-xs-center {{ $t('resume.paperTitle')}}
+            .headline.mb-4.text-xs-left
+                font-awesome-icon(:icon="['fas', 'book-open']").mr-2
+                | {{ $t('resume.paperTitle')}}
             v-card(v-for="(p, idx) in $t('resume.paper')" :key="`paper-${idx}`" flat tile).pa-3
                 .title.mb-1
                     | {{ p.title }}
@@ -20,7 +22,9 @@
                 .subheading.grey--text {{ p.member }}
 
         v-flex(md10 xs12).my-3
-            .display-1.my-2.text-xs-center {{ $t('resume.otherTitle')}}
+            .headline.mb-4.text-xs-left
+                font-awesome-icon(:icon="['fas', 'book-open']").mr-2
+                | {{ $t('resume.otherTitle')}}
             v-card(v-for="(o, idx) in $t('resume.other')" :key="`other-${idx}`" flat tile).pa-3
                 .title.mb-1
                     | {{ o.title }}
@@ -28,8 +32,11 @@
                 .subheading.grey--text {{ o.subtitle }}
                 .subheading.grey--text {{ o.member }}
 
-        //-v-flex(md10 xs12).my-3
-            .display-1.my-2.text-xs-center {{ $t('resume.researchTitle')}}
+        v-flex(md10 xs12).my-3
+            .headline.mb-4.text-xs-left
+                font-awesome-icon(:icon="['fas', 'chalkboard-teacher']").mr-2
+                | {{ $t('resume.researchTitle')}}
+
             v-card(v-for="(r, idx) in $t('resume.research')" :key="`research-${idx}`" hover).my-3.pa-3
                 v-card-title(primary-title): span.title {{ r.title }}
                 v-card-text

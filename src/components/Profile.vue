@@ -11,11 +11,11 @@
                         v-card-text.pa-3
                             .my-2.headline {{ $t('profile.name') }}
                             .my-4.subheading
-                                v-icon cake
-                                | &nbsp;{{ $t('profile.birthday') }}
+                                v-icon.mr-2 cake
+                                | {{ $t('profile.birthday') }}
                             .my-4.subheading
-                                v-icon work
-                                | &nbsp;{{ $t('profile.status') }}
+                                v-icon.mr-2 work
+                                | {{ $t('profile.status') }}
 
                     v-flex(md7 xs12)
                         v-card-title(primary-title): span.headline {{ $t('profile.hobbyTitle') }}
