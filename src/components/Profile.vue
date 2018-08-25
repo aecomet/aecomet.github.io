@@ -49,13 +49,16 @@
         v-flex(md10 xs12).my-3
             .title.my-2.text-xs-left {{ $t('profile.favoriteTitle') }}
 
-            v-expansion-panel
-                v-expansion-panel-content(v-for="(f, idx) in $t('profile.favorites')" :key="`favorite-${idx}`" :value="true")
-                    span(slot="header").d-block {{ f.title }}
+            v-expansion-panel(v-model="panels" expand)
+                v-expansion-panel-content(v-for="(f, idx) in $t('profile.favorites')" :key="`favorite-${idx}`")
+                    span(slot="header")
+                        font-awesome-icon(:icon="['fas', `${f.icon}`]").mr-2
+                        | {{ f.title }}
+
                     v-layout(row wrap)
-                        v-flex(v-for="(item, idx) in f.items" :key="`f-item-${idx}`" md2 xs3)
+                        v-flex(v-for="(item, idx) in f.items" :key="`f-item-${idx}`" md2 xs4)
                             v-card(flat tile hover)
-                                v-card-text: .text-xs-center.display-1: font-awesome-icon(:icon="['fas', `${item.icon}`]")
+                                v-card-text: .text-xs-center.display-1: font-awesome-icon(:icon="['fas', `${f.icon}`]")
 
                                 v-card-text
                                     .text-xs-center: span.subheding {{ item.name }}
@@ -81,6 +84,8 @@
         };
 
         placeIdx = 0;
+
+        panels = [ true, true, true, true, true, true ];
 
         created() {
         }

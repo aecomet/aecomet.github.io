@@ -33,7 +33,7 @@
         v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
-                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" icon flat large).mx-3: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
+                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
                 v-divider
                 v-card-text.pa-2
                     span.mr-3.subheading &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}

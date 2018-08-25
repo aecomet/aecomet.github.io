@@ -54,27 +54,52 @@
     "favorites": [
       {
         "title": "食べ物",
+        "icon": "utensils",
         "items": [
-          { "name": "寿司", "icon": "utensils", "href": "" },
-          { "name": "天ぷら", "icon": "utensils", "href": "" },
-          { "name": "蕎麦", "icon": "utensils", "href": "" }
+          { "name": "寿司", "href": "" },
+          { "name": "天ぷら", "href": "" },
+          { "name": "蕎麦", "href": "" }
         ]
       },
       {
         "title": "芸能人",
+        "icon": "user-circle",
         "items": [
-          { "name": "明石家さんま", "icon": "user-circle", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
+          { "name": "明石家さんま", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
         ]
       },
       {
         "title": "アーティスト",
+        "icon": "headphones-alt",
         "items": [
-          { "name": "L'arc〜en〜Ciel", "icon": "headphones-alt", "href": "https://www.larc-en-ciel.com/index.php" },
-          { "name": "SCANDAL", "icon": "headphones-alt", "href": "http://www.scandal-4.com/" },
-          { "name": "福山雅治", "icon": "headphones-alt", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
-          { "name": "東方神起(TVQX)", "icon": "headphones-alt", "href": "https://toho-jp.net/" },
-          { "name": "やなぎなぎ", "icon": "headphones-alt", "href": "http://yanaginagi.net/" },
-          { "name": "柴咲コウ", "icon": "headphones-alt", "href": "https://koshibasaki.com/" }
+          { "name": "L'arc〜en〜Ciel", "href": "https://www.larc-en-ciel.com/index.php" },
+          { "name": "SCANDAL", "href": "http://www.scandal-4.com/" },
+          { "name": "福山雅治", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
+          { "name": "東方神起(TVQX)", "href": "https://toho-jp.net/" },
+          { "name": "やなぎなぎ", "href": "http://yanaginagi.net/" },
+          { "name": "柴咲コウ", "href": "https://koshibasaki.com/" }
+        ]
+      },
+      {
+        "title": "漫画",
+        "icon": "book-open",
+        "items": [
+          { "name": "ONE PIECE", "href": "https://one-piece.com/" }
+        ]
+      },
+      {
+        "title": "アニメ",
+        "icon": "tv",
+        "items": [
+          { "name": "機動戦士ガンダムシリーズ", "href": "https://www.gundam.info/" }
+        ]
+      },
+      {
+        "title": "ゲーム",
+        "icon": "gamepad",
+        "items": [
+          { "name": "ポケットモンスター シリーズ", "href": "https://www.pokemon.co.jp/" },
+          { "name": "Minecraft", "href": "https://minecraft.net/ja-jp/" }
         ]
       }
     ]
@@ -134,27 +159,52 @@
     "favorites": [
       {
         "title": "Foods",
+        "icon": "utensils",
         "items": [
-          { "name": "Sushi", "icon": "utensils", "href": "" },
-          { "name": "Tenpura", "icon": "utensils", "href": "" },
-          { "name": "Soba", "icon": "utensils", "href": "" }
+          { "name": "Sushi", "href": "" },
+          { "name": "Tenpura", "href": "" },
+          { "name": "Soba", "href": "" }
         ]
       },
       {
         "title": "Entertainer",
+        "icon": "user-circle",
         "items": [
-          { "name": "Sanma Akashiya", "icon": "user-circle", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
+          { "name": "Sanma Akashiya", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
         ]
       },
       {
         "title": "Artists",
+        "icon": "headphones-alt",
         "items": [
-          { "name": "L'arc〜en〜Ciel", "icon": "headphones-alt", "href": "https://www.larc-en-ciel.com/en/index.php" },
-          { "name": "SCANDAL", "icon": "headphones-alt", "href": "http://www.scandal-4.com/" },
-          { "name": "Masaharu Fukuyama", "icon": "headphones-alt", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
-          { "name": "TOHOSHINKI(TVQX)", "icon": "headphones-alt", "href": "https://toho-jp.net/e/" },
-          { "name": "Yanaginagi", "icon": "headphones-alt", "href": "http://yanaginagi.net/" },
-          { "name": "Koh Shibasaki", "icon": "headphones-alt", "href": "https://koshibasaki.com/" }
+          { "name": "L'arc〜en〜Ciel", "href": "https://www.larc-en-ciel.com/en/index.php" },
+          { "name": "SCANDAL", "href": "http://www.scandal-4.com/" },
+          { "name": "Masaharu Fukuyama", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
+          { "name": "TOHOSHINKI(TVQX)", "href": "https://toho-jp.net/e/" },
+          { "name": "Yanaginagi", "href": "http://yanaginagi.net/" },
+          { "name": "Koh Shibasaki", "href": "https://koshibasaki.com/" }
+        ]
+      },
+      {
+        "title": "Manga",
+        "icon": "book-open",
+        "items": [
+          { "name": "ONE PIECE", "href": "https://one-piece.com/" }
+        ]
+      },
+      {
+        "title": "Anime",
+        "icon": "tv",
+        "items": [
+          { "name": "Gundam Series", "href": "https://na.gundam.info/" }
+        ]
+      },
+      {
+        "title": "Games",
+        "icon": "gamepad",
+        "items": [
+          { "name": "Pocket Monster Series", "href": "https://www.pokemon.com/us/" },
+          { "name": "Minecraft", "href": "https://minecraft.net/en-us/" }
         ]
       }
     ]
