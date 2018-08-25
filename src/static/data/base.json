@@ -20,7 +20,7 @@
     "title": "Portfolio",
     "content": [
       { "name": "Profile", "href": "/", "icon": "person" },
-      { "name": "Products", "href": "/products", "icon": "web_asset" },
+      { "name": "Products", "href": "/product", "icon": "web_asset" },
       { "name": "Skills", "href": "/skill", "icon": "fitness_center" }
     ],
     "attribute": "Tatsuya Oyanagi",

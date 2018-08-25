@@ -100,6 +100,15 @@
           "Mongo DB"
         ]
       }
+    ],
+    "developTitle": "開発経験",
+    "develops": [
+      {
+        "name": "Web アプリケーション"
+      },
+      {
+        "name": "Android アプリケーション"
+      }
     ]
   },
   "en": {
@@ -202,6 +211,15 @@
           "SQLite",
           "Mongo DB"
         ]
+      }
+    ],
+    "developTitle": "Development Experience",
+    "develops": [
+      {
+        "name": "Web Application"
+      },
+      {
+        "name": "Android Application"
       }
     ]
   }

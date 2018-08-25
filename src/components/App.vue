@@ -84,8 +84,6 @@
             if (vm.$i18n.locale === code) return
             vm.$i18n.locale = code
             vm.$ls.set('lang', vm.$i18n.locale)
-            vm.$t('resume.school').reverse()
-            vm.$forceUpdate()
         }
 
         onChangeTheme() {
