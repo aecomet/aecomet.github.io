@@ -19,24 +19,28 @@
         "href": "http://www.cis.ibaraki.ac.jp/"
       }
     ],
-    "from": {
-      "title": "出身地",
-      "name": "福島県郡山市",
-      "web_page": "https://www.city.koriyama.fukushima.jp/",
-      "center": {
-        "lat": 37.398021,
-        "lng": 140.387946
+    "places": [
+      {
+        "title": "出身地",
+        "name": "福島県郡山市",
+        "web_page": "https://www.city.koriyama.fukushima.jp/",
+        "center": {
+          "lat": 37.398021,
+          "lng": 140.387946
+        }
+      },
+      {
+        "title": "在住",
+        "name": "茨城県日立市",
+        "web_page": "http://www.city.hitachi.lg.jp/",
+        "center": {
+          "lat": 36.590654,
+          "lng": 140.662153
+        }
       }
-    },
-    "stay": {
-      "title": "在住",
-      "name": "茨城県日立市",
-      "web_page": "http://www.city.hitachi.lg.jp/",
-      "center": {
-        "lat": 36.590654,
-        "lng": 140.662153
-      }
-    },
+    ],
+    "wordTitle": "好きな言葉",
+    "word": "「果報は寝て待て」",
     "hobbyTitle": "趣味",
     "hobby": [
       "映画鑑賞",
@@ -46,32 +50,34 @@
       "アニメ / 漫画 / ゲーム",
       "プログラミング"
     ],
-    "favorite": {
-      "title": "その他",
-      "foodTitle": "好きな食べ物",
-      "food": [
-        "寿司",
-        "天ぷら",
-        "蕎麦",
-        "甘いもの全般"
-      ],
-      "artistTitle": "よく聞くアーティスト",
-      "artist": [
-        "L'arc〜en〜Ciel",
-        "SCANDAL",
-        "福山雅治",
-        "東方神起",
-        "やなぎなぎ",
-        "柴咲コウ",
-        "桑田佳祐"
-      ],
-      "personTitle": "好きな芸能人",
-      "person": [
-        "明石家さんま"
-      ],
-      "wordTitle": "好きな言葉",
-      "word": "「果報は寝て待て」"
-    }
+    "favoriteTitle": "好きなもの/人",
+    "favorites": [
+      {
+        "title": "食べ物",
+        "items": [
+          { "name": "寿司", "icon": "utensils", "href": "" },
+          { "name": "天ぷら", "icon": "utensils", "href": "" },
+          { "name": "蕎麦", "icon": "utensils", "href": "" }
+        ]
+      },
+      {
+        "title": "芸能人",
+        "items": [
+          { "name": "明石家さんま", "icon": "user-circle", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
+        ]
+      },
+      {
+        "title": "アーティスト",
+        "items": [
+          { "name": "L'arc〜en〜Ciel", "icon": "headphones-alt", "href": "https://www.larc-en-ciel.com/index.php" },
+          { "name": "SCANDAL", "icon": "headphones-alt", "href": "http://www.scandal-4.com/" },
+          { "name": "福山雅治", "icon": "headphones-alt", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
+          { "name": "東方神起(TVQX)", "icon": "headphones-alt", "href": "https://toho-jp.net/" },
+          { "name": "やなぎなぎ", "icon": "headphones-alt", "href": "http://yanaginagi.net/" },
+          { "name": "柴咲コウ", "icon": "headphones-alt", "href": "https://koshibasaki.com/" }
+        ]
+      }
+    ]
   },
   "en": {
     "introduction": "Hello, World!",
@@ -93,24 +99,28 @@
         "href": "http://www.cis.ibaraki.ac.jp/en/"
       }
     ],
-    "from": {
-      "title": "From",
-      "name": "Koriyama city, Fukushima Prefecture",
-      "web_page": "https://honyaku.j-server.com/LUCKORIYAM/ns/tl.cgi/http%3a//www.city.koriyama.fukushima.jp/foreign/index.html?SLANG=ja&TLANG=en&XMODE=0&XPARAM=q,&XCHARSET=utf-8&XPORG=,&XJSID=0",
-      "center": {
-        "lat": 37.398021,
-        "lng": 140.387946
+    "places": [
+      {
+        "title": "From",
+        "name": "Koriyama city, Fukushima Prefecture",
+        "web_page": "https://honyaku.j-server.com/LUCKORIYAM/ns/tl.cgi/http%3a//www.city.koriyama.fukushima.jp/foreign/index.html?SLANG=ja&TLANG=en&XMODE=0&XPARAM=q,&XCHARSET=utf-8&XPORG=,&XJSID=0",
+        "center": {
+          "lat": 37.398021,
+          "lng": 140.387946
+        }
+      },
+      {
+        "title": "Stay",
+        "name": "Hitachi city, Ibaraki Prefecture",
+        "web_page": "https://honyaku.j-server.com/LUCHITACHI/ns/tl.cgi/http%3a//www.city.hitachi.lg.jp/index.html?SLANG=ja&TLANG=en&XMODE=0&XCHARSET=utf-8&XJSID=0",
+        "center": {
+          "lat": 36.590654,
+          "lng": 140.662153
+        }
       }
-    },
-    "stay": {
-      "title": "Stay",
-      "name": "Hitachi city, Ibaraki Prefecture",
-      "web_page": "https://honyaku.j-server.com/LUCHITACHI/ns/tl.cgi/http%3a//www.city.hitachi.lg.jp/index.html?SLANG=ja&TLANG=en&XMODE=0&XCHARSET=utf-8&XJSID=0",
-      "center": {
-        "lat": 36.590654,
-        "lng": 140.662153
-      }
-    },
+    ],
+    "wordTitle": "Favorite Quotes",
+    "word": "「Everything comes to those who wait」",
     "hobbyTitle": "Hobby",
     "hobby": [
       "Watching movies",
@@ -120,31 +130,33 @@
       "Anime / Managa / Game",
       "Programing"
     ],
-    "favorite": {
-      "title": "Favorites",
-      "foodTitle": "Favorite Foods",
-      "food": [
-        "Sushi",
-        "Tempura",
-        "Soba",
-        "Sweets"
-      ],
-      "artistTitle": "Favorite Artists",
-      "artist": [
-        "L'arc〜en〜Ciel",
-        "SCANDAL",
-        "Masaharu Fukuyama",
-        "Tohoshinki",
-        "Yanaginagi",
-        "Koh Shibasaki",
-        "Keisuke Kuwata"
-      ],
-      "personTitle": "Favorite Entertainer",
-      "person": [
-        "Sanma Akashiya"
-      ],
-      "wordTitle": "Favorite Word",
-      "word": "「Everything comes to those who wait」"
-    }
+    "favoriteTitle": "Favorites",
+    "favorites": [
+      {
+        "title": "Foods",
+        "items": [
+          { "name": "Sushi", "icon": "utensils", "href": "" },
+          { "name": "Tenpura", "icon": "utensils", "href": "" },
+          { "name": "Soba", "icon": "utensils", "href": "" }
+        ]
+      },
+      {
+        "title": "Entertainer",
+        "items": [
+          { "name": "Sanma Akashiya", "icon": "user-circle", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
+        ]
+      },
+      {
+        "title": "Artists",
+        "items": [
+          { "name": "L'arc〜en〜Ciel", "icon": "headphones-alt", "href": "https://www.larc-en-ciel.com/en/index.php" },
+          { "name": "SCANDAL", "icon": "headphones-alt", "href": "http://www.scandal-4.com/" },
+          { "name": "Masaharu Fukuyama", "icon": "headphones-alt", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
+          { "name": "TOHOSHINKI(TVQX)", "icon": "headphones-alt", "href": "https://toho-jp.net/e/" },
+          { "name": "Yanaginagi", "icon": "headphones-alt", "href": "http://yanaginagi.net/" },
+          { "name": "Koh Shibasaki", "icon": "headphones-alt", "href": "https://koshibasaki.com/" }
+        ]
+      }
+    ]
   }
 }

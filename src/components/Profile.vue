@@ -23,17 +23,9 @@
                             template(slot="items" slot-scope="props"): td: span.subheading {{ props.item }}
 
                     v-flex(xs12).my-3
-                        .subheading.my-2.text-xs-center {{ $t('profile.favorite.wordTitle') }}
+                        .subheading.my-2.text-xs-center {{ $t('profile.wordTitle') }}
                         v-card(tile flat).pa-2
-                            .text-xs-center.vertical-text.headline {{ $t('profile.favorite.word')}}
-
-                    v-flex(md6 xs12).my-3
-                        .subheading.my-2.text-xs-center {{ $t('profile.favorite.foodTitle') }}
-                        .text-xs-center.body-1.grey--text(v-for="(food, idx) in $t('profile.favorite.food')" :key="`food-${idx}`") {{ food }}
-                    v-flex(md6 xs12).my-3
-                        .subheading.my-2.text-xs-center {{ $t('profile.favorite.artistTitle') }}
-                        .text-xs-center.body-1.grey--text(v-for="(artist, idx) in $t('profile.favorite.artist')" :key="`artist-${idx}`") {{ artist }}
-
+                            .text-xs-center.vertical-text.headline {{ $t('profile.word')}}
 
         v-flex(md7 xs8).my-3
             v-card(color="transparent" height="300" flat tile)
@@ -55,7 +47,23 @@
                         | Link
 
         v-flex(md10 xs12).my-3
-            .title.my-2.text-xs-left {{ $t('link.laboratoryTitle')}}
+            .title.my-2.text-xs-left {{ $t('profile.favoriteTitle') }}
+
+            v-expansion-panel
+                v-expansion-panel-content(v-for="(f, idx) in $t('profile.favorites')" :key="`favorite-${idx}`" :value="true")
+                    span(slot="header").d-block {{ f.title }}
+                    v-layout(row wrap)
+                        v-flex(v-for="(item, idx) in f.items" :key="`f-item-${idx}`" md2 xs3)
+                            v-card(flat tile hover)
+                                v-card-text: .text-xs-center.display-1: font-awesome-icon(:icon="['fas', `${item.icon}`]")
+
+                                v-card-text
+                                    .text-xs-center: span.subheding {{ item.name }}
+
+                                    v-btn(color="orange" v-if="item.href !== ''" :href="item.href" target="_blank" flat outline block round small) Link
+
+        v-flex(md10 xs12).my-3
+            .title.my-2.text-xs-left {{ $t('link.laboratoryTitle') }}
             v-card(:href="$t('link.laboratory.href')" target="_blank"  color="transparent" flat tile).pa-3
                 .text-xs-left.body-2.mb-1.orange--text {{ $t('link.laboratory.name') }}
 
@@ -72,30 +80,24 @@
             scrollWheel: false,
         };
 
-        places = [
-            'from',
-            'stay'
-        ];
-
-        place = ''
         placeIdx = 0;
 
         created() {
-            this.place = this.places[0]
         }
-        mounted() {}
+        mounted() {
+            this.placeIdx = 0;
+        }
 
         changePlace () {
-            if (this.placeIdx === this.places.length - 1) {
-                this.place = this.places[0]
+            if (this.placeIdx === 1) {
                 this.placeIdx = 0
             } else {
-                this.place = this.places[++this.placeIdx]
+                this.placeIdx++
             }
         }
 
         get placeState () {
-            return `profile.${this.place}`
+            return `profile.places.${this.placeIdx}`
         }
     }
 </script>
