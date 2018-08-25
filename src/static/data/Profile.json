@@ -3,7 +3,8 @@
     "introduction": "こんにちは，世界！",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
-    "status": "茨城大学 大学院理工学研究科情報工学専攻",
+    "birthday": "1994/08/23",
+    "status": "大学院生",
     "univ": [
       {
         "name": "茨城大学",
@@ -21,6 +22,7 @@
     "from": {
       "title": "出身地",
       "name": "福島県郡山市",
+      "web_page": "https://www.city.koriyama.fukushima.jp/",
       "center": {
         "lat": 37.398021,
         "lng": 140.387946
@@ -29,6 +31,7 @@
     "stay": {
       "title": "在住",
       "name": "茨城県日立市",
+      "web_page": "http://www.city.hitachi.lg.jp/",
       "center": {
         "lat": 36.590654,
         "lng": 140.662153
@@ -74,7 +77,8 @@
     "introduction": "Hello, World!",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
-    "status": "Major in Computer and Information Sciences, Graduate School of Science and Engineering, Ibaraki University",
+    "birthday": "1994/08/23",
+    "status": "A graduate school student",
     "univ": [
       {
         "name": "Ibaraki University",
@@ -92,6 +96,7 @@
     "from": {
       "title": "From",
       "name": "Koriyama city, Fukushima Prefecture",
+      "web_page": "https://honyaku.j-server.com/LUCKORIYAM/ns/tl.cgi/http%3a//www.city.koriyama.fukushima.jp/foreign/index.html?SLANG=ja&TLANG=en&XMODE=0&XPARAM=q,&XCHARSET=utf-8&XPORG=,&XJSID=0",
       "center": {
         "lat": 37.398021,
         "lng": 140.387946
@@ -100,6 +105,7 @@
     "stay": {
       "title": "Stay",
       "name": "Hitachi city, Ibaraki Prefecture",
+      "web_page": "https://honyaku.j-server.com/LUCHITACHI/ns/tl.cgi/http%3a//www.city.hitachi.lg.jp/index.html?SLANG=ja&TLANG=en&XMODE=0&XCHARSET=utf-8&XJSID=0",
       "center": {
         "lat": 36.590654,
         "lng": 140.662153

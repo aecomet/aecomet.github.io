@@ -3,7 +3,7 @@
     "title": "ポートフォリオ",
     "content": [
       { "name": "プロフィール", "href": "/", "icon": "person" },
-      { "name": "成果物", "href": "/product", "icon": "work" },
+      { "name": "成果物", "href": "/product", "icon": "web_asset" },
       { "name": "スキル", "href": "/skill", "icon": "fitness_center" }
     ],
     "attribute": "大柳 達哉",
@@ -20,7 +20,7 @@
     "title": "Portfolio",
     "content": [
       { "name": "Profile", "href": "/", "icon": "person" },
-      { "name": "Products", "href": "/products", "icon": "work" },
+      { "name": "Products", "href": "/products", "icon": "web_asset" },
       { "name": "Skills", "href": "/skill", "icon": "fitness_center" }
     ],
     "attribute": "Tatsuya Oyanagi",
