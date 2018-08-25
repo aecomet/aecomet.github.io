@@ -1,14 +1,28 @@
 <template lang="pug">
     v-layout(row wrap justify-center)#resume
-        //- v-flex(md10 xs12).my-3
-            .display-1.my-2.text-xs-center {{ $t('resume.schoolTitle') }}
-            timeline
-                timeline-item(v-for="(school, idx) in $t('resume.school')" :key="`school-${idx}`" :hollow="school.hollow")
-                    v-card(flat tile).pa-3
-                        a(:href="school.href").title {{ school.name }}
-                        .body-1 {{ school.start }} - {{ school.end }}
-                        .subheading {{ school.remark }}
 
+        v-flex(md10 xs12).my-3
+            .headline.mb-4.text-xs-left
+                font-awesome-icon(:icon="['fab', 'github']").mr-2
+                | Github Repos
+
+            v-layout(row wrap)
+                v-flex(v-for="(r, idx) in repos" :key="`github-repo-${idx}`" md4 xs4)
+                    v-card(v-if="!r.private" flat tile)
+                        v-card-text.pb-0: .text-xs-center.display-2: font-awesome-icon(:icon="['fab', 'github']")
+                        v-card-text.text-xs-center: a(:href="r.html_url" target="_blank").white--text {{ r.full_name }}
+
+        v-flex(md10 xs12).my-3
+            .headline.mb-4.text-xs-left
+                font-awesome-icon(:icon="['far', 'newspaper']").mr-2
+                | Qiita Articles
+
+            v-layout(row wrap)
+                v-flex(v-for="(a, idx) in articles" :key="`qiita-article-${idx}`" xs12)
+                    v-card(v-if="!a.private" flat tile)
+                        v-card-text: a(:href="a.url" target="_blank").white--text
+                            font-awesome-icon(:icon="['far', 'newspaper']").mr-2
+                            | {{ a.title }}
 
         v-flex(md10 xs12).my-3
             .headline.mb-4.text-xs-left
@@ -48,19 +62,41 @@
 </template>
 
 <script lang="ts">
-    // import { Timeline, TimelineItem, TimelineTitle } from 'vue-cute-timeline'
     import Vue from 'vue'
+    import axios from 'axios'
+    import Key from '../Key'
     import Component from 'vue-class-component'
 
     @Component({
-        components: {
-            // Timeline,
-            // TimelineItem,
-            // TimelineTitle
-        }
+        components: {}
     })
     export default class Resume extends Vue {
-        created() {}
+
+        repos = []
+        articles = []
+
+        created() {
+            // Get Qiita article
+            axios.get(`https://qiita.com/api/v2/authenticated_user/items`, {
+                headers: {
+                    Authorization: `Bearer ${Key.Qiita.appId}`
+                }
+            }).then(res => {
+                console.log(res.data[0])
+                this.articles = res.data
+            }).catch(err => {
+                console.error(err)
+            })
+
+            // Get Github repos
+            axios.get('https://api.github.com/users/hiyoko3/repos')
+                .then(res => {
+                    console.log(res.data[0])
+                    this.repos = res.data
+                }).catch(err => {
+                    console.error(err)
+                })
+        }
         mounted() {}
     }
 </script>
