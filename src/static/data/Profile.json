@@ -58,7 +58,9 @@
         "items": [
           { "name": "寿司", "href": "" },
           { "name": "天ぷら", "href": "" },
-          { "name": "蕎麦", "href": "" }
+          { "name": "蕎麦", "href": "" },
+          { "name": "パスタ", "href": "" },
+          { "name": "コーヒー", "href": "" }
         ]
       },
       {
@@ -77,7 +79,8 @@
           { "name": "福山雅治", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
           { "name": "東方神起(TVXQ)", "href": "https://toho-jp.net/" },
           { "name": "やなぎなぎ", "href": "http://yanaginagi.net/" },
-          { "name": "柴咲コウ", "href": "https://koshibasaki.com/" }
+          { "name": "柴咲コウ", "href": "https://koshibasaki.com/" },
+          { "name": "久石譲", "href": "http://joehisaishi.com/index.php" }
         ]
       },
       {
@@ -91,7 +94,8 @@
         "title": "アニメ",
         "icon": "tv",
         "items": [
-          { "name": "機動戦士ガンダムシリーズ", "href": "https://www.gundam.info/" }
+          { "name": "機動戦士ガンダムシリーズ", "href": "https://www.gundam.info/" },
+          { "name": "スタジオジブリ作品", "href": "http://www.ghibli.jp/" }
         ]
       },
       {
@@ -163,7 +167,9 @@
         "items": [
           { "name": "Sushi", "href": "" },
           { "name": "Tenpura", "href": "" },
-          { "name": "Soba", "href": "" }
+          { "name": "Soba", "href": "" },
+          { "name": "Pasta", "href": "" },
+          { "name": "Coffee", "href": "" }
         ]
       },
       {
@@ -182,7 +188,8 @@
           { "name": "Masaharu Fukuyama", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
           { "name": "TOHOSHINKI(TVXQ)", "href": "https://toho-jp.net/e/" },
           { "name": "Yanaginagi", "href": "http://yanaginagi.net/" },
-          { "name": "Koh Shibasaki", "href": "https://koshibasaki.com/" }
+          { "name": "Koh Shibasaki", "href": "https://koshibasaki.com/" },
+          { "name": "Joh Hisaishi", "href": "http://joehisaishi.com/index.php" }
         ]
       },
       {
@@ -196,7 +203,8 @@
         "title": "Anime",
         "icon": "tv",
         "items": [
-          { "name": "Gundam Series", "href": "https://na.gundam.info/" }
+          { "name": "Gundam Series", "href": "https://na.gundam.info/" },
+          { "name": "STUDIO GHIBLE", "href": "http://www.ghibli.jp/" }
         ]
       },
       {
