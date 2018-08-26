@@ -1,8 +1,9 @@
 <template lang="pug">
     v-layout(row wrap justify-center)#profile
-        v-flex(md10 xs12).my-5
+        v-flex(md10 xs12): img(:src="$t('profile.top')" alt="top-img").top-img
+        //- v-flex(md10 xs12).my-3
             blockquote.display-1.text-xs-left {{ $t('profile.introduction') }}
-        v-flex(md10 xs12).my-3
+        v-flex(md10 xs12).mb-3
             v-card(hover)
                 v-layout(row wrap)
                     v-flex(md5 xs12)
@@ -108,6 +109,10 @@
 </script>
 
 <style scoped>
+    .top-img {
+        width: 100%;
+    }
+
     .vertical-text {
         font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
         font-feature-settings: 'pkna';

@@ -27,7 +27,7 @@ import {
 import {
     BaseJSON,
     ProfileJSON,
-    ResumeJSON,
+    ProductJSON,
     SkillJSON,
     LinkJSON
 } from './static/data/'
@@ -43,14 +43,14 @@ const messages = {
     ja: {
         base: BaseJSON.ja,
         profile: ProfileJSON.ja,
-        resume: ResumeJSON.ja,
+        resume: ProductJSON.ja,
         skill: SkillJSON.ja,
         link: LinkJSON.ja
     },
     en: {
         base: BaseJSON.en,
         profile: ProfileJSON.en,
-        resume: ResumeJSON.en,
+        resume: ProductJSON.en,
         skill: SkillJSON.en,
         link: LinkJSON.en
     }
