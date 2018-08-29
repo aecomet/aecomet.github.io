@@ -1,7 +1,7 @@
 {
   "short_name": "Portfolio",
   "name": "Portfolio",
-  "start_url": "/index.html",
+  "start_url": "/",
   "icons": [
     {
       "src": "static/images/icons/icon-128x128.png",
@@ -28,5 +28,5 @@
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#efefef",
-  "theme_color": "#fafdff"
+  "theme_color": "#43676b"
 }
