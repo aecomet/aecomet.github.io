@@ -9,7 +9,7 @@
             v-layout(row wrap)
                 v-flex(v-for="(r, idx) in repos" :key="`github-repo-${idx}`" xs12)
                     v-card(color="transparent" v-if="!r.private" flat tile)
-                        v-card-text.pa-1: a(:href="r.html_url" target="_blank").grey--text.subheading
+                        v-card-text.pa-1: a(:href="r.html_url" target="_blank" rel="noopener noreferrer" ).grey--text.subheading
                             font-awesome-icon(:icon="['fab', 'github']").mr-2
                             | {{ r.full_name }}
 
@@ -21,7 +21,7 @@
             v-layout(row wrap)
                 v-flex(v-for="(a, idx) in articles" :key="`qiita-article-${idx}`" xs12)
                     v-card(color="transparent" v-if="!a.private" flat tile)
-                        v-card-text.pa-1: a(:href="a.url" target="_blank").teal--text.subheading
+                        v-card-text.pa-1: a(:href="a.url" target="_blank" rel="noopener noreferrer" ).teal--text.subheading
                             font-awesome-icon(:icon="['far', 'newspaper']").mr-2
                             | {{ a.title }}
 

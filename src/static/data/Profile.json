@@ -104,7 +104,8 @@
         "icon": "gamepad",
         "items": [
           { "name": "ポケットモンスター シリーズ", "href": "https://www.pokemon.co.jp/" },
-          { "name": "Minecraft", "href": "https://minecraft.net/ja-jp/" }
+          { "name": "Minecraft", "href": "https://minecraft.net/ja-jp/" },
+          { "name": "三國無双シリーズ", "href": "https://www.gamecity.ne.jp/index.html#top" }
         ]
       }
     ]
@@ -214,7 +215,8 @@
         "icon": "gamepad",
         "items": [
           { "name": "Pocket Monster Series", "href": "https://www.pokemon.com/us/" },
-          { "name": "Minecraft", "href": "https://minecraft.net/en-us/" }
+          { "name": "Minecraft", "href": "https://minecraft.net/en-us/" },
+          { "name": "Warriors Series", "href": "http://www.koeitecmoamerica.com/" }
         ]
       }
     ]

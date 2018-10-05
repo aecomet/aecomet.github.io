@@ -14,16 +14,6 @@
                     span.caption {{ header.name }}
                     v-icon {{ header.icon }}
 
-        //- Navigation Drawer
-        //- v-navigation-drawer(v-model="drawer" app :light="theme" :dark="!theme" disable-resize-watcher clipped)
-            v-list(subheader dense)
-                v-list-tile(v-for="(nav, idx) in $t('base.content')" :key="`nav-${idx}`" :to="nav.href" @click="" avatar ripple)
-                    v-list-tile-content
-                        v-list-tile-title
-                            span.subheading
-                                v-icon {{ nav.icon }}
-                                | &nbsp;{{ nav.name }}
-
         //- Main Contents
         v-content
             v-container(fluid)
@@ -33,11 +23,10 @@
         v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
-                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
+                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" rel="noopener noreferrer"  icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
                 v-divider
                 v-card-text.pa-2
                     span.mr-3.subheading &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
-
 </template>
 
 <script lang="ts">

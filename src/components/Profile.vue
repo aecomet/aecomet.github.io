@@ -43,7 +43,7 @@
 
                     v-divider.my-3
                     span.subheading.d-block.mb-3 {{ $t(`${placeState}.name`) }}
-                    v-btn(:href="$t(`${placeState}.web_page`)" target="_blank" outline round).orange--text
+                    v-btn(:href="$t(`${placeState}.web_page`)" target="_blank" rel="noopener noreferrer"  outline round).orange--text
                         v-icon open_in_new
                         | Link
 
@@ -64,11 +64,11 @@
                                 v-card-text
                                     .text-xs-center: span.subheding {{ item.name }}
 
-                                    v-btn(color="orange" v-if="item.href !== ''" :href="item.href" target="_blank" flat outline block round small) Link
+                                    v-btn(color="orange" v-if="item.href !== ''" :href="item.href" target="_blank" rel="noopener noreferrer"  flat outline block round small) Link
 
         v-flex(md10 xs12).my-3
             .title.my-2.text-xs-left {{ $t('link.laboratoryTitle') }}
-            v-card(:href="$t('link.laboratory.href')" target="_blank"  color="transparent" flat tile).pa-3
+            v-card(:href="$t('link.laboratory.href')" target="_blank" rel="noopener noreferrer"   color="transparent" flat tile).pa-3
                 .text-xs-left.body-2.mb-1.orange--text {{ $t('link.laboratory.name') }}
 
 </template>
