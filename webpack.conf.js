@@ -55,6 +55,17 @@ let baseWebpack = {
             },
             inject: true,
             chunksSortMode: 'dependency',
+            meta: {
+                title: 'ポートフォリオ(T.O Portfolio)',
+                keywords: 'ポートフォリオ,Portfolio',
+                author: 'Tatsuya Oyanagi',
+                description: 'ポートフォリオ(Portfolio)',
+                'theme-color': '#f7f6f5',
+                'format-detection': 'telephone=no', //- Disabled phone number (iOS)
+                //- /* ==== Windows Theme ==== */
+                'msapplication-TileImage': 'public/static/images/apple-touch-icon.png',
+                'msapplication-TileColor': '#f7f6f5'
+            }
         }),
         // === Compile `404.pug` === //
         new HTMLWebpackPlugin({
@@ -68,14 +79,13 @@ let baseWebpack = {
                 removeEmptyAttributes: true
             },
             inject: false,
-            chunksSortMode: 'dependency',
-            excludeChunks: ['app', 'vendor', 'data', 'component']
+            chunksSortMode: 'dependency'
         }),
-        new ExtractTextPlugin('[name].css', {
+        new ExtractTextPlugin('[name].[hash].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
         new WebpackPwaManifest({
-            filename: "public/manifest.json",
+            filename: "public/manifest.[hash].json",
             name: 'My Progressive Portfolio',
             short_name: 'T.O. Portfolio',
             description: 'My portfolio! This is created by PWA.',
@@ -98,7 +108,7 @@ let baseWebpack = {
                 {
                     src: path.resolve('src/static/icons/icon.png'),
                     sizes: [128, 144, 152, 192, 256], // multiple sizes
-                    destination: path.join('public/icons', '')
+                    destination: path.join('public/icons', 'default')
                 }
             ]
         }),
@@ -111,8 +121,8 @@ let baseWebpack = {
     ],
     // Output config
     output: {
-        path: '', //  Output directory name
-        filename: '[name].js', // Output filename
+        path: path.resolve(__dirname, './dist'), //  Output directory name
+        filename: '[name].[hash].js', // Output filename
     },
     module: {
         rules: [
@@ -210,8 +220,6 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         })
     )
 } else {
-    baseWebpack.output.path = path.resolve(__dirname, './dist')
-
     baseWebpack.plugins = baseWebpack.plugins.concat([
         new HardSourceWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
