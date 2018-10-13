@@ -6,23 +6,18 @@ html(lang="ja")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(content="ポートフォリオ" name="title")
-    meta(content="大柳達哉,プロフィール,AR,拡張現実,VR,仮想現実,防災,日立,茨城大学,大学院,石田研究室" name="keywords")
+    meta(content="ポートフォリオ,Portfolio" name="keywords")
     meta(name="theme-color" content="#f7f6f5")
     meta(name="description" content="my ポートフォリオ")
     meta(name="author" content="Tatsuya Oyanagi")
     link(rel="canonical" href="https://hiyoko3.github.io/")
-    link(rel="icon" href="static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
-    link(rel="shortcut icon" href="static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
+    //- link(rel="icon" href="public/static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
+    //- link(rel="shortcut icon" href="public/static/images/icons/favicon.ico" type="image/vnd.microsoft.icon")
 
-    link(rel="manifest" href="manifest.json")
-    //- /* ==== iOS Theme ==== */
-    meta(name="apple-mobile-web-app-capable" content="yes")
-    meta(name="apple-mobile-web-app-status-bar-style" content="black")
-    meta(name="apple-mobile-web-app-title" content="Portfolio")
-    link(rel="apple-touch-icon" href="static/images/icons/apple-touch-icon.png" sizes="152x152")
+    //- link(rel="apple-touch-icon" href="public/static/images/icons/apple-touch-icon.png" sizes="152x152")
 
     //- /* ==== Windows Theme ==== */
-    meta(name="msapplication-TileImage" content="static/images/icons/apple-touch-icon.png")
+    meta(name="msapplication-TileImage" content="public/static/images/icons/apple-touch-icon.png")
     meta(name="msapplication-TileColor" content="#f7f6f5")
 
     //- /* ==== OGP ==== */
@@ -31,11 +26,11 @@ html(lang="ja")
     meta(property="og:description" content="my ポートフォリオ")
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://hiyoko3.github.io/")
-    meta(property="og:image" content="https://hiyoko3.github.io/static/images/icons/apple-touch-icon.png")
+    meta(property="og:image" content="https://hiyoko3.github.io/public/static/images/icons/apple-touch-icon.png")
     meta(property="fb:app_id" content="429920394126900")
     meta(name="twitter:card" content="summary")
     meta(name="twitter:site" content="https://hiyoko3.github.io/")
-    meta(name="twitter:image" content="https://hiyoko3.github.io/static/images/icons/apple-touch-icon.png")
+    meta(name="twitter:image" content="https://hiyoko3.github.io/public/static/images/icons/apple-touch-icon.png")
 
     //- Disabled phone number (iOS)
     meta(name="format-detection" content="telephone=no")
@@ -57,6 +52,4 @@ html(lang="ja")
   body
     noscript.
       This is your fallback content in case JavaScript fails to load.
-    #app(hidden)
-    //-.loader
-      svg(viewBox="0 0 32 32" width="32" height="32"): circle(cx="16" cy="16" r="14" fill="none")#spinner
+    #app
