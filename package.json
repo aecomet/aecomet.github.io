@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.conf.js  | webpack --config webpack.conf.js",
     "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize",
-    "clear": "rm -f dist/*.css.map dist/*.js.map dist/*.hot-update.*",
+    "clear": "rm -f dist/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

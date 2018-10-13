@@ -152,10 +152,3 @@ if ('serviceWorker' in navigator &&
 } else {
     console.warn('This browser doesn\'t use a service worker')
 }
-/* === Cache === */
-// Checking exist a cache
-if ('caches' in window) {
-    // caches.match(url).then(res => {
-    //
-    // })
-}

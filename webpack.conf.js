@@ -4,7 +4,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
@@ -221,9 +220,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     )
 } else {
     baseWebpack.plugins = baseWebpack.plugins.concat([
-        new HardSourceWebpackPlugin(),
         new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
         /* === Copy Static files === */
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/public/static/images') } ]),
     ])
@@ -236,7 +233,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
         progress: false,                         // Show progress on console.
         inline: true,                         // The mode of inline.
-        hot: true,                         // use HMR
+        hot: false,                         // use HMR
         clientLogLevel: 'info',                       // The log level(none, error, warning, info)
         historyApiFallback: true
     }

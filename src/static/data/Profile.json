@@ -1,6 +1,6 @@
 {
   "ja": {
-    "top": "static/images/top.svg",
+    "top": "public/static/images/top.svg",
     "introduction": "こんにちは，世界！",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
@@ -111,7 +111,7 @@
     ]
   },
   "en": {
-    "top": "static/images/top.svg",
+    "top": "public/static/images/top.svg",
     "introduction": "Hello, World!",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
