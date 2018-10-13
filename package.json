@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.conf.js  | webpack --config webpack.conf.js",
-    "build": "NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize",
-    "clear": "rm -f dist/*",
+    "build": "rm -rf public/*; NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize",
+    "clear": "rm -rf dist/**/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
