@@ -141,9 +141,9 @@ new Vue({
  *  === Service Worker ===
  */
 // Checking support a `service worker`
-// if ('serviceWorker' in navigator &&
-//     (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
-//     const registration = runtime.register()
-// } else {
-//     console.warn('This browser doesn\'t use a service worker')
-// }
+if ('serviceWorker' in navigator &&
+    (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+    const registration = runtime.register()
+} else {
+    console.warn('This browser doesn\'t use a service worker')
+}
