@@ -5,10 +5,10 @@
             v-card(tile flat)
                 v-data-table(:headers="$t('skill.certificationHeader')" :items="$t('skill.certification')" hide-actions).elevation-1
                     template(slot="headerCell" slot-scope="props")
-                        .text-xs-center.title {{ props.header.text }}
+                        .text-xs-center.body-2 {{ props.header.text }}
                     template(slot="items" slot-scope="props")
-                        td: .text-xs-center.subheading {{ props.item.date }}
-                        td: .text-xs-center.subheading {{ props.item.name }}
+                        td: .text-xs-center {{ props.item.date }}
+                        td: .text-xs-center {{ props.item.name }}
 
         v-flex(md10 xs12).my-3
             .headline.mb-4.text-xs-left {{ $t('skill.programingTitle')}}

@@ -6,7 +6,7 @@
             v-card(hover)
                 v-layout(row wrap)
                     v-flex(md5 xs12)
-                        v-card-title(primary-title): span.headline {{ $t('profile.profileTitle') }}
+                        v-card-title(primary-title): .headline {{ $t('profile.profileTitle') }}
                         v-card-text: .text-xs-center.display-4: font-awesome-icon(:icon="['fas', 'user-circle']")
                         v-card-text.pa-3
                             .my-2.headline {{ $t('profile.name') }}
@@ -19,10 +19,13 @@
                                 v-btn(:to="$t('link.laboratory.href')" color="orange" flat) {{ `${$t('link.laboratoryTitle')}` }}
 
                     v-flex(md7 xs12)
-                        v-card-text: .title {{ $t('profile.introduction') }}
+                        v-card-title(primary-title)
                         v-card-text
-                            .pa-1.title.greeting-text {{ $t('profile.greeting') }}
-                            .my-2.text-xs-center.orange--text
+                            .headline {{ $t('profile.introduction') }}
+
+                            .my-4.pa-1.title.greeting-text {{ $t('profile.greeting') }}
+
+                            .text-xs-center.orange--text
                                 .subheading {{ $t('profile.wordTitle') }}
                                 .pa-2.headline {{ $t('profile.word')}}
 </template>

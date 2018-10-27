@@ -55,13 +55,21 @@
 
         created() {
             vm = this
+
+            // set page position
             vm.currentPage = 0
+            if (vm.pages[vm.currentPage] !== vm.$route.name) {
+                vm.$router.push({ name: vm.pages[0] })
+            }
+
+            // set default theme
             if (vm.$ls.get('theme') !== undefined) {
                 vm.theme = vm.$ls.get('theme')
             } else {
                 vm.$ls.set('theme', vm.theme)
             }
 
+            // set default lang
             if (vm.$ls.get('lang')) {
                 vm.$i18n.locale = vm.$ls.get('lang')
             } else {

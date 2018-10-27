@@ -16,7 +16,6 @@ import LocalStorage from 'vue-ls'
 import {
     App,
     Profile,
-    Product,
     Skill,
     NotFound
 } from './components/'
@@ -26,7 +25,6 @@ import {
 import {
     BaseJSON,
     ProfileJSON,
-    ProductJSON,
     SkillJSON,
     LinkJSON
 } from './static/data/'
@@ -42,14 +40,12 @@ const messages = {
     ja: {
         base: BaseJSON.ja,
         profile: ProfileJSON.ja,
-        resume: ProductJSON.ja,
         skill: SkillJSON.ja,
         link: LinkJSON.ja
     },
     en: {
         base: BaseJSON.en,
         profile: ProfileJSON.en,
-        resume: ProductJSON.en,
         skill: SkillJSON.en,
         link: LinkJSON.en
     }
