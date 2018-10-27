@@ -113,9 +113,7 @@ let baseWebpack = {
         }),
         new ServiceWorkerWebpackPlugin({
             entry: path.join(__dirname, 'src/service-worker.js'),
-            filename: 'public/service-worker.js',
-            exclude: [ '**/.*', '**/*.hot-update.*', '**/*.map' ],
-            include: [ '*.js', '*.css', '*.html', 'manifest.json', '*.png', '*.ico' ],
+            filename: 'service-worker.js'
         }),
     ],
     // Output config
