@@ -1,4 +1,30 @@
 {
-  "ja": {},
-  "en": {}
+  "ja": {
+    "title": "制作物",
+    "products": [
+      { "name": "業務管理システム開発", "language": "PHP, jQuery", "text": "企業内部で利用する販売管理システムの開発" },
+      { "name": "業務管理システム開発", "language": "Ruby on Rails,jQuery", "text": "企業内部で利用する販売管理システムの開発" },
+      { "name": "スマホアプリ開発", "language": "Java(Android)", "text": "小型IoTデバイスと連動したデータ収集アプリケーションの開発" },
+      { "name": "スマホアプリ開発", "language": "Java(Android)", "text": "動物園散策アプリケーションのデザイン刷新とパフォーマンス改善を担当" },
+      { "name": "業務管理システム開発", "language": "Laravel,jQuery", "text": "動物園内部で利用する総合業務管理システムの開発" },
+      { "name": "ポータルサイト作成", "language": "jQuery,Bootstrap", "text": "他研究室の研究成果を公開するページを作成" },
+      { "name": "研究室HP作成", "language": "Vue.js", "text": "所属している研究室のHPリニューアル" },
+      { "name": "ポートフォリオ作成", "language": "Vue.js", "text": "自身の成果を公開するためのポートフォリオサイトを作成" },
+      { "name": "業務支援システム開発", "language": "Django REST Framework,ElasticSearch,Vue.js", "text": "修士研究で開発．自治体向け災害対策意思決定支援システムの開発" }
+    ]
+  },
+  "en": {
+    "title": "Products",
+    "products": [
+      { "name": "Operation Management System", "language": "PHP, jQuery", "text": "coming soon." },
+      { "name": "Operation Management System", "language": "Ruby on Rails,jQuery", "text": "coming soon." },
+      { "name": "Mobile Application", "language": "Java(Android)", "text": "coming soon." },
+      { "name": "Mobile Application", "language": "Java(Android)", "text": "coming soon." },
+      { "name": "Operation Management System", "language": "Laravel,jQuery", "text": "coming soon." },
+      { "name": "Portal Web Site", "language": "jQuery,Bootstrap", "text": "coming soon." },
+      { "name": "Renewal my laboratory HP", "language": "Vue.js", "text": "coming soon." },
+      { "name": "Portfolio", "language": "Vue.js", "text": "coming soon." },
+      { "name": "Development of Operation Support System", "language": "Django REST Framework,ElasticSearch,Vue.js", "text": "coming soon." }
+    ]
+  }
 }

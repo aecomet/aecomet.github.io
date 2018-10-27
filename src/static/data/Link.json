@@ -4,13 +4,23 @@
     "laboratory": {
       "name": "石田研究室",
       "href": "https://glocalvision.net/ishilab/"
-    }
+    },
+    "techTitle": "リンク",
+    "technologies": [
+      { "name": "Qiita", "href": "https://github.com/hiyoko3" },
+      { "name": "Github", "href": "https://qiita.com/tatsuya_oyanagi" }
+    ]
   },
   "en": {
     "laboratoryTitle": "Laboratory",
     "laboratory": {
       "name": "Ishilda Laboratory",
       "href": "https://glocalvision.net/ishilab/"
-    }
+    },
+    "techTitle": "Links",
+    "technologies": [
+      { "name": "Qiita", "href": "https://github.com/hiyoko3" },
+      { "name": "Github", "href": "https://qiita.com/tatsuya_oyanagi" }
+    ]
   }
 }

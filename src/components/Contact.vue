@@ -1,10 +1,12 @@
 <template lang="pug">
-    v-layout(row wrap justify-center)#contact-me
+    v-layout(align-center justify-center)#contact-me
         v-flex(md10 xs12).my-3
             .headline.mb-4 {{ $t('contact.title') }}
             v-card
                 v-card-text.text-xs-center
-                    .body-2 {{ $t('contact.text') }}
+                    .body-2
+                        v-icon(small).mr-2 email
+                        | {{ $t('contact.text') }}
                     .body-2 {{ $t('contact.subtext') }}
 
 </template>

@@ -11,7 +11,12 @@
                         td: .text-xs-center.body-2 {{ props.item.name }}
 
         v-flex(md10 xs12).my-3
-            .headline.mb-4 {{ $t('skill.programingTitle')}}
+            .headline.mb-4 {{ $t('link.techTitle') }}
+            v-list.elevation-1
+                v-list-tile(v-for="(link, idx) in $t('link.technologies')" :key="`tech-link-${idx}`" :to="link.href" color="blue") {{ link.name }}
+
+        v-flex(md10 xs12).my-3
+            .headline.mb-4 {{ $t('skill.programingTitle') }}
             v-card
                 v-card-title(primary-title)
                     .select-form: v-combobox(v-model="skill" :items="$t('skill.programing')" item-text="name" placeholder="未選択(Not select)" hint="プログラミング言語を選択してください (Select a programming language)" persistent-hint)
