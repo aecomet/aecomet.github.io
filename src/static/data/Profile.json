@@ -1,224 +1,24 @@
 {
   "ja": {
     "top": "public/static/images/top.svg",
-    "introduction": "こんにちは，世界！",
+    "introduction": "2019年度より新社会人になるひよこエンジニア",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
     "birthday": "1994/08/23",
     "status": "大学院生",
-    "univ": [
-      {
-        "name": "茨城大学",
-        "href": "http://www.ibaraki.ac.jp/index.html"
-      },
-      {
-        "name": "茨城大学院理工学研究科",
-        "href": "http://www.gse.ibaraki.ac.jp/"
-      },
-      {
-        "name": "情報工学専攻",
-        "href": "http://www.cis.ibaraki.ac.jp/"
-      }
-    ],
-    "places": [
-      {
-        "title": "出身地",
-        "name": "福島県郡山市",
-        "web_page": "https://www.city.koriyama.fukushima.jp/",
-        "center": {
-          "lat": 37.398021,
-          "lng": 140.387946
-        }
-      },
-      {
-        "title": "在住",
-        "name": "茨城県日立市",
-        "web_page": "http://www.city.hitachi.lg.jp/",
-        "center": {
-          "lat": 36.590654,
-          "lng": 140.662153
-        }
-      }
-    ],
     "wordTitle": "好きな言葉",
     "word": "「果報は寝て待て」",
-    "hobbyTitle": "趣味",
-    "hobby": [
-      "映画鑑賞",
-      "読書",
-      "ランニング",
-      "ドライブ",
-      "アニメ / 漫画 / ゲーム",
-      "プログラミング"
-    ],
-    "favoriteTitle": "好きなもの/人",
-    "favorites": [
-      {
-        "title": "食べ物",
-        "icon": "utensils",
-        "items": [
-          { "name": "寿司", "href": "" },
-          { "name": "天ぷら", "href": "" },
-          { "name": "蕎麦", "href": "" },
-          { "name": "パスタ", "href": "" },
-          { "name": "コーヒー", "href": "" }
-        ]
-      },
-      {
-        "title": "芸能人",
-        "icon": "user-circle",
-        "items": [
-          { "name": "明石家さんま", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
-        ]
-      },
-      {
-        "title": "アーティスト",
-        "icon": "headphones-alt",
-        "items": [
-          { "name": "L'arc〜en〜Ciel", "href": "https://www.larc-en-ciel.com/index.php" },
-          { "name": "SCANDAL", "href": "http://www.scandal-4.com/" },
-          { "name": "福山雅治", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
-          { "name": "東方神起(TVXQ)", "href": "https://toho-jp.net/" },
-          { "name": "やなぎなぎ", "href": "http://yanaginagi.net/" },
-          { "name": "柴咲コウ", "href": "https://koshibasaki.com/" },
-          { "name": "久石譲", "href": "http://joehisaishi.com/index.php" }
-        ]
-      },
-      {
-        "title": "漫画",
-        "icon": "book-open",
-        "items": [
-          { "name": "ONE PIECE", "href": "https://one-piece.com/" }
-        ]
-      },
-      {
-        "title": "アニメ",
-        "icon": "tv",
-        "items": [
-          { "name": "機動戦士ガンダムシリーズ", "href": "https://www.gundam.info/" },
-          { "name": "スタジオジブリ作品", "href": "http://www.ghibli.jp/" }
-        ]
-      },
-      {
-        "title": "ゲーム",
-        "icon": "gamepad",
-        "items": [
-          { "name": "ポケットモンスター シリーズ", "href": "https://www.pokemon.co.jp/" },
-          { "name": "Minecraft", "href": "https://minecraft.net/ja-jp/" },
-          { "name": "三國無双シリーズ", "href": "https://www.gamecity.ne.jp/index.html#top" }
-        ]
-      }
-    ]
+    "greeting": "2019年度よりITエンジニアとして働く学生のポートフォリオです．主にWebに関連する技術を学んでおり，現在はより洗練されたアプリケーションを構築したいと考え，アーキテクチャの勉強を進めています．"
   },
   "en": {
     "top": "public/static/images/top.svg",
-    "introduction": "Hello, World!",
+    "introduction": "A newbie engineer who will be office worker since 2019",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
     "birthday": "1994/08/23",
     "status": "A graduate school student",
-    "univ": [
-      {
-        "name": "Ibaraki University",
-        "href": "http://www.ibaraki.ac.jp/en/index.html"
-      },
-      {
-        "name": "Graduate School of Science and Engineering",
-        "href": "http://www.gse.ibaraki.ac.jp/en/index.html"
-      },
-      {
-        "name": "Major in Computer and Information Sciences",
-        "href": "http://www.cis.ibaraki.ac.jp/en/"
-      }
-    ],
-    "places": [
-      {
-        "title": "From",
-        "name": "Koriyama city, Fukushima Prefecture",
-        "web_page": "https://honyaku.j-server.com/LUCKORIYAM/ns/tl.cgi/http%3a//www.city.koriyama.fukushima.jp/foreign/index.html?SLANG=ja&TLANG=en&XMODE=0&XPARAM=q,&XCHARSET=utf-8&XPORG=,&XJSID=0",
-        "center": {
-          "lat": 37.398021,
-          "lng": 140.387946
-        }
-      },
-      {
-        "title": "Stay",
-        "name": "Hitachi city, Ibaraki Prefecture",
-        "web_page": "https://honyaku.j-server.com/LUCHITACHI/ns/tl.cgi/http%3a//www.city.hitachi.lg.jp/index.html?SLANG=ja&TLANG=en&XMODE=0&XCHARSET=utf-8&XJSID=0",
-        "center": {
-          "lat": 36.590654,
-          "lng": 140.662153
-        }
-      }
-    ],
     "wordTitle": "Favorite Quotes",
     "word": "「Everything comes to those who wait」",
-    "hobbyTitle": "Hobby",
-    "hobby": [
-      "Watching movies",
-      "Reading books",
-      "Running",
-      "Driving",
-      "Anime / Managa / Game",
-      "Programing"
-    ],
-    "favoriteTitle": "Favorites",
-    "favorites": [
-      {
-        "title": "Foods",
-        "icon": "utensils",
-        "items": [
-          { "name": "Sushi", "href": "" },
-          { "name": "Tenpura", "href": "" },
-          { "name": "Soba", "href": "" },
-          { "name": "Pasta", "href": "" },
-          { "name": "Coffee", "href": "" }
-        ]
-      },
-      {
-        "title": "Entertainer",
-        "icon": "user-circle",
-        "items": [
-          { "name": "Sanma Akashiya", "href": "https://profile.yoshimoto.co.jp/talent/detail?id=873" }
-        ]
-      },
-      {
-        "title": "Artists",
-        "icon": "headphones-alt",
-        "items": [
-          { "name": "L'arc〜en〜Ciel", "href": "https://www.larc-en-ciel.com/en/index.php" },
-          { "name": "SCANDAL", "href": "http://www.scandal-4.com/" },
-          { "name": "Masaharu Fukuyama", "href": "https://fmsp.amob.jp/mob/index.php?site=F&ima=0207" },
-          { "name": "TOHOSHINKI(TVXQ)", "href": "https://toho-jp.net/e/" },
-          { "name": "Yanaginagi", "href": "http://yanaginagi.net/" },
-          { "name": "Koh Shibasaki", "href": "https://koshibasaki.com/" },
-          { "name": "Joh Hisaishi", "href": "http://joehisaishi.com/index.php" }
-        ]
-      },
-      {
-        "title": "Manga",
-        "icon": "book-open",
-        "items": [
-          { "name": "ONE PIECE", "href": "https://one-piece.com/" }
-        ]
-      },
-      {
-        "title": "Anime",
-        "icon": "tv",
-        "items": [
-          { "name": "Gundam Series", "href": "https://na.gundam.info/" },
-          { "name": "STUDIO GHIBLE", "href": "http://www.ghibli.jp/" }
-        ]
-      },
-      {
-        "title": "Games",
-        "icon": "gamepad",
-        "items": [
-          { "name": "Pocket Monster Series", "href": "https://www.pokemon.com/us/" },
-          { "name": "Minecraft", "href": "https://minecraft.net/en-us/" },
-          { "name": "Warriors Series", "href": "http://www.koeitecmoamerica.com/" }
-        ]
-      }
-    ]
+    "greeting": "This is a portfolio of a graduate student who will work as IT engineer since 2019. Currently, I am mainly studying technologies related to the Web, and System Architect. In the future, I will build sophisticated applications!"
   }
 }

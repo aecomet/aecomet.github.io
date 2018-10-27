@@ -58,10 +58,12 @@ const messages = {
 
 const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
-    { path: '/', name: 'Profile', component: Profile, meta: { title: `${baseTitle} | プロフィール/Profile` } },
-    { path: '/product', name: 'Products', component: Product, meta: { title: `${baseTitle} | 成果物/Products` } },
-    { path: '/skill', name: 'Skills', component: Skill, meta: { title: `${baseTitle} | スキル/Skills` } },
-    { path: '*', name: 'NotFound', component: NotFound, meta: { title: `${baseTitle} | 404 Not found` } }
+    { path: '/', name: 'Profile', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
+    { path: '/product', name: 'Products', component: Product, meta: { title: `成果物/Products | ${baseTitle}` } },
+    { path: '/skill', name: 'Skills', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/work', name: 'Works', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/contact', name: 'Contact', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '*', name: 'NotFound', component: NotFound, meta: { title: `404 Not found | ${baseTitle}` } }
 ]
 
 // CSS / Icon pack
@@ -146,9 +148,9 @@ new Vue({
  *  === Service Worker ===
  */
 // Checking support a `service worker`
-if ('serviceWorker' in navigator &&
-    (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
-    const registration = runtime.register()
-} else {
-    console.warn('This browser doesn\'t use a service worker')
-}
+// if ('serviceWorker' in navigator &&
+//     (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+//     const registration = runtime.register()
+// } else {
+//     console.warn('This browser doesn\'t use a service worker')
+// }
