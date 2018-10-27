@@ -14,9 +14,9 @@
                     v-icon {{ header.icon }}
 
         //- Main Contents
-        v-content
+        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }")
             v-container(fluid)
-                transition(name="fade" mode="out-in" appear): router-view(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }")
+                transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
         v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
@@ -30,6 +30,7 @@
 
 <script lang="ts">
     'use strict'
+
     let vm:any = null
     import Vue from 'vue'
     import Component from 'vue-class-component'

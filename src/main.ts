@@ -17,7 +17,9 @@ import {
     App,
     Profile,
     Skill,
-    NotFound
+    NotFound,
+    Work,
+    Contact
 } from './components/'
 
 
@@ -26,7 +28,9 @@ import {
     BaseJSON,
     ProfileJSON,
     SkillJSON,
-    LinkJSON
+    LinkJSON,
+    WorkJSON,
+    ContactJSON
 } from './static/data/'
 
 // set local storage config.
@@ -41,13 +45,17 @@ const messages = {
         base: BaseJSON.ja,
         profile: ProfileJSON.ja,
         skill: SkillJSON.ja,
-        link: LinkJSON.ja
+        link: LinkJSON.ja,
+        work: WorkJSON.ja,
+        contact: ContactJSON.ja
     },
     en: {
         base: BaseJSON.en,
         profile: ProfileJSON.en,
         skill: SkillJSON.en,
-        link: LinkJSON.en
+        link: LinkJSON.en,
+        work: WorkJSON.en,
+        contact: ContactJSON.en
     }
 }
 
@@ -55,8 +63,8 @@ const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
     { path: '/', name: 'profile_path', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
     { path: '/skill', name: 'skill_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
-    { path: '/work', name: 'work_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
-    { path: '/contact', name: 'contact_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/work', name: 'work_path', component: Work, meta: { title: `実績/Works | ${baseTitle}` } },
+    { path: '/contact', name: 'contact_path', component: Contact, meta: { title: `問い合わせ/Contact | ${baseTitle}` } },
     { path: '*', name: 'NotFound', component: NotFound, meta: { title: `404 Not found | ${baseTitle}` } }
 ]
 

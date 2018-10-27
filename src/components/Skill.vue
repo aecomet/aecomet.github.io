@@ -2,8 +2,8 @@
     v-layout(row wrap justify-center)#skill
         v-flex(md10 xs12).my-3
             .headline.mb-4 {{ $t('skill.certificationTitle')}}
-            v-card(tile flat)
-                v-data-table(:headers="$t('skill.certificationHeader')" :items="$t('skill.certification')" hide-actions).elevation-1
+            v-card
+                v-data-table(:headers="$t('skill.certificationHeader')" :items="$t('skill.certification')" hide-actions)
                     template(slot="headerCell" slot-scope="props")
                         .text-xs-center.body-2 {{ props.header.text }}
                     template(slot="items" slot-scope="props")
@@ -31,6 +31,8 @@
 </template>
 
 <script lang="ts">
+    'use strict'
+
     import Vue from 'vue'
     import Component from 'vue-class-component'
 
