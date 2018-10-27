@@ -27,87 +27,75 @@
         "name": "応用情報技術者"
       }
     ],
-    "programingTitle": "プログラミング経験",
+    "programingTitle": "スキル",
     "programing": [
       {
         "name": "PHP",
-        "experience": 50,
         "remark": [
-          "Laravel",
-          "Slim3"
+          { "title": "Laravel", "text": "PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね" },
+          { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" }
         ]
       },
       {
         "name": "HTML/CSS",
-        "experience": 50,
         "remark": [
-          "Bootstrap 3, 4",
-          "Materialize",
-          "Bulma"
+          { "title": "Bootstrap 3, 4", "text": "言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．" },
+          { "title": "Materialize", "text": "Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います" },
+          { "title": "Bulma", "text": "CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです" }
         ]
       },
       {
         "name": "JavaScript",
-        "experience": 55,
         "remark": [
-          "jQuery",
-          "AngularJS",
-          "Vue.js",
-          "Node.js",
-          "React.js"
+          { "title": "jQuery", "text": "web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません" },
+          { "title": "AngularJS / Angular", "text": "AngularJSから使ってました．typescriptで書くAngularは非常に見やすいのでたまに使いたい" },
+          { "title": "Vue.js", "text": "クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．" },
+          { "title": "React.js", "text": "ただいま勉強中．．Vueに慣れるとちょっと辛いかも" }
         ]
       },
       {
         "name": "Ruby",
-        "experience": 25,
         "remark": [
-          "Ruby On Rails"
+          { "title": "Ruby On Rails", "text": "インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．" }
         ]
       },
       {
         "name": "Go lang",
-        "experience": 20,
         "remark": [
-          "Gin"
+          { "title": "Gin", "text": "Goを学びたくてとりあえずドキュメント読んで使ってます．" }
         ]
       },
       {
         "name": "C / C++",
-        "experience": 15,
-        "remark": []
+        "remark": [
+          { "title": "", "text": "大学の講義は基本 C or Javaなのでその時に基本文法を学んだ程度です" }
+        ]
       },
       {
         "name": "Java",
-        "experience": 30,
         "remark": [
-          "Android(with Kotlin)"
+          { "title": "Java", "text": "大学の講義でその時に基本文法を学んだ程度です" },
+          { "title": "Android(with Kotlin)", "text": "インターンのアプリケーション開発で利用しました．Kotlinは洗練されててお気に入りです" }
         ]
       },
       {
         "name": "Python",
-        "experience": 35,
         "remark": [
-          "Django",
-          "Django Rest Framework"
+          { "title": "Django Rest Framework", "text": "修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です" }
         ]
       },
       {
         "name": "Database",
-        "experience": 40,
         "remark": [
-          "MySQL",
-          "SQLite",
-          "Mongo DB"
+          { "title": "MySQL", "text": "小中規模のアプリケーション開発にはこれを利用します" },
+          { "title": "SQLite", "text": "講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します" }
         ]
-      }
-    ],
-    "developTitle": "開発経験",
-    "develops": [
-      {
-        "name": "Web アプリケーション"
       },
       {
-        "name": "Android アプリケーション"
+        "name": "その他",
+        "remark": [
+          { "title": "ElasticSearch", "text": "検索エンジンを構築する際に必要だったため使い方を学び利用しています" }
+        ]
       }
     ]
   },
@@ -139,87 +127,75 @@
         "name": "Applied Information Technology Engineer Examination"
       }
     ],
-    "programingTitle": "Programing Skill",
+    "programingTitle": "Skill",
     "programing": [
       {
         "name": "PHP",
-        "experience": 50,
         "remark": [
-          "Laravel",
-          "Slim3"
+          { "title": "Laravel", "text": "coming soon." },
+          { "title": "Slim3", "text": "coming soon." }
         ]
       },
       {
         "name": "HTML/CSS",
-        "experience": 50,
         "remark": [
-          "Bootstrap 3, 4",
-          "Materialize",
-          "Bulma"
+          { "title": "Bootstrap 3, 4", "text": "coming soon." },
+          { "title": "Materialize", "text": "coming soon." },
+          { "title": "Bulma", "text": "coming soon." }
         ]
       },
       {
         "name": "JavaScript",
-        "experience": 55,
         "remark": [
-          "jQuery",
-          "AngularJS",
-          "Vue.js",
-          "Node.js",
-          "React.js"
+          { "title": "jQuery", "text": "coming soon." },
+          { "title": "AngularJS / Angular", "text": "coming soon." },
+          { "title": "Vue.js", "text": "coming soon." },
+          { "title": "Node.js", "text": "coming soon." },
+          { "title": "React.js", "text": "coming soon." }
         ]
       },
       {
         "name": "Ruby",
-        "experience": 25,
         "remark": [
-          "Ruby On Rails"
+          { "title": "Ruby On Rails", "text": "coming soon." }
         ]
       },
       {
         "name": "Go lang",
-        "experience": 20,
         "remark": [
-          "Gin"
+          { "title": "Gin", "text": "coming soon." }
         ]
       },
       {
         "name": "C / C++",
-        "experience": 15,
-        "remark": []
+        "remark": [
+          { "title": "", "text": "coming soon." }
+        ]
       },
       {
         "name": "Java",
-        "experience": 30,
         "remark": [
-          "Android(with Kotlin)"
+          { "title": "Android(with Kotlin)", "text": "coming soon." }
         ]
       },
       {
         "name": "Python",
-        "experience": 35,
         "remark": [
-          "Django",
-          "Django Rest Framework"
+          { "title": "Django Rest Framework", "text": "coming soon." }
         ]
       },
       {
         "name": "Database",
-        "experience": 40,
         "remark": [
-          "MySQL",
-          "SQLite",
-          "Mongo DB"
+          { "title": "MySQL", "text": "coming soon." },
+          { "title": "SQLite", "text": "coming soon." }
         ]
-      }
-    ],
-    "developTitle": "Development Experience",
-    "develops": [
-      {
-        "name": "Web Application"
       },
       {
-        "name": "Android Application"
+        "name": "Others",
+        "remark": [
+          { "title": "ElasticSearch", "text": "coming soon." }
+        ]
       }
     ]
   }

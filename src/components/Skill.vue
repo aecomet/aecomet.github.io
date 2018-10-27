@@ -1,33 +1,33 @@
 <template lang="pug">
     v-layout(row wrap justify-center)#skill
         v-flex(md10 xs12).my-3
-            .headline.mb-4.text-xs-left {{ $t('skill.certificationTitle')}}
+            .headline.mb-4 {{ $t('skill.certificationTitle')}}
             v-card(tile flat)
                 v-data-table(:headers="$t('skill.certificationHeader')" :items="$t('skill.certification')" hide-actions).elevation-1
                     template(slot="headerCell" slot-scope="props")
                         .text-xs-center.body-2 {{ props.header.text }}
                     template(slot="items" slot-scope="props")
-                        td: .text-xs-center {{ props.item.date }}
-                        td: .text-xs-center {{ props.item.name }}
+                        td: .text-xs-center.body-2 {{ props.item.date }}
+                        td: .text-xs-center.body-2 {{ props.item.name }}
 
         v-flex(md10 xs12).my-3
-            .headline.mb-4.text-xs-left {{ $t('skill.programingTitle')}}
-            v-card(tile flat).py-1
-                v-layout(row wrap justify-start)
-                    v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" md3 xs6).pa-2
-                        .text-xs-center
-                            //- .title.my-3 {{ p.name }}
-                            //-v-progress-circular(color="red" :size="100" :width="15" :rotate="360" :value="p.experience") {{ p.experience }}
-                            .title.my-3
-                            v-progress-circular(color="blue" :size="100" :width="15" :rotate="360" :value="100") {{ p.name }}
-                        .text-xs-left.mt-2
-                            span(v-for="(chip, idx) in p.remark" :key="`chip-${idx}`"): v-chip(color="blue" label outline) {{ chip }}
+            .headline.mb-4 {{ $t('skill.programingTitle')}}
+            v-card
+                v-card-title(primary-title)
+                    .select-form: v-combobox(v-model="skill" :items="$t('skill.programing')" item-text="name" placeholder="未選択(Not select)" hint="プログラミング言語を選択してください (Select a programming language)" persistent-hint)
+                v-card-text
+                    v-layout(align-center)
+                        v-item-group(v-model="currentWindow" tag="v-flex").mr-4
+                            v-item(v-for="idx in skill.remark.length" :key="`key-item-${idx}`")
+                                div(slot-scope="{ active, toggle }")
+                                    v-btn(:input-value="active" @click="toggle" icon small): v-icon label
 
-        v-flex(md10 xs12).my-3
-            .headline.mb-4.text-xs-left {{ $t('skill.developTitle')}}
-            v-card(v-for="(d, idx) in $t('skill.develops')" :key="`develop-${idx}`" tile flat).py-1
-                .text-xs-left.pa-2.blue--text {{ d.name }}
-
+                        v-flex
+                            v-window(v-model="currentWindow" vertical)
+                                v-window-item(v-for="(item, idx) in skill.remark" :key="`window-item-${idx}`")
+                                    v-card(flat)
+                                        v-card-title(primary-title).title {{ item.title }}
+                                        v-card-text.skill-text.body-2 {{ item.text }}
 </template>
 
 <script lang="ts">
@@ -36,11 +36,24 @@
 
     @Component
     export default class Skill extends Vue {
+        skill: object = {
+            name: '',
+            remark: []
+        };
+
+        currentWindow: number = 0;
+
         created () {}
         mounted () {}
     }
 </script>
 
 <style scoped>
+    .select-form {
+        max-width: 250px;
+    }
 
+    .skill-text {
+        line-height: 30px;
+    }
 </style>

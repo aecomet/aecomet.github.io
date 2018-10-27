@@ -42,7 +42,7 @@
     export default class App extends Vue {
         tab: any = null
         theme: boolean = true
-        currentPage: any = 0;
+        currentPage: number = 0;
         pages: Array<string> = [
             'profile_path',
             'skill_path',
@@ -58,9 +58,10 @@
 
             // set page position
             vm.currentPage = 0
-            if (vm.pages[vm.currentPage] !== vm.$route.name) {
-                vm.$router.push({ name: vm.pages[0] })
-            }
+            vm.pages.forEach((name: string, idx: number) => {
+                if (name === vm.$route.name) vm.currentPage = idx
+            })
+
 
             // set default theme
             if (vm.$ls.get('theme') !== undefined) {
