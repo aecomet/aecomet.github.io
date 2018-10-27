@@ -1,7 +1,6 @@
 <template lang="pug">
     v-app(:light="theme" :dark="!theme" app)
-        v-toolbar(:scroll-threshold="300" :light="theme" :dark="!theme" extended app scroll-off-screen)
-            //- v-toolbar-side-icon(@click="onChangeDrawer" :light="theme" :dark="!theme")
+        v-toolbar(:light="theme" :dark="!theme" extended app scroll-off-screen)
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
             v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" icon): v-icon g_translate
@@ -17,7 +16,7 @@
         //- Main Contents
         v-content
             v-container(fluid)
-                transition(name="fade" mode="out-in" appear): router-view
+                transition(name="fade" mode="out-in" appear): router-view(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }")
 
         //- footer
         v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
@@ -41,15 +40,22 @@
         components: FontAwesomeIcon
     })
     export default class App extends Vue {
-        drawer: boolean = false
         tab: any = null
         theme: boolean = true
+        currentPage: any = 0;
+        pages: Array<string> = [
+            'profile_path',
+            'skill_path',
+            'work_path',
+            'contact_path'
+        ];
 
         @Prop()
 
 
         created() {
             vm = this
+            vm.currentPage = 0
             if (vm.$ls.get('theme') !== undefined) {
                 vm.theme = vm.$ls.get('theme')
             } else {
@@ -65,8 +71,18 @@
 
         mounted() {}
 
-        onChangeDrawer() {
-            vm.drawer = !vm.drawer
+        onSwipe (direction: string) {
+            switch (direction) {
+                case 'right':
+                    if (this.currentPage <= 0) return;
+                    this.currentPage -= 1;
+                    break;
+                case 'left':
+                    if (this.currentPage >= this.pages.length -1) return;
+                    this.currentPage += 1;
+                    break;
+            }
+            this.$router.push({ name: this.pages[this.currentPage] })
         }
 
         onChangeLanguage(code: any) {

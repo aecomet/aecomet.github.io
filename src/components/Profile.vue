@@ -1,6 +1,6 @@
 <template lang="pug">
     v-layout(row wrap justify-center)#profile
-        v-flex(md10 xs12).text-xs-center.my-2: img(:src="$t('profile.top')" alt="top-img").top-img
+        v-flex(md10 xs12).text-xs-center.my-3: img(:src="$t('profile.top')" alt="top-img").top-img
 
         v-flex(md10 xs12).mb-3
             v-card(hover)
@@ -50,6 +50,7 @@
         margin: 0;
         padding: 0;
         vertical-align: top;
+        max-width: 100%;
     }
 
     .greeting-text {

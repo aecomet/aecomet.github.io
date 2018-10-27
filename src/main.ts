@@ -9,7 +9,6 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
-import * as VueGoogleMaps from 'vue2-google-maps';
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 import LocalStorage from 'vue-ls'
 
@@ -58,11 +57,10 @@ const messages = {
 
 const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
-    { path: '/', name: 'Profile', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
-    { path: '/product', name: 'Products', component: Product, meta: { title: `成果物/Products | ${baseTitle}` } },
-    { path: '/skill', name: 'Skills', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
-    { path: '/work', name: 'Works', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
-    { path: '/contact', name: 'Contact', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/', name: 'profile_path', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
+    { path: '/skill', name: 'skill_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/work', name: 'work_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
+    { path: '/contact', name: 'contact_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
     { path: '*', name: 'NotFound', component: NotFound, meta: { title: `404 Not found | ${baseTitle}` } }
 ]
 
@@ -88,15 +86,6 @@ Vue.use(Vuetify)
 Vue.use(VueI18n)
 Vue.use(Router)
 Vue.use(LocalStorage, lsOptions)
-Vue.use(VueGoogleMaps, {
-    load: {
-        key: 'AIzaSyC-9WiQjFhxE5DWsG_tJUArjc17lItzoxA',
-        // libraries: 'places', // This is required if you use the Autocomplete plugin
-        // OR: libraries: 'places,drawing'
-        // OR: libraries: 'places,drawing,visualization'
-        // (as you require)
-    }
-});
 
 /**
  * Router
