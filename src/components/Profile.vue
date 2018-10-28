@@ -16,7 +16,7 @@
                             .my-4.subheading
                                 v-icon.mr-2 work
                                 | {{ $t('profile.status') }}
-                                v-btn(:to="$t('link.laboratory.href')" color="orange" flat) {{ `${$t('link.laboratoryTitle')}` }}
+                                v-btn(:href="$t('link.laboratory.href')" color="orange" target="_blank" rel="noopener noreferrer" flat) {{ `${$t('link.laboratoryTitle')}` }}
 
                     v-flex(md7 xs12)
                         v-card-title(primary-title)
