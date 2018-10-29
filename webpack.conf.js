@@ -84,7 +84,7 @@ let baseWebpack = {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
         new WebpackPwaManifest({
-            filename: "public/manifest.[hash].json",
+            filename: "manifest.json",
             name: 'My Progressive Portfolio',
             short_name: 'T.O. Portfolio',
             description: 'My portfolio! This is created by PWA.',
