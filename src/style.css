@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'); /* Import Material Icons and Fonts*/
-
 /* ===== Global Field ===== */
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.1s
@@ -8,7 +6,3 @@
 .fade-enter, .fade-leave-active {
     opacity: 0
 }
-/* Main Components */
-@media screen and (min-width: 480px) and (max-width: 767px) {  }
-
-@media screen and (max-width: 480px) {  }

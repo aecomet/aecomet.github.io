@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -7,11 +6,6 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-
-function assetsPath(_path) {
-    const assetsSubDirectory = 'static'
-    return path.posix.join(assetsSubDirectory, _path)
-}
 
 const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
 const watch = (process.env.NODE_ENV !== 'PRODUCTION');
@@ -100,13 +94,13 @@ let baseWebpack = {
             icons: [
                 {
                     src: path.resolve('src/static/icons/apple-touch-icon.png'),
-                    sizes: [128, 144, 152, 192, 256], // multiple sizes
+                    sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
                     destination: path.join('public/icons', 'ios'),
                     ios: true
                 },
                 {
                     src: path.resolve('src/static/icons/icon.png'),
-                    sizes: [128, 144, 152, 192, 256], // multiple sizes
+                    sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
                     destination: path.join('public/icons', 'default')
                 }
             ]
@@ -120,6 +114,7 @@ let baseWebpack = {
     output: {
         path: path.resolve(__dirname, './dist'), //  Output directory name
         filename: '[name].[hash].js', // Output filename
+        publicPath: '/'
     },
     module: {
         rules: [
@@ -145,27 +140,23 @@ let baseWebpack = {
                 })
             },
             {
-                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: assetsPath('img/[name].[hash:7].[ext]')
+                    name: '[name].[hash:7].[ext]',
+                    outputPath: 'public/media',
+                    publicPath: '/public/media/'
                 }
             },
             {
-                test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+                test: /\.(woff2?|woff|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: assetsPath('media/[name].[hash:7].[ext]')
-                }
-            },
-            {
-                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-                loader: 'url-loader',
-                options: {
-                    limit: 10000,
-                    name: assetsPath('fonts/[name].[hash:7].[ext]')
+                    name: '[name].[hash:7].[ext]',
+                    outputPath: 'public/fonts',
+                    publicPath: '/public/fonts/'
                 }
             },
             {
@@ -218,7 +209,6 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     )
 } else {
     baseWebpack.plugins = baseWebpack.plugins.concat([
-        new webpack.NamedModulesPlugin(),
         /* === Copy Static files === */
         new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/public/static/images') } ]),
     ])

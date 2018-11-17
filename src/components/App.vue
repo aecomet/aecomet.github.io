@@ -3,9 +3,9 @@
         v-toolbar(:light="theme" :dark="!theme" extended app scroll-off-screen)
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" icon): v-icon g_translate
-            v-btn(v-else @click="onChangeLanguage('en')" icon): v-icon g_translate
-            v-btn(@click="onChangeTheme" icon): v-icon brightness_4
+            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" aria-label="jp_translate" icon): v-icon g_translate
+            v-btn(v-else @click="onChangeLanguage('en')" aria-label="en_translate" icon): v-icon g_translate
+            v-btn(@click="onChangeTheme" aria-label="brightness" icon): v-icon mdi-brightness-4
 
             v-tabs(slot="extension" color="transparent" v-model="tab" :light="theme" :dark="!theme" height="63px" grow centered icons-and-text)
                 v-tabs-slider(color="blue")
@@ -22,7 +22,7 @@
         v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
-                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" rel="noopener noreferrer"  icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
+                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
                 v-divider
                 v-card-text.pa-2
                     span.mr-3.subheading &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
