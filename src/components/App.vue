@@ -1,17 +1,15 @@
 <template lang="pug">
-    v-app(:light="theme" :dark="!theme" app)
-        v-toolbar(:light="theme" :dark="!theme" extended app scroll-off-screen)
+    v-app(light app)
+        v-toolbar(dark extended app scroll-off-screen dense)
             v-toolbar-title {{ $t('base.title') }}
             v-spacer
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" aria-label="jp_translate" icon): v-icon g_translate
-            v-btn(v-else @click="onChangeLanguage('en')" aria-label="en_translate" icon): v-icon g_translate
-            v-btn(@click="onChangeTheme" aria-label="brightness" icon): v-icon mdi-brightness-4
+            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" aria-label="jp_translate" icon): v-icon fas fa-language
+            v-btn(v-else @click="onChangeLanguage('en')" aria-label="en_translate" icon): v-icon fas fa-language
 
-            v-tabs(slot="extension" color="transparent" v-model="tab" :light="theme" :dark="!theme" height="63px" grow centered icons-and-text)
-                v-tabs-slider(color="blue")
+            v-tabs(slot="extension" color="transparent" v-model="tab" dark grow centered)
+                v-tabs-slider(color="white")
                 v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
-                    span.caption {{ header.name }}
-                    v-icon {{ header.icon }}
+                    span.body-1.font-weight-bold {{ header.name }}
 
         //- Main Contents
         v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }")
@@ -19,13 +17,13 @@
                 transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
-        v-footer(height="auto" :light="theme" :dark="!theme" app absolute)
+        v-footer(height="auto" dark app absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
-                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" color="grey" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" icon flat large).mx-2: font-awesome-icon(size="lg" :icon="['fab', link.icon]")
-                v-divider
-                v-card-text.pa-2
-                    span.mr-3.subheading &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" flat icon small).mx-2
+                        v-icon {{ `fab fa-${link.icon}` }}
+                    v-divider.my-2
+                    .text-xs-right: span.body-2 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script lang="ts">
@@ -34,15 +32,11 @@
     let vm:any = null
     import Vue from 'vue'
     import Component from 'vue-class-component'
-    import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
     import { Prop } from 'vue-property-decorator';
 
-    @Component({
-        components: FontAwesomeIcon
-    })
+    @Component({})
     export default class App extends Vue {
         tab: any = null
-        theme: boolean = true
         currentPage: number = 0;
         pages: Array<string> = [
             'profile_path',
@@ -56,20 +50,11 @@
 
         created() {
             vm = this
-
             // set page position
             vm.currentPage = 0
             vm.pages.forEach((name: string, idx: number) => {
                 if (name === vm.$route.name) vm.currentPage = idx
             })
-
-
-            // set default theme
-            if (vm.$ls.get('theme') !== undefined) {
-                vm.theme = vm.$ls.get('theme')
-            } else {
-                vm.$ls.set('theme', vm.theme)
-            }
 
             // set default lang
             if (vm.$ls.get('lang')) {
@@ -92,18 +77,13 @@
                     this.currentPage += 1;
                     break;
             }
-            this.$router.push({ name: this.pages[this.currentPage] })
+            vm.$router.push({ name: this.pages[this.currentPage] })
         }
 
         onChangeLanguage(code: any) {
             if (vm.$i18n.locale === code) return
             vm.$i18n.locale = code
             vm.$ls.set('lang', vm.$i18n.locale)
-        }
-
-        onChangeTheme() {
-            vm.theme = !vm.theme
-            vm.$ls.set('theme', vm.theme)
         }
     }
 </script>

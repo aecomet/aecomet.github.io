@@ -25,7 +25,7 @@
                         v-item-group(v-model="currentWindow" tag="v-flex").mr-4
                             v-item(v-for="idx in skill.remark.length" :key="`key-item-${idx}`")
                                 div(slot-scope="{ active, toggle }")
-                                    v-btn(:input-value="active" @click="toggle" icon small): v-icon label
+                                    v-btn(:input-value="active" @click="toggle" icon small): v-icon fas fa-tag
 
                         v-flex
                             v-window(v-model="currentWindow" vertical)

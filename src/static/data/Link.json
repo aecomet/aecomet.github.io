@@ -1,6 +1,6 @@
 {
   "ja": {
-    "laboratoryTitle": "研究室",
+    "laboratoryTitle": "研究室 HP",
     "laboratory": {
       "name": "石田研究室",
       "href": "https://glocalvision.net/ishilab/"
@@ -12,7 +12,7 @@
     ]
   },
   "en": {
-    "laboratoryTitle": "Laboratory",
+    "laboratoryTitle": "Laboratory HP",
     "laboratory": {
       "name": "Ishilda Laboratory",
       "href": "https://glocalvision.net/ishilab/"

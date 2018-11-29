@@ -73,23 +73,11 @@ import './style.css'
 import 'vuetify/dist/vuetify.min.css'
 
 // icon pack
-import 'material-design-icons-iconfont/dist/material-design-icons.css'
-import '@mdi/font/css/materialdesignicons.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { fas, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-library.add(faCoffee)
-library.add(fas)
-library.add(far)
-library.add(fab)
-
-Vue.component('font-awesome-icon', FontAwesomeIcon)
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 // Enable Vue Modules
 Vue.use(Vuetify, {
-    iconfont: 'mdi'
+    iconfont: 'fa'
 })
 Vue.use(VueI18n)
 Vue.use(Router)

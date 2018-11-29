@@ -5,7 +5,7 @@
             v-card
                 v-card-text.text-xs-center
                     .body-2
-                        v-icon(small).mr-2 email
+                        v-icon(small).mr-2 fas fa-envelope
                         | {{ $t('contact.text') }}
                     .body-2 {{ $t('contact.subtext') }}
 

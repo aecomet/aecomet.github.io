@@ -6,6 +6,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
 const watch = (process.env.NODE_ENV !== 'PRODUCTION');
@@ -23,6 +24,12 @@ let baseWebpack = {
     optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
         splitChunks: {
             cacheGroups: {
+                vuetify: {
+                    test: /node_modules\/vuetify/,
+                    name: 'public/vuetify',
+                    chunks: 'all', // initial, async, all
+                    priority: 1
+                },
                 vendor: {
                     test: /node_modules/,
                     name: 'public/vendor',
@@ -74,7 +81,18 @@ let baseWebpack = {
             inject: false,
             chunksSortMode: 'dependency'
         }),
-        new ExtractTextPlugin('[name].[hash].css', {
+        new PreloadWebpackPlugin({
+            rel: 'preload',
+            as(entry) {
+                if (/\.css$/.test(entry)) return 'style';
+                if (/\.(woff2?|woff|ttf|otf)$/.test(entry)) return 'font';
+                if (/\.(png|jpe?g|gif)$/.test(entry)) return 'image';
+                return 'script';
+            },
+            include: 'allAssets', // or 'initial', 'allChunks'
+            fileBlacklist: [/\.(eot|svg)/]
+        }),
+        new ExtractTextPlugin('[name].css', {
             allChunks: true // TODO: You divide js files, you must add this code.
         }),
         new WebpackPwaManifest({
@@ -113,7 +131,7 @@ let baseWebpack = {
     // Output config
     output: {
         path: path.resolve(__dirname, './dist'), //  Output directory name
-        filename: '[name].[hash].js', // Output filename
+        filename: '[name].js', // Output filename
         publicPath: '/'
     },
     module: {
@@ -144,7 +162,7 @@ let baseWebpack = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: '[name].[hash:7].[ext]',
+                    name: '[name].[ext]',
                     outputPath: 'public/media',
                     publicPath: '/public/media/'
                 }
@@ -154,7 +172,7 @@ let baseWebpack = {
                 loader: 'url-loader',
                 options: {
                     limit: 10000,
-                    name: '[name].[hash:7].[ext]',
+                    name: '[name].[ext]',
                     outputPath: 'public/fonts',
                     publicPath: '/public/fonts/'
                 }
