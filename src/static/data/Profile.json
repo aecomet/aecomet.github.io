@@ -1,6 +1,6 @@
 {
   "ja": {
-    "top": "public/static/images/top.svg",
+    "img": "public/static/images/profile.JPG",
     "introduction": "2019年度より新社会人になるひよこエンジニア",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
@@ -11,7 +11,7 @@
     "greeting": "2019年度よりITエンジニアとして働く学生のポートフォリオです．主にWebに関連する技術を学んでおり，現在はより洗練されたアプリケーションを構築したいと考え，アーキテクチャの勉強を進めています．"
   },
   "en": {
-    "top": "public/static/images/top.svg",
+    "img": "public/static/images/profile.JPG",
     "introduction": "A newbie engineer who will be office worker since 2019",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",

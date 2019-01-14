@@ -1,23 +1,23 @@
 <template lang="pug">
-    v-app(light app)
-        v-toolbar(dark extended app scroll-off-screen dense)
-            v-toolbar-title {{ $t('base.title') }}
+    v-app(app)
+        v-toolbar(color="white" extended app scroll-off-screen dense flat)
+            .text-xs-left: img(:src="$t('base.top')").top-img
             v-spacer
             v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" aria-label="jp_translate" icon): v-icon fas fa-language
             v-btn(v-else @click="onChangeLanguage('en')" aria-label="en_translate" icon): v-icon fas fa-language
 
-            v-tabs(slot="extension" color="transparent" v-model="tab" dark grow centered)
+            v-tabs(slot="extension" color="transparent" v-model="tab" right)
                 v-tabs-slider(color="white")
                 v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
                     span.body-1.font-weight-bold {{ header.name }}
 
         //- Main Contents
-        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }")
+        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
             v-container(fluid)
                 transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
-        v-footer(height="auto" dark app absolute)
+        v-footer(height="auto" app dark absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
                     v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" flat icon small).mx-2
@@ -89,4 +89,18 @@
 </script>
 
 <style scoped>
+    .top-img {
+        margin: 0;
+        padding: 2px 0;
+        vertical-align: top;
+        height: 44px;
+    }
+
+    @media (max-width: 767px) {
+        /* Only smart phone css */
+        .top-img {
+            width: 80%;
+            height: 32px;
+        }
+    }
 </style>

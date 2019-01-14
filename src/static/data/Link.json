@@ -7,8 +7,8 @@
     },
     "techTitle": "リンク",
     "technologies": [
-      { "name": "Qiita", "href": "https://github.com/hiyoko3" },
-      { "name": "Github", "href": "https://qiita.com/tatsuya_oyanagi" }
+      { "name": "Github", "href": "https://github.com/hiyoko3" },
+      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
     ]
   },
   "en": {
@@ -19,8 +19,8 @@
     },
     "techTitle": "Links",
     "technologies": [
-      { "name": "Qiita", "href": "https://github.com/hiyoko3" },
-      { "name": "Github", "href": "https://qiita.com/tatsuya_oyanagi" }
+      { "name": "Github", "href": "https://github.com/hiyoko3" },
+      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
     ]
   }
 }

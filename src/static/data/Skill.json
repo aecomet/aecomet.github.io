@@ -48,9 +48,10 @@
         "name": "JavaScript",
         "remark": [
           { "title": "jQuery", "text": "web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません" },
-          { "title": "AngularJS / Angular", "text": "AngularJSから使ってました．typescriptで書くAngularは非常に見やすいのでたまに使いたい" },
+          { "title": "AngularJS / Angular", "text": "coming soon." },
           { "title": "Vue.js", "text": "クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．" },
-          { "title": "React.js", "text": "ただいま勉強中．．Vueに慣れるとちょっと辛いかも" }
+          { "title": "Node.js", "text": "" },
+          { "title": "React.js", "text": "" }
         ]
       },
       {
@@ -68,14 +69,13 @@
       {
         "name": "C / C++",
         "remark": [
-          { "title": "", "text": "大学の講義は基本 C or Javaなのでその時に基本文法を学んだ程度です" }
         ]
       },
       {
         "name": "Java",
         "remark": [
-          { "title": "Java", "text": "大学の講義でその時に基本文法を学んだ程度です" },
-          { "title": "Android(with Kotlin)", "text": "インターンのアプリケーション開発で利用しました．Kotlinは洗練されててお気に入りです" }
+          { "title": "Android", "text": "インターンのアプリケーション開発で利用しました．" },
+          { "title": "Kotlin", "text": "Kotlinは洗練されててお気に入りです" }
         ]
       },
       {
@@ -88,12 +88,14 @@
         "name": "Database",
         "remark": [
           { "title": "MySQL", "text": "小中規模のアプリケーション開発にはこれを利用します" },
+          { "title": "MongoDB", "text": "" },
           { "title": "SQLite", "text": "講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します" }
         ]
       },
       {
         "name": "その他",
         "remark": [
+          { "title": "Mecab", "text": "coming soon." },
           { "title": "ElasticSearch", "text": "検索エンジンを構築する際に必要だったため使い方を学び利用しています" }
         ]
       }
@@ -169,13 +171,13 @@
       {
         "name": "C / C++",
         "remark": [
-          { "title": "", "text": "coming soon." }
         ]
       },
       {
         "name": "Java",
         "remark": [
-          { "title": "Android(with Kotlin)", "text": "coming soon." }
+          { "title": "Android", "text": "coming soon." },
+          { "title": "Kotlin", "text": "coming soon." }
         ]
       },
       {
@@ -188,12 +190,14 @@
         "name": "Database",
         "remark": [
           { "title": "MySQL", "text": "coming soon." },
+          { "title": "MongoDB", "text": "" },
           { "title": "SQLite", "text": "coming soon." }
         ]
       },
       {
         "name": "Others",
         "remark": [
+          { "title": "Mecab", "text": "coming soon." },
           { "title": "ElasticSearch", "text": "coming soon." }
         ]
       }
