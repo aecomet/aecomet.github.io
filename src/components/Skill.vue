@@ -4,12 +4,12 @@
             .subheading.mb-2 {{ $t('skill.certificationTitle')}}
 
             v-list(dense)
-                v-list-tile(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`") {{ `${c.date} : ${c.name} 取得` }}
+                v-list-tile(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subheading {{ `${c.date} : ${c.name} 取得` }}
 
         v-flex(md10 xs12)
             .subheading.mb-2 {{ $t('link.techTitle') }}
             v-list(dense)
-                v-list-tile(v-for="(link, idx) in $t('link.technologies')" :key="`tech-link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`tech-link-${idx}`" color="blue") {{ link.name }}
+                v-list-tile(v-for="(link, idx) in $t('link.technologies')" :key="`tech-link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`tech-link-${idx}`" color="blue"): .subheading {{ link.name }}
 
         v-flex(md10 xs12).my-3
             .subheading.mb-4 {{ $t('skill.programingTitle') }}

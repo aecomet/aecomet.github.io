@@ -17,7 +17,7 @@
   },
   "en": {
     "title": "Products",
-    "desc": "制作物",
+    "desc": "※ Those that can not post images such as those developed during interns are displaying icons. External links are also attached to published applications.",
     "products": [
       { "name": "Property browsing system", "language": "PHP, jQuery", "text": "Development of property viewing system.", "src": "", "icon": "fas fa-laptop-code", "href": "" },
       { "name": "Home sales management system", "language": "Ruby on Rails,jQuery", "text": "Development of home sales management system.", "src": "", "icon": "fas fa-laptop-code", "href": "" },

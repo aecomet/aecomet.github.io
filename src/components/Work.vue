@@ -11,7 +11,7 @@
                         v-card-text
                             img(v-if="product.src.length > 0" :src="product.src" :alt="`${product.name}`").work-img
                             .text-xs-center(v-else): v-icon {{ product.icon }}
-                            .subheading {{ product.name }}
+                            .subheading.mt-2 {{ product.name }}
                             .body-2.my-2 {{ product.text }}
                             v-chip(v-for="(label, idx) in product.language.split(',')" :key="`product-label-${idx}`" color="red" outline small) {{ label }}
                         v-card-actions(v-if="product.href.length > 0")
