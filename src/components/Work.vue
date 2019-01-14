@@ -7,7 +7,7 @@
 
             v-layout(row wrap justify-start)
                 v-flex(v-for="(product, idx) in $t('work.products')" :key="`product-${idx}`" md3 sm4 xs12).pa-1
-                    v-card(min-height="300" max-height="400")
+                    v-card(min-height="300" max-height="430")
                         v-card-text
                             img(v-if="product.src.length > 0" :src="product.src" :alt="`${product.name}`").work-img
                             .text-xs-center(v-else): v-icon {{ product.icon }}

@@ -7,6 +7,7 @@
                         v-flex(md5 xs12)
                             v-card-title(primary-title): .headline {{ $t('profile.profileTitle') }}
                             v-img(:src="$t('profile.img')" height="200" aspect-ratio="1.4" contain)
+                                v-layout(slot="placeholder" fill-height align-center justify-center).ma-0: v-progress-circular(indeterminate color="grey lighten-5")
                             v-card-text.pa-3
                                 .my-2.headline {{ $t('profile.name') }}
                                 .my-3.subheading

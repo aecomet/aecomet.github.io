@@ -1,5 +1,7 @@
 /* ===== Global Field ===== */
-div {
+div,
+.headline,
+.title {
     font-family: 'Oswald', serif !important;
 }
 
