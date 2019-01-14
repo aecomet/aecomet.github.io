@@ -8,19 +8,13 @@ Hello! This is source codes that is my portfolio.
 
 The web page introduces my skills and history.
 
-And, this app is created by PWA(Progressive Web App).
-
-Please read [this doc](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=ja) about PWA.
-
 ## Development environment
 
 - HTML5
 - CSS3
 - JavaScript
     - Vue.js
-    - Node.js(Webpack)
     - EcmaScript
-    - Service Worker
 
 ## How to set up
 
