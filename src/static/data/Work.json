@@ -10,7 +10,7 @@
       { "name": "動物園ナビゲーションアプリ", "language": "Java(Android)", "text": "動物園散策アプリケーションのデザイン刷新とパフォーマンス改善を担当", "src": "public/static/images/works/zoo_app.png", "icon": "fas fa-mobile-alt", "href": "" },
       { "name": "動物園業務統合管理システム", "language": "Laravel,jQuery", "text": "動物園内部で利用する総合業務管理システムの開発", "src": "public/static/images/works/zoo_admin.png", "icon": "fas fa-laptop-code", "href": "" },
       { "name": "潮流予測配信サイト", "language": "jQuery,Bootstrap", "text": "他研究室の研究成果を公開するページを作成", "src": "public/static/images/works/go_shima.png", "icon": "fas fa-mobile-alt", "href": "http://eiji.eng.ibaraki.ac.jp/GOShima/" },
-      { "name": "研究室HP", "language": "Vue.js", "text": "在籍している研究室のHPリニューアル", "src": "public/static/images/works/hp.png", "icon": "fas fa-mobile-alt", "href": "https//glocalvision.net/ishilab/"},
+      { "name": "研究室HP", "language": "Vue.js", "text": "在籍している研究室のHPリニューアル", "src": "public/static/images/works/hp.png", "icon": "fas fa-mobile-alt", "href": "https://glocalvision.net/ishilab/"},
       { "name": "ポートフォリオ", "language": "Vue.js", "text": "自身の成果を公開するためのポートフォリオサイトを作成", "src": "public/static/images/works/portfolio.png", "icon": "fas fa-mobile-alt", "href": "https://hiyoko3.github.io/" },
       { "name": "災害記録史可視化・分析システム", "language": "Django REST Framework,ElasticSearch,Vue.js,Mecab", "text": "修士研究で開発．自治体向け災害対策意思決定支援システムの開発", "src": "public/static/images/works/research.png", "icon": "fas fa-laptop-code", "href": "" }
     ]
@@ -26,7 +26,7 @@
       { "name": "Zoo navigation application", "language": "Java(Android)", "text": "Responsible for design redesign and performance improvement of the zoo walking application.", "src": "public/static/images/works/zoo_app.png", "icon": "fas fa-mobile-alt", "href": "" },
       { "name": "Zoo Business Integrated Management System", "language": "Laravel,jQuery", "text": "Development of comprehensive task management system to be used inside the zoo.", "src": "public/static/images/works/zoo_admin.png", "icon": "fas fa-laptop-code", "href": "" },
       { "name": "Tidal forecast distribution site", "language": "jQuery,Bootstrap", "text": "Create a page to publish research results from other laboratories.", "src": "public/static/images/works/go_shima.png", "icon": "fas fa-laptop-code", "href": "http://eiji.eng.ibaraki.ac.jp/GOShima/" },
-      { "name": "Renewal my laboratory HP", "language": "Vue.js", "text": "HP renewal of my laboratory.", "src": "public/static/images/works/hp.png", "icon": "fas fa-mobile-alt", "href": "https//glocalvision.net/ishilab/" },
+      { "name": "Renewal my laboratory HP", "language": "Vue.js", "text": "HP renewal of my laboratory.", "src": "public/static/images/works/hp.png", "icon": "fas fa-mobile-alt", "href": "https://glocalvision.net/ishilab/" },
       { "name": "Portfolio", "language": "Vue.js", "text": "Create a portfolio site to publish own achievements.", "src": "public/static/images/works/portfolio.png", "icon": "fas fa-mobile-alt", "href": "https://hiyoko3.github.io/" },
       { "name": "Disaster historical record visualization and analysis system", "language": "Django REST Framework,ElasticSearch,Vue.js,Mecab", "text": "Developed by master's degree. Development of Disaster Measure Decision Support System for Local Government.", "src": "public/static/images/works/research.png", "icon": "fas fa-laptop-code", "href": "" }
     ]
