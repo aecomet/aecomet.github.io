@@ -4,7 +4,7 @@
             .subheading.mb-2 {{ $t('skill.certificationTitle')}}
 
             v-list(dense)
-                v-list-tile(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subheading {{ `${c.date} : ${c.name} 取得` }}
+                v-list-tile(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subheading {{ `${c.date} : ${c.name}` }}
 
         v-flex(md10 xs12)
             .subheading.mb-2 {{ $t('link.techTitle') }}
