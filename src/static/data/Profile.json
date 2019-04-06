@@ -1,6 +1,6 @@
 {
   "ja": {
-    "img": "public/static/images/profile.jpg",
+    "img": "public/static/images/profile.JPG",
     "introduction": "駆け出しWeb エンジニア",
     "profileTitle": "プロフィール",
     "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
@@ -10,7 +10,7 @@
     "greeting": "<p>こんにちは！</p><p>2019年からバックエンドエンジニアとして駆け出しました。</p><p>学生の頃はベンチャー企業でプログラマーとしてフロントエンドを中心に開発していましたが、</p><p>さらなるスキルアップと自己成長を目指しバックエンドエンジニアとしてのキャリアをスタートいたしました！</p><p>サービスを支える重要な役目であり、覚えることも多いので精進して参りたいと思います!</p><p>よろしくお願いいたします！</p>"
   },
   "en": {
-    "img": "public/static/images/profile.jpg",
+    "img": "public/static/images/profile.JPG",
     "introduction": "A fresh soft engineer",
     "profileTitle": "My Profile",
     "name": "Tatsuya Oyanagi",
