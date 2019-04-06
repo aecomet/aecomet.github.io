@@ -2,29 +2,23 @@
     #profile
         v-layout(row wrap justify-center)
             v-flex(md10 xs12).my-2
-                v-card(color="white")
-                    v-layout(row wrap justify-center)
-                        v-flex(md5 xs12)
-                            v-card-title(primary-title): .headline {{ $t('profile.profileTitle') }}
-                            v-img(:src="$t('profile.img')" height="200" aspect-ratio="1.4" contain)
-                                v-layout(slot="placeholder" fill-height align-center justify-center).ma-0: v-progress-circular(indeterminate color="grey dark-5")
-                            v-card-text.pa-3
-                                .my-2.headline {{ $t('profile.name') }}
-                                .my-3.subheading
-                                    v-icon.mr-2 fas fa-briefcase
-                                    | {{ $t('profile.status') }}
-                                    v-btn(:href="$t('link.laboratory.href')" color="red" target="_blank" rel="noopener noreferrer" flat outline).ml-2 {{ `${$t('link.laboratoryTitle')}` }}
+                v-card(color="white").text-xs-center
+                    v-card-text(primary-title).display-2.my-2 {{ $t('profile.profileTitle') }}
 
-                        v-flex(md7 xs12)
-                            v-card-title(primary-title)
-                            v-card-text
-                                .subheading {{ $t('profile.introduction') }}
+                    v-card-text
+                        v-avatar(:tile="tile" size="170px" color="grey lighten-4"): img(:src="$t('profile.img')")
 
-                                .my-4.pa-1.body-2.greeting-text {{ $t('profile.greeting') }}
+                    v-card-text
+                        .my-2.headline {{ $t('profile.name') }}
 
-                                .text-xs-center
-                                    .title {{ $t('profile.wordTitle') }}
-                                    .mt-3.title.font-weight-bold {{ $t('profile.word')}}
+                    v-card-text
+                        .subheading {{ $t('profile.introduction') }}
+
+                        .my-4.pa-1.body-2.greeting-text {{ $t('profile.greeting') }}
+
+
+                        .title {{ $t('profile.wordTitle') }}
+                        .my-3.title.font-weight-bold {{ $t('profile.word')}}
 </template>
 
 <script lang="ts">
@@ -40,10 +34,11 @@
 
         panels = [ true, true, true, true, true, true ];
 
+        tile = false;
+
         created() {}
 
-        mounted() {
-        }
+        mounted() {}
     }
 </script>
 

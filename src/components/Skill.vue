@@ -1,5 +1,5 @@
 <template lang="pug">
-    v-layout(row wrap justify-start)#skill
+    v-layout(row wrap justify-center)#skill
         v-flex(md10 xs12)
             .subheading.mb-2 {{ $t('skill.certificationTitle')}}
 
@@ -15,8 +15,8 @@
             .subheading.mb-4 {{ $t('skill.programingTitle') }}
 
             v-layout(row wrap justify-start)
-                v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" md2 sm3 xs6).pa-1
-                    v-card(color="pink lighten-5" min-height="150" tile)
+                v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" sm3 xs6).pa-1
+                    v-card(color="green lighten-5" min-height="150" tile)
                         v-card-text
                             .subheading {{ p.name }}
                             ul
