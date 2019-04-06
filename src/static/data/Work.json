@@ -14,7 +14,8 @@
       { "name": "ポートフォリオ", "language": "Vue.js", "text": "自身の成果を公開するためのポートフォリオサイトを作成", "src": "public/static/images/works/portfolio.png", "icon": "fas fa-mobile-alt", "href": "https://hiyoko3.github.io/" },
       { "name": "災害記録史可視化・分析システム", "language": "Django REST Framework,ElasticSearch,Vue.js,Mecab", "text": "修士研究で開発．自治体向け災害対策意思決定支援システムの開発", "src": "public/static/images/works/research.png", "icon": "fas fa-laptop-code", "href": "" },
       { "name": "広告表示システム", "language": "C#", "text": "広告ディスプレイに表示する資料（プレゼンテーション）を動的に更新するシステムの開発", "src": "", "icon": "fas fa-laptop-code", "href": "" },
-      { "name": "走行軌跡可視化アプリ", "language": "Kotlin(Android)", "text": "自立型掃除機が走行した軌跡と収集したゴミの量を一元的に可視化するアプリケーションの開発", "src": "", "icon": "fas fa-mobile-alt", "href": "" }
+      { "name": "走行軌跡可視化アプリ", "language": "Kotlin(Android)", "text": "自立型掃除機が走行した軌跡と収集したゴミの量を一元的に可視化するアプリケーションの開発", "src": "", "icon": "fas fa-mobile-alt", "href": "" },
+      { "name": "ブログページ開発", "language": "PHP(WordPress)", "text": "WordPressを用いたブログページ開発", "src": "public/static/images/works/soda.png", "icon": "fas fa-laptop-code", "href": "https://lifelearning.tokyo/" }
     ]
   },
   "en": {
@@ -32,7 +33,8 @@
       { "name": "Portfolio", "language": "Vue.js", "text": "Create a portfolio site to publish own achievements.", "src": "public/static/images/works/portfolio.png", "icon": "fas fa-mobile-alt", "href": "https://hiyoko3.github.io/" },
       { "name": "Disaster historical record visualization and analysis system", "language": "Django REST Framework,ElasticSearch,Vue.js,Mecab", "text": "Developed by master's degree. Development of Disaster Measure Decision Support System for Local Government.", "src": "public/static/images/works/research.png", "icon": "fas fa-laptop-code", "href": "" },
       { "name": "Promotion support system", "language": "C#", "text": "Development of a system to dynamically update some documents displayed on display.", "src": "", "icon": "fas fa-laptop-code", "href": "" },
-      { "name": "Path-Traced visualization app", "language": "Kotlin(Android)", "text": "Development of an android app that provides visualization of the path-traveled of the of vacuum cleaner and the amount of collected garbage.", "src": "", "icon": "fas fa-mobile-alt", "href": "" }
+      { "name": "Path-Traced visualization app", "language": "Kotlin(Android)", "text": "Development of an android app that provides visualization of the path-traveled of the of vacuum cleaner and the amount of collected garbage.", "src": "", "icon": "fas fa-mobile-alt", "href": "" },
+      { "name": "Launch blog page", "language": "PHP(WordPress)", "text": "Development of blog pages with WordPress", "src": "public/static/images/works/soda.png", "icon": "fas fa-laptop-code", "href": "https://lifelearning.tokyo/" }
     ]
   }
 }

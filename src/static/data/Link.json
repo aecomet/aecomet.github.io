@@ -9,7 +9,8 @@
     "technologies": [
       { "name": "Github", "href": "https://github.com/hiyoko3" },
       { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" },
-      { "name": "はてなブログ", "href": "https://ae-t-hiyoko3.hatenablog.com/" }
+      { "name": "はてなブログ", "href": "https://ae-t-hiyoko3.hatenablog.com/" },
+      { "name": "クラウドワークス", "href": "https://crowdworks.jp/public/employees/1912065/" }
     ]
   },
   "en": {
@@ -22,7 +23,8 @@
     "technologies": [
       { "name": "Github", "href": "https://github.com/hiyoko3" },
       { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" },
-      { "name": "Hatena Blog", "href": "https://ae-t-hiyoko3.hatenablog.com/" }
+      { "name": "Hatena Blog", "href": "https://ae-t-hiyoko3.hatenablog.com/" },
+      { "name": "Crowd Works", "href": "https://crowdworks.jp/public/employees/1912065/" }
     ]
   }
 }

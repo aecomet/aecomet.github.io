@@ -33,7 +33,8 @@
         "name": "PHP",
         "remark": [
           { "title": "Laravel", "text": "PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね" },
-          { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" }
+          { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" },
+          { "title": "WordPress", "text": "" }
         ]
       },
       {
@@ -135,7 +136,8 @@
         "name": "PHP",
         "remark": [
           { "title": "Laravel", "text": "coming soon." },
-          { "title": "Slim3", "text": "coming soon." }
+          { "title": "Slim3", "text": "coming soon." },
+          { "title": "WordPress", "text": "" }
         ]
       },
       {
