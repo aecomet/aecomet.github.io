@@ -13,7 +13,6 @@
     "footer": [
       { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "github" },
       { "name": "Facebook", "href": "https://www.facebook.com/", "icon": "facebook" },
-      { "name": "Instagram", "href": "https://www.instagram.com/", "icon": "instagram" },
       { "name": "LinkedIn", "href": "https://www.linkedin.com/in/tatsuya-oyanagi-a5ab72143/", "icon": "linkedin-in" }
     ]
   },
@@ -31,7 +30,6 @@
     "footer": [
       { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "github" },
       { "name": "Facebook", "href": "https://www.facebook.com/", "icon": "facebook" },
-      { "name": "Instagram", "href": "https://www.instagram.com/", "icon": "instagram" },
       { "name": "LinkedIn", "href": "https://www.linkedin.com/in/tatsuya-oyanagi-a5ab72143/", "icon": "linkedin-in" }
     ]
   }

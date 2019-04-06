@@ -23,7 +23,7 @@
                     v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" flat icon small).mx-2
                         v-icon {{ `fab fa-${link.icon}` }}
                     v-divider.my-2
-                    .text-xs-right: span.body-2 &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+                    .text-xs-center: span.subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script lang="ts">

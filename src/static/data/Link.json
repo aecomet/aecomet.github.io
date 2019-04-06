@@ -5,10 +5,11 @@
       "name": "石田研究室",
       "href": "https://glocalvision.net/ishilab/"
     },
-    "techTitle": "リンク",
+    "techTitle": "外部リンク",
     "technologies": [
       { "name": "Github", "href": "https://github.com/hiyoko3" },
-      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
+      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" },
+      { "name": "はてなブログ", "href": "https://ae-t-hiyoko3.hatenablog.com/" }
     ]
   },
   "en": {
@@ -20,7 +21,8 @@
     "techTitle": "Links",
     "technologies": [
       { "name": "Github", "href": "https://github.com/hiyoko3" },
-      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
+      { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" },
+      { "name": "Hatena Blog", "href": "https://ae-t-hiyoko3.hatenablog.com/" }
     ]
   }
 }

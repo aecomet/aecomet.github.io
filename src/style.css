@@ -2,7 +2,7 @@
 div,
 .headline,
 .title {
-    font-family: 'Oswald', serif !important;
+    font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
 }
 
 .fade-enter-active, .fade-leave-active {
