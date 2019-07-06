@@ -1,208 +1,202 @@
 {
-  "ja": {
-    "certificationTitle": "資格",
-    "certificationHeader": [
-      {
-        "text": "取得年月日",
-        "value": "date",
-        "sortable": false
-      },
-      {
-        "text": "資格名",
-        "value": "name",
-        "sortable": false
-      }
-    ],
-    "certification": [
-      {
-        "date": "2013年9月17日",
-        "name": "普通自動車第一種運転免許"
-      },
-      {
-        "date": "2015年5月18日",
-        "name": "基本情報技術者"
-      },
-      {
-        "date": "2015年12月18日",
-        "name": "応用情報技術者"
-      }
-    ],
-    "programingTitle": "スキル",
-    "programing": [
-      {
-        "name": "PHP",
-        "remark": [
-          { "title": "Laravel", "text": "PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね" },
-          { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" },
-          { "title": "WordPress", "text": "" }
+    "ja": {
+        "certificationTitle": "資格",
+        "certificationHeader": [{
+                "text": "取得年月日",
+                "value": "date",
+                "sortable": false
+            },
+            {
+                "text": "資格名",
+                "value": "name",
+                "sortable": false
+            }
+        ],
+        "certification": [{
+                "date": "2013年9月17日",
+                "name": "普通自動車第一種運転免許"
+            },
+            {
+                "date": "2015年5月18日",
+                "name": "基本情報技術者"
+            },
+            {
+                "date": "2015年12月18日",
+                "name": "応用情報技術者"
+            }
+        ],
+        "programingTitle": "スキル",
+        "programing": [{
+                "name": "PHP",
+                "remark": [
+                    { "title": "Laravel", "text": "PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね" },
+                    { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" },
+                    { "title": "WordPress", "text": "" }
+                ]
+            },
+            {
+                "name": "HTML/CSS",
+                "remark": [
+                    { "title": "Bootstrap 3, 4", "text": "言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．" },
+                    { "title": "Materialize", "text": "Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います" },
+                    { "title": "Bulma", "text": "CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです" }
+                ]
+            },
+            {
+                "name": "JavaScript",
+                "remark": [
+                    { "title": "jQuery", "text": "web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません" },
+                    { "title": "AngularJS / Angular", "text": "coming soon." },
+                    { "title": "Vue.js", "text": "クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．" },
+                    { "title": "Node.js", "text": "" },
+                    { "title": "React.js", "text": "" },
+                    { "title": "Electron", "text": "" }
+                ]
+            },
+            {
+                "name": "Ruby",
+                "remark": [
+                    { "title": "Ruby On Rails", "text": "インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．" }
+                ]
+            },
+            {
+                "name": "Go lang",
+                "remark": [
+                    { "title": "Gin", "text": "Goを学びたくてとりあえずドキュメント読んで使ってます．" }
+                ]
+            },
+            {
+                "name": "C / C++",
+                "remark": []
+            },
+            {
+                "name": "Java",
+                "remark": [
+                    { "title": "Android", "text": "インターンのアプリケーション開発で利用しました．" },
+                    { "title": "Kotlin", "text": "Kotlinは洗練されててお気に入りです" }
+                ]
+            },
+            {
+                "name": "Python",
+                "remark": [
+                    { "title": "Django Rest Framework", "text": "修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です" }
+                ]
+            },
+            {
+                "name": "Database",
+                "remark": [
+                    { "title": "MySQL", "text": "小中規模のアプリケーション開発にはこれを利用します" },
+                    { "title": "MongoDB", "text": "" },
+                    { "title": "SQLite", "text": "講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します" }
+                ]
+            },
+            {
+                "name": "その他",
+                "remark": [
+                    { "title": "Mecab", "text": "coming soon." },
+                    { "title": "ElasticSearch", "text": "検索エンジンを構築する際に必要だったため使い方を学び利用しています" }
+                ]
+            }
         ]
-      },
-      {
-        "name": "HTML/CSS",
-        "remark": [
-          { "title": "Bootstrap 3, 4", "text": "言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．" },
-          { "title": "Materialize", "text": "Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います" },
-          { "title": "Bulma", "text": "CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです" }
+    },
+    "en": {
+        "certificationTitle": "Certification",
+        "certificationHeader": [{
+                "text": "Date",
+                "value": "date",
+                "sortable": false
+            },
+            {
+                "text": "Name",
+                "value": "name",
+                "sortable": false
+            }
+        ],
+        "certification": [{
+                "date": "2013-9-17",
+                "name": "First-class drivers for normal vehicles"
+            },
+            {
+                "date": "2015-5-18",
+                "name": "Fundamental Information Technology Engineer Examination"
+            },
+            {
+                "date": "2015-12-18",
+                "name": "Applied Information Technology Engineer Examination"
+            }
+        ],
+        "programingTitle": "Skill",
+        "programing": [{
+                "name": "PHP",
+                "remark": [
+                    { "title": "Laravel", "text": "coming soon." },
+                    { "title": "Slim3", "text": "coming soon." },
+                    { "title": "WordPress", "text": "" }
+                ]
+            },
+            {
+                "name": "HTML/CSS",
+                "remark": [
+                    { "title": "Bootstrap 3, 4", "text": "coming soon." },
+                    { "title": "Materialize", "text": "coming soon." },
+                    { "title": "Bulma", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "JavaScript",
+                "remark": [
+                    { "title": "jQuery", "text": "coming soon." },
+                    { "title": "AngularJS / Angular", "text": "coming soon." },
+                    { "title": "Vue.js", "text": "coming soon." },
+                    { "title": "Node.js", "text": "coming soon." },
+                    { "title": "React.js", "text": "coming soon." },
+                    { "title": "Electron", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "Ruby",
+                "remark": [
+                    { "title": "Ruby On Rails", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "Go lang",
+                "remark": [
+                    { "title": "Gin", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "C / C++",
+                "remark": []
+            },
+            {
+                "name": "Java",
+                "remark": [
+                    { "title": "Android", "text": "coming soon." },
+                    { "title": "Kotlin", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "Python",
+                "remark": [
+                    { "title": "Django Rest Framework", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "Database",
+                "remark": [
+                    { "title": "MySQL", "text": "coming soon." },
+                    { "title": "MongoDB", "text": "" },
+                    { "title": "SQLite", "text": "coming soon." }
+                ]
+            },
+            {
+                "name": "Others",
+                "remark": [
+                    { "title": "Mecab", "text": "coming soon." },
+                    { "title": "ElasticSearch", "text": "coming soon." }
+                ]
+            }
         ]
-      },
-      {
-        "name": "JavaScript",
-        "remark": [
-          { "title": "jQuery", "text": "web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません" },
-          { "title": "AngularJS / Angular", "text": "coming soon." },
-          { "title": "Vue.js", "text": "クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．" },
-          { "title": "Node.js", "text": "" },
-          { "title": "React.js", "text": "" }
-        ]
-      },
-      {
-        "name": "Ruby",
-        "remark": [
-          { "title": "Ruby On Rails", "text": "インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．" }
-        ]
-      },
-      {
-        "name": "Go lang",
-        "remark": [
-          { "title": "Gin", "text": "Goを学びたくてとりあえずドキュメント読んで使ってます．" }
-        ]
-      },
-      {
-        "name": "C / C++",
-        "remark": [
-        ]
-      },
-      {
-        "name": "Java",
-        "remark": [
-          { "title": "Android", "text": "インターンのアプリケーション開発で利用しました．" },
-          { "title": "Kotlin", "text": "Kotlinは洗練されててお気に入りです" }
-        ]
-      },
-      {
-        "name": "Python",
-        "remark": [
-          { "title": "Django Rest Framework", "text": "修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です" }
-        ]
-      },
-      {
-        "name": "Database",
-        "remark": [
-          { "title": "MySQL", "text": "小中規模のアプリケーション開発にはこれを利用します" },
-          { "title": "MongoDB", "text": "" },
-          { "title": "SQLite", "text": "講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します" }
-        ]
-      },
-      {
-        "name": "その他",
-        "remark": [
-          { "title": "Mecab", "text": "coming soon." },
-          { "title": "ElasticSearch", "text": "検索エンジンを構築する際に必要だったため使い方を学び利用しています" }
-        ]
-      }
-    ]
-  },
-  "en": {
-    "certificationTitle": "Certification",
-    "certificationHeader": [
-      {
-        "text": "Date",
-        "value": "date",
-        "sortable": false
-      },
-      {
-        "text": "Name",
-        "value": "name",
-        "sortable": false
-      }
-    ],
-    "certification": [
-      {
-        "date": "2013-9-17",
-        "name": "First-class drivers for normal vehicles"
-      },
-      {
-        "date": "2015-5-18",
-        "name": "Fundamental Information Technology Engineer Examination"
-      },
-      {
-        "date": "2015-12-18",
-        "name": "Applied Information Technology Engineer Examination"
-      }
-    ],
-    "programingTitle": "Skill",
-    "programing": [
-      {
-        "name": "PHP",
-        "remark": [
-          { "title": "Laravel", "text": "coming soon." },
-          { "title": "Slim3", "text": "coming soon." },
-          { "title": "WordPress", "text": "" }
-        ]
-      },
-      {
-        "name": "HTML/CSS",
-        "remark": [
-          { "title": "Bootstrap 3, 4", "text": "coming soon." },
-          { "title": "Materialize", "text": "coming soon." },
-          { "title": "Bulma", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "JavaScript",
-        "remark": [
-          { "title": "jQuery", "text": "coming soon." },
-          { "title": "AngularJS / Angular", "text": "coming soon." },
-          { "title": "Vue.js", "text": "coming soon." },
-          { "title": "Node.js", "text": "coming soon." },
-          { "title": "React.js", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "Ruby",
-        "remark": [
-          { "title": "Ruby On Rails", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "Go lang",
-        "remark": [
-          { "title": "Gin", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "C / C++",
-        "remark": [
-        ]
-      },
-      {
-        "name": "Java",
-        "remark": [
-          { "title": "Android", "text": "coming soon." },
-          { "title": "Kotlin", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "Python",
-        "remark": [
-          { "title": "Django Rest Framework", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "Database",
-        "remark": [
-          { "title": "MySQL", "text": "coming soon." },
-          { "title": "MongoDB", "text": "" },
-          { "title": "SQLite", "text": "coming soon." }
-        ]
-      },
-      {
-        "name": "Others",
-        "remark": [
-          { "title": "Mecab", "text": "coming soon." },
-          { "title": "ElasticSearch", "text": "coming soon." }
-        ]
-      }
-    ]
-  }
+    }
 }

@@ -4,8 +4,7 @@
         "top": "public/static/images/top.svg",
         "content": [
             { "name": "プロフィール", "href": "/", "icon": "person" },
-            { "name": "実績", "href": "/work", "icon": "assignment" },
-            { "name": "問い合わせ", "href": "/contact", "icon": "email" }
+            { "name": "実績", "href": "/work", "icon": "assignment" }
         ],
         "attribute": "大柳 達哉",
         "not_found": "お探しのページは存在しません．",
@@ -20,8 +19,7 @@
         "top": "public/static/images/top.svg",
         "content": [
             { "name": "Profile", "href": "/", "icon": "person" },
-            { "name": "Works", "href": "/work", "icon": "assignment" },
-            { "name": "Contact", "href": "/contact", "icon": "email" }
+            { "name": "Works", "href": "/work", "icon": "assignment" }
         ],
         "attribute": "Tatsuya Oyanagi",
         "not_found": "The page doesn't exist.",

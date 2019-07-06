@@ -3,12 +3,17 @@
         v-layout(row wrap justify-center)
             v-flex(md10 xs12).my-2
                 v-card(color="white").text-xs-center
-                    v-card-text.text-xs-center: img(:src="$t('profile.img')" width="300")
-
                     v-card-text(primary-title).display-2.my-2 {{ $t('profile.profileTitle') }}
+
+                    v-card-text.text-xs-center: img(:src="$t('profile.img')" width="240")
 
                     v-card-text
                         .my-2.headline {{ $t('profile.name') }}
+
+                        .body-2
+                            v-icon(small).mr-2 fas fa-envelope
+                            | {{ $t('contact.text') }}
+                        .body-2 {{ $t('contact.subtext') }}
 
                     v-card-text.text-xs-left
                         v-flex(md10 xs12)
