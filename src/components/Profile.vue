@@ -10,37 +10,59 @@
                     v-card-text
                         .my-2.headline {{ $t('profile.name') }}
 
-                    v-card-text
-                        .subheading {{ $t('profile.introduction') }}
+                    v-card-text.text-xs-left
+                        v-flex(md10 xs12)
+                            .subheading.mb-2 {{ $t('skill.certificationTitle')}}
 
-                        .my-4.pa-1.subheading.font-weight-bold.greeting-text(v-html="$t('profile.greeting')")
+                            v-list(dense)
+                                v-list-tile(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subheading {{ `${c.date} : ${c.name}` }}
 
+                        v-flex(md10 xs12)
+                            .subheading.mb-2 {{ $t('link.techTitle') }}
 
-                        .title {{ $t('profile.wordTitle') }}
-                        .my-3.title.font-weight-bold {{ $t('profile.word')}}
+                            v-list(dense)
+                                v-list-tile(v-for="(link, idx) in $t('link.technologies')" :key="`tech-link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`tech-link-${idx}`" color="blue"): .subheading {{ link.name }}
+
+                        v-flex(md10 xs12).my-3
+                            .subheading.mb-4 {{ $t('skill.programingTitle') }}
+
+                            v-layout(row wrap justify-start)
+                                v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" sm3 xs6).pa-1
+                                    v-card(color="blue lighten-5" min-height="150" tile)
+                                        v-card-text
+                                            .subheading {{ p.name }}
+                                            ul
+                                                li(v-for="(item, idx) in p.remark" :key="`p-item-${idx}`") {{ item.title }}
+
 </template>
 
 <script lang="ts">
-    'use strict'
+"use strict";
 
-    import Vue from 'vue'
-    import Component from 'vue-class-component'
+import Vue from "vue";
+import Component from "vue-class-component";
 
-    @Component
-    export default class Profile extends Vue {
+@Component
+export default class Profile extends Vue {
+  placeIdx = 0;
 
-        placeIdx = 0;
+  panels = [true, true, true, true, true, true];
 
-        panels = [ true, true, true, true, true, true ];
+  created() {}
 
-        created() {}
-
-        mounted() {}
-    }
+  mounted() {}
+}
 </script>
 
 <style scoped>
-    .greeting-text {
-        line-height: 32px !important;
-    }
+.greeting-text {
+  line-height: 32px !important;
+}
+.select-form {
+  max-width: 250px;
+}
+
+.skill-text {
+  line-height: 30px;
+}
 </style>

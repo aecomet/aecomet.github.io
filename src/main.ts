@@ -16,7 +16,6 @@ import LocalStorage from 'vue-ls'
 import {
     App,
     Profile,
-    Skill,
     NotFound,
     Work,
     Contact
@@ -62,7 +61,6 @@ const messages = {
 const baseTitle = 'ポートフォリオ - Portfolio ';
 const Routes = [
     { path: '/', name: 'profile_path', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
-    { path: '/skill', name: 'skill_path', component: Skill, meta: { title: `スキル/Skills | ${baseTitle}` } },
     { path: '/work', name: 'work_path', component: Work, meta: { title: `実績/Works | ${baseTitle}` } },
     { path: '/contact', name: 'contact_path', component: Contact, meta: { title: `問い合わせ/Contact | ${baseTitle}` } },
     { path: '*', name: 'NotFound', component: NotFound, meta: { title: `404 Not found | ${baseTitle}` } }

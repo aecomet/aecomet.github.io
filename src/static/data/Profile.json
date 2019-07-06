@@ -1,22 +1,16 @@
 {
-  "ja": {
-    "img": "public/static/images/profile.JPG",
-    "introduction": "駆け出しWeb エンジニア",
-    "profileTitle": "プロフィール",
-    "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
-    "status": "大学院生",
-    "wordTitle": "好きな言葉",
-    "word": "「果報は寝て待て」",
-    "greeting": "<p>こんにちは！</p><p>2019年からバックエンドエンジニアとして駆け出しました。</p><p>学生の頃はベンチャー企業でプログラマーとしてフロントエンドを中心に開発していましたが、</p><p>さらなるスキルアップと自己成長を目指しバックエンドエンジニアとしてのキャリアをスタートいたしました！</p><p>サービスを支える重要な役目であり、覚えることも多いので精進して参りたいと思います!</p><p>よろしくお願いいたします！</p>"
-  },
-  "en": {
-    "img": "public/static/images/profile.JPG",
-    "introduction": "A fresh soft engineer",
-    "profileTitle": "My Profile",
-    "name": "Tatsuya Oyanagi",
-    "status": "A graduate school student",
-    "wordTitle": "Favorite Quotes",
-    "word": "「Everything comes to those who wait」",
-    "greeting": "<p>Hello World :-)</p><p>I am software engineer in 2019!</p><p>And, When I learned `Front-End Web Technologies` in graduate school, </p><p>but now I learn `Back-End Web Technologoeis ` and start a career as `Back-End Software Engineer`.</p><p>I would like to contribute as hard as possible because of this position is so important.</p><p>Thank you！</p>"
-  }
+    "ja": {
+        "img": "public/static/images/profile.JPG",
+        "introduction": "アプリケーションエンジニア",
+        "profileTitle": "プロフィール",
+        "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
+        "status": "ITエンジニア"
+    },
+    "en": {
+        "img": "public/static/images/profile.JPG",
+        "introduction": "A software developer",
+        "profileTitle": "Profile",
+        "name": "Tatsuya Oyanagi",
+        "status": "A software developer"
+    }
 }
