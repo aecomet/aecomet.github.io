@@ -40,9 +40,7 @@
         currentPage: number = 0;
         pages: Array<string> = [
             'profile_path',
-            'skill_path',
             'work_path',
-            'contact_path'
         ];
 
         @Prop()
@@ -69,12 +67,16 @@
         onSwipe (direction: string) {
             switch (direction) {
                 case 'right':
-                    if (this.currentPage <= 0) return;
-                    this.currentPage -= 1;
+                    if (this.currentPage <= 0)
+                        this.currentPage += 1;
+                    else
+                        this.currentPage -= 1;
                     break;
                 case 'left':
-                    if (this.currentPage >= this.pages.length -1) return;
-                    this.currentPage += 1;
+                    if (this.currentPage >= this.pages.length -1) 
+                        this.currentPage -= 1;
+                    else
+                        this.currentPage += 1;
                     break;
             }
             vm.$router.push({ name: this.pages[this.currentPage] })
