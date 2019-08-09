@@ -1,6 +1,7 @@
 <template lang="pug">
     v-app(app)
-        v-toolbar(color="white" extended app scroll-off-screen dense flat)
+        p hello
+        //- v-toolbar(color="white" extended app scroll-off-screen dense flat)
             .text-xs-left: img(:src="$t('base.top')").top-img
 
             v-tabs(slot="extension" color="transparent" v-model="tab" right)
@@ -9,12 +10,12 @@
                     span.body-1.font-weight-bold {{ header.name }}
 
         //- Main Contents
-        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
+        //- v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
             v-container(fluid)
                 transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
-        v-footer(height="auto" app dark absolute)
+        //- v-footer(height="auto" app dark absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
                     .text-xs-center: span.subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}

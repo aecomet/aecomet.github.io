@@ -109,8 +109,7 @@ let baseWebpack = {
                 'apple-mobile-web-app-title': 'T.O. Portfolio',
                 'apple-mobile-web-app-status-bar-style': 'black'
             },
-            icons: [
-                {
+            icons: [{
                     src: path.resolve('src/static/icons/apple-touch-icon.png'),
                     sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
                     destination: path.join('public/icons', 'ios'),
@@ -135,8 +134,7 @@ let baseWebpack = {
         publicPath: '/'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
                 loader: 'vue-loader',
                 options: {
@@ -156,6 +154,20 @@ let baseWebpack = {
                     fallback: 'style-loader',
                     use: 'css-loader'
                 })
+            },
+            {
+                test: /\.s(c|a)ss$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            implementation: require('sass'),
+                            indentedSyntax: true // optional
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -194,10 +206,6 @@ let baseWebpack = {
                         use: ['raw-loader', 'pug-plain-loader']
                     }
                 ]
-            },
-            {
-                test: /\.styl$/,
-                loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
             }
         ]
     },
@@ -214,7 +222,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
     baseWebpack.output.path = path.resolve(__dirname, './')
     baseWebpack.plugins = baseWebpack.plugins.concat([
         /* === Copy Static files === */
-        new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'public/static/images') } ]),
+        new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'public/static/images') }]),
     ])
     baseWebpack.optimization.minimizer.push(
         new UglifyJSPlugin({
@@ -228,19 +236,19 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 } else {
     baseWebpack.plugins = baseWebpack.plugins.concat([
         /* === Copy Static files === */
-        new CopywebpackPlugin([ { toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/public/static/images') } ]),
+        new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/public/static/images') }]),
     ])
     baseWebpack['devtool'] = 'inline-source-map'
-    // local server config
+        // local server config
     baseWebpack['devServer'] = {
         host: '0.0.0.0',
-        port: 7777,                         // port number
-        contentBase: path.join(__dirname, 'dist/'),    // Document root on server
+        port: 7777, // port number
+        contentBase: path.join(__dirname, 'dist/'), // Document root on server
         // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
-        progress: false,                         // Show progress on console.
-        inline: true,                         // The mode of inline.
-        hot: false,                         // use HMR
-        clientLogLevel: 'info',                       // The log level(none, error, warning, info)
+        progress: false, // Show progress on console.
+        inline: true, // The mode of inline.
+        hot: false, // use HMR
+        clientLogLevel: 'info', // The log level(none, error, warning, info)
         historyApiFallback: true
     }
 }

@@ -6,7 +6,7 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import Vuetify from 'vuetify'
+import vuetify from '@/plugin/vuetify';
 import VueI18n from 'vue-i18n';
 import Router from 'vue-router'
 import runtime from 'serviceworker-webpack-plugin/lib/runtime';
@@ -66,15 +66,11 @@ const Routes = [
 
 // CSS / Icon pack
 import './style.css'
-import 'vuetify/dist/vuetify.min.css'
 
 // icon pack
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 // Enable Vue Modules
-Vue.use(Vuetify, {
-    iconfont: 'fa'
-})
 Vue.use(VueI18n)
 Vue.use(Router)
 Vue.use(LocalStorage, lsOptions)
@@ -119,6 +115,7 @@ new Vue({
     el: '#app',
     router,
     i18n,
+    vuetify,
     template: '<App/>',
     components: {
         App
