@@ -1,16 +1,16 @@
 {
     "ja": {
-        "img": "public/static/images/profile.JPG",
-        "introduction": "アプリケーションエンジニア",
+        "img": "public/static/images/logo.png",
+        "introduction": "JavaScriptが好きなバックエンドエンジニアです。実務ではRuby, Javaをメインで利用しています。",
         "profileTitle": "プロフィール",
-        "name": "大柳達哉（ｵｵﾔﾅｷﾞﾀﾂﾔ）",
+        "name": "hiyoko3",
         "status": "ITエンジニア"
     },
     "en": {
-        "img": "public/static/images/profile.JPG",
-        "introduction": "A software developer",
-        "profileTitle": "Profile",
-        "name": "Tatsuya Oyanagi",
-        "status": "A software developer"
+        "img": "",
+        "introduction": "",
+        "profileTitle": "",
+        "name": "",
+        "status": ""
     }
 }

@@ -100,103 +100,24 @@
         ]
     },
     "en": {
-        "certificationTitle": "Certification",
+        "certificationTitle": "",
         "certificationHeader": [{
-                "text": "Date",
-                "value": "date",
-                "sortable": false
-            },
-            {
-                "text": "Name",
-                "value": "name",
-                "sortable": false
-            }
-        ],
+            "text": "",
+            "value": "",
+            "sortable": false
+        }],
         "certification": [{
-                "date": "2013-9-17",
-                "name": "First-class drivers for normal vehicles"
-            },
-            {
-                "date": "2015-5-18",
-                "name": "Fundamental Information Technology Engineer Examination"
-            },
-            {
-                "date": "2015-12-18",
-                "name": "Applied Information Technology Engineer Examination"
-            }
-        ],
+            "date": "",
+            "name": ""
+        }],
         "programingTitle": "Skill",
         "programing": [{
-                "name": "PHP",
-                "remark": [
-                    { "title": "Laravel", "text": "coming soon." },
-                    { "title": "Slim3", "text": "coming soon." },
-                    { "title": "WordPress", "text": "" }
-                ]
-            },
-            {
-                "name": "HTML/CSS",
-                "remark": [
-                    { "title": "Bootstrap 3, 4", "text": "coming soon." },
-                    { "title": "Materialize", "text": "coming soon." },
-                    { "title": "Bulma", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "JavaScript",
-                "remark": [
-                    { "title": "jQuery", "text": "coming soon." },
-                    { "title": "AngularJS / Angular", "text": "coming soon." },
-                    { "title": "Vue.js", "text": "coming soon." },
-                    { "title": "Node.js", "text": "coming soon." },
-                    { "title": "React.js", "text": "coming soon." },
-                    { "title": "Electron", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "Ruby",
-                "remark": [
-                    { "title": "Ruby On Rails", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "Go lang",
-                "remark": [
-                    { "title": "Gin", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "C / C++",
-                "remark": []
-            },
-            {
-                "name": "Java",
-                "remark": [
-                    { "title": "Android", "text": "coming soon." },
-                    { "title": "Kotlin", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "Python",
-                "remark": [
-                    { "title": "Django Rest Framework", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "Database",
-                "remark": [
-                    { "title": "MySQL", "text": "coming soon." },
-                    { "title": "MongoDB", "text": "" },
-                    { "title": "SQLite", "text": "coming soon." }
-                ]
-            },
-            {
-                "name": "Others",
-                "remark": [
-                    { "title": "Mecab", "text": "coming soon." },
-                    { "title": "ElasticSearch", "text": "coming soon." }
-                ]
-            }
-        ]
+            "name": "",
+            "remark": [
+                { "title": "", "text": "" },
+                { "title": "", "text": "" },
+                { "title": "", "text": "" }
+            ]
+        }]
     }
 }

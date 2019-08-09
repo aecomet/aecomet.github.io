@@ -2,9 +2,6 @@
     v-app(app)
         v-toolbar(color="white" extended app scroll-off-screen dense flat)
             .text-xs-left: img(:src="$t('base.top')").top-img
-            v-spacer
-            v-btn(v-if="$i18n.locale !== 'ja'" @click="onChangeLanguage('ja')" aria-label="jp_translate" icon): v-icon fas fa-language
-            v-btn(v-else @click="onChangeLanguage('en')" aria-label="en_translate" icon): v-icon fas fa-language
 
             v-tabs(slot="extension" color="transparent" v-model="tab" right)
                 v-tabs-slider(color="white")
@@ -20,9 +17,6 @@
         v-footer(height="auto" app dark absolute)
             v-card(width="100%" flat tile).text-xs-center
                 v-card-text
-                    v-btn(v-for="(link, idx) in $t('base.footer')" :key="`link-${idx}`" :href="link.href" target="_blank" rel="noopener noreferrer" :aria-label="`ext-link-${idx}`" flat icon small).mx-2
-                        v-icon {{ `fab fa-${link.icon}` }}
-                    v-divider.my-2
                     .text-xs-center: span.subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
@@ -54,12 +48,6 @@
                 if (name === vm.$route.name) vm.currentPage = idx
             })
 
-            // set default lang
-            if (vm.$ls.get('lang')) {
-                vm.$i18n.locale = vm.$ls.get('lang')
-            } else {
-                vm.$ls.set('lang', vm.$i18n.locale)
-            }
         }
 
         mounted() {}
@@ -80,12 +68,6 @@
                     break;
             }
             vm.$router.push({ name: this.pages[this.currentPage] })
-        }
-
-        onChangeLanguage(code: any) {
-            if (vm.$i18n.locale === code) return
-            vm.$i18n.locale = code
-            vm.$ls.set('lang', vm.$i18n.locale)
         }
     }
 </script>

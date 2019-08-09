@@ -2,7 +2,7 @@
     #profile
         v-layout(row wrap justify-center)
             v-flex(md10 xs12).my-2
-                v-card(color="white").text-xs-center
+                v-card(color="grey lighten-5").text-xs-center
                     v-card-text(primary-title).display-2.my-2 {{ $t('profile.profileTitle') }}
 
                     v-card-text.text-xs-center: img(:src="$t('profile.img')" width="240")
@@ -10,10 +10,12 @@
                     v-card-text
                         .my-2.headline {{ $t('profile.name') }}
 
-                        .body-2
+                        .my-3.subheading {{ $t('profile.introduction') }}
+
+                        .subheading
                             v-icon(small).mr-2 fas fa-envelope
                             | {{ $t('contact.text') }}
-                        .body-2 {{ $t('contact.subtext') }}
+                        .subheading {{ $t('contact.subtext') }}
 
                     v-card-text.text-xs-left
                         v-flex(md10 xs12)
@@ -33,7 +35,7 @@
 
                             v-layout(row wrap justify-start)
                                 v-flex(v-for="(p, idx) in $t('skill.programing')" :key="`programing-${idx}`" sm3 xs6).pa-1
-                                    v-card(color="blue lighten-5" min-height="150" tile)
+                                    v-card(color="white" min-height="150" tile)
                                         v-card-text
                                             .subheading {{ p.name }}
                                             ul

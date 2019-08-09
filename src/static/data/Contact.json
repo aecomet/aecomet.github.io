@@ -1,12 +1,12 @@
 {
-  "ja": {
-    "title": "問い合わせ",
-    "text": "sb.gm.0823@***",
-    "subtext": "***にはgmail.comを入力してください"
-  },
-  "en": {
-    "title": "Contact",
-    "text": "sb.gm.0823@***",
-    "subtext": "set '***' to 'gmail.com'"
-  }
+    "ja": {
+        "title": "問い合わせ",
+        "text": "sb.gm.0823@***",
+        "subtext": "***にはgmail.comを入力してください"
+    },
+    "en": {
+        "title": "",
+        "text": "",
+        "subtext": ""
+    }
 }

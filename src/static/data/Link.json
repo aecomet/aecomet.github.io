@@ -2,15 +2,14 @@
     "ja": {
         "techTitle": "外部リンク",
         "technologies": [
-            { "name": "Github", "href": "https://github.com/hiyoko3" },
-            { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
+            { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "" },
+            { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi", "icon": "" }
         ]
     },
     "en": {
-        "techTitle": "Links",
+        "techTitle": "",
         "technologies": [
-            { "name": "Github", "href": "https://github.com/hiyoko3" },
-            { "name": "Qiita", "href": "https://qiita.com/tatsuya_oyanagi" }
+            { "name": "", "href": "", "icon": "" }
         ]
     }
 }

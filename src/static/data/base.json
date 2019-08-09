@@ -6,27 +6,23 @@
             { "name": "プロフィール", "href": "/", "icon": "person" },
             { "name": "実績", "href": "/work", "icon": "assignment" }
         ],
-        "attribute": "大柳 達哉",
+        "attribute": "hiyoko3",
         "not_found": "お探しのページは存在しません．",
         "footer": [
-            { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "github" },
-            { "name": "Facebook", "href": "https://www.facebook.com/", "icon": "facebook" },
-            { "name": "LinkedIn", "href": "https://www.linkedin.com/in/tatsuya-oyanagi-a5ab72143/", "icon": "linkedin-in" }
+            { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "github" }
         ]
     },
     "en": {
-        "title": "Portfolio",
-        "top": "public/static/images/top.svg",
+        "title": "",
+        "top": "",
         "content": [
             { "name": "Profile", "href": "/", "icon": "person" },
             { "name": "Works", "href": "/work", "icon": "assignment" }
         ],
-        "attribute": "Tatsuya Oyanagi",
-        "not_found": "The page doesn't exist.",
+        "attribute": "",
+        "not_found": "",
         "footer": [
-            { "name": "Github", "href": "https://github.com/hiyoko3", "icon": "github" },
-            { "name": "Facebook", "href": "https://www.facebook.com/", "icon": "facebook" },
-            { "name": "LinkedIn", "href": "https://www.linkedin.com/in/tatsuya-oyanagi-a5ab72143/", "icon": "linkedin-in" }
+            { "name": "", "href": "", "icon": "" }
         ]
     }
 }
