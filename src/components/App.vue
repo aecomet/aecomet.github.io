@@ -20,7 +20,6 @@
 </template>
 
 <script lang="ts">
-  let vm:any = null
   import Vue from 'vue'
   import Component from 'vue-class-component'
   import { Prop } from 'vue-property-decorator';
@@ -37,7 +36,7 @@
     @Prop()
      
     created() {
-      vm = this
+      const vm:any = this
       // set page position
       vm.currentPage = 0
       vm.pages.forEach((name: string, idx: number) => {
@@ -48,6 +47,7 @@
     mounted() {}
 
     onSwipe (direction: string) {
+      const vm:any = this
       switch (direction) {
         case 'right':
           if (this.currentPage <= 0)

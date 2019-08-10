@@ -13,8 +13,8 @@ The web page introduces my skills and history.
 - HTML5
 - CSS3
 - JavaScript
-    - Vue.js
-    - EcmaScript
+  - Vue.js
+  - TypeScript
 
 ## How to set up
 

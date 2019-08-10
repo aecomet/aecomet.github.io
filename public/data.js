@@ -1,1 +1,156 @@
-!function(t){var e={};function a(o){if(e[o])return e[o].exports;var i=e[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,a),i.l=!0,i.exports}a.m=t,a.c=e,a.d=function(t,e,o){a.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:o})},a.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},a.t=function(t,e){if(1&e&&(t=a(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var o=Object.create(null);if(a.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)a.d(o,i,function(e){return t[e]}.bind(null,i));return o},a.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return a.d(e,"a",e),e},a.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},a.p="/",a(a.s=24)}({24:function(t,e,a){"use strict";var o=this&&this.__importDefault||function(t){return t&&t.__esModule?t:{default:t}};Object.defineProperty(e,"__esModule",{value:!0});const i=o(a(25));e.BaseJSON=i.default;const n=o(a(26));e.ProfileJSON=n.default;const r=o(a(27));e.SkillJSON=r.default;const l=o(a(28));e.LinkJSON=l.default;const s=o(a(29));e.WorkJSON=s.default;const c=o(a(30));e.ContactJSON=c.default},25:function(t){t.exports=JSON.parse('{"ja":{"title":"ポートフォリオ","top":"public/static/images/top.svg","content":[{"name":"プロフィール","href":"/","icon":"person"},{"name":"実績","href":"/work","icon":"assignment"}],"attribute":"hiyoko3","not_found":"お探しのページは存在しません．","footer":[{"name":"Github","href":"https://github.com/hiyoko3","icon":"github"}]},"en":{"title":"","top":"","content":[{"name":"Profile","href":"/","icon":"person"},{"name":"Works","href":"/work","icon":"assignment"}],"attribute":"","not_found":"","footer":[{"name":"","href":"","icon":""}]}}')},26:function(t){t.exports=JSON.parse('{"ja":{"img":"public/static/images/logo.png","introduction":"JavaScriptが好きなバックエンドエンジニアです。実務ではRuby, Javaをメインで利用しています。","profileTitle":"プロフィール","name":"hiyoko3","status":"ITエンジニア"},"en":{"img":"","introduction":"","profileTitle":"","name":"","status":""}}')},27:function(t){t.exports=JSON.parse('{"ja":{"certificationTitle":"資格","certificationHeader":[{"text":"取得年月日","value":"date","sortable":false},{"text":"資格名","value":"name","sortable":false}],"certification":[{"date":"2013年9月17日","name":"普通自動車第一種運転免許"},{"date":"2015年5月18日","name":"基本情報技術者"},{"date":"2015年12月18日","name":"応用情報技術者"}],"programingTitle":"スキル","programing":[{"name":"PHP","remark":[{"title":"Laravel","text":"PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね"},{"title":"Slim3","text":"PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り"},{"title":"WordPress","text":""}]},{"name":"HTML/CSS","remark":[{"title":"Bootstrap 3, 4","text":"言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．"},{"title":"Materialize","text":"Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います"},{"title":"Bulma","text":"CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです"}]},{"name":"JavaScript","remark":[{"title":"jQuery","text":"web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません"},{"title":"AngularJS / Angular","text":"coming soon."},{"title":"Vue.js","text":"クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．"},{"title":"Node.js","text":""},{"title":"React.js","text":""},{"title":"Electron","text":""}]},{"name":"Ruby","remark":[{"title":"Ruby On Rails","text":"インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．"}]},{"name":"Go lang","remark":[{"title":"Gin","text":"Goを学びたくてとりあえずドキュメント読んで使ってます．"}]},{"name":"C / C++","remark":[]},{"name":"Java","remark":[{"title":"Android","text":"インターンのアプリケーション開発で利用しました．"},{"title":"Kotlin","text":"Kotlinは洗練されててお気に入りです"}]},{"name":"Python","remark":[{"title":"Django Rest Framework","text":"修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です"}]},{"name":"Database","remark":[{"title":"MySQL","text":"小中規模のアプリケーション開発にはこれを利用します"},{"title":"MongoDB","text":""},{"title":"SQLite","text":"講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します"}]},{"name":"その他","remark":[{"title":"Mecab","text":"coming soon."},{"title":"ElasticSearch","text":"検索エンジンを構築する際に必要だったため使い方を学び利用しています"}]}]},"en":{"certificationTitle":"","certificationHeader":[{"text":"","value":"","sortable":false}],"certification":[{"date":"","name":""}],"programingTitle":"Skill","programing":[{"name":"","remark":[{"title":"","text":""},{"title":"","text":""},{"title":"","text":""}]}]}}')},28:function(t){t.exports=JSON.parse('{"ja":{"techTitle":"外部リンク","technologies":[{"name":"Github","href":"https://github.com/hiyoko3","icon":""},{"name":"Qiita","href":"https://qiita.com/tatsuya_oyanagi","icon":""}]},"en":{"techTitle":"","technologies":[{"name":"","href":"","icon":""}]}}')},29:function(t){t.exports=JSON.parse('{"ja":{"title":"制作物","desc":"※ インターン中に開発したものなど，画像を掲載できないものはアイコンを表示しています．また，公開されているアプリケーションには外部リンクが付属しています．","products":[{"name":"（共同開発）Memoma","language":"Electron","text":"クロスプラットフォーム対応のスタンドアロンなメモアプリ","src":"public/static/images/works/memoma.png","icon":"fas fa-laptop-code","href":"https://github.com/narugit/Memoma"},{"name":"ブログページ開発","language":"PHP(WordPress)","text":"WordPressを用いたブログページ開発","src":"public/static/images/works/soda.png","icon":"fas fa-laptop-code","href":"https://lifelearning.tokyo/"},{"name":"研究室HP","language":"Vue.js","text":"研究室のHPリニューアル","src":"public/static/images/works/hp.png","icon":"fas fa-mobile-alt","href":"https://glocalvision.net/ishilab/"},{"name":"ポートフォリオ","language":"Vue.js","text":"自身の成果を公開するためのポートフォリオサイトを作成","src":"public/static/images/works/portfolio.png","icon":"fas fa-mobile-alt","href":"https://hiyoko3.github.io/"},{"name":"災害記録史可視化・分析システム","language":"Django REST Framework,ElasticSearch,Vue.js,Mecab","text":"修士研究で開発．自治体向け災害対策意思決定支援システムの開発","src":"public/static/images/works/research.png","icon":"fas fa-laptop-code","href":""},{"name":"動物園業務統合管理システム","language":"Laravel,jQuery","text":"動物園内部で利用する総合業務管理システムの開発","src":"public/static/images/works/zoo_admin.png","icon":"fas fa-laptop-code","href":""},{"name":"動物園ナビゲーションアプリ","language":"Java(Android)","text":"動物園散策アプリケーションのデザイン刷新とパフォーマンス改善を担当","src":"public/static/images/works/zoo_app.png","icon":"fas fa-mobile-alt","href":""},{"name":"潮流予測配信サイト","language":"jQuery,Bootstrap","text":"他研究室の研究成果を公開するページを作成","src":"public/static/images/works/go_shima.png","icon":"fas fa-mobile-alt","href":"http://eiji.eng.ibaraki.ac.jp/GOShima/"},{"name":"物件閲覧システム","language":"PHP, jQuery","text":"物件閲覧システムの開発","src":"","icon":"fas fa-laptop-code","href":""},{"name":"衝撃検知アプリケーション","language":"Kotlin(Android)","text":"IoTデバイスを利用した衝撃検知アプリケーションの開発","src":"","icon":"fas fa-mobile-alt","href":""},{"name":"車両データ収集アプリ","language":"Java(Android)","text":"IoTデバイスと連動した車両データ収集アプリケーションの開発","src":"","icon":"fas fa-mobile-alt","href":""},{"name":"住宅販売管理システム","language":"Ruby on Rails,jQuery","text":"住宅販売管理システムの開発","src":"","icon":"fas fa-laptop-code","href":""},{"name":"広告表示システム","language":"C#","text":"広告ディスプレイに表示する資料（プレゼンテーション）を動的に更新するシステムの開発","src":"","icon":"fas fa-laptop-code","href":""},{"name":"走行軌跡可視化アプリ","language":"Kotlin(Android)","text":"自立型掃除機が走行した軌跡と収集したゴミの量を一元的に可視化するアプリケーションの開発","src":"","icon":"fas fa-mobile-alt","href":""}]},"en":{"title":"","desc":"","products":[{"name":"","language":"","text":"","src":"","icon":"","href":""}]}}')},30:function(t){t.exports=JSON.parse('{"ja":{"title":"問い合わせ","text":"sb.gm.0823@***","subtext":"***にはgmail.comを入力してください"},"en":{"title":"","text":"","subtext":""}}')}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ 32:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const base_json_1 = __importDefault(__webpack_require__(33));
+exports.BaseJSON = base_json_1.default;
+const Profile_json_1 = __importDefault(__webpack_require__(34));
+exports.ProfileJSON = Profile_json_1.default;
+const Skill_json_1 = __importDefault(__webpack_require__(35));
+exports.SkillJSON = Skill_json_1.default;
+const Link_json_1 = __importDefault(__webpack_require__(36));
+exports.LinkJSON = Link_json_1.default;
+const Work_json_1 = __importDefault(__webpack_require__(37));
+exports.WorkJSON = Work_json_1.default;
+const Contact_json_1 = __importDefault(__webpack_require__(38));
+exports.ContactJSON = Contact_json_1.default;
+
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"title\":\"ポートフォリオ\",\"top\":\"public/static/images/top.svg\",\"content\":[{\"name\":\"プロフィール\",\"href\":\"/\",\"icon\":\"person\"},{\"name\":\"実績\",\"href\":\"/work\",\"icon\":\"assignment\"}],\"attribute\":\"hiyoko3\",\"not_found\":\"お探しのページは存在しません．\",\"footer\":[{\"name\":\"Github\",\"href\":\"https://github.com/hiyoko3\",\"icon\":\"github\"}]},\"en\":{\"title\":\"\",\"top\":\"\",\"content\":[{\"name\":\"Profile\",\"href\":\"/\",\"icon\":\"person\"},{\"name\":\"Works\",\"href\":\"/work\",\"icon\":\"assignment\"}],\"attribute\":\"\",\"not_found\":\"\",\"footer\":[{\"name\":\"\",\"href\":\"\",\"icon\":\"\"}]}}");
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"img\":\"public/static/images/logo.png\",\"introduction\":\"JavaScriptが好きなバックエンドエンジニアです。実務ではRuby, Javaをメインで利用しています。\",\"profileTitle\":\"プロフィール\",\"name\":\"hiyoko3\",\"status\":\"ITエンジニア\"},\"en\":{\"img\":\"\",\"introduction\":\"\",\"profileTitle\":\"\",\"name\":\"\",\"status\":\"\"}}");
+
+/***/ }),
+
+/***/ 35:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"certificationTitle\":\"資格\",\"certificationHeader\":[{\"text\":\"取得年月日\",\"value\":\"date\",\"sortable\":false},{\"text\":\"資格名\",\"value\":\"name\",\"sortable\":false}],\"certification\":[{\"date\":\"2013年9月17日\",\"name\":\"普通自動車第一種運転免許\"},{\"date\":\"2015年5月18日\",\"name\":\"基本情報技術者\"},{\"date\":\"2015年12月18日\",\"name\":\"応用情報技術者\"}],\"programingTitle\":\"スキル\",\"programing\":[{\"name\":\"PHP\",\"remark\":[{\"title\":\"Laravel\",\"text\":\"PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね\"},{\"title\":\"Slim3\",\"text\":\"PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り\"},{\"title\":\"WordPress\",\"text\":\"\"}]},{\"name\":\"HTML/CSS\",\"remark\":[{\"title\":\"Bootstrap 3, 4\",\"text\":\"言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．\"},{\"title\":\"Materialize\",\"text\":\"Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います\"},{\"title\":\"Bulma\",\"text\":\"CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです\"}]},{\"name\":\"JavaScript\",\"remark\":[{\"title\":\"jQuery\",\"text\":\"web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません\"},{\"title\":\"AngularJS / Angular\",\"text\":\"coming soon.\"},{\"title\":\"Vue.js\",\"text\":\"クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．\"},{\"title\":\"Node.js\",\"text\":\"\"},{\"title\":\"React.js\",\"text\":\"\"},{\"title\":\"Electron\",\"text\":\"\"}]},{\"name\":\"Ruby\",\"remark\":[{\"title\":\"Ruby On Rails\",\"text\":\"インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．\"}]},{\"name\":\"Go lang\",\"remark\":[{\"title\":\"Gin\",\"text\":\"Goを学びたくてとりあえずドキュメント読んで使ってます．\"}]},{\"name\":\"C / C++\",\"remark\":[]},{\"name\":\"Java\",\"remark\":[{\"title\":\"Android\",\"text\":\"インターンのアプリケーション開発で利用しました．\"},{\"title\":\"Kotlin\",\"text\":\"Kotlinは洗練されててお気に入りです\"}]},{\"name\":\"Python\",\"remark\":[{\"title\":\"Django Rest Framework\",\"text\":\"修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です\"}]},{\"name\":\"Database\",\"remark\":[{\"title\":\"MySQL\",\"text\":\"小中規模のアプリケーション開発にはこれを利用します\"},{\"title\":\"MongoDB\",\"text\":\"\"},{\"title\":\"SQLite\",\"text\":\"講義の課題や新しい言語を学ぶ時などの簡易アプリケーション開発時に利用します\"}]},{\"name\":\"その他\",\"remark\":[{\"title\":\"Mecab\",\"text\":\"coming soon.\"},{\"title\":\"ElasticSearch\",\"text\":\"検索エンジンを構築する際に必要だったため使い方を学び利用しています\"}]}]},\"en\":{\"certificationTitle\":\"\",\"certificationHeader\":[{\"text\":\"\",\"value\":\"\",\"sortable\":false}],\"certification\":[{\"date\":\"\",\"name\":\"\"}],\"programingTitle\":\"Skill\",\"programing\":[{\"name\":\"\",\"remark\":[{\"title\":\"\",\"text\":\"\"},{\"title\":\"\",\"text\":\"\"},{\"title\":\"\",\"text\":\"\"}]}]}}");
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"techTitle\":\"外部リンク\",\"technologies\":[{\"name\":\"Github\",\"href\":\"https://github.com/hiyoko3\",\"icon\":\"\"},{\"name\":\"Qiita\",\"href\":\"https://qiita.com/tatsuya_oyanagi\",\"icon\":\"\"}]},\"en\":{\"techTitle\":\"\",\"technologies\":[{\"name\":\"\",\"href\":\"\",\"icon\":\"\"}]}}");
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"title\":\"制作物\",\"desc\":\"※ インターン中に開発したものなど，画像を掲載できないものはアイコンを表示しています．また，公開されているアプリケーションには外部リンクが付属しています．\",\"products\":[{\"name\":\"（共同開発）Memoma\",\"language\":\"Electron\",\"text\":\"クロスプラットフォーム対応のスタンドアロンなメモアプリ\",\"src\":\"public/static/images/works/memoma.png\",\"icon\":\"fas fa-laptop-code\",\"href\":\"https://github.com/narugit/Memoma\"},{\"name\":\"ブログページ開発\",\"language\":\"PHP(WordPress)\",\"text\":\"WordPressを用いたブログページ開発\",\"src\":\"public/static/images/works/soda.png\",\"icon\":\"fas fa-laptop-code\",\"href\":\"https://lifelearning.tokyo/\"},{\"name\":\"研究室HP\",\"language\":\"Vue.js\",\"text\":\"研究室のHPリニューアル\",\"src\":\"public/static/images/works/hp.png\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"https://glocalvision.net/ishilab/\"},{\"name\":\"ポートフォリオ\",\"language\":\"Vue.js\",\"text\":\"自身の成果を公開するためのポートフォリオサイトを作成\",\"src\":\"public/static/images/works/portfolio.png\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"https://hiyoko3.github.io/\"},{\"name\":\"災害記録史可視化・分析システム\",\"language\":\"Django REST Framework,ElasticSearch,Vue.js,Mecab\",\"text\":\"修士研究で開発．自治体向け災害対策意思決定支援システムの開発\",\"src\":\"public/static/images/works/research.png\",\"icon\":\"fas fa-laptop-code\",\"href\":\"\"},{\"name\":\"動物園業務統合管理システム\",\"language\":\"Laravel,jQuery\",\"text\":\"動物園内部で利用する総合業務管理システムの開発\",\"src\":\"public/static/images/works/zoo_admin.png\",\"icon\":\"fas fa-laptop-code\",\"href\":\"\"},{\"name\":\"動物園ナビゲーションアプリ\",\"language\":\"Java(Android)\",\"text\":\"動物園散策アプリケーションのデザイン刷新とパフォーマンス改善を担当\",\"src\":\"public/static/images/works/zoo_app.png\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"\"},{\"name\":\"潮流予測配信サイト\",\"language\":\"jQuery,Bootstrap\",\"text\":\"他研究室の研究成果を公開するページを作成\",\"src\":\"public/static/images/works/go_shima.png\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"http://eiji.eng.ibaraki.ac.jp/GOShima/\"},{\"name\":\"物件閲覧システム\",\"language\":\"PHP, jQuery\",\"text\":\"物件閲覧システムの開発\",\"src\":\"\",\"icon\":\"fas fa-laptop-code\",\"href\":\"\"},{\"name\":\"衝撃検知アプリケーション\",\"language\":\"Kotlin(Android)\",\"text\":\"IoTデバイスを利用した衝撃検知アプリケーションの開発\",\"src\":\"\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"\"},{\"name\":\"車両データ収集アプリ\",\"language\":\"Java(Android)\",\"text\":\"IoTデバイスと連動した車両データ収集アプリケーションの開発\",\"src\":\"\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"\"},{\"name\":\"住宅販売管理システム\",\"language\":\"Ruby on Rails,jQuery\",\"text\":\"住宅販売管理システムの開発\",\"src\":\"\",\"icon\":\"fas fa-laptop-code\",\"href\":\"\"},{\"name\":\"広告表示システム\",\"language\":\"C#\",\"text\":\"広告ディスプレイに表示する資料（プレゼンテーション）を動的に更新するシステムの開発\",\"src\":\"\",\"icon\":\"fas fa-laptop-code\",\"href\":\"\"},{\"name\":\"走行軌跡可視化アプリ\",\"language\":\"Kotlin(Android)\",\"text\":\"自立型掃除機が走行した軌跡と収集したゴミの量を一元的に可視化するアプリケーションの開発\",\"src\":\"\",\"icon\":\"fas fa-mobile-alt\",\"href\":\"\"}]},\"en\":{\"title\":\"\",\"desc\":\"\",\"products\":[{\"name\":\"\",\"language\":\"\",\"text\":\"\",\"src\":\"\",\"icon\":\"\",\"href\":\"\"}]}}");
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"ja\":{\"title\":\"問い合わせ\",\"text\":\"sb.gm.0823@***\",\"subtext\":\"***にはgmail.comを入力してください\"},\"en\":{\"title\":\"\",\"text\":\"\",\"subtext\":\"\"}}");
+
+/***/ })
+
+/******/ });

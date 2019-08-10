@@ -225,13 +225,13 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
         new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'public/static/images') }]),
     ])
     baseWebpack.optimization.minimizer.push(
-        new UglifyJSPlugin({
-            uglifyOptions: {
-                compress: {
-                    drop_console: true
-                }
-            }
-        })
+        // new UglifyJSPlugin({
+        //     uglifyOptions: {
+        //         compress: {
+        //             drop_console: true
+        //         }
+        //     }
+        // })
     )
 } else {
     baseWebpack.plugins = baseWebpack.plugins.concat([
