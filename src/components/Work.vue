@@ -20,31 +20,29 @@
 </template>
 
 <script lang="ts">
-    'use strict'
+  'use strict'
 
-    import Vue from 'vue'
-    import Component from 'vue-class-component'
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
 
-    @Component
-    export default class Profile extends Vue {
+  @Component
+  export default class Profile extends Vue {
 
-        created() {}
+    created() {}
 
-        mounted() {
-        }
-    }
+    mounted() {}
+  }
 </script>
 
 <style scoped>
-    .work-icon,
-    .v-icon.fas {
-        font-size: 8em !important;
-    }
+  .work-icon,
+  .v-icon.fas {
+    font-size: 8em !important;
+  }
 
-    .work-img {
-        height: 150px;
-        width: 100%;
-        object-fit: contain;
-    }
-
+  .work-img {
+    height: 150px;
+    width: 100%;
+    object-fit: contain;
+  }
 </style>

@@ -40,32 +40,30 @@
 </template>
 
 <script lang="ts">
-"use strict";
+  import Vue from "vue";
+  import Component from "vue-class-component";
 
-import Vue from "vue";
-import Component from "vue-class-component";
+  @Component
+  export default class Profile extends Vue {
+    placeIdx = 0;
 
-@Component
-export default class Profile extends Vue {
-  placeIdx = 0;
+    panels = [true, true, true, true, true, true];
 
-  panels = [true, true, true, true, true, true];
+    created() {}
 
-  created() {}
-
-  mounted() {}
-}
+    mounted() {}
+  }
 </script>
 
 <style scoped>
-.greeting-text {
-  line-height: 32px !important;
-}
-.select-form {
-  max-width: 250px;
-}
+  .greeting-text {
+    line-height: 32px !important;
+  }
+  .select-form {
+    max-width: 250px;
+  }
 
-.skill-text {
-  line-height: 30px;
-}
+  .skill-text {
+    line-height: 30px;
+  }
 </style>

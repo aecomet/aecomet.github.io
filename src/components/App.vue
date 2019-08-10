@@ -20,70 +20,66 @@
 </template>
 
 <script lang="ts">
-    'use strict'
+  let vm:any = null
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+  import { Prop } from 'vue-property-decorator';
 
-    let vm:any = null
-    import Vue from 'vue'
-    import Component from 'vue-class-component'
-    import { Prop } from 'vue-property-decorator';
+  @Component({})
+  export default class App extends Vue {
+    tab: any = null
+    currentPage: number = 0;
+    pages: Array<string> = [
+      'profile_path',
+      'work_path',
+    ];
 
-    @Component({})
-    export default class App extends Vue {
-        tab: any = null
-        currentPage: number = 0;
-        pages: Array<string> = [
-            'profile_path',
-            'work_path',
-        ];
+    @Prop()
+     
+    created() {
+      vm = this
+      // set page position
+      vm.currentPage = 0
+      vm.pages.forEach((name: string, idx: number) => {
+        if (name === vm.$route.name) vm.currentPage = idx
+      })
+    }
 
-        @Prop()
+    mounted() {}
 
-
-        created() {
-            vm = this
-            // set page position
-            vm.currentPage = 0
-            vm.pages.forEach((name: string, idx: number) => {
-                if (name === vm.$route.name) vm.currentPage = idx
-            })
-
+    onSwipe (direction: string) {
+      switch (direction) {
+        case 'right':
+          if (this.currentPage <= 0)
+            this.currentPage += 1;
+          else
+            this.currentPage -= 1;
+          break;
+        case 'left':
+          if (this.currentPage >= this.pages.length -1) 
+            this.currentPage -= 1;
+          else
+            this.currentPage += 1;
+          break;
         }
-
-        mounted() {}
-
-        onSwipe (direction: string) {
-            switch (direction) {
-                case 'right':
-                    if (this.currentPage <= 0)
-                        this.currentPage += 1;
-                    else
-                        this.currentPage -= 1;
-                    break;
-                case 'left':
-                    if (this.currentPage >= this.pages.length -1) 
-                        this.currentPage -= 1;
-                    else
-                        this.currentPage += 1;
-                    break;
-            }
-            vm.$router.push({ name: this.pages[this.currentPage] })
-        }
+        vm.$router.push({ name: this.pages[this.currentPage] })
+      }
     }
 </script>
 
 <style scoped>
-    .top-img {
-        margin: 0;
-        padding: 2px 0;
-        vertical-align: top;
-        height: 44px;
-    }
+  .top-img {
+    margin: 0;
+    padding: 2px 0;
+    vertical-align: top;
+    height: 44px;
+  }
 
-    @media (max-width: 767px) {
-        /* Only smart phone css */
-        .top-img {
-            width: 80%;
-            height: 32px;
-        }
+  @media (max-width: 767px) {
+    /* Only smart phone css */
+    .top-img {
+      width: 80%;
+      height: 32px;
     }
+  }
 </style>
