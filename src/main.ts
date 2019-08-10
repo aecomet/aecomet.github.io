@@ -6,18 +6,15 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import vuetify from '@/plugin/vuetify';
+import Vuetify from '@/plugins/vuetify';
+import '@/plugins/vue-ls'
 import VueI18n from 'vue-i18n';
-import Router from 'vue-router'
-import runtime from 'serviceworker-webpack-plugin/lib/runtime';
-import LocalStorage from 'vue-ls'
+import router from '@/plugins/vue-router'
+// import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
 // Components
 import {
-    App,
-    Profile,
-    NotFound,
-    Work
+    App
 } from './components/'
 
 
@@ -31,12 +28,6 @@ import {
     ContactJSON
 } from './static/data/'
 
-// set local storage config.
-const lsOptions = {
-    namespace: 'portfolio__', // key prefix
-    name: 'ls', // name variable Vue.[ls] or this.[$ls],
-    storage: 'local' // storage name session, local, memory
-}
 
 const messages = {
     ja: {
@@ -57,13 +48,6 @@ const messages = {
     }
 }
 
-const baseTitle = 'ポートフォリオ - Portfolio ';
-const Routes = [
-    { path: '/', name: 'profile_path', component: Profile, meta: { title: `プロフィール/Profile | ${baseTitle}` } },
-    { path: '/work', name: 'work_path', component: Work, meta: { title: `実績/Works | ${baseTitle}` } },
-    { path: '*', name: 'NotFound', component: NotFound, meta: { title: `404 Not found | ${baseTitle}` } }
-]
-
 // CSS / Icon pack
 import './style.css'
 
@@ -72,30 +56,6 @@ import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-l
 
 // Enable Vue Modules
 Vue.use(VueI18n)
-Vue.use(Router)
-Vue.use(LocalStorage, lsOptions)
-
-/**
- * Router
- */
-const router = new Router({
-    routes: Routes,
-    mode: 'history',
-    linkActiveClass: 'active'
-})
-
-// Before process
-router.beforeResolve((to, from, next) => {
-    setTimeout(() => { window.scrollTo(0, 0) }, 100)
-    next()
-})
-
-// After process
-router.afterEach((to, from) => {
-    if (to.meta && to.meta.title) {
-        document.title = to.meta.title
-    }
-})
 
 /**
  * I18n
@@ -112,15 +72,14 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 // Main Application
 new Vue({
-    el: '#app',
     router,
     i18n,
-    vuetify,
+    vuetify: Vuetify,
     template: '<App/>',
     components: {
         App
     }
-})
+}).$mount('#app')
 
 /**
  *  === Service Worker ===

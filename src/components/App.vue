@@ -1,7 +1,6 @@
 <template lang="pug">
     v-app(app)
-        p hello
-        //- v-toolbar(color="white" extended app scroll-off-screen dense flat)
+        v-app-bar(color="white" extended app scroll-off-screen dense flat)
             .text-xs-left: img(:src="$t('base.top')").top-img
 
             v-tabs(slot="extension" color="transparent" v-model="tab" right)
