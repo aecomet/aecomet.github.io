@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import Vuetify from '@/plugins/vuetify';
 import '@/plugins/vue-ls'
-import VueI18n from 'vue-i18n';
+import VueI18n from '@/plugins/vue-i18n';
 import router from '@/plugins/vue-router'
 // import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 
@@ -18,36 +18,6 @@ import {
 } from './components/'
 
 
-// Initial Data
-import {
-    BaseJSON,
-    ProfileJSON,
-    SkillJSON,
-    LinkJSON,
-    WorkJSON,
-    ContactJSON
-} from './static/data/'
-
-
-const messages = {
-    ja: {
-        base: BaseJSON.ja,
-        profile: ProfileJSON.ja,
-        skill: SkillJSON.ja,
-        link: LinkJSON.ja,
-        work: WorkJSON.ja,
-        contact: ContactJSON.ja
-    },
-    en: {
-        base: BaseJSON.en,
-        profile: ProfileJSON.en,
-        skill: SkillJSON.en,
-        link: LinkJSON.en,
-        work: WorkJSON.en,
-        contact: ContactJSON.en
-    }
-}
-
 // CSS / Icon pack
 import './style.css'
 
@@ -55,16 +25,7 @@ import './style.css'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 // Enable Vue Modules
-Vue.use(VueI18n)
 
-/**
- * I18n
- */
-// Create a vueI18n instance:
-const i18n = new VueI18n({
-    locale: 'ja', // set locale
-    messages // set locale messages
-})
 
 // Vue.config.lang = 'ja' // Set Language for i18n
 Vue.config.productionTip = false
@@ -73,7 +34,7 @@ Vue.config.productionTip = false
 // Main Application
 new Vue({
     router,
-    i18n,
+    i18n: VueI18n,
     vuetify: Vuetify,
     template: '<App/>',
     components: {
