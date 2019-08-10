@@ -5,13 +5,6 @@
   vertical-align: top;
   height: 44px;
 }
-@media (max-width: 767px) {
-  /* Only smart phone css */
-.top-img[data-v-617ab0be] {
-    width: 80%;
-    height: 32px;
-}
-}
 
 .greeting-text[data-v-bf1681ae] {
   line-height: 32px !important;
