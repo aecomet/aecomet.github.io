@@ -1,22 +1,22 @@
 <template lang="pug">
-    v-app(app)
-        v-app-bar(color="white" extended app scroll-off-screen dense flat)
-            .text-xs-left: img(:src="$t('base.top')").top-img
+  v-app(app)
+    v-app-bar(color="white" extended app scroll-off-screen dense flat)
+      .text-xs-left: img(:src="$t('base.top')").top-img
 
-            v-tabs(slot="extension" color="transparent" v-model="tab" right)
-                v-tabs-slider(color="white")
-                v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
-                    span.body-1.font-weight-bold {{ header.name }}
+      v-tabs(slot="extension" color="black" v-model="tab" right)
+        v-tabs-slider(color="white")
+        v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
+          span.body-1 {{ header.name }}
 
-        //- Main Contents
-        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
-            v-container(fluid)
-                transition(name="fade" mode="out-in" appear): router-view
+    //- Main Contents
+    v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
+      v-container(fluid)
+        transition(name="fade" mode="out-in" appear): router-view
 
-        //- footer
-        v-footer(height="auto" app dark absolute)
-            v-flex(text-center)
-                .subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+    //- footer
+    v-footer(height="auto" app dark absolute)
+      v-flex(text-center)
+        .subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script lang="ts">

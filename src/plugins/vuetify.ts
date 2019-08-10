@@ -8,6 +8,8 @@ import Vuetify, {
 	VTab,
   VCard,
 	VCardText,
+	VCardActions,
+	VChip,
 	VFooter,
 	VContent,
 	VContainer,
@@ -15,7 +17,9 @@ import Vuetify, {
 	VLayout,
 	VList,
 	VListItem,
-	VIcon
+	VIcon,
+	VSpacer,
+	VBtn
 } from 'vuetify/lib'
 import { Touch } from 'vuetify/lib/directives'
 
@@ -28,6 +32,8 @@ Vue.use(Vuetify, {
 		VTab,
 		VCard,
 		VCardText,
+		VCardActions,
+		VChip,
 		VFooter,
 		VContent,
 		VContainer,
@@ -35,7 +41,9 @@ Vue.use(Vuetify, {
 		VLayout,
 		VList,
 		VListItem,
-		VIcon	
+		VIcon,
+		VSpacer,
+		VBtn
   },
   directives: {
     Touch,
