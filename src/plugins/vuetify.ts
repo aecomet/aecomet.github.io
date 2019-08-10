@@ -15,10 +15,9 @@ import Vuetify, {
 	VLayout,
 	VList,
 	VListItem,
-	VListItemTitle,
 	VIcon
 } from 'vuetify/lib'
-import { Ripple } from 'vuetify/lib/directives'
+import { Touch } from 'vuetify/lib/directives'
 
 Vue.use(Vuetify, {
   components: {
@@ -36,11 +35,10 @@ Vue.use(Vuetify, {
 		VLayout,
 		VList,
 		VListItem,
-		VListItemTitle,
 		VIcon	
   },
   directives: {
-    Ripple,
+    Touch,
   },
 })
 
