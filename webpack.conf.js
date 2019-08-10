@@ -27,14 +27,12 @@ let baseWebpack = {
                 vuetify: {
                     test: /node_modules\/vuetify/,
                     name: 'public/vuetify',
-                    chunks: 'all', // initial, async, all
-                    priority: 1
+                    chunks: 'initial' // initial, async, all
                 },
                 vendor: {
                     test: /node_modules/,
                     name: 'public/vendor',
-                    chunks: 'initial', // initial, async, all
-                    enforce: true
+                    chunks: 'initial' // initial, async, all
                 }
             }
         },

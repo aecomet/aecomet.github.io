@@ -4,8 +4,8 @@
     "description": "My portfolio.",
     "main": "index.js",
     "scripts": {
-        "dev": "rm -rf dist/*; webpack-dev-server --config webpack.conf.js  | webpack --config webpack.conf.js",
-        "build": "rm -rf public/*; NODE_ENV=PRODUCTION webpack --config webpack.conf.js --optimize-minimize",
+        "dev": "rm -rf dist/*; webpack-dev-server --config webpack.conf.js | webpack --config webpack.conf.js",
+        "build": "rm -rf public/*; NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
         "clear": "rm -rf dist/*",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
