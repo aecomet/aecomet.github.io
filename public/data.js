@@ -135,7 +135,7 @@ module.exports = JSON.parse("{\"ja\":{\"certificationTitle\":\"資格\",\"certif
 /***/ 36:
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"ja\":{\"techTitle\":\"外部リンク\",\"technologies\":[{\"name\":\"Github\",\"href\":\"https://github.com/hiyoko3\",\"icon\":\"\"},{\"name\":\"Qiita\",\"href\":\"https://qiita.com/tatsuya_oyanagi\",\"icon\":\"\"}]},\"en\":{\"techTitle\":\"\",\"technologies\":[{\"name\":\"\",\"href\":\"\",\"icon\":\"\"}]}}");
+module.exports = JSON.parse("{\"ja\":{\"techTitle\":\"外部リンク\",\"technologies\":[{\"name\":\"Github\",\"href\":\"https://github.com/hiyoko3\",\"icon\":\"\"},{\"name\":\"Qiita\",\"href\":\"https://qiita.com/hiyoko3\",\"icon\":\"\"}]},\"en\":{\"techTitle\":\"\",\"technologies\":[{\"name\":\"\",\"href\":\"\",\"icon\":\"\"}]}}");
 
 /***/ }),
 

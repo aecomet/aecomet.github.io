@@ -6,7 +6,7 @@
       v-tabs(slot="extension" color="black" v-model="tab" right)
         v-tabs-slider(color="white")
         v-tab(v-for="(header, idx) in $t('base.content')" :key="`header-${idx}`" :to="header.href" :href="`#tab-${idx}`")
-          span.body-1 {{ header.name }}
+          span.body-2 {{ header.name }}
 
     //- Main Contents
     v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
@@ -73,13 +73,5 @@
     padding: 2px 0;
     vertical-align: top;
     height: 44px;
-  }
-
-  @media (max-width: 767px) {
-    /* Only smart phone css */
-    .top-img {
-      width: 80%;
-      height: 32px;
-    }
   }
 </style>

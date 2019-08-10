@@ -19,7 +19,8 @@ import Vuetify, {
 	VListItem,
 	VIcon,
 	VSpacer,
-	VBtn
+	VBtn,
+	VDivider
 } from 'vuetify/lib'
 import { Touch } from 'vuetify/lib/directives'
 
@@ -43,7 +44,8 @@ Vue.use(Vuetify, {
 		VListItem,
 		VIcon,
 		VSpacer,
-		VBtn
+		VBtn,
+		VDivider
   },
   directives: {
     Touch,

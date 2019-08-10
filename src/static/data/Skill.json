@@ -29,25 +29,26 @@
         "programing": [{
                 "name": "PHP",
                 "remark": [
-                    { "title": "Laravel", "text": "PHPで中規模アプリケーションを開発する際に利用しました．Railsライクに構成されており使い勝手が良いです．また，私が利用し始めた時と比べ今はユーザ数がとても多くいい感じですね" },
-                    { "title": "Slim3", "text": "PHPで小規模のAPIを開発する際に愛用しています．必要最小限の構成に自分でライブラリを注入していくスタイルなので軽快に動作するところがお気に入り" },
+                    { "title": "Laravel", "text": "" },
+                    { "title": "Slim3", "text": "" },
                     { "title": "WordPress", "text": "" }
                 ]
             },
             {
                 "name": "HTML/CSS",
                 "remark": [
-                    { "title": "Bootstrap 3, 4", "text": "言わずと知れたフレームワーク．私がWeb技術を学び始めた際に非常にお世話になりました．" },
-                    { "title": "Materialize", "text": "Bootstrapのデザインに飽きていた頃に見つけたフレームワークです．Google の提言に従ってCSSがスタイリングされており最近は専らこいつを使います" },
-                    { "title": "Bulma", "text": "CSSのみのフレームワーク．インタラクティブな動作がいらず，マークアップだけ行いたいときはこのフレームワークが良いです" }
+                    { "title": "Bootstrap 3, 4", "text": "" },
+                    { "title": "Materialize", "text": "" },
+                    { "title": "Bulma", "text": "" },
+                    { "title": "UIkit", "text": "" }
                 ]
             },
             {
                 "name": "JavaScript",
                 "remark": [
-                    { "title": "jQuery", "text": "web技術を学び始めた頃にお世話になりました．今は必要に迫られない限り使うことはありません" },
-                    { "title": "AngularJS / Angular", "text": "coming soon." },
-                    { "title": "Vue.js", "text": "クライアントアプリを開発する際はほぼこれです．VuetifyとVuexと組み合わせれば何でもいける気がします．" },
+                    { "title": "jQuery", "text": "" },
+                    { "title": "AngularJS / Angular", "text": "" },
+                    { "title": "Vue.js", "text": "" },
                     { "title": "Node.js", "text": "" },
                     { "title": "React.js", "text": "" },
                     { "title": "Electron", "text": "" }
@@ -56,13 +57,13 @@
             {
                 "name": "Ruby",
                 "remark": [
-                    { "title": "Ruby On Rails", "text": "インターンの業務アプリケーション開発を通じて学びました．rakeによる強力な補助機能に何度助けられたことか．．" }
+                    { "title": "Ruby On Rails", "text": "" }
                 ]
             },
             {
                 "name": "Go lang",
                 "remark": [
-                    { "title": "Gin", "text": "Goを学びたくてとりあえずドキュメント読んで使ってます．" }
+                    { "title": "Gin", "text": "" }
                 ]
             },
             {
@@ -72,14 +73,20 @@
             {
                 "name": "Java",
                 "remark": [
-                    { "title": "Android", "text": "インターンのアプリケーション開発で利用しました．" },
-                    { "title": "Kotlin", "text": "Kotlinは洗練されててお気に入りです" }
+                    { "title": "Android", "text": "" },
+                    { "title": "Kotlin", "text": "" }
                 ]
             },
             {
                 "name": "Python",
                 "remark": [
-                    { "title": "Django Rest Framework", "text": "修士研究で構築しているアプリケーションに利用しています．Pythonは様々な計算ライブラリに利用されているのでそれらと連携にする時など便利です" }
+                    { "title": "Django Rest Framework", "text": "" }
+                ]
+            },
+            {
+                "name": "Swift",
+                "remark": [
+                    { "title": "iOS App", "text": "" }
                 ]
             },
             {

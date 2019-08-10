@@ -5,7 +5,7 @@
         v-card(color="grey lighten-5")
           v-card-text(primary-title).display-2.my-2 {{ $t('profile.profileTitle') }}
 
-          v-card-text.text-xs-center: img(:src="$t('profile.img')" width="240")
+          v-card-text.text-center: img(:src="$t('profile.img')" width="240")
 
           v-card-text
             .my-2.headline {{ $t('profile.name') }}
@@ -21,7 +21,7 @@
             .my-3: .title.mb-2 {{ $t('skill.certificationTitle')}}
 
             v-list
-              v-list-item(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subtitle-1 {{ `${c.date} : ${c.name}` }}
+              v-list-item(v-for="(c, idx) in $t('skill.certification')" :key="`certification-${idx}`"): .subtitle-1 {{ c.name }}
 
             .my-3: .title.mb-2 {{ $t('link.techTitle') }}
 
@@ -35,7 +35,7 @@
                 v-card(color="white" min-height="150" tile)
                   v-card-text
                     .subtitle-1.black--text {{ p.name }}
-                    ul: li.black--text(v-for="(item, idx) in p.remark" :key="`p-item-${idx}`") {{ item.title }}
+                    ul.text-left: li.black--text(v-for="(item, idx) in p.remark" :key="`p-item-${idx}`") {{ item.title }}
 
 </template>
 
