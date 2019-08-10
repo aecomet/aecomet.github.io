@@ -9,15 +9,14 @@
                     span.body-1.font-weight-bold {{ header.name }}
 
         //- Main Contents
-        //- v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
+        v-content(v-touch="{ left: () => onSwipe('left'), right: () => onSwipe('right') }").white
             v-container(fluid)
                 transition(name="fade" mode="out-in" appear): router-view
 
         //- footer
-        //- v-footer(height="auto" app dark absolute)
-            v-card(width="100%" flat tile).text-xs-center
-                v-card-text
-                    .text-xs-center: span.subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
+        v-footer(height="auto" app dark absolute)
+            v-flex(text-center)
+                .subheading.font-weight-bold &copy; {{ new Date().getFullYear() }} {{ $t('base.attribute') }}
 </template>
 
 <script lang="ts">

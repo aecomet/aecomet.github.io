@@ -24,9 +24,6 @@ import './style.css'
 // icon pack
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
-// Enable Vue Modules
-
-
 // Vue.config.lang = 'ja' // Set Language for i18n
 Vue.config.productionTip = false
 

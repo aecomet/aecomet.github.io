@@ -7,7 +7,16 @@ import Vuetify, {
 	VTabsSlider,
 	VTab,
   VCard,
-  VRating
+	VCardText,
+	VFooter,
+	VContent,
+	VContainer,
+	VFlex,
+	VLayout,
+	VList,
+	VListItem,
+	VListItemTitle,
+	VIcon
 } from 'vuetify/lib'
 import { Ripple } from 'vuetify/lib/directives'
 
@@ -18,8 +27,17 @@ Vue.use(Vuetify, {
 		VTabs,
 		VTabsSlider,
 		VTab,
-    VCard,
-    VRating
+		VCard,
+		VCardText,
+		VFooter,
+		VContent,
+		VContainer,
+		VFlex,
+		VLayout,
+		VList,
+		VListItem,
+		VListItemTitle,
+		VIcon	
   },
   directives: {
     Ripple,
