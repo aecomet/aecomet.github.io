@@ -1,0 +1,10 @@
+@import './vars';
+
+.circle-el {
+	border: 1px solid $dark-text;
+	border-radius: 100%;
+	&:hover {
+		cursor: pointer;
+		opacity: .8;
+	}
+}

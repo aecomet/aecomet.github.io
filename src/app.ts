@@ -4,8 +4,9 @@ import 'skeleton-css/css/normalize.css'
 import 'skeleton-css/css/skeleton.css'
 import '@fortawesome/fontawesome-free/css/all.css'
 
-// Custom Style
+// Custom Style and Script
 import './style.scss'
+import './components/main.ts'
 
 /* === Service Worker === */
 // Checking support a `service worker`

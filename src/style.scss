@@ -1,15 +1,64 @@
 /* ===== Global Field ===== */
+@import './components/vars';
+
 html, body {
-  background: #282828;
-  color: rgba(225, 225, 225, 1);
+  background: $dark-bg;
+  color: $dark-text;
   font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
 }
 
 /* spaces */
-.pa-3 {
-  padding: 24px;
+$directions: a t r b l;
+@for $i from 0 through 4 {
+  @each $d in $directions {
+    .p#{$d}-#{$i} {
+      padding: #{$i * 8}px !important;
+    }
+    .m#{$d}-#{$i} {
+      margin:#{$i * 8}px !important;
+    }
+  }
 }
 
-.hoge {
-  color: white;
+/* align */
+$aligns: left right center;
+@each $a in $aligns {
+  .text-#{$a} {
+    text-align: $a !important;
+  }
 }
+
+/* display */
+$displays: block inline inline-block flex;
+@each $d in $displays {
+  .d-#{$d} {
+    display: $d;
+  }  
+}
+
+/* Flexbox */
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+$flex-items: start end center stretch flex-end flex-start;
+$flex-contents: start end center stretch space-between space-around flex-end flex-start;
+@each $item in $flex-items {
+  justify-item-#{$item} {
+    justify-items: $item;
+  }
+  aligm-item-#{$item} {
+    align-items: $item;
+  }
+}
+@each $content in $flex-contents {
+  justify-content-#{$content} {
+    justify-content: $content;
+  }
+  aligm-content-#{$content} {
+    align-content: $content;
+  }
+}
+
+/* Override content by each components */
+@import './components/main'

@@ -22,7 +22,7 @@ let baseWebpack = {
   watch: watch,
   mode: environment,
   entry: {
-      'public/app': path.resolve(__dirname, 'src/main.ts'), // The main javascript file
+      'public/app': path.resolve(__dirname, 'src/app.ts'), // The main javascript file
       'public/data': path.resolve(__dirname, 'src/static/data/index.ts') // The main javascript file
   },
   optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
