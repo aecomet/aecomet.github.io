@@ -7,6 +7,12 @@ html, body {
   font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
 }
 
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
 /* spaces */
 $directions: a t r b l;
 @for $i from 0 through 4 {
