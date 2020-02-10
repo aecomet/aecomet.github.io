@@ -79,6 +79,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.8.3",
         "i18next": "^17.3.1",
+        "skeleton-css": "^2.0.4",
         "vue": "^2.6.11",
         "vue-i18n": "^8.15.3",
         "vue-ls": "^3.2.1",

@@ -121,9 +121,6 @@ let baseWebpack = {
           {
               test: /\.ts$/,
               loader: 'ts-loader',
-              options: {
-                  appendTsSuffixTo: [/\.vue$/],
-              }
           },
           {
               test: /(\.css$)/,
@@ -134,17 +131,10 @@ let baseWebpack = {
           },
           {
               test: /\.s(c|a)ss$/,
-              use: [
-                  'vue-style-loader',
-                  'css-loader',
-                  {
-                      loader: 'sass-loader',
-                      options: {
-                          implementation: require('sass'),
-                          indentedSyntax: true // optional
-                      }
-                  }
-              ]
+              use: ExtractTextPlugin.extract({
+                fallback: 'style-loader',
+                use: ['css-loader', 'sass-loader']
+              })
           },
           {
               test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,

@@ -1,7 +1,11 @@
 /* === Main Application bundle file === */
-// Custom Style
-import './style.css'
+// Libraries
+import 'skeleton-css/css/normalize.css'
+import 'skeleton-css/css/skeleton.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+
+// Custom Style
+import './style.scss'
 
 /* === Service Worker === */
 // Checking support a `service worker`
