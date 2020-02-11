@@ -9,12 +9,20 @@ html, body {
   background: $dark-bg !important;
   color: $dark-text !important;
   font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
+  min-height: 100vh;
 }
 
-footer#footer {
-  width: 100% !important;
-  position: absolute !important;
-  bottom: 0 !important;
+#app {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  #main {
+    flex: 1; 
+  }
+
+  #footer {
+    width: 100% !important;
+  }
 }
 
 /* size */
@@ -61,7 +69,7 @@ $aligns: left right center;
 }
 
 /* display */
-$displays: block inline inline-block flex;
+$displays: block inline inline-block flex none;
 @each $d in $displays {
   .d-#{$d} { display: $d !important; }  
 }

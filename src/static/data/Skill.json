@@ -1,6 +1,15 @@
 {
   "header": "Skill Set",
   "body": {
+    "urls": [
+      { "name": "Github",
+        "url": "https://github.com/hiyoko3"
+      },
+      {
+        "name": "Qiita",
+        "url": "https://atcoder.jp/users/ae_hiyoko3"
+      }
+    ],
     "skills": [
       "C++",
       "JavaScript / Node.js / TypeScript / Vue.js / React.js",
@@ -12,8 +21,6 @@
       "Python",
       "Ruby / Ruby on Rails",
       "Swift"
-    ],
-    "github": "https://github.com/hiyoko3",
-    "atCoder": "https://atcoder.jp/users/ae_hiyoko3"
+    ]
   }
 }
