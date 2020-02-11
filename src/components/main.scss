@@ -1,11 +1,10 @@
 @import './vars';
 
-$circle-size: 200px;
+$circle-size: 150px;
 .circle-el {
 	width: $circle-size;
 	height: $circle-size;
 	line-height: $circle-size;
-	box-sizing: border-box;
 	border-radius: 50%;
 	&:hover {
 		cursor: pointer;
@@ -30,4 +29,33 @@ $contact-color: #fa5c44;
 #contact {
 	border: 1px solid $contact-color;
 	color: $contact-color;
+}
+
+/* Modal Contents */
+$paper-color: rgba(250, 235, 215, 1);
+$paper-text: #444;
+.paper-style {
+	color: $paper-text;
+	background: $paper-color;
+	border: 3px dotted $dark-bg;
+	padding: 16px;
+}
+
+#modal {
+	button {
+		@each $el in $active-elements {
+			&:#{$el} {
+				color: none;
+				border: none;
+				outline: 0;
+			}
+		}
+	}
+	#modal-header {
+		.modal-close {
+			background: transparent;
+			border: none;
+			color: $paper-text;
+		}	
+	}
 }

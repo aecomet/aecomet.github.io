@@ -1,6 +1,10 @@
 /* ===== Global Field ===== */
 @import './components/vars';
 
+* {
+	box-sizing: border-box !important;
+}
+
 html, body {
   background: $dark-bg !important;
   color: $dark-text !important;
@@ -22,7 +26,10 @@ footer#footer {
 
 /* width */
 @for $i from 1 through 5 {
-  .w-#{$i*20} { width: #{$i*20} !important; }
+  .w-#{$i*20} {
+    width: #{$i*20%} !important;
+    margin: auto #{(100%-$i*20%)/2} !important;
+  }
 }
 .container {
   width: 80% !important;
@@ -68,11 +75,11 @@ $flex-items: start end center stretch flex-end flex-start;
 $flex-contents: start end center stretch space-between space-around flex-end flex-start;
 @each $item in $flex-items {
   .justify-items-#{$item} { justify-items: $item !important; }
-  .aligm-items-#{$item} { align-items: $item !important; }
+  .align-items-#{$item} { align-items: $item !important; }
 }
 @each $content in $flex-contents {
   .justify-content-#{$content} { justify-content: $content !important; }
-  .aligm-content-#{$content} { align-content: $content !important; }
+  .align-content-#{$content} { align-content: $content !important; }
 }
 
 /* Override styles by each components */

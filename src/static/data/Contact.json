@@ -1,12 +1,8 @@
 {
-    "ja": {
-        "title": "問い合わせ",
-        "text": "sb.gm.0823@***",
-        "subtext": "***にはgmail.comを入力してください"
-    },
-    "en": {
-        "title": "",
-        "text": "",
-        "subtext": ""
-    }
+  "header": "Contact Me",
+  "body": {
+    "title": "問い合わせ",
+    "text": "sb.gm.0823@***",
+    "subtext": "***にはgmail.comを入力してください"
+  }
 }
