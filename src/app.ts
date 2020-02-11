@@ -1,8 +1,7 @@
 /* === Main Application bundle file === */
 // Libraries
-import 'skeleton-css/css/normalize.css'
-import 'skeleton-css/css/skeleton.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import 'modern-css-reset/dist/reset.min.css'
 
 // Custom Style and Script
 import './style.scss'

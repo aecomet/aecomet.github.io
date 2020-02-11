@@ -2,69 +2,78 @@
 @import './components/vars';
 
 html, body {
-  background: $dark-bg;
-  color: $dark-text;
+  background: $dark-bg !important;
+  color: $dark-text !important;
   font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
 }
 
-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+footer#footer {
+  width: 100% !important;
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+/* size */
+@for $i from 0 through 5 {
+  .h#{$i+1} {
+    font-size: #{36-($i*6)}px;
+  }
+}
+
+/* width */
+@for $i from 1 through 5 {
+  .w-#{$i*20} { width: #{$i*20} !important; }
+}
+.container {
+  width: 80% !important;
+  margin: auto 10% auto !important;
 }
 
 /* spaces */
-$directions: a t r b l;
 @for $i from 0 through 4 {
-  @each $d in $directions {
-    .p#{$d}-#{$i} {
-      padding: #{$i * 8}px !important;
-    }
-    .m#{$d}-#{$i} {
-      margin:#{$i * 8}px !important;
-    }
-  }
+  .pa-#{$i} { padding: #{$i * 8}px !important; }
+  .pt-#{$i} { padding: #{$i * 8}px 0 0 0 !important; }
+  .pr-#{$i} { padding: 0 #{$i * 8}px 0 0 !important; }
+  .pb-#{$i} { padding: 0 0 #{$i * 8}px 0 !important; }
+  .pl-#{$i} { padding: 0 0 0 #{$i * 8}px !important; }
+  .px-#{$i} { padding: 0 #{$i * 8}px !important; }
+  .py-#{$i} { padding: #{$i * 8}px 0 !important; }
+  .ma-#{$i} { margin: #{$i * 8}px !important; }
+  .mt-#{$i} { margin: #{$i * 8}px 0 0 0 !important; }
+  .mr-#{$i} { margin: 0 #{$i * 8}px 0 0 !important; }
+  .mb-#{$i} { margin: 0 0 #{$i * 8}px 0 !important; }
+  .ml-#{$i} { margin: 0 0 0 #{$i * 8}px !important; }
+  .mx-#{$i} { margin: 0 #{$i * 8}px !important; }
+  .my-#{$i} { margin: #{$i * 8}px 0 !important; }
 }
 
 /* align */
 $aligns: left right center;
 @each $a in $aligns {
-  .text-#{$a} {
-    text-align: $a !important;
-  }
+  .text-#{$a} { text-align: $a !important; }
 }
 
 /* display */
 $displays: block inline inline-block flex;
 @each $d in $displays {
-  .d-#{$d} {
-    display: $d;
-  }  
+  .d-#{$d} { display: $d !important; }  
 }
 
 /* Flexbox */
 .wrap-reverse {
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse !important;
 }
 
 $flex-items: start end center stretch flex-end flex-start;
 $flex-contents: start end center stretch space-between space-around flex-end flex-start;
 @each $item in $flex-items {
-  justify-item-#{$item} {
-    justify-items: $item;
-  }
-  aligm-item-#{$item} {
-    align-items: $item;
-  }
+  .justify-items-#{$item} { justify-items: $item !important; }
+  .aligm-items-#{$item} { align-items: $item !important; }
 }
 @each $content in $flex-contents {
-  justify-content-#{$content} {
-    justify-content: $content;
-  }
-  aligm-content-#{$content} {
-    align-content: $content;
-  }
+  .justify-content-#{$content} { justify-content: $content !important; }
+  .aligm-content-#{$content} { align-content: $content !important; }
 }
 
-/* Override content by each components */
+/* Override styles by each components */
 @import './components/main'
