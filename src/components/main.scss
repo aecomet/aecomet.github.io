@@ -6,9 +6,11 @@ $circle-size: 150px;
 	height: $circle-size;
 	line-height: $circle-size;
 	border-radius: 50%;
+	border: 1px solid $dark-text;
 	&:hover {
 		cursor: pointer;
 		opacity: .8;
+		border-style: dashed;
 	}
 }
 
@@ -17,17 +19,17 @@ $skill-color: #e0ffff;
 $contact-color: #fa5c44;
 
 #profile {
-	border: 1px solid $profile-color;
+	border-color: $profile-color;
 	color: $profile-color;
 }
 
 #skill {
-	border: 1px solid $skill-color;
+	border-color: $skill-color;
 	color: $skill-color;
 }
 
 #contact {
-	border: 1px solid $contact-color;
+	border-color: $contact-color;
 	color: $contact-color;
 }
 
@@ -39,6 +41,14 @@ $paper-text: #444;
 	background: $paper-color;
 	border: 3px dotted $dark-bg;
 	padding: 16px;
+}
+
+.link {
+	text-decoration: none;
+	&:hover {
+		opacity: .9;
+		text-decoration: underline;
+	}
 }
 
 #modal {

@@ -1,72 +1,72 @@
 {
   "icons": [
     {
-      "src": "/public/icons/default/icon_512x512.d3b0092223ab8e72f668efc97951500a.png",
+      "src": "/public/icons/default/icon_512x512.d0098f33e05addb5a25e8e6e54c4261d.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/default/icon_256x256.bdf05c831b2f67235f9e723fd88de5ef.png",
+      "src": "/public/icons/default/icon_256x256.1f508956dac9d188f1314fe074269f48.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/default/icon_192x192.0b7776844e28068d56e372defaeb6c71.png",
+      "src": "/public/icons/default/icon_192x192.06407d1f5c3c7dc33250eedef74bd38a.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/default/icon_152x152.2c0ae93f44672680c15ac1d05945319d.png",
+      "src": "/public/icons/default/icon_152x152.5d3d087ba7fc380d24272a6e9ae57074.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/default/icon_144x144.71c05b38beb6b3d63298869a46d55149.png",
+      "src": "/public/icons/default/icon_144x144.151e90a76d2d78018a44cd5a88a45307.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/default/icon_128x128.d01fac217c8f55f874c17dee5af07d55.png",
+      "src": "/public/icons/default/icon_128x128.1388f09296d56c97f1794bcca11aae4c.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_512x512.5de80bddab9cc62e51a0988ccee8aaf1.png",
+      "src": "/public/icons/ios/icon_512x512.996e9ec433671140c5bf1ba5d9c1e8d5.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_256x256.a1f3b7044f93219371b9c7a4b1c08ae9.png",
+      "src": "/public/icons/ios/icon_256x256.9fc0a5b9b0c30c0e9b1d6009edb7b64f.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_192x192.1b142f9311a52487be2deb92660111ac.png",
+      "src": "/public/icons/ios/icon_192x192.0c36af4edf68061899e08a65f7005142.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_152x152.ed8b9ce707f1145e1611cb68ecbfb797.png",
+      "src": "/public/icons/ios/icon_152x152.03aaf741558da0b8a4d876bb7fc8c1aa.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_144x144.640253dd5ac9a8bf6c8bdcc7a3bc3a3e.png",
+      "src": "/public/icons/ios/icon_144x144.ba972348aaa2392594fbd1d88dfc171e.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/public/icons/ios/icon_128x128.44dca085a072429c27388ca3cca84a8e.png",
+      "src": "/public/icons/ios/icon_128x128.b764780fa5dbe02dcc836c49fcba68df.png",
       "sizes": "128x128",
       "type": "image/png"
     }
   ],
-  "name": "My Progressive Portfolio",
-  "short_name": "T.O. Portfolio",
+  "name": "PWA Hiyoko3 Portfolio",
+  "short_name": "Hiyoko3 Portfolio",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
-  "description": "My portfolio! This is created by PWA.",
+  "description": "Hiyoko3 Portfolio | A piyo piyo engineer for PWA",
   "background_color": "#efefef",
   "theme_color": "#fff"
 }

@@ -72,7 +72,10 @@ class SkillComponent extends MainComponent {
 		urls.forEach((item:{ name: string, url: string }, idx: number) => {
 			const li = document.createElement('li');
 			const a = document.createElement('a');
-			a.href = item.url;
+			a.setAttribute('href', item.url);
+			a.setAttribute('target', '_blank');
+			a.setAttribute('rel', 'noopener noreferrer');
+			a.classList.add('link');
 			a.innerHTML = item.name;
 			li.appendChild(a);
 			urlList.appendChild(li);
@@ -104,15 +107,23 @@ class ProfileComponent extends MainComponent {
 
 	buildTemplate ():Template {
 		const node = document.createElement('div');
+		node.classList.add('text-center');
+
+		const logo = document.createElement('img');
+		logo.setAttribute('src', ProfileJSON.body.logo);
+		logo.setAttribute('alt', 'logo-img');
+		logo.setAttribute('height', '150');
+		logo.classList.add('d-inline-block');
 
 		const name = document.createElement('div');
-		name.classList.add('h1', 'text-center');
+		name.classList.add('h1');
 		name.innerHTML = ProfileJSON.body.name;
 
 		const note = document.createElement('div');
-		note.classList.add('text-center', 'my-3');
+		note.classList.add('my-3');
 		note.innerHTML = ProfileJSON.body.note;
 
+		node.appendChild(logo);
 		node.appendChild(name);
 		node.appendChild(note);
 		return {
@@ -132,13 +143,14 @@ class ContactComponent extends MainComponent {
 
 	buildTemplate ():Template {
 		const node = document.createElement('div');
+		node.classList.add('text-center');
 
 		const text = document.createElement('div');
-		text.classList.add('text-center', 'my-1');
+		text.classList.add('my-1');
 		text.innerHTML = ContactJSON.body.text;
 
 		const subText = document.createElement('div');
-		subText.classList.add('text-center', 'my-1');
+		subText.classList.add('my-2');
 		subText.innerHTML = ContactJSON.body.subtext;
 
 		node.appendChild(text);
