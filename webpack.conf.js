@@ -1,7 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
@@ -180,15 +179,6 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
       /* === Copy Static files === */
       new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'public/static/images') }]),
   ])
-  baseWebpack.optimization.minimizer.push(
-      // new UglifyJSPlugin({
-      //     uglifyOptions: {
-      //         compress: {
-      //             drop_console: true
-      //         }
-      //     }
-      // })
-  )
 } else {
   baseWebpack.plugins = baseWebpack.plugins.concat([
       /* === Copy Static files === */
