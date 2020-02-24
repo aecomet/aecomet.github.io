@@ -9,7 +9,7 @@ jobs:
     name: 'Run build and deploy'
     runs-on: 'ubuntu-latest'
     steps:
-      - name: 'checkout'
+      - name: 'Checkout branch'
         uses: 'actions/checkout@v2'
 
       - name: 'Set up Node.js'
@@ -18,18 +18,10 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Cache dependencies
-        uses: actions/cache@v1
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: 'install dependencies'
+      - name: 'Install dependencies'
         run: 'npm install'
 
-      - name: 'build'
+      - name: 'Build app'
         run: 'npm run build'
 
       # - name: 'deploy'
