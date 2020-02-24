@@ -1,12 +1,12 @@
 {
     "name": "hiyoko3.github.io",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "description": "My portfolio.",
     "main": "index.js",
     "scripts": {
-        "dev": "rm -rf dist/*; webpack-dev-server --config webpack.conf.js | webpack --config webpack.conf.js",
-        "build": "rm -rf public/*; NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
         "clear": "rm -rf dist/*",
+        "dev": "npm run clear && webpack-dev-server --config webpack.conf.js | webpack --config webpack.conf.js",
+        "build": "npm run clear && NODE_ENV=PRODUCTION webpack --config webpack.conf.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

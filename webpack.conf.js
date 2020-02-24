@@ -7,6 +7,7 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
 const watch = (process.env.NODE_ENV !== 'PRODUCTION');
+const devPath = (process.env.NODE_ENV === 'PRODUCTION') ? './' : './dist/';
 
 const NAMES = {
   user: '@hiyoko3',
@@ -102,11 +103,20 @@ let baseWebpack = {
                   destination: path.join('public/icons', 'default')
               }
           ]
-      })
+			}),
+      new CopywebpackPlugin(
+				[
+					{ 
+						toType: 'dir',
+						from: path.join(__dirname, 'src/static/images'),
+						to: path.join(__dirname, `${devPath}public/static/images`)
+					}
+				]
+			)
   ],
   // Output config
   output: {
-      path: path.resolve(__dirname, './dist'), //  Output directory name
+      path: path.resolve(__dirname, devPath), //  Output directory name
       filename: '[name].js', // Output filename
       publicPath: '/'
   },
@@ -171,32 +181,18 @@ let baseWebpack = {
           '@': path.resolve(__dirname, 'src/')
       }
   },
+  devtool: 'inline-source-map',
+  devServer: {
+		host: '0.0.0.0',
+		port: 7777, // port number
+		contentBase: path.join(__dirname, 'dist/'), // Document root on server
+		// publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
+		progress: false, // Show progress on console.
+		inline: true, // The mode of inline.
+		hot: false, // use HMR
+		clientLogLevel: 'info', // The log level(none, error, warning, info)
+		historyApiFallback: true
+	}
 };
-
-if (process.env.NODE_ENV === 'PRODUCTION') {
-  baseWebpack.output.path = path.resolve(__dirname, './')
-  baseWebpack.plugins = baseWebpack.plugins.concat([
-      /* === Copy Static files === */
-      new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'public/static/images') }]),
-  ])
-} else {
-  baseWebpack.plugins = baseWebpack.plugins.concat([
-      /* === Copy Static files === */
-      new CopywebpackPlugin([{ toType: 'dir', from: path.join(__dirname, 'src/static/images'), to: path.join(__dirname, 'dist/public/static/images') }]),
-  ])
-  baseWebpack['devtool'] = 'inline-source-map'
-      // local server config
-  baseWebpack['devServer'] = {
-      host: '0.0.0.0',
-      port: 7777, // port number
-      contentBase: path.join(__dirname, 'dist/'), // Document root on server
-      // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
-      progress: false, // Show progress on console.
-      inline: true, // The mode of inline.
-      hot: false, // use HMR
-      clientLogLevel: 'info', // The log level(none, error, warning, info)
-      historyApiFallback: true
-  }
-}
 
 module.exports = baseWebpack
