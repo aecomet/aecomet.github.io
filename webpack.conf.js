@@ -3,7 +3,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
@@ -104,11 +103,7 @@ let baseWebpack = {
                   destination: path.join('public/icons', 'default')
               }
           ]
-      }),
-      new ServiceWorkerWebpackPlugin({
-          entry: path.join(__dirname, 'src/service-worker.js'),
-          filename: 'service-worker.js'
-      }),
+      })
   ],
   // Output config
   output: {
