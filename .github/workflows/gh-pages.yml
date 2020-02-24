@@ -1,9 +1,7 @@
 name: 'Automatic release'
 on:
   push:
-    branches: 'develop' # target branch
-    tags:
-      - "!*" # タグがないとき
+    branches: 'develop' # target branch that fire the event.
 jobs:
   release:
     name: 'Run build and deploy'
@@ -24,8 +22,9 @@ jobs:
       - name: 'Build app'
         run: 'npm run build'
 
-      # - name: 'deploy'
-      #   uses: technote-space/release-github-actions@v3
-      #   with:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #     BRANCH_NAME: 'master'
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./
+          publish_branch: master  # deploying branch
