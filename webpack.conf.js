@@ -7,7 +7,7 @@ const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 const environment = (process.env.NODE_ENV === 'PRODUCTION') ? 'production' : 'development';
 const watch = (process.env.NODE_ENV !== 'PRODUCTION');
-const devPath = (process.env.NODE_ENV === 'PRODUCTION') ? './' : './dist/';
+const devPath = (process.env.NODE_ENV === 'PRODUCTION') ? './build' : './dist/';
 
 const NAMES = {
   user: '@hiyoko3',

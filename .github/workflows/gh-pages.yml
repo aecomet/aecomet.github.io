@@ -22,13 +22,11 @@ jobs:
       - name: 'Build app'
         run: | 
           npm run build
-          rm -rf node_modules
-          rm -rf src
-          rm .gitignore package.json package-lock.json tsconfig.json webpack.conf.js LICENSE README.md
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./
+          publish_dir: ./build
           publish_branch: master  # deploying branch
+          commit_message: "App build: ${{ github.event.head_commit.message }}"
