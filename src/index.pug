@@ -1,11 +1,11 @@
 doctype html
 html(lang="ja")
   head
-    include components/_head.pug
+    include layouts/_head.pug
   body
     noscript.
       This is your fallback content in case JavaScript fails to load.
-    #app.container
-      include components/_header.pug
+    #app.container-fill
+      include layouts/_header.pug
       include components/main.pug
-      include components/_footer.pug
+      include layouts/_footer.pug

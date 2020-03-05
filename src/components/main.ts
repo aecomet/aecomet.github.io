@@ -1,4 +1,4 @@
-import { ProfileJSON, SkillJSON, ContactJSON } from '../static/data/';
+import { ProfileJSON, SkillJSON, ContactJSON } from '../assets/data/';
 
 /* === Footer === */
 class FooterComponent  {
@@ -56,11 +56,12 @@ class MainComponent implements MainInterface {
 }
 
 class SkillComponent extends MainComponent {
-	private skill: HTMLInputElement;
 	constructor() {
 		super();
-		this.skill = document.querySelector('#skill') as HTMLInputElement;
-		this.skill.addEventListener('click', () => { this.onItemClick(); });
+		const skill = document.querySelector('#skill') as HTMLInputElement;
+		const htmlTemplate = this.buildTemplate();
+		skill.innerHTML = htmlTemplate.header;
+		skill.innerHTML = htmlTemplate.body;
 	}
 
 	buildTemplate():Template {
@@ -69,6 +70,7 @@ class SkillComponent extends MainComponent {
 		const node = document.createElement('div');
 
 		const urlList = document.createElement('ul');
+		urlList.classList.add('non-list-style');
 		urls.forEach((item:{ name: string, url: string }, idx: number) => {
 			const li = document.createElement('li');
 			const a = document.createElement('a');
@@ -82,6 +84,7 @@ class SkillComponent extends MainComponent {
 		});
 
 		const skillList = document.createElement('ul');
+		skillList.classList.add('non-list-style');
 		skills.forEach((item:string, idx: number) => {
 			const li = document.createElement('li');
 			li.innerHTML = item;

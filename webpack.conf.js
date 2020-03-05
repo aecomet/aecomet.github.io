@@ -22,7 +22,7 @@ let baseWebpack = {
   mode: environment,
   entry: {
       'public/app': path.resolve(__dirname, 'src/app.ts'), // The main javascript file
-      'public/data': path.resolve(__dirname, 'src/static/data/index.ts') // The main javascript file
+      'public/data': path.resolve(__dirname, 'src/assets/data/index.ts') // The main javascript file
   },
   optimization: { // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
       splitChunks: {
@@ -92,13 +92,13 @@ let baseWebpack = {
               'apple-mobile-web-app-status-bar-style': 'black'
           },
           icons: [{
-                  src: path.resolve('src/static/icons/apple-touch-icon.png'),
+                  src: path.resolve('src/assets/icons/apple-touch-icon.png'),
                   sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
                   destination: path.join('public/icons', 'ios'),
                   ios: true
               },
               {
-                  src: path.resolve('src/static/icons/icon.png'),
+                  src: path.resolve('src/assets/icons/icon.png'),
                   sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
                   destination: path.join('public/icons', 'default')
               }
@@ -108,7 +108,7 @@ let baseWebpack = {
 				[
 					{ 
 						toType: 'dir',
-						from: path.join(__dirname, 'src/static/images'),
+						from: path.join(__dirname, 'src/assets/images'),
 						to: path.join(__dirname, `${devPath}public/static/images`)
 					}
 				]

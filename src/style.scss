@@ -1,5 +1,5 @@
 /* ===== Global Field ===== */
-@import './components/vars';
+@import './vars';
 
 * {
 	box-sizing: border-box !important;
@@ -42,6 +42,9 @@ html, body {
 .container {
   width: 80% !important;
   margin: auto 10% auto !important;
+}
+.container-fill {
+  width: 100% !important;
 }
 
 /* spaces */
@@ -103,6 +106,11 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
       margin: auto 5% !important;
     }
   }
+}
+
+/* list */
+.non-list-style {
+  list-style: none;
 }
 
 

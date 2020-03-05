@@ -1,17 +1,9 @@
-@import './vars';
+@import '../vars';
 
-$circle-size: 150px;
-.circle-el {
-	width: $circle-size;
-	height: $circle-size;
-	line-height: $circle-size;
-	border-radius: 50%;
-	border: 1px solid $dark-text;
-	&:hover {
-		cursor: pointer;
-		opacity: .8;
-		border-style: dashed;
-	}
+.page-item {
+	box-sizing: border-box;
+	width: 100vw;
+	height: 100vh;
 }
 
 $profile-color: #66cdaa;
@@ -19,17 +11,17 @@ $skill-color: #e0ffff;
 $contact-color: #fa5c44;
 
 #profile {
-	border-color: $profile-color;
+	border-top: 1px solid $profile-color;
 	color: $profile-color;
 }
 
 #skill {
-	border-color: $skill-color;
+	border-top: 1px solid $skill-color;
 	color: $skill-color;
 }
 
 #contact {
-	border-color: $contact-color;
+	border-top: 1px solid $contact-color;
 	color: $contact-color;
 }
 
@@ -51,70 +43,62 @@ $paper-text: #444;
 	}
 }
 
-#modal {
-	display: none;
-	position: fixed;
-	z-index: 99999;
-	width: 100%;
-	max-height: 80%;
-	top: 10% !important;
-	overflow-y: scroll;
-	&.visible-transition {
-		transition: ease display 400ms;
-	}
+// #modal {
+// 	display: none;
+// 	position: fixed;
+// 	z-index: 99999;
+// 	width: 100%;
+// 	max-height: 80%;
+// 	top: 10% !important;
+// 	overflow-y: scroll;
+// 	&.visible-transition {
+// 		transition: ease display 400ms;
+// 	}
 
-	button {
-		@each $el in $active-elements {
-			&:#{$el} {
-				color: none;
-				border: none;
-				outline: 0;
-			}
-		}
-	}
-	#modal-header {
-		.modal-close {
-			background: transparent;
-			border: none;
-			color: $paper-text;
-			&:hover {
-				cursor: pointer;
-				color: rgba(255, 99, 71, 1);
-				transition: ease color 150ms;
-			}
-		}	
-	}
-	#modal-body {
-		ul {
-			border-top: solid $paper-text 1px;
-			border-bottom: solid $paper-text 1px;
-			li {
-				padding: 8px;
-			}
-		}
-	}
-}
+// 	button {
+// 		@each $el in $active-elements {
+// 			&:#{$el} {
+// 				color: none;
+// 				border: none;
+// 				outline: 0;
+// 			}
+// 		}
+// 	}
+// 	#modal-header {
+// 		.modal-close {
+// 			background: transparent;
+// 			border: none;
+// 			color: $paper-text;
+// 			&:hover {
+// 				cursor: pointer;
+// 				color: rgba(255, 99, 71, 1);
+// 				transition: ease color 150ms;
+// 			}
+// 		}	
+// 	}
+// 	#modal-body {
+// 		ul {
+// 			border-top: solid $paper-text 1px;
+// 			border-bottom: solid $paper-text 1px;
+// 			li {
+// 				padding: 8px;
+// 			}
+// 		}
+// 	}
+// }
 
-#overlay {
-	display: none;
-	background: rgba(0, 0, 0, .45);
-	position: fixed;
-	z-index: 99998;
-	left: 0;
-	top: 0;
-	height: 100vh;
-	width: 100vw;
-}
+// #overlay {
+// 	display: none;
+// 	background: rgba(0, 0, 0, .45);
+// 	position: fixed;
+// 	z-index: 99998;
+// 	left: 0;
+// 	top: 0;
+// 	height: 100vh;
+// 	width: 100vw;
+// }
 
 /* Responsible Layout */
 @media screen and (max-width: 480px) {
-  .circle-el {
-		width: $circle-size/3*2;
-		height: $circle-size/3*2;
-		line-height: $circle-size/3*2;
 
-		.h2 {
-			font-size: 24px;
-		}
-	}
 }
