@@ -1,4 +1,4 @@
-// import { MainComponent, Template } from '../main';
+// import { MainComponent } from '../main';
 // import { ContactJSON } from '../../assets/data/';
 
 // export class ContactComponent extends MainComponent {

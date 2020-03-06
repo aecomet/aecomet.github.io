@@ -1,19 +1,6 @@
 {
-  "header": "Skill Set",
+  "header": "Skill & Products",
   "body": {
-    "urls": [
-      { "name": "Github",
-        "url": "https://github.com/hiyoko3"
-      },
-      {
-        "name": "AtCoder",
-        "url": "https://atcoder.jp/users/ae_hiyoko3"
-      },
-      {
-        "name": "Qiita",
-        "url": "https://qiita.com/hiyoko3"
-      }
-    ],
     "skills": [
       "C++",
       "JavaScript / Node.js / TypeScript / Vue.js / React.js",
@@ -25,6 +12,53 @@
       "Python",
       "Ruby / Ruby on Rails",
       "Swift"
+    ],
+    "products": [
+      {
+        "name": "NaruHiyo Project",
+        "logo": "",
+        "desc": "友人と色々なモノを作ったり勉強したり、エンジニアとして高め合うために設立したチーム。リンクはチームのポートフォリオへ飛びます",
+        "github": "https://github.com/naruhiyo/naruhiyo.github.io",
+        "lang": [
+          "React.js"
+        ]
+      },
+      {
+        "name": "Memoma",
+        "logo": "https://github.com/naruhiyo/Memoma",
+        "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応",
+        "github": "",
+        "lang": [
+          "Electron"
+        ]
+      },
+      {
+        "name": "Partytion",
+        "logo": "https://github.com/naruhiyo/partytion",
+        "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリ",
+        "github": "https://github.com/naruhiyo/partytion",
+        "lang": [
+          "Swift 5"
+        ]
+      },
+      {
+        "name": "AtCoder 過去問集",
+        "logo": "",
+        "desc": "AtCoderの過去問",
+        "github": "https://github.com/hiyoko3/practice-contest",
+        "lang": [
+          "C++"
+        ]
+      },
+      {
+        "name": "研究室HP",
+        "logo": "",
+        "desc": "学生時代に作成した研究室のHP。SPAで構築",
+        "github": "https://github.com/ishilab-apps/ishilab",
+        "lang": [
+          "Vue.js"
+        ]
+      }
     ]
   }
 }

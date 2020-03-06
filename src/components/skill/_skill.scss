@@ -1,8 +1,56 @@
-$skill-color: #e0ffff;
+$skill-bg: #282828;
+$skill-color: rgba(220, 220, 220, 1); 
 
 #skill {
-	border-top: 1px solid $skill-color;
+	background: $skill-bg;
 	color: $skill-color;
+
+	#skill-body {
+		#skill-menu {
+			flex: 0 0 500px;
+			padding: 8px;
+			border-right: 1px dotted $skill-color;
+
+			ul#skill-list, ul#product-list {
+				list-style: none;
+				text-align: left;
+
+				li {
+					padding: 4px 0 !important;
+				}
+			}
+
+			ul#product-list {
+				li {
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+
+		#skill-content {
+			width: 100%;
+			text-align: left;
+			box-shadow: 1px 1px 8px $skill-color;
+
+			#product-lang {
+				span {
+					border: 1px solid $skill-color;
+					padding: 4px;
+				}
+			}
+
+			a#product-github {
+				height: 100%;
+				display: inline-block;
+
+				&:visited {
+					color: $skill-color;
+				}
+			}
+		}
+	}
 }
 
 /* Responsible Layout */

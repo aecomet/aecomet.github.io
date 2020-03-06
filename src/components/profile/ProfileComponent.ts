@@ -25,12 +25,14 @@ export class ProfileComponent implements MainInterface {
 	render ():void {
 		const json: JsonIF = ProfileJSON;
 
+		// DOM
 		const header = this.profile.querySelector('#profile-header') as HTMLInputElement;
 		const name = this.profile.querySelector('#profile-name') as HTMLInputElement;
 		const note = this.profile.querySelector('#profile-note') as HTMLInputElement;
 		const logo = this.profile.querySelector('#profile-logo') as HTMLInputElement;
 		const socialLinks = this.profile.querySelector('#profile-social-links') as HTMLInputElement;
 
+		// Insert JSON
 		header.innerHTML = json.header;
 		name.innerHTML = json.body.name;
 		logo.src = json.body.logo;

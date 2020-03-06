@@ -1,15 +1,7 @@
 .page-item {
 	box-sizing: border-box;
 	width: 100vw;
-	height: 100vh;
-}
-
-.link {
-	text-decoration: none;
-	&:hover {
-		opacity: .9;
-		text-decoration: underline;
-	}
+	min-height: 100vh;
 }
 
 /* Responsible Layout */
