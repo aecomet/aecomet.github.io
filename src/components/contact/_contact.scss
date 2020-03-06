@@ -1,8 +1,15 @@
-$contact-color: #fa5c44;
+$contact-bg: whitesmoke;
+$contact-color: #430;
 
 #contact {
-	border-top: 1px solid $contact-color;
+	background: $contact-bg;
 	color: $contact-color;
+	height: 100vh;
+
+	#contact-field {
+		position: relative;
+		top: 120px;
+	}
 }
 
 /* Responsible Layout */

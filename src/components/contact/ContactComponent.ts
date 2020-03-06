@@ -1,32 +1,31 @@
-// import { MainComponent } from '../main';
-// import { ContactJSON } from '../../assets/data/';
+import { MainInterface } from '../main';
+import { ContactJSON } from '../../assets/data/';
 
-// export class ContactComponent extends MainComponent {
-// 	private contact: HTMLInputElement;
-// 	constructor() {
-// 		super();
-// 		this.contact = document.querySelector('#contact') as HTMLInputElement;
-// 		this.contact.addEventListener('click', () => { this.onItemClick(); });
-// 	}
+interface JsonIF {
+	header: string;
+	body: {
+		text: string;
+		subtext: string;
+	}
+}
 
-// 	buildTemplate ():Template {
-// 		const node = document.createElement('div');
-// 		node.classList.add('text-center');
+export class ContactComponent implements MainInterface {
+	private contact: HTMLInputElement;
+	constructor() {
+		this.contact = document.querySelector('#contact') as HTMLInputElement;
+	}
 
-// 		const text = document.createElement('div');
-// 		text.classList.add('my-1');
-// 		text.innerHTML = ContactJSON.body.text;
+	render ():void {
+		const json: JsonIF = ContactJSON;
 
-// 		const subText = document.createElement('div');
-// 		subText.classList.add('my-2');
-// 		subText.innerHTML = ContactJSON.body.subtext;
+		// DOM
+		const header = this.contact.querySelector('#contact-header') as HTMLInputElement;
+		const text = this.contact.querySelector('#contact-text') as HTMLInputElement;
+		const subtext = this.contact.querySelector('#contact-subtext') as HTMLInputElement;
 
-// 		node.appendChild(text);
-// 		node.appendChild(subText);
-
-// 		return {
-// 			header: ContactJSON.header,
-// 			body: node.outerHTML
-// 		};
-// 	}
-// }
+		// Insert JSON
+		header.innerHTML = json.header;
+		text.innerHTML = json.body.text;
+		subtext.innerHTML = json.body.subtext;
+	}
+}

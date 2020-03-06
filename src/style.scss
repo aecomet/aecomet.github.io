@@ -19,12 +19,19 @@ html, body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+  #header {
+    background: #f0f0eb;
+    color: #1b2437;
+  }
+
   #main {
     flex: 1; 
   }
 
   #footer {
     width: 100% !important;
+    background: whitesmoke;
+    color: #430;
   }
 }
 
@@ -83,6 +90,10 @@ $displays: block inline inline-block flex none;
 /* Flexbox */
 .wrap-reverse {
   flex-wrap: wrap-reverse !important;
+}
+
+.vertical-direction {
+  flex-direction: column;
 }
 
 $flex-items: start end center stretch flex-end flex-start;
