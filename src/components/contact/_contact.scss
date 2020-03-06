@@ -1,0 +1,11 @@
+$contact-color: #fa5c44;
+
+#contact {
+	border-top: 1px solid $contact-color;
+	color: $contact-color;
+}
+
+/* Responsible Layout */
+@media screen and (max-width: 480px) {
+
+}

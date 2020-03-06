@@ -1,5 +1,8 @@
 /* ===== Global Field ===== */
-@import './vars';
+/* Global Variables */
+$dark-bg: #282828;
+$dark-text: rgba(225, 225, 225, 1);
+$active-elements: link visited focus hover;
 
 * {
 	box-sizing: border-box !important;
@@ -8,7 +11,7 @@
 html, body {
   background: $dark-bg !important;
   color: $dark-text !important;
-  font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
+  // font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
   min-height: 100vh;
 }
 
@@ -107,12 +110,6 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
     }
   }
 }
-
-/* list */
-.non-list-style {
-  list-style: none;
-}
-
 
 /* Override styles by each components */
 @import './components/main'

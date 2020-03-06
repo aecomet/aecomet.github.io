@@ -1,0 +1,11 @@
+$skill-color: #e0ffff;
+
+#skill {
+	border-top: 1px solid $skill-color;
+	color: $skill-color;
+}
+
+/* Responsible Layout */
+@media screen and (max-width: 480px) {
+
+}

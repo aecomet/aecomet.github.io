@@ -1,38 +1,7 @@
-@import '../vars';
-
 .page-item {
 	box-sizing: border-box;
 	width: 100vw;
 	height: 100vh;
-}
-
-$profile-color: #66cdaa;
-$skill-color: #e0ffff;
-$contact-color: #fa5c44;
-
-#profile {
-	border-top: 1px solid $profile-color;
-	color: $profile-color;
-}
-
-#skill {
-	border-top: 1px solid $skill-color;
-	color: $skill-color;
-}
-
-#contact {
-	border-top: 1px solid $contact-color;
-	color: $contact-color;
-}
-
-/* Modal Contents */
-$paper-color: rgba(250, 235, 215, 1);
-$paper-text: #444;
-.paper-style {
-	color: $paper-text;
-	background: $paper-color;
-	border: 3px dotted $dark-bg;
-	padding: 16px;
 }
 
 .link {
@@ -43,62 +12,11 @@ $paper-text: #444;
 	}
 }
 
-// #modal {
-// 	display: none;
-// 	position: fixed;
-// 	z-index: 99999;
-// 	width: 100%;
-// 	max-height: 80%;
-// 	top: 10% !important;
-// 	overflow-y: scroll;
-// 	&.visible-transition {
-// 		transition: ease display 400ms;
-// 	}
-
-// 	button {
-// 		@each $el in $active-elements {
-// 			&:#{$el} {
-// 				color: none;
-// 				border: none;
-// 				outline: 0;
-// 			}
-// 		}
-// 	}
-// 	#modal-header {
-// 		.modal-close {
-// 			background: transparent;
-// 			border: none;
-// 			color: $paper-text;
-// 			&:hover {
-// 				cursor: pointer;
-// 				color: rgba(255, 99, 71, 1);
-// 				transition: ease color 150ms;
-// 			}
-// 		}	
-// 	}
-// 	#modal-body {
-// 		ul {
-// 			border-top: solid $paper-text 1px;
-// 			border-bottom: solid $paper-text 1px;
-// 			li {
-// 				padding: 8px;
-// 			}
-// 		}
-// 	}
-// }
-
-// #overlay {
-// 	display: none;
-// 	background: rgba(0, 0, 0, .45);
-// 	position: fixed;
-// 	z-index: 99998;
-// 	left: 0;
-// 	top: 0;
-// 	height: 100vh;
-// 	width: 100vw;
-// }
-
 /* Responsible Layout */
 @media screen and (max-width: 480px) {
 
 }
+
+@import './profile/_profile';
+@import './skill/skill';
+@import './contact/contact';
