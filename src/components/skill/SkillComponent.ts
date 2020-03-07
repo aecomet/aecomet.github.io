@@ -21,7 +21,8 @@ export class SkillComponent implements MainInterface {
 	skill: HTMLInputElement;
 
 	constructor() {
-		this.skill = document.querySelector('#skill') as HTMLInputElement;
+		const matchView: string = (matchMedia('(max-width:480px)').matches) ? '.mobile' : '.desktop';
+		this.skill = document.querySelector(`#skill ${matchView}`) as HTMLInputElement;
 	}
 
 	render (): void {

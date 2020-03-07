@@ -11,8 +11,10 @@ interface JsonIF {
 
 export class ContactComponent implements MainInterface {
 	private contact: HTMLInputElement;
+
 	constructor() {
-		this.contact = document.querySelector('#contact') as HTMLInputElement;
+		const matchView: string = (matchMedia('(max-width:480px)').matches) ? '.mobile' : '.desktop';
+		this.contact = document.querySelector(`#contact ${matchView}`) as HTMLInputElement;
 	}
 
 	render ():void {

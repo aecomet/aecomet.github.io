@@ -19,7 +19,8 @@ interface JsonIF {
 export class ProfileComponent implements MainInterface {
 	private profile: HTMLInputElement;
 	constructor() {
-		this.profile = document.querySelector('#profile') as HTMLInputElement;
+		const matchView: string = (matchMedia('(max-width:480px)').matches) ? '.mobile' : '.desktop';
+		this.profile = document.querySelector(`#profile ${matchView}`) as HTMLInputElement;
 	}
 
 	render ():void {

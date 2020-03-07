@@ -24,7 +24,8 @@ html, body {
   }
 
   #main {
-    flex: 1; 
+    flex: 1;
+  	height: 100%;
   }
 
   #footer {
@@ -110,6 +111,11 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
 @media screen and (max-width: 480px) {
   html, body {
     font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
+  }
+
+  header, footer {
+    background: $dark-bg !important;
+    color: $dark-text !important;
   }
 
   .container {

@@ -2,12 +2,29 @@
 	width: 100vw;
 	min-height: 100vh;
 
-	/* Responsible Layout */
-	@media screen and (max-width: 480px) {
-		min-height: auto;
+	.desktop {
+		display: block;
+	}
+
+	.mobile {
+		display: none;
 	}
 }
 
+/* Responsible Layout */
+@media screen and (max-width: 480px) {
+	.page-item {
+		min-height: auto;
+
+		.desktop {
+			display: none;
+		}
+
+		.mobile {
+			display: block;
+		}
+	}
+}
 @import './profile/_profile';
 @import './skill/skill';
 @import './contact/contact';

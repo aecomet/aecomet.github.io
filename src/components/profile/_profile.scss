@@ -1,51 +1,53 @@
 $profile-bg: #f0f0eb;
 $profile-color: #d60d21;
 
+$logo-width: 300px;
+
 #profile {
 	text-align: left;
 	background: $profile-bg;
 	color: #1b2437;
+
 	.vertical-field {
 		writing-mode: vertical-rl;
 		text-orientation: upright;
+	}
 
+	#profile-logo {
+		max-width: $logo-width;
+		display: inline-block;
 
-		#profile-logo {
-			max-width: 300px;
-			@media screen and (max-width: 640px) {
-				width: 200px;
-			}
-			@media screen and (max-width: 480px) {
-				width: 150px;
-			}
-		}
-
-		ul#profile-social-links {
-			list-style: none;
-			width: 100%;
-			padding: 0;
-			li {
-				height: 100%;
-				padding: 8px;
-				a {
-					width: 100%;
-					padding: 8px;
-					display: inline-block;
-					color: $profile-color;
-					text-decoration: none;
-					border: 1px solid rgba(0, 0, 0, 0);
-					&:hover {
-						border-color: $profile-color !important;
-					}
-				}
-				
-			}
+		@media screen and (max-width: 480px) {
+			max-width: $logo-width / 2;
 		}
 	}
 
-	/* Responsible Layout */
-	@media screen and (max-width: 480px) {
+	ul#profile-social-links {
+		list-style: none;
+		width: 100%;
+		padding: 0;
+		li {
+			height: 100%;
+			padding: 8px;
+			a {
+				width: 100%;
+				padding: 8px;
+				display: inline-block;
+				color: $profile-color;
+				text-decoration: none;
+				border: 1px solid rgba(0, 0, 0, 0);
+				&:hover {
+					border-color: $profile-color !important;
+				}
 
+				@media screen and (max-width: 480px) {
+					padding: 4px;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				padding: 4px;
+			}
+		}
 	}
 }
-
