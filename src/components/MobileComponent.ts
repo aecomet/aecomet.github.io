@@ -14,22 +14,19 @@ export class MobileComponent {
 
 	private onSwipe(): void {
 		const main = document.querySelector('#main') as HTMLInputElement;
-		const DISTANCE: number = 50;
+		const DISTANCE: number = 150;
 		let startX: number = 0;
 		let endX: number = 0;
 
 		main.addEventListener('touchstart', e => {
-			e.preventDefault();
 			startX = e.touches[0].pageX;
 		});
 
 		main.addEventListener('touchmove', e => {
-			e.preventDefault();
 			endX = e.changedTouches[0].pageX;
 		});
 
 		main.addEventListener('touchend', e => {
-			e.preventDefault();
 			if (endX == 0) return;
 
 			if (startX > (endX + DISTANCE)) {

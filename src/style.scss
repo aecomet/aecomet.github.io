@@ -18,9 +18,18 @@ html, body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+
   #header {
     background: #f0f0eb;
     color: #1b2437;
+
+    .desktop {
+			display: block;
+		}
+
+		.mobile {
+			display: none;
+		}
   }
 
   #main {
@@ -113,20 +122,20 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
     font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
   }
 
-  header, footer {
-    background: $dark-bg !important;
-    color: $dark-text !important;
-  }
-
-  .container {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-  /* width */
-  @for $i from 1 through 5 {
-    .w-#{$i*20} {
-      width: 90% !important;
-      margin: auto 5% !important;
+  #app {
+    #header, #footer {
+      background: $dark-bg !important;
+      color: $dark-text !important;
+    }
+  
+    #header {
+      .desktop {
+        display: none !important;
+      }
+  
+      .mobile {
+        display: block !important;
+      }
     }
   }
 }

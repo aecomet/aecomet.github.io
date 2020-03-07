@@ -16,7 +16,7 @@
     "products": [
       {
         "name": "NaruHiyo Project",
-        "logo": "",
+        "logo": "public/static/images/naruhiyo.png",
         "desc": "友人と色々なモノを作ったり勉強したり、エンジニアとして高め合うために設立したチーム。リンクはチームのポートフォリオへ飛びます",
         "github": "https://github.com/naruhiyo/naruhiyo.github.io",
         "lang": [
@@ -25,16 +25,16 @@
       },
       {
         "name": "Memoma",
-        "logo": "https://github.com/naruhiyo/Memoma",
+        "logo": "public/static/images/memoma.gif",
         "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応",
-        "github": "",
+        "github": "https://github.com/naruhiyo/Memoma",
         "lang": [
           "Electron"
         ]
       },
       {
         "name": "Partytion",
-        "logo": "https://github.com/naruhiyo/partytion",
+        "logo": "public/static/images/partytion.gif",
         "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリ",
         "github": "https://github.com/naruhiyo/partytion",
         "lang": [
@@ -43,7 +43,7 @@
       },
       {
         "name": "AtCoder 過去問集",
-        "logo": "",
+        "logo": "public/static/images/no_image.png",
         "desc": "AtCoderの過去問",
         "github": "https://github.com/hiyoko3/practice-contest",
         "lang": [
@@ -52,7 +52,7 @@
       },
       {
         "name": "研究室HP",
-        "logo": "",
+        "logo": "public/static/images/ishilab.png",
         "desc": "学生時代に作成した研究室のHP。SPAで構築",
         "github": "https://github.com/ishilab-apps/ishilab",
         "lang": [
