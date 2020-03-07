@@ -10,9 +10,9 @@ $contact-color: #430;
 		position: relative;
 		top: 120px;
 	}
-}
 
-/* Responsible Layout */
-@media screen and (max-width: 480px) {
-
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
 }

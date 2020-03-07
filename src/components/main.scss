@@ -1,12 +1,11 @@
 .page-item {
-	box-sizing: border-box;
 	width: 100vw;
 	min-height: 100vh;
-}
 
-/* Responsible Layout */
-@media screen and (max-width: 480px) {
-
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+		min-height: auto;
+	}
 }
 
 @import './profile/_profile';

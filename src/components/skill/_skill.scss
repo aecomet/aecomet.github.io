@@ -51,9 +51,9 @@ $skill-color: rgba(220, 220, 220, 1);
 			}
 		}
 	}
-}
 
-/* Responsible Layout */
-@media screen and (max-width: 480px) {
-
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
 }

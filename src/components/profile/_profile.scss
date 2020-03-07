@@ -42,9 +42,10 @@ $profile-color: #d60d21;
 			}
 		}
 	}
+
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+
+	}
 }
 
-/* Responsible Layout */
-@media screen and (max-width: 480px) {
-
-}
