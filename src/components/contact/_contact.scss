@@ -1,0 +1,18 @@
+$contact-bg: whitesmoke;
+$contact-color: #430;
+
+#contact {
+	background: $contact-bg;
+	color: $contact-color;
+	height: 100vh;
+
+	#contact-field {
+		position: relative;
+		top: 120px;
+	}
+
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
+}

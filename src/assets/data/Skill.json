@@ -1,0 +1,64 @@
+{
+  "header": "Skill & Products",
+  "body": {
+    "skills": [
+      "C++",
+      "JavaScript / Node.js / TypeScript / Vue.js / React.js",
+      "Java",
+      "Kotlin",
+      "MySQL",
+      "Perl",
+      "PHP / Laravel",
+      "Python",
+      "Ruby / Ruby on Rails",
+      "Swift"
+    ],
+    "products": [
+      {
+        "name": "NaruHiyo Project",
+        "logo": "public/static/images/naruhiyo.png",
+        "desc": "友人と色々なモノを作ったり勉強したり、エンジニアとして高め合うために設立したチーム。リンクはチームのポートフォリオへ飛びます",
+        "github": "https://github.com/naruhiyo/naruhiyo.github.io",
+        "lang": [
+          "React.js"
+        ]
+      },
+      {
+        "name": "Memoma",
+        "logo": "public/static/images/memoma.gif",
+        "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応",
+        "github": "https://github.com/naruhiyo/Memoma",
+        "lang": [
+          "Electron"
+        ]
+      },
+      {
+        "name": "Partytion",
+        "logo": "public/static/images/partytion.gif",
+        "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリ",
+        "github": "https://github.com/naruhiyo/partytion",
+        "lang": [
+          "Swift 5"
+        ]
+      },
+      {
+        "name": "研究室HP",
+        "logo": "public/static/images/ishilab.png",
+        "desc": "学生時代に作成した研究室のHP。SPAで構築",
+        "github": "https://github.com/ishilab-apps/ishilab",
+        "lang": [
+          "Vue.js"
+        ]
+      },
+      {
+        "name": "AtCoder 過去問集",
+        "logo": "public/static/images/no_image.png",
+        "desc": "AtCoderの過去問",
+        "github": "https://github.com/hiyoko3/practice-contest",
+        "lang": [
+          "C++"
+        ]
+      }
+    ]
+  }
+}

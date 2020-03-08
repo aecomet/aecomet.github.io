@@ -1,6 +1,6 @@
 {
     "name": "hiyoko3.github.io",
-    "version": "3.0.3",
+    "version": "4.0.0",
     "description": "My portfolio.",
     "main": "index.js",
     "scripts": {

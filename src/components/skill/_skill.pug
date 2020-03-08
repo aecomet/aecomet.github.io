@@ -1,0 +1,37 @@
+#skill.frame
+	.desktop.pa-2
+		h2.h2#skill-header
+
+		.d-flex.mt-4#skill-body
+			#skill-menu
+				h4.h4 Skills
+				ul#skill-list.pa-2
+
+				h4.h4.mt-2 Products
+				ul#product-list.pa-2
+
+			#skill-content.ma-3.pa-2
+				.pa-1.text-center: img(src="public/static/images/no_image.png" alt="product-img")#product-logo
+				.pa-1: #product-lang
+				.mt-2
+					h4.h4#product-name Productを選択すると詳細が表示されます
+					.mr-2.my-2#product-desc
+					.my-1: a(href="#" target="_blank" rel="noopener").d-none#product-github: i.fa-2x.fab.fa-github-alt
+
+	.mobile.pa-2
+		h3.h3#skill-header
+
+		#skill-body
+			h4.h4 Skills
+			ul#skill-list.pa-2
+
+			h4.h4.mt-2 Products
+			ul#product-list
+
+			#skill-content.pa-2
+				.pa-1.text-center: img(src="public/static/images/no_image.png" alt="product-img")#product-logo
+				.my-1#product-lang
+				.mt-2
+					h4.h4#product-name Productを選択すると詳細が表示されます
+					.mr-2.my-2#product-desc
+					.my-1: a(href="#" target="_blank" rel="noopener").d-none#product-github: i.fa-2x.fab.fa-github-alt

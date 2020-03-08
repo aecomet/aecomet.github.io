@@ -1,8 +1,0 @@
-{
-	"header": "My Profile",
-	"body": {
-		"logo": "public/static/images/logo.png",
-		"name": "hiyoko 3",
-		"note": "A piyo piyo server side engineer"
-	}
-}

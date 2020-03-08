@@ -1,5 +1,8 @@
 /* ===== Global Field ===== */
-@import './components/vars';
+/* Global Variables */
+$dark-bg: #282828;
+$dark-text: rgba(225, 225, 225, 1);
+$active-elements: link visited focus hover;
 
 * {
 	box-sizing: border-box !important;
@@ -8,7 +11,6 @@
 html, body {
   background: $dark-bg !important;
   color: $dark-text !important;
-  font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
   min-height: 100vh;
 }
 
@@ -16,12 +18,29 @@ html, body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
+
+  #header {
+    background: #f0f0eb;
+    color: #1b2437;
+
+    .desktop {
+			display: block;
+		}
+
+		.mobile {
+			display: none;
+		}
+  }
+
   #main {
-    flex: 1; 
+    flex: 1;
+  	height: 100%;
   }
 
   #footer {
     width: 100% !important;
+    background: whitesmoke;
+    color: #430;
   }
 }
 
@@ -43,21 +62,24 @@ html, body {
   width: 80% !important;
   margin: auto 10% auto !important;
 }
+.container-fill {
+  width: 100% !important;
+}
 
 /* spaces */
 @for $i from 0 through 4 {
   .pa-#{$i} { padding: #{$i * 8}px !important; }
-  .pt-#{$i} { padding: #{$i * 8}px 0 0 0 !important; }
-  .pr-#{$i} { padding: 0 #{$i * 8}px 0 0 !important; }
-  .pb-#{$i} { padding: 0 0 #{$i * 8}px 0 !important; }
-  .pl-#{$i} { padding: 0 0 0 #{$i * 8}px !important; }
+  .pt-#{$i} { padding-top: #{$i * 8}px !important; }
+  .pr-#{$i} { padding-right: #{$i * 8}px !important; }
+  .pb-#{$i} { padding-bottom: #{$i * 8}px !important; }
+  .pl-#{$i} { padding-left: #{$i * 8}px !important; }
   .px-#{$i} { padding: 0 #{$i * 8}px !important; }
   .py-#{$i} { padding: #{$i * 8}px 0 !important; }
   .ma-#{$i} { margin: #{$i * 8}px !important; }
-  .mt-#{$i} { margin: #{$i * 8}px 0 0 0 !important; }
-  .mr-#{$i} { margin: 0 #{$i * 8}px 0 0 !important; }
-  .mb-#{$i} { margin: 0 0 #{$i * 8}px 0 !important; }
-  .ml-#{$i} { margin: 0 0 0 #{$i * 8}px !important; }
+  .mt-#{$i} { margin-top: #{$i * 8}px !important; }
+  .mr-#{$i} { margin-right: #{$i * 8}px !important; }
+  .mb-#{$i} { margin-bottom: #{$i * 8}px !important; }
+  .ml-#{$i} { margin-left: #{$i * 8}px !important; }
   .mx-#{$i} { margin: 0 #{$i * 8}px !important; }
   .my-#{$i} { margin: #{$i * 8}px 0 !important; }
 }
@@ -79,6 +101,10 @@ $displays: block inline inline-block flex none;
   flex-wrap: wrap-reverse !important;
 }
 
+.vertical-direction {
+  flex-direction: column;
+}
+
 $flex-items: start end center stretch flex-end flex-start;
 $flex-contents: start end center stretch space-between space-around flex-end flex-start;
 @each $item in $flex-items {
@@ -92,19 +118,61 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
 
 /* Responsible Layout */
 @media screen and (max-width: 480px) {
-  .container {
-    width: 100% !important;
-    margin: 0 !important;
+  html, body {
+    font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
   }
-  /* width */
-  @for $i from 1 through 5 {
-    .w-#{$i*20} {
-      width: 90% !important;
-      margin: auto 5% !important;
+
+  .no-scroll {
+    overflow-y: hidden;
+  }
+
+  #app {
+
+    #header, #footer {
+      background: $dark-bg !important;
+      color: $dark-text !important;
+    }
+  
+    #header {
+      .desktop {
+        display: none !important;
+      }
+  
+      .mobile {
+        display: block !important;
+      }
+
+      .breadcrumbs {
+        text-align: right;
+        .breadcrumb-item {
+          display: inline-block;
+          &::after {
+            content: '/';
+            padding: 0 4px;
+          }
+
+          &:last-child::after {
+            content: '';
+            padding: 0;
+          }
+
+          .active {
+            color: #fffacd;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      .help {
+        cursor: pointer;
+        &:hover {
+          opacity: .8;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
-
 
 /* Override styles by each components */
 @import './components/main'

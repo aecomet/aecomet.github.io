@@ -1,172 +1,32 @@
-import { ProfileJSON, SkillJSON, ContactJSON } from '../static/data/';
-
-/* === Footer === */
-class FooterComponent  {
-	constructor() {
-		const footerYear: HTMLInputElement = document.querySelector('footer span#year') as HTMLInputElement;
-		footerYear.innerHTML = `${new Date().getFullYear()}`;
-	}
-}
+import { FooterComponent } from '../layouts/FooterComponent';
+import { ProfileComponent } from './profile/ProfileComponent';
+import { SkillComponent } from './skill/SkillComponent';
+import { ContactComponent } from './contact/ContactComponent';
+import { MobileComponent } from './MobileComponent';
 
 /* === Main === */
-interface Template {
-	header: string;
-	body: string;
+export interface ComponentInterface {
+	render():void;
 }
 
-interface MainInterface {
-	onItemClick():void;
-	buildTemplate():Template;
-}
-
-class MainComponent implements MainInterface {
-	onItemClick ():void {
-		const modal = document.querySelector('#modal') as HTMLInputElement;
-		const header = modal.querySelector('#modal-header .h1') as HTMLInputElement;
-		const body = modal.querySelector('#modal-body .h3') as HTMLInputElement;
-		const overlay = document.querySelector('#overlay') as HTMLInputElement;
-
-		// set data
-		const htmlTemplate = this.buildTemplate();
-		header.innerHTML = htmlTemplate.header;
-		body.innerHTML = htmlTemplate.body;
-
-		// visible modal view
-		modal.classList.add('d-block', 'visible-transition');
-		overlay.classList.add('d-block', 'visible-transition');
-
-		// unvisible event
-		const closeBtn = modal.querySelector('button.modal-close') as HTMLInputElement;
-		closeBtn.addEventListener('click', () => {
-			modal.classList.remove('d-block', 'visible-transition');
-			overlay.classList.remove('d-block', 'visible-transition');
-		});
-
-		overlay.addEventListener('click', () => {
-			modal.classList.remove('d-block', 'visible-transition');
-			overlay.classList.remove('d-block', 'visible-transition');
-		});
-	}
-
-	buildTemplate():Template { return {
-			header: '',
-			body: ''
-		}; 
-	};
-}
-
-class SkillComponent extends MainComponent {
-	private skill: HTMLInputElement;
-	constructor() {
-		super();
-		this.skill = document.querySelector('#skill') as HTMLInputElement;
-		this.skill.addEventListener('click', () => { this.onItemClick(); });
-	}
-
-	buildTemplate():Template {
-		const urls = SkillJSON.body.urls;
-		const skills = SkillJSON.body.skills;
-		const node = document.createElement('div');
-
-		const urlList = document.createElement('ul');
-		urls.forEach((item:{ name: string, url: string }, idx: number) => {
-			const li = document.createElement('li');
-			const a = document.createElement('a');
-			a.setAttribute('href', item.url);
-			a.setAttribute('target', '_blank');
-			a.setAttribute('rel', 'noopener noreferrer');
-			a.classList.add('link');
-			a.innerHTML = item.name;
-			li.appendChild(a);
-			urlList.appendChild(li);
-		});
-
-		const skillList = document.createElement('ul');
-		skills.forEach((item:string, idx: number) => {
-			const li = document.createElement('li');
-			li.innerHTML = item;
-			skillList.appendChild(li);
-		});
-
-		node.appendChild(urlList);
-		node.appendChild(skillList);
-		return {
-			header: SkillJSON.header,
-			body: node.outerHTML
-		};
-	};
-}
-
-class ProfileComponent extends MainComponent {
-	private profile: HTMLInputElement;
-	constructor() {
-		super();
-		this.profile = document.querySelector('#profile') as HTMLInputElement;
-		this.profile.addEventListener('click', () => { this.onItemClick(); });
-	}
-
-	buildTemplate ():Template {
-		const node = document.createElement('div');
-		node.classList.add('text-center');
-
-		const logo = document.createElement('img');
-		logo.setAttribute('src', ProfileJSON.body.logo);
-		logo.setAttribute('alt', 'logo-img');
-		logo.setAttribute('height', '150');
-		logo.classList.add('d-inline-block');
-
-		const name = document.createElement('div');
-		name.classList.add('h1');
-		name.innerHTML = ProfileJSON.body.name;
-
-		const note = document.createElement('div');
-		note.classList.add('my-3');
-		note.innerHTML = ProfileJSON.body.note;
-
-		node.appendChild(logo);
-		node.appendChild(name);
-		node.appendChild(note);
-		return {
-			header: ProfileJSON.header,
-			body: node.outerHTML
-		};
-	}
-}
-
-class ContactComponent extends MainComponent {
-	private contact: HTMLInputElement;
-	constructor() {
-		super();
-		this.contact = document.querySelector('#contact') as HTMLInputElement;
-		this.contact.addEventListener('click', () => { this.onItemClick(); });
-	}
-
-	buildTemplate ():Template {
-		const node = document.createElement('div');
-		node.classList.add('text-center');
-
-		const text = document.createElement('div');
-		text.classList.add('my-1');
-		text.innerHTML = ContactJSON.body.text;
-
-		const subText = document.createElement('div');
-		subText.classList.add('my-2');
-		subText.innerHTML = ContactJSON.body.subtext;
-
-		node.appendChild(text);
-		node.appendChild(subText);
-
-		return {
-			header: ContactJSON.header,
-			body: node.outerHTML
-		};
-	}
+export interface ModuleInterface {
+	handler(): void;
 }
 
 /* === App Event === */
 document.addEventListener('DOMContentLoaded', e => {
+	// view component
 	const footer = new FooterComponent();
-	const skill = new SkillComponent();
 	const profile = new ProfileComponent();
+	const skill = new SkillComponent();
 	const contact = new ContactComponent();
+	
+	// responsive component
+	const mobile = new MobileComponent();
+
+	// render view
+	footer.render();
+	profile.render();
+	skill.render();
+	contact.render();
 });

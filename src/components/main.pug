@@ -1,17 +1,11 @@
-main#main.w-60.text-center
-	.d-flex.justify-content-space-around.align-items-center.mt-4
-		#skill.circle-el
-			h2.h2 Skill
-		#profile.circle-el
-			h2.h2 Profile
-		#contact.circle-el
-			h2.h2 Contact
+main#main.text-center
+	.page-item: include profile/_profile.pug
+	.page-item: include skill/_skill.pug
+	.page-item: include contact/_contact.pug
 
-#modal.ma-1.w-80
-	.paper-style
-		#modal-header.d-flex.justify-content-space-between.align-items-center
-			.h1
-			button.modal-close: i.fas.fa-times.d-inline-block.h1
-		#modal-body
-			.h3
+#modal.ma-2.pa-1
+	#modal-body
+		h4.text-center 画面の操作方法
+		p.my-2 画面を左右にスワイプすることでコンテンツを切り替えることが可能です
+
 #overlay
