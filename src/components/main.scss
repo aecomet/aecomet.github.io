@@ -1,30 +1,56 @@
-.page-item {
-	width: 100vw;
-	min-height: 100vh;
-
-	.desktop {
-		display: block;
-	}
-
-	.mobile {
-		display: none;
-	}
-}
-
-/* Responsible Layout */
-@media screen and (max-width: 480px) {
+main#main {
 	.page-item {
-		min-height: auto;
+		width: 100vw;
+		min-height: 100vh;
 
 		.desktop {
-			display: none;
+			display: block;
 		}
 
 		.mobile {
-			display: block;
+			display: none;
 		}
 	}
+
+	/* Responsible Layout */
+	@media screen and (max-width: 480px) {
+		.page-item {
+			min-height: auto;
+
+			.desktop {
+				display: none;
+			}
+
+			.mobile {
+				display: block;
+			}
+		}
+	}
+	@import './profile/_profile';
+	@import './skill/skill';
+	@import './contact/contact';
 }
-@import './profile/_profile';
-@import './skill/skill';
-@import './contact/contact';
+
+.visible-transition {
+	transition: ease display 400ms;
+}
+
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 99999;
+	top: 20% !important;
+
+	
+}
+
+#overlay {
+	display: none;
+	background: rgba(0, 0, 0, .6);
+	position: fixed;
+	z-index: 99998;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+}

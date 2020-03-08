@@ -1,4 +1,4 @@
-import { MainInterface } from '../main';
+import { ComponentInterface } from '../main';
 import { SkillJSON } from '../../assets/data';
 
 interface product {
@@ -17,7 +17,7 @@ interface JsonIF {
 	}
 }
 
-export class SkillComponent implements MainInterface {
+export class SkillComponent implements ComponentInterface {
 	skill: HTMLInputElement;
 
 	constructor() {
@@ -46,14 +46,13 @@ export class SkillComponent implements MainInterface {
 		json.body.products.forEach((product: product) => {
 			const li = document.createElement('li');
 			li.innerHTML = product.name;
-			li.addEventListener('click', e => { console.warn('clicked'); this.setContent(product); });
+			li.addEventListener('click', e => { this.setContent(product); });
 
 			productList.append(li);
 		});
 	}
 
 	private setContent(product: product): void {
-		console.warn('set', product);
 		// DOM
 		const logo = this.skill.querySelector('#product-logo') as HTMLInputElement;
 		const lang = this.skill.querySelector('#product-lang') as HTMLInputElement;

@@ -1,4 +1,4 @@
-import { MainInterface } from '../main';
+import { ComponentInterface } from '../main';
 import { ProfileJSON } from '../../assets/data';
 
 interface link {
@@ -16,7 +16,7 @@ interface JsonIF {
 	};
 }
 
-export class ProfileComponent implements MainInterface {
+export class ProfileComponent implements ComponentInterface {
 	private profile: HTMLInputElement;
 	constructor() {
 		const matchView: string = (matchMedia('(max-width:480px)').matches) ? '.mobile' : '.desktop';

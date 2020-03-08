@@ -122,7 +122,12 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
     font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
   }
 
+  .no-scroll {
+    overflow-y: hidden;
+  }
+
   #app {
+
     #header, #footer {
       background: $dark-bg !important;
       color: $dark-text !important;
@@ -139,7 +144,7 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
 
       .breadcrumbs {
         text-align: right;
-        span {
+        .breadcrumb-item {
           display: inline-block;
           &::after {
             content: '/';
@@ -150,6 +155,19 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
             content: '';
             padding: 0;
           }
+
+          .active {
+            color: #fffacd;
+            font-weight: bolder;
+          }
+        }
+      }
+
+      .help {
+        cursor: pointer;
+        &:hover {
+          opacity: .8;
+          font-weight: bold;
         }
       }
     }

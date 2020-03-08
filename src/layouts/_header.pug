@@ -2,7 +2,11 @@ header#header
 	.desktop: h1.h1.text-center.my-3 Portfolio
 	.mobile
 		h3.h3.text-center.my-1 Portfolio
-		.breadcrumbs.pr-2.pb-1
-			span(data-target="profile") profile
-			span(data-target="skill") skill
-			span(data-target="contact") contact
+		
+		.d-flex.pb-1.justify-content-flex-end
+			.breadcrumbs
+				span.breadcrumb-item: span(data-target="profile").active profile
+				span.breadcrumb-item: span(data-target="skill") skill
+				span.breadcrumb-item: span(data-target="contact") contact
+
+			span#help.mx-2: i.far.fa-question-circle

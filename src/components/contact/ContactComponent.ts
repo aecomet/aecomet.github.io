@@ -1,4 +1,4 @@
-import { MainInterface } from '../main';
+import { ComponentInterface } from '../main';
 import { ContactJSON } from '../../assets/data/';
 
 interface JsonIF {
@@ -9,7 +9,7 @@ interface JsonIF {
 	}
 }
 
-export class ContactComponent implements MainInterface {
+export class ContactComponent implements ComponentInterface {
 	private contact: HTMLInputElement;
 
 	constructor() {

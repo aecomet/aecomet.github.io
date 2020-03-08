@@ -5,8 +5,12 @@ import { ContactComponent } from './contact/ContactComponent';
 import { MobileComponent } from './MobileComponent';
 
 /* === Main === */
-export interface MainInterface {
+export interface ComponentInterface {
 	render():void;
+}
+
+export interface ModuleInterface {
+	handler(): void;
 }
 
 /* === App Event === */
