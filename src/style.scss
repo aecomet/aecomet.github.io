@@ -243,4 +243,5 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
 }
 
 /* Override styles by each components */
-@import './components/main'
+@import './components/profile/profile';
+@import './components/skill/skill';

@@ -1,17 +1,17 @@
 {
   "header": "Skill & Products",
   "body": {
-    "skills": [
-      "C++",
-      "JavaScript / Node.js / TypeScript / Vue.js / React.js",
-      "Java",
-      "Kotlin",
-      "MySQL",
-      "Perl",
-      "PHP / Laravel",
-      "Python",
-      "Ruby / Ruby on Rails",
-      "Swift"
+    "langexps": [
+      {"name": "C++", "exp": 1, "note": "競技プログラミングでのみ使用してます。"},
+      {"name":"JavaScript","exp":4, "note":"趣味がメインです。時々業務でも使用してます。jQuery / Node.js / TypeScript / Vue.js / React.jsも含む"},
+      {"name":"Java","exp":2,"note":"業務メイン。Androidも含む。"},
+      {"name":"Kotlin","exp":1,"note":"ちょっとかじった程度です。Javaが書けるのでドキュメント見ながらなら人並みにコーディングできるかと思います"},
+      {"name":"MySQL","exp":2,"note":"ガッツリ関わる（トランザクション分離、バッファプールなど）ようになったのは業務からです。それまでは基礎構文程度しか抑えていませんでした。"},
+      {"name":"Perl","exp":2,"note":"業務でしか触りません。"},
+      {"name":"PHP","exp":3,"note":"学生時代（趣味+インターン先）でよく書いてました。嫌いじゃないです。Laravelも含む"},
+      {"name":"Python","exp":2,"note":"研究用のプログラムで書いてました。Djangoも含む。"},
+      {"name":"Ruby / Ruby on Rails","exp":4,"note":"学生時代（趣味+インターン先）から書いてて今の業務でも使ってます。ほとんどRailsなので、Rubyと言えるか怪しい。。"},
+      {"name":"Swift","exp":1,"note":"趣味でちょっと触っただけです。設計が難しい印象しかないです。"}
     ],
     "products": [
       {
@@ -19,45 +19,35 @@
         "logo": "public/static/images/naruhiyo.png",
         "desc": "友人と色々なモノを作ったり勉強したり、エンジニアとして高め合うために設立したチーム。リンクはチームのポートフォリオへ飛びます",
         "github": "https://github.com/naruhiyo/naruhiyo.github.io",
-        "lang": [
-          "React.js"
-        ]
+        "lang": ["React.js"]
       },
       {
         "name": "Memoma",
         "logo": "public/static/images/memoma.gif",
         "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応",
         "github": "https://github.com/naruhiyo/Memoma",
-        "lang": [
-          "Electron"
-        ]
+        "lang": ["Electron"]
       },
       {
         "name": "Partytion",
         "logo": "public/static/images/partytion.gif",
         "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリ",
         "github": "https://github.com/naruhiyo/partytion",
-        "lang": [
-          "Swift 5"
-        ]
+        "lang": ["Swift 5"]
       },
       {
         "name": "研究室HP",
-        "logo": "public/static/images/ishilab.png",
+        "logo": "public/static/images/no_image.png",
         "desc": "学生時代に作成した研究室のHP。SPAで構築",
-        "github": "https://github.com/ishilab-apps/ishilab",
-        "lang": [
-          "Vue.js"
-        ]
+        "github": "",
+        "lang": ["Vue.js"]
       },
       {
         "name": "AtCoder 過去問集",
         "logo": "public/static/images/no_image.png",
         "desc": "AtCoderの過去問",
         "github": "https://github.com/hiyoko3/practice-contest",
-        "lang": [
-          "C++"
-        ]
+        "lang": ["C++"]
       }
     ]
   }

@@ -1,14 +1,6 @@
 interface WebComponentInterface {}
 
-interface ComponentInterface {
-  render(): void;
-}
-
 export namespace Base {
-  export abstract class ComponentBase implements ComponentInterface {
-    render() {}
-  }
-
   export abstract class WebComponentBase extends HTMLElement
     implements WebComponentInterface {
     protected template: string = '';
