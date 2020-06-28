@@ -1,10 +1,9 @@
 import VNode from './union/VNode';
 import Attributes from './union/Attributes';
 import NodeType from './union/NodeType';
-import Base from './Base';
 import DiffType from './union/DiffType';
 
-export default class ViewModel extends Base {
+export namespace ViewModel {
   /**
    * 仮想DOM生成
    * @param nodeName ノード名(tag)
@@ -12,7 +11,7 @@ export default class ViewModel extends Base {
    * @param children 子ノード
    * @returns { ElementTagNameMap, Attributes, NodeType[] } 仮想DOMツリー
    */
-  h(
+  export function h(
     nodeName: keyof ElementTagNameMap,
     attributes: Attributes,
     ...children: NodeType[]
@@ -25,17 +24,17 @@ export default class ViewModel extends Base {
    * @param node 仮想ノード
    * @returns HTMLElement | Text DOM
    */
-  createElement(node: NodeType): HTMLElement | Text {
-    if (!this.isVNode(node)) return document.createTextNode(node.toString());
+  export function createElement(node: NodeType): HTMLElement | Text {
+    if (!isVNode(node)) return document.createTextNode(node.toString());
 
     const el = document.createElement(node.nodeName);
     // 属性値セット
     const setAttributes = (target: HTMLElement, attrs: Attributes): void => {
       for (const attr in attrs) {
         // on*** はイベントとして取り扱う
-        const isEventAttr: boolean = this.isEventAttr(attr);
-  
-        if (isEventAttr) {
+        const isEvent: boolean = isEventAttr(attr);
+
+        if (isEvent) {
           const eventName: string = attr.slice(2);
           target.addEventListener(eventName, attrs[attr] as EventListener);
         } else {
@@ -43,10 +42,10 @@ export default class ViewModel extends Base {
         }
       }
       return;
-    }
+    };
     // 属性値の反映
     setAttributes(el, node.attributes);
-    node.children.forEach((child) => el.appendChild(this.createElement(child)));
+    node.children.forEach((child) => el.appendChild(createElement(child)));
 
     return el;
   }
@@ -58,7 +57,7 @@ export default class ViewModel extends Base {
    * @param newNode 更新後のDOM
    * @param index
    */
-  updateElement(
+  export function updateElement(
     parent: HTMLElement,
     oldNode: NodeType,
     newNode: NodeType,
@@ -66,7 +65,7 @@ export default class ViewModel extends Base {
   ): void {
     // oldNodeがない場合は新しいノードを返す
     if (!oldNode) {
-      parent.appendChild(this.createElement(newNode));
+      parent.appendChild(createElement(newNode));
     }
 
     const target = parent.childNodes[index];
@@ -86,25 +85,25 @@ export default class ViewModel extends Base {
     ): void => {
       // remove Attributes
       for (const attr in oldAttrs) {
-        if (this.isEventAttr(attr)) continue;
+        if (isEventAttr(attr)) continue;
         target.removeAttribute(attr);
       }
-  
+
       // set attrs
       for (const attr in newAttrs) {
-        if (this.isEventAttr(attr)) continue;
+        if (isEventAttr(attr)) continue;
         target.setAttribute(attr, newAttrs[attr] as string);
       }
-    }
+    };
     // 値の更新
     const updateVlaue = (target: HTMLInputElement, newValue: string): void => {
       target.value = newValue;
       return;
-    }
-    const diffType: number = this.detectDiff(oldNode, newNode);
+    };
+    const diffType: number = detectDiff(oldNode, newNode);
     switch (diffType) {
       case DiffType.Type || DiffType.Text || DiffType.Node:
-        parent.replaceChild(this.createElement(newNode), target);
+        parent.replaceChild(createElement(newNode), target);
         break;
       case DiffType.Value:
         // valueの変更時にNodeを置き換えてしまうとフォーカスが外れてしまうため
@@ -126,13 +125,13 @@ export default class ViewModel extends Base {
     }
 
     //　再帰的にupdateElementを呼び出し、childrenの更新処理を行う
-    if (this.isVNode(oldNode) && this.isVNode(newNode)) {
+    if (isVNode(oldNode) && isVNode(newNode)) {
       const max: number = Math.max(
         oldNode.children.length,
         newNode.children.length
       );
       for (let i = 0; i < max; i++) {
-        this.updateElement(
+        updateElement(
           target as HTMLElement,
           oldNode.children[i],
           newNode.children[i]
@@ -148,12 +147,12 @@ export default class ViewModel extends Base {
    * @param b
    * @returns number : 異なっている値
    */
-  private detectDiff(a: NodeType, b: NodeType): number {
+  function detectDiff(a: NodeType, b: NodeType): number {
     // 型が違う
     if (typeof a !== typeof b) return DiffType.Type;
     // 異なる文字列
-    if (!this.isVNode(a) && a !== b) return DiffType.Text;
-    if (this.isVNode(a) && this.isVNode(b)) {
+    if (!isVNode(a) && a !== b) return DiffType.Text;
+    if (isVNode(a) && isVNode(b)) {
       // 異なるノード
       if (a.nodeName !== b.nodeName) return DiffType.Node;
       // 異なる値
@@ -173,7 +172,7 @@ export default class ViewModel extends Base {
    * @param node DOM
    * @returns 真偽値
    */
-  private isVNode(node: NodeType): node is VNode {
+  function isVNode(node: NodeType): node is VNode {
     return typeof node !== 'string' && typeof node !== 'number';
   }
 
@@ -181,7 +180,7 @@ export default class ViewModel extends Base {
    * 属性値がイベントであるかチェック
    * @param attr DOMの属性名
    */
-  private isEventAttr(attr: string): boolean {
+  function isEventAttr(attr: string): boolean {
     // onから始まる属性名はイベントとして扱う
     return /^on/.test(attr);
   }

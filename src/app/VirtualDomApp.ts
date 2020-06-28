@@ -3,9 +3,9 @@ import View from "./View";
 import VNode from "./union/VNode";
 import Controller from "./Controller";
 import ActionType from "./union/ActionType";
-import ViewModel from "./ViewModel";
+import { ViewModel } from "./ViewModel";
 
-export default class Main<State, Actions> {
+export default class VirtualDomApp<State, Actions> {
   private readonly el: HTMLElement;
   private readonly view: View<State, ActionTree<State>>;
   private readonly state: State;
@@ -13,7 +13,6 @@ export default class Main<State, Actions> {
   private oldNode: VNode | undefined;
   private newNode: VNode | undefined;
   private isSkipRender: boolean = false;
-  private readonly viewModel: ViewModel;
 
   constructor(params: Controller<State>) {
     if (typeof params.el === 'string') {
@@ -26,7 +25,6 @@ export default class Main<State, Actions> {
     this.state = params.state;
     this.actions = this.dispatchAction(params.actions);
     this.resolveNode();
-    this.viewModel = new ViewModel();
   }
 
   /**
@@ -75,9 +73,9 @@ export default class Main<State, Actions> {
     if (!this.newNode) return;
 
     if (this.oldNode) {
-      this.viewModel.updateElement(this.el, this.oldNode, this.newNode);
+      ViewModel.updateElement(this.el, this.oldNode, this.newNode);
     } else {
-      this.el.appendChild(this.viewModel.createElement(this.newNode));
+      this.el.appendChild(ViewModel.createElement(this.newNode));
     }
     this.oldNode = this.newNode;
     this.isSkipRender = false;

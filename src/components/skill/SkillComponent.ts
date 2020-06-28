@@ -1,4 +1,4 @@
-import { ComponentInterface } from '../main';
+import { Base } from '../Base';
 import { SkillJSON } from '../../assets/data';
 
 interface product {
@@ -17,10 +17,11 @@ interface JsonIF {
 	}
 }
 
-export class SkillComponent implements ComponentInterface {
+export class SkillComponent extends Base.ComponentBase {
 	skill: HTMLInputElement;
 
 	constructor() {
+		super();
 		const matchView: string = (matchMedia('(max-width:480px)').matches) ? '.mobile' : '.desktop';
 		this.skill = document.querySelector(`#skill ${matchView}`) as HTMLInputElement;
 	}

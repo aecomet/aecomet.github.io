@@ -26,9 +26,8 @@ main#main {
 			}
 		}
 	}
-	@import './profile/_profile';
+	@import './profile/profile';
 	@import './skill/skill';
-	@import './contact/contact';
 }
 
 .visible-transition {

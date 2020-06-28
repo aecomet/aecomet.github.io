@@ -6,6 +6,7 @@ import 'modern-css-reset/dist/reset.min.css'
 // Custom Style and Script
 import './style.scss'
 import './components/main.ts'
+// import VirtualDomApp from './app/VirtualDomApp'
 
 /* === Service Worker === */
 // Checking support a `service worker`
