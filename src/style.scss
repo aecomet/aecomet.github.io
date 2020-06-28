@@ -3,7 +3,7 @@
 $dark-theme-bg: #282828;
 $dark-theme-text: rgba(225, 225, 225, 1);
 $active-elements: link visited focus hover;
-$white-theme-bg: #f0f0eb;
+$white-theme-bg: #fffaf9;
 $white-theme-text: #1b2437;
 
 * {
@@ -53,10 +53,10 @@ body {
 }
 
 /* width */
-@for $i from 1 through 5 {
-  .w-#{$i*20} {
-    width: #{$i*20%} !important;
-    margin: auto #{(100%-$i*20%)/2} !important;
+@for $i from 1 through 10 {
+  .w-#{$i*10} {
+    width: #{$i*10%} !important;
+    margin: auto #{(100%-$i*10%)/2} !important;
   }
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 /* spaces */
-@for $i from 0 through 4 {
+@for $i from 0 through 6 {
   .pa-#{$i} {
     padding: #{$i * 8}px !important;
   }

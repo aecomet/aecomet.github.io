@@ -3,8 +3,6 @@ interface WebComponentInterface {}
 export namespace Base {
   export abstract class WebComponentBase extends HTMLElement
     implements WebComponentInterface {
-    protected template: string = '';
-    // protected domParser = new DOMParser();
 
     /**
      * 有効にする属性値
@@ -41,13 +39,18 @@ export namespace Base {
       return;
     }
     /**
-     * HTML解析
-     * querySelector() などを利用できるように ParentNode でキャストする
+     * テンプレート解析
+     * 変数があれば展開する
+     * FIXME: 配列展開さえできれば実用化可能
      */
-    // protected parseHTML(): ParentNode | null {
-    //   const dom: HTMLDivElement = document.createElement('div');
-    //   dom.innerHTML = this.template;
-    //   return dom.firstChild as ParentNode | null;
-    // }
+    protected parseTemplate(template: string, data: any): string {
+      const regexp: RegExp = new RegExp(`\\$` + `{data.(${Object.keys(data).join('|')})}`, 'g');
+
+      return template.replace(regexp, (s:string):string => {
+        // 変数のkeyを取得
+        const key:string = s.split('.')[1].split('}')[0];
+        return data[key];
+      });
+    }
   }
 }

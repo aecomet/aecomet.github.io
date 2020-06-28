@@ -1,23 +1,45 @@
 {
-  "header": "Profile",
+  "header": "プロフィール",
   "body": {
     "logo": "public/static/images/logo.png",
-    "name": "hiyoko 3",
-    "note": "サーバーサイドエンジニア",
+    "name": "hiyoko3",
+    "note": "アプリケーションエンジニア",
+    "birth": 1994,
+    "gender": "男性",
     "histories": [
+      "2013年 大学(情報工学)入学",
       "2017年 大学(情報工学)卒業",
+      "2017年 大学院(情報工学専攻)入学",
       "2019年 大学院(情報工学専攻)修了",
-      "2020年~ 入社"
+      "2019年 新卒入社（現在に至る）"
     ],
+    "vision": {
+      "work": [
+        "顧客に第一線でサービス提供している",
+        "システム開発において、柔軟に対応できる",
+        "「やってみよう」だけではなく、事前調査を行い、根拠の上で行動を起こせる"
+      ],
+      "wantto": [
+        "大規模サービス開発チームにジョインし、開発に携わりたい",
+        "バックエンド(言語+DB+サーバー構成)が第一志望。第二志望でフロントエンド",
+        "プロジェクトのチームリーダーとして活動してみたい"
+      ],
+      "contribution": [
+        "大規模Webサービスのチーム開発経験があるので、小規模〜中規模でも対応できると思います。",
+        "チーム開発ではウォーターフォールの中にアジャイル的なサイクル開発を取り入れていたため、比較的短期間でアジャイル開発にも適応できると思います。",
+        "小規模かつ少人数の案件であれば、擬似的なプロジェクト管理を実施し、プロジェクトマネージャーを支援できます。",
+        "現職では、企画以外の開発フェーズを経験しています（設計・開発・テスト設計・テスト・QA）"
+      ]
+    },
     "email": {
       "prefix": "sb.gm.0823@***",
-      "suffix": "***にはgmail.comを入力してください"
+      "suffix": "※ ***にはgmail.comを入力してください"
     },
     "social_links": [
-      { "name": "Github", "url": "https://github.com/hiyoko3" },
       { "name": "AtCoder", "url": "https://atcoder.jp/users/ae_hiyoko3" },
-      { "name": "Twitter", "url": "https://twitter.com/ae_hiyoko3" },
-      { "name": "Qiita", "url": "https://qiita.com/hiyoko3" }
+      { "name": "Github", "url": "https://github.com/hiyoko3" },
+      { "name": "Qiita", "url": "https://qiita.com/hiyoko3" },
+      { "name": "Twitter", "url": "https://twitter.com/ae_hiyoko3" }
     ]
   }
 }

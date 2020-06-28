@@ -7,6 +7,14 @@ type ProfileJsonState = {
     logo: string;
     name: string;
     note: string;
+    brith: number,
+    gender: string,
+    histories: string[],
+    vision: {
+      work:string[],
+      wantoto: string[],
+      contribution: string[]
+    },
     email: {
       prefix: string;
       suffix: string;
