@@ -39,7 +39,7 @@ type SkillJsonState = {
       logo: string;
       desc: string;
       github: string;
-      lang: string[];
+      langs: string[];
     }[];
   };
 };

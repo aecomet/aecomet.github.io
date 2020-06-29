@@ -15,39 +15,46 @@
     ],
     "products": [
       {
+        "name": "Portfilo",
+        "logo": "public/static/images/no_image.png",
+        "desc": "本ページです。フレームワークは利用せず、全て自前実装で書いてます。デザインが頻繁に変わるので画像はつけていません。",
+        "github": "https://github.com/hiyoko3/hiyoko3.github.io",
+        "langs": ["TypeScript"]
+      },
+      {
         "name": "NaruHiyo Project",
         "logo": "public/static/images/naruhiyo.png",
         "desc": "友人と色々なモノを作ったり勉強したり、エンジニアとして高め合うために設立したチーム。リンクはチームのポートフォリオへ飛びます",
         "github": "https://github.com/naruhiyo/naruhiyo.github.io",
-        "lang": ["React.js"]
+        "langs": ["React.js"]
       },
       {
         "name": "Memoma",
         "logo": "public/static/images/memoma.gif",
-        "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応",
+        "desc": "Markdown変換に対応したクロスプラットフォーム型メモアプリ。マルチカラムに対応してます。公開してないです。",
         "github": "https://github.com/naruhiyo/Memoma",
-        "lang": ["Electron"]
+        "langs": ["Electron"]
       },
       {
         "name": "Partytion",
         "logo": "public/static/images/partytion.gif",
-        "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリ",
+        "desc": "「飲み会の盛り上げる」をコンセプトに作成したクイズ型のiOSアプリです。公開してないです。",
         "github": "https://github.com/naruhiyo/partytion",
-        "lang": ["Swift 5"]
+        "langs": ["Swift 5"]
       },
       {
         "name": "研究室HP",
         "logo": "public/static/images/no_image.png",
-        "desc": "学生時代に作成した研究室のHP。SPAで構築",
+        "desc": "学生時代に作成した研究室のHPです。SPAで構築されています。身バレ防止のため画像などは添付していません。",
         "github": "",
-        "lang": ["Vue.js"]
+        "langs": ["Vue.js"]
       },
       {
         "name": "AtCoder 過去問集",
         "logo": "public/static/images/no_image.png",
         "desc": "AtCoderの過去問",
         "github": "https://github.com/hiyoko3/practice-contest",
-        "lang": ["C++"]
+        "langs": ["C++"]
       }
     ]
   }

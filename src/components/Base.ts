@@ -17,6 +17,15 @@ export namespace Base {
       // this.attachShadow({ mode: 'open' });
     }
 
+    // Custom ElementがDOMに追加されたタイミング
+    // connectedCallback() {
+    //   console.log('connectedCallback');
+    // }
+
+    // Custom ElementがDOMから削除されたタイミング
+    // disconnectedCallback() {
+    //   console.log('disconnectedCallback');
+    // }
     /**
      * 属性値によってイベントをフックする。observedAttributesと併用する必要がる
      * @param attributeName

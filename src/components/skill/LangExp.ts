@@ -17,13 +17,16 @@ export default class LangExp extends Base.WebComponentBase {
   protected _render(): void {
     const dom =
         this.data.map(
-          (skillData) =>
-            `<div class="d-flex">` +
-              `<span class="skill-name">${skillData.name}</span>` +
-              `<span class="skill-exp">${skillData.exp}</span>` +
-            `</div>` +
-            `<p class="skill-note">${skillData.note}</p>`
-        ).join('');
+          skill =>
+            `<div class="skill-item pa-1">` +
+              `<div class="d-flex align-items-center">` +
+                `<span class="d-block"><strong>${skill.name}</strong></span>` +
+                `<progress class="ml-2 skill-exp" max="100" value="${skill.exp * 10}">${skill.exp}年</progress>` +
+                `<span class="ml-2 h5">${skill.exp} 年</span>` +
+              `</div>` +
+              `<p class="mt-1 skill-note">${skill.note}</p>` +
+            `</div>`
+          ).join('');
 
     this.innerHTML = dom;
     return;

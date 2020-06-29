@@ -23,6 +23,16 @@ $card-shadow: rgba(220, 220, 220, 1);
     }
   }
 
+  .next-to {
+    color: blue;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+      text-decoration: underline;
+    }
+  }
+
   .social-link {
     padding: 8px;
     margin-right: 8px;

@@ -50,8 +50,12 @@ export default class User extends Base.WebComponentBase {
           `<p class="pl-2 my-1">${this.data.email.suffix}</p>` +
           `<h4 class="h4 my-2">SNS</h4>` +
           `<div class="pl-2 my-1">` +
-            this.data.social_links.map(link => `<a target="_blank" rel="noopener" href="${link.url}" class="social-link">${link.name}</a>`).join('') +          `</div>` +
+            this.data.social_links.map(link => `<a target="_blank" rel="noopener" href="${link.url}" class="social-link">${link.name}</a>`).join('') +
           `</div>` +
+          `<div class="my-3 text-right">` +
+            `<span class="next-to">Next to</span>` +
+          `</div>` +
+        `</div>` +
       `</div>`;
 
     this.innerHTML = dom;

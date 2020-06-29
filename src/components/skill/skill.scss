@@ -1,88 +1,109 @@
 $skill-bg: #282828;
-$skill-color: rgba(220, 220, 220, 1); 
-$logo-width: 360px;
+$skill-color: rgba(230, 230, 230, 1);
+$logo-height: 280px;
+$bar-bg: #fffaf9;
+$skyblue: #67b5b7;
+$red: #d60d21;
 
 #skill {
-	background: $skill-bg;
-	color: $skill-color;
+  background: $skill-bg;
+  color: $skill-color;
 
-	#skill-body {
-		#skill-menu {
-			flex: 0 0 320px;
-			padding: 8px;
-			border-right: 1px dotted $skill-color;
-		}
+  .skill-item {
+    border-bottom: 1px dashed rgba(200, 200, 200, .8);
 
-		ul#skill-list, ul#product-list {
-			list-style: none;
-			text-align: left;
-			padding: 0;
+    progress.skill-exp {
+      border: none;
+      width: 200px;
 
-			li {
-				padding: 4px 0;
-			}
-		}
+      &::-webkit-progress-value {
+        color: $skyblue;
+        background: $skyblue;
+      }
 
-		ul#product-list {
-			li {
-				&:hover {
-					cursor: pointer;
-				}
-			}
-		}
+      &::-webkit-progress-bar {
+        color: $bar-bg;
+        background-color: $bar-bg;
+      }
+    }
+  }
 
-		#skill-content {
-			width: 100%;
-			text-align: left;
-			box-shadow: 1px 1px 8px $skill-color;
+  #product-field {
+    box-sizing: border-box;
 
-			#product-logo {
-				max-height: $logo-width;
-				display: inline-block;
-			}
+    .product-list {
+      flex: 0 0 320px;
+      padding: 8px;
+      border-right: 1px dotted $skill-color;
 
-			#product-lang {
-				span {
-					border: 1px solid $skill-color;
-					padding: 4px;
-				}
-			}
+      &:hover {
+        cursor: pointer;
+      }
 
-			a#product-github {
-				height: 100%;
-				display: inline-block;
+      p {
+        &:hover {
+          outline: 1px solid $skill-color;
+        }
+      }
+    }
 
-				&:link, &:visited {
-					color: $skill-color;
-				}
-			}
-		}
-	}
+    .product-content {
+      width: 100%;
+      text-align: left;
+      box-shadow: 1px 1px 8px $skill-color;
 
-	/* Responsible Layout */
-	@media screen and (max-width: 480px) {
-		display: none;
+      #product-logo {
+        height: $logo-height;
+        display: inline-block;
+      }
 
-		ul#skill-list {
-			li {
-				padding: 2px 0;
-			}
-		}
+      #product-lang {
+        span {
+          color: $skyblue;
+          border: 1px solid $skyblue;
+          padding: 4px;
+        }
+      }
 
-		ul#product-list {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			li {
-				&::after {
-					content: '|';
-					padding: 0 4px;
-				}
+      #product-github {
+        padding: 4px;
+        display: inline-block;
+        text-decoration: none;
+        outline: 1px solid $red;
+        color: $red;
+        &:link,
+        &:visited {
+          color: $red;
+        }
+      }
+    }
+  }
 
-				&:last-child::after {
-					content: '';
-				}
-			}
-		}
-	}
+  /* Responsible Layout */
+  @media screen and (max-width: 480px) {
+    display: none;
+
+    ul#skill-list {
+      li {
+        padding: 2px 0;
+      }
+    }
+
+    ul#product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      li {
+        &::after {
+          content: '|';
+          padding: 0 4px;
+        }
+
+        &:last-child::after {
+          content: '';
+        }
+      }
+    }
+  }
 }
