@@ -11,25 +11,70 @@ $card-shadow: rgba(220, 220, 220, 1);
   .user {
     box-shadow: 1px 1px 8px $card-shadow;
     background: #fffafa;
-  }
 
 
-  #profile-logo {
-    max-width: $logo-width;
-    display: inline-block;
+    #profile-logo {
+      max-width: $logo-width;
+      display: inline-block;
 
-    @media screen and (max-width: 480px) {
-      max-width: $logo-width / 2;
+      @media screen and (max-width: 480px) {
+        max-width: $logo-width / 2;
+      }
     }
-  }
 
-  .next-to {
-    color: blue;
-    cursor: pointer;
+    .next-to {
+      color: blue;
+      cursor: pointer;
 
-    &:hover {
-      opacity: .7;
-      text-decoration: underline;
+      &:hover {
+        opacity: .7;
+        text-decoration: underline;
+      }
+    }
+
+    /* 表面の表示 */
+    .is-profile {
+      position: relative;
+      .surface {
+        opacity: 1;
+        transform: rotateY(0deg);
+        transition:
+          opacity 100ms 150ms,
+          transform 300ms 150ms;
+      }
+
+      .reversed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: rotateY(90deg);
+        transition:
+          opacity 50ms 200ms,
+          transform 300ms;
+      }
+    }
+
+    .is-profile-reverse {
+      position: relative;
+      .surface {
+        opacity: 0;
+        transform: rotateY(90deg);
+        transition:
+          opacity 50ms 200ms,
+          transform 300ms;
+      }
+
+      .reversed {
+        position: absolute;
+        top: 16px;
+        left: 0;
+        opacity: 1;
+        transform: rotateY(0deg);
+        transition:
+          opacity 100ms 150ms,
+          transform 300ms 150ms;
+      }
     }
   }
 
