@@ -9,9 +9,7 @@ export default class Header extends Base.WebComponentBase {
   protected _render(): void {
     const dom =
       `<header id="header">` +
-        `<div class="desktop">` +
-          `<h1 class="h1 text-center">Portfolio</h1>` +
-        `</div>` +
+        `<h1 class="h1 text-center">Portfolio</h1>` +
       `</header>`;
 
     this.innerHTML = dom;

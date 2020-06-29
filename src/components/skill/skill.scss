@@ -12,9 +12,14 @@ $red: #d60d21;
   .skill-item {
     border-bottom: 1px dashed rgba(200, 200, 200, .8);
 
-    progress.skill-exp {
+    .skill-name {
+      width: 75%;
+    }
+
+    .skill-exp {
       border: none;
-      width: 200px;
+      max-width: 200px;
+      min-width: 120px;
 
       &::-webkit-progress-value {
         color: $skyblue;
@@ -29,8 +34,6 @@ $red: #d60d21;
   }
 
   #product-field {
-    box-sizing: border-box;
-
     .product-list {
       flex: 0 0 320px;
       padding: 8px;
@@ -71,6 +74,7 @@ $red: #d60d21;
         text-decoration: none;
         outline: 1px solid $red;
         color: $red;
+
         &:link,
         &:visited {
           color: $red;
@@ -78,31 +82,22 @@ $red: #d60d21;
       }
     }
   }
+}
 
-  /* Responsible Layout */
-  @media screen and (max-width: 480px) {
-    display: none;
+/* Responsible Layout */
+@media screen and (max-width: 480px) {
+  #skill {
+    #product-field {
+      padding: 0 !important;
+      flex-flow: column;
 
-    ul#skill-list {
-      li {
-        padding: 2px 0;
+      .product-list {
+        flex-basis: inherit;
+        border-right: none;
       }
-    }
-
-    ul#product-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      li {
-        &::after {
-          content: '|';
-          padding: 0 4px;
-        }
-
-        &:last-child::after {
-          content: '';
-        }
+    
+      .product-content {
+        width: auto;
       }
     }
   }

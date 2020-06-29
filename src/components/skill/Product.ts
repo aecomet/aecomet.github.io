@@ -31,7 +31,7 @@ export default class Product extends Base.WebComponentBase {
 
   protected _render(): void {
     const dom = 
-      `<div id="product-field" class="my-2 d-flex">` +
+      `<div id="product-field" class="pa-2 d-flex">` +
         `<div class="product-list">` + 
           this.data.map((product, idx) => `<p class="py-1 h4 product-name" data-key="${idx}">${product.name}</p>`).join('') +
         `</div>` +

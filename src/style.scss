@@ -7,41 +7,23 @@ $white-theme-bg: #fffaf9;
 $white-theme-text: #1b2437;
 
 * {
-  box-sizing: border-box !important;
-}
-
-html,
-body {
-  background: $dark-theme-bg !important;
-  color: $dark-theme-text !important;
-  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 #app {
   display: flex;
   flex-flow: column;
-  min-height: 100vh;
+  background: transparent;
 
   #header {
     background: $white-theme-bg;
     color: $white-theme-text;
-
-    .desktop {
-      display: block;
-    }
-
-    .mobile {
-      display: none;
-    }
-  }
-
-  #main {
-    flex: 1;
-    height: 100%;
   }
 
   #footer {
-    width: 100% !important;
+    background: $dark-theme-bg;
+    color: $dark-theme-text;  
+    width: 100%;
   }
 }
 
@@ -151,10 +133,6 @@ $displays: block inline inline-block flex none;
   flex-wrap: wrap-reverse !important;
 }
 
-.vertical-direction {
-  flex-direction: column;
-}
-
 $flex-items: start end center stretch flex-end flex-start;
 $flex-contents: start end center stretch space-between space-around flex-end flex-start;
 
@@ -184,61 +162,6 @@ $flex-contents: start end center stretch space-between space-around flex-end fle
   html,
   body {
     font-family: 'Oswald', 'Sawarabi Gothic', sans-serif !important;
-  }
-
-  .no-scroll {
-    overflow-y: hidden;
-  }
-
-  #app {
-
-    #header,
-    #footer {
-      background: $dark-theme-bg !important;
-      color: $dark-theme-text !important;
-    }
-
-    #header {
-      .desktop {
-        display: none !important;
-      }
-
-      .mobile {
-        display: block !important;
-      }
-
-      .breadcrumbs {
-        text-align: right;
-
-        .breadcrumb-item {
-          display: inline-block;
-
-          &::after {
-            content: '/';
-            padding: 0 4px;
-          }
-
-          &:last-child::after {
-            content: '';
-            padding: 0;
-          }
-
-          .active {
-            color: #fffacd;
-            font-weight: bolder;
-          }
-        }
-      }
-
-      .help {
-        cursor: pointer;
-
-        &:hover {
-          opacity: .8;
-          font-weight: bold;
-        }
-      }
-    }
   }
 }
 

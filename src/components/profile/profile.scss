@@ -16,10 +16,6 @@ $card-shadow: rgba(220, 220, 220, 1);
     #profile-logo {
       max-width: $logo-width;
       display: inline-block;
-
-      @media screen and (max-width: 480px) {
-        max-width: $logo-width / 2;
-      }
     }
 
     .next-to {
@@ -93,6 +89,25 @@ $card-shadow: rgba(220, 220, 220, 1);
 
     @media screen and (max-width: 480px) {
       padding: 4px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #profile {
+    .w-80 {
+      width: 95% !important;
+      margin: auto 2.5% !important;  
+    }
+    .py-5 {
+      padding: 16px 0 !important;
+    }
+    .user {
+      flex-flow: column;
+
+      #profile-logo {
+        max-width: $logo-width / 2;
+      } 
     }
   }
 }
