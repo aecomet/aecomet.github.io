@@ -61,12 +61,12 @@
       "type": "image/png"
     }
   ],
-  "name": "PWA Hiyoko3 Portfolio",
-  "short_name": "Hiyoko3 Portfolio",
+  "name": "PWA Portfolio",
+  "short_name": "Portfolio",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
-  "description": "Hiyoko3 Portfolio | A piyo piyo engineer for PWA",
+  "description": "Portfolio | Hiyoko3 for PWA",
   "background_color": "#efefef",
   "theme_color": "#fff"
 }
