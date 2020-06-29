@@ -2,3 +2,4 @@
 *.js.map
 *.css.map
 dist
+package-lock.json

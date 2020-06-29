@@ -5,7 +5,11 @@ import 'modern-css-reset/dist/reset.min.css'
 
 // Custom Style and Script
 import './style.scss'
-import './components/main.ts'
+import { MainComponent } from './components/Main'
+// import VirtualDomApp from './app/VirtualDomApp'
+
+// render custom component
+MainComponent.init();
 
 /* === Service Worker === */
 // Checking support a `service worker`

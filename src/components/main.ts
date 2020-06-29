@@ -1,32 +1,32 @@
-import { FooterComponent } from '../layouts/FooterComponent';
-import { ProfileComponent } from './profile/ProfileComponent';
-import { SkillComponent } from './skill/SkillComponent';
-import { ContactComponent } from './contact/ContactComponent';
-import { MobileComponent } from './MobileComponent';
+import { LayoutComponent } from './layouts';
+import { ProfileComponent } from './profile';
+import { SkillComponent } from './skill';
+import { Base } from './Base';
 
-/* === Main === */
-export interface ComponentInterface {
-	render():void;
+class Main extends Base.WebComponentBase {
+  constructor () {
+    super();
+    this._render();
+  }
+
+  protected _render(): void {
+    const dom =
+      `<main class="text-center">` +
+        `<profile-component></profile-component>` +
+        `<skill-component></skill-component>` +
+      `</main>`;
+
+    this.innerHTML = dom;
+    return;
+  }
 }
 
-export interface ModuleInterface {
-	handler(): void;
+export namespace MainComponent {
+  export function init() {
+    // render view
+    LayoutComponent.init();
+    ProfileComponent.init();
+    SkillComponent.init();
+    customElements.define('app-main', Main);
+  }
 }
-
-/* === App Event === */
-document.addEventListener('DOMContentLoaded', e => {
-	// view component
-	const footer = new FooterComponent();
-	const profile = new ProfileComponent();
-	const skill = new SkillComponent();
-	const contact = new ContactComponent();
-	
-	// responsive component
-	const mobile = new MobileComponent();
-
-	// render view
-	footer.render();
-	profile.render();
-	skill.render();
-	contact.render();
-});
