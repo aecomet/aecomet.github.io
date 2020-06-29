@@ -5,7 +5,7 @@ import 'modern-css-reset/dist/reset.min.css'
 
 // Custom Style and Script
 import './style.scss'
-import { MainComponent } from './components/Main'
+import { MainComponent } from './components/main'
 // import VirtualDomApp from './app/VirtualDomApp'
 
 // render custom component
