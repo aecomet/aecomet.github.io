@@ -3,15 +3,17 @@
   "body": {
     "langexps": [
       {"name": "C++", "exp": 1, "note": "競技プログラミングでのみ使用してます。"},
-      {"name":"JavaScript","exp":4, "note":"趣味がメインです。時々業務でも使用してます。jQuery / Node.js / TypeScript / Vue.js / React.jsも含む"},
-      {"name":"Java","exp":2,"note":"業務メイン。Androidも含む。"},
+      {"name":"JavaScript","exp":5, "note":"趣味がメインです。時々業務でも使用してます。jQuery / Node.js / TypeScript / Vue.js / React.jsも含む"},
+      {"name":"Java","exp":3,"note":"業務メイン。Androidも含む。"},
       {"name":"Kotlin","exp":1,"note":"ちょっとかじった程度です。Javaが書けるのでドキュメント見ながらなら人並みにコーディングできるかと思います"},
-      {"name":"MySQL","exp":2,"note":"ガッツリ関わる（トランザクション分離、バッファプールなど）ようになったのは業務からです。それまでは基礎構文程度しか抑えていませんでした。"},
       {"name":"Perl","exp":2,"note":"業務でしか触りません。"},
-      {"name":"PHP","exp":3,"note":"学生時代（趣味+インターン先）でよく書いてました。嫌いじゃないです。Laravelも含む"},
+      {"name":"PHP","exp":4,"note":"学生時代（趣味+インターン先）でよく書いてました。嫌いじゃないです。Laravelも含む"},
       {"name":"Python","exp":2,"note":"研究用のプログラムで書いてました。Djangoも含む。"},
-      {"name":"Ruby / Ruby on Rails","exp":4,"note":"学生時代（趣味+インターン先）から書いてて今の業務でも使ってます。ほとんどRailsなので、Rubyと言えるか怪しい。。"},
-      {"name":"Swift","exp":1,"note":"趣味でちょっと触っただけです。設計が難しい印象しかないです。"}
+      {"name":"Ruby","exp":5,"note":"学生時代（趣味+インターン先）から書いてて今の業務でも使ってます。ほとんどRailsなので、Rubyと言えるか怪しい。。"},
+      {"name":"Swift","exp":1,"note":"趣味でちょっと触っただけです。設計が難しい印象しかないです。"},
+      {"name":"MySQL","exp":5,"note":"ガッツリ関わる（トランザクション分離、バッファプールなど）ようになったのは業務からです。それまでは基礎構文程度しか抑えていませんでした。"},
+      {"name":"Docker","exp":2,"note":"docker-composeがメインです。業務でしか使ってません。"},
+      {"name":"git","exp":5,"note":"CLIでしか使ったことないです。これからもCLI（これはスキルと言えるのか、、？"}
     ],
     "products": [
       {
