@@ -2,3 +2,6 @@
 *.js.map
 *.css.map
 dist
+node_modules
+*.vscode
+*.node-version

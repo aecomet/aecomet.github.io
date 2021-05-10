@@ -1,9 +1,9 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // local variables
 let env = 'development';
@@ -44,6 +44,7 @@ let baseWebpack = {
     minimizer: [],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     // === Compile `index.pug` === //
     new HTMLWebpackPlugin({
       filename: 'index.html',
@@ -80,9 +81,6 @@ let baseWebpack = {
       },
       include: 'allAssets', // or 'initial', 'allChunks'
       fileBlacklist: [/\.(eot|svg)/],
-    }),
-    new ExtractTextPlugin('[name].css', {
-      allChunks: true, // TODO: You divide js files, you must add this code.
     }),
     new WebpackPwaManifest({
       filename: 'manifest.json',
@@ -127,6 +125,7 @@ let baseWebpack = {
     path: path.resolve(__dirname, outputPath), //  Output directory name
     filename: '[name].js', // Output filename
     publicPath: '/',
+    clean: true
   },
   module: {
     rules: [
@@ -136,17 +135,18 @@ let baseWebpack = {
       },
       {
         test: /(\.css$)/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+        ],
       },
       {
         test: /\.s(c|a)ss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-        }),
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader'
+        ],
       },
       {
         test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
