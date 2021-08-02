@@ -7,11 +7,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // local variables
 let env = 'development';
-let watch = true;
 let outputPath = './dist/';
 if (process.env.NODE_ENV === 'PRODUCTION') {
   env = 'production';
-  watch = false;
   outputPath = './build/';
 }
 
@@ -22,13 +20,9 @@ const NAMES = {
 };
 
 let baseWebpack = {
-  // If mode is "production", the app is optimized.
-  // If mode is "development", javascript files output with adding source map.
-  watch: watch,
   mode: env,
   entry: {
     'public/app': path.resolve(__dirname, 'src/app.ts'), // The main javascript file
-    'public/data': path.resolve(__dirname, 'src/assets/data/index.ts'), // The main javascript file
   },
   optimization: {
     // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)

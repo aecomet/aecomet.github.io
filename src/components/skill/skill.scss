@@ -32,73 +32,8 @@ $red: #d60d21;
       }
     }
   }
-
-  #product-field {
-    .product-list {
-      flex: 0 0 320px;
-      padding: 8px;
-      border-right: 1px dotted $skill-color;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      p {
-        &:hover {
-          outline: 1px solid $skill-color;
-        }
-      }
-    }
-
-    .product-content {
-      width: 100%;
-      text-align: left;
-      box-shadow: 1px 1px 8px $skill-color;
-
-      #product-logo {
-        height: $logo-height;
-        display: inline-block;
-      }
-
-      #product-lang {
-        span {
-          color: $skyblue;
-          border: 1px solid $skyblue;
-          padding: 4px;
-        }
-      }
-
-      #product-github {
-        padding: 4px;
-        display: inline-block;
-        text-decoration: none;
-        outline: 1px solid $red;
-        color: $red;
-
-        &:link,
-        &:visited {
-          color: $red;
-        }
-      }
-    }
-  }
 }
 
 /* Responsible Layout */
 @media screen and (max-width: 480px) {
-  #skill {
-    #product-field {
-      padding: 0 !important;
-      flex-flow: column;
-
-      .product-list {
-        flex-basis: inherit;
-        border-right: none;
-      }
-    
-      .product-content {
-        width: auto;
-      }
-    }
-  }
 }
