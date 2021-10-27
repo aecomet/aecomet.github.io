@@ -24,8 +24,16 @@ export default {
   data: () => ({
     skills: [
       {
-        name: 'JavaScript',
-        note: 'jQuery, Vue, Reactの開発経験があり、Vue, Reactについては状態管理を用いた大規模アプリケーションに携わったこともあります。'
+        name: 'JavaScript(jQuery)',
+        note: '業務で利用していますが、保守開発が多いです。'
+      },
+      {
+        name: 'Vue(+ TypeScript)',
+        note: '業務で利用しており、Vuexの開発経験もあります。'
+      },
+      {
+        name: 'React(+ TypeScript)',
+        note: '個人開発で利用しており、Reduxの開発経験もあります。'
       },
       {
         name: 'Java',
@@ -33,15 +41,15 @@ export default {
       },
       {
         name: 'PHP',
-        note: 'サーバー言語を初めて触った際に触れた言語で、ここから色々な言語を学ぶようになりました。主に素のPHPやLaravelを用いた開発をしていました。今は触っていないです。'
+        note: 'サーバー言語を初めて触った際に触れた言語です。主に素のPHPやLaravelを用いた開発をしていました。'
       },
       {
         name: 'Python',
-        note: '主に業務で利用しておりFlask, Djangoのようなアプリケーション開発方面なら経験があります。'
+        note: '業務で利用しておりFlask, Djangoのようなアプリケーション開発方面なら経験があります。'
       },
       {
         name: 'Ruby',
-        note: '業務で利用していますが、正式にはRuby on Railsがメインであり、素のRubyを使って何かを作るときはバッチ処理のようなワンタイムのものを作るときが多いです。'
+        note: '業務で利用していますがRuby on Railsがメインであり、素のRubyはバッチ処理のようなものを作るときが多いです。'
       },
       {
         name: 'Perl',
