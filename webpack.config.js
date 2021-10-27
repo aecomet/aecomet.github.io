@@ -1,28 +1,21 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const { VueLoaderPlugin } = require('vue-loader');
+const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // local variables
-let env = 'development';
-let outputPath = './dist/';
-if (process.env.NODE_ENV === 'PRODUCTION') {
-  env = 'production';
-  outputPath = './build/';
-}
+const isProduction = process.env.NODE_ENV === 'PRODUCTION';
 
-const NAMES = {
-  user: '@hiyoko3',
-  title: 'Portfolio',
-  desc: 'Portfolio | Hiyoko3',
-};
+let env = isProduction ? 'production' : 'development';
+let outputPath = isProduction ? './build/' : './dist/';
 
 let baseWebpack = {
   mode: env,
   entry: {
-    'public/app': path.resolve(__dirname, 'src/app.ts'), // The main javascript file
+    'public/app': path.resolve(__dirname, 'src/app.ts') // The main javascript file
   },
   optimization: {
     // optimization chunks (Referecne: https://qiita.com/soarflat/items/1b5aa7163c087a91877d)
@@ -31,39 +24,28 @@ let baseWebpack = {
         vendor: {
           test: /node_modules/,
           name: 'public/vendor',
-          chunks: 'initial', // initial, async, all
-        },
-      },
+          chunks: 'initial' // initial, async, all
+        }
+      }
     },
-    minimizer: [],
+    minimizer: []
   },
   plugins: [
+    new VueLoaderPlugin(),
+    new VuetifyLoaderPlugin(),
     new MiniCssExtractPlugin(),
-    // === Compile `index.pug` === //
     new HTMLWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, 'src/index.pug'),
+      template: path.resolve(__dirname, 'src/index.html'),
       minify: {
         html5: true,
         minifyCSS: true,
         collapseWhitespace: true,
         removeComments: true,
-        removeEmptyAttributes: true,
+        removeEmptyAttributes: true
       },
       inject: true,
-      chunksSortMode: 'auto',
-      meta: {
-        viewport: 'width=device-width, initial-scale=1.0',
-        title: NAMES.title,
-        keywords: 'Portfolio',
-        author: NAMES.user,
-        description: NAMES.desc,
-        'theme-color': '#f7f6f5',
-        'format-detection': 'telephone=no', //- Disabled phone number (iOS)
-        //- /* ==== Windows Theme ==== */
-        'msapplication-TileImage': 'public/static/images/apple-touch-icon.png',
-        'msapplication-TileColor': '#f7f6f5',
-      },
+      chunksSortMode: 'auto'
     }),
     new PreloadWebpackPlugin({
       rel: 'preload',
@@ -74,42 +56,14 @@ let baseWebpack = {
         return 'script';
       },
       include: 'allAssets', // or 'initial', 'allChunks'
-      fileBlacklist: [/\.(eot|svg)/],
-    }),
-    new WebpackPwaManifest({
-      filename: 'manifest.json',
-      name: `PWA ${NAMES.title}`,
-      short_name: NAMES.title,
-      description: `${NAMES.desc} for PWA`,
-      background_color: '#efefef',
-      theme_color: '#fff',
-      display: 'standalone',
-      orientation: 'portrait',
-      crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
-      ios: {
-        'apple-mobile-web-app-title': NAMES.title,
-        'apple-mobile-web-app-status-bar-style': 'black',
-      },
-      icons: [
-        {
-          src: path.resolve('src/assets/icons/apple-touch-icon.png'),
-          sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
-          destination: path.join('public/icons', 'ios'),
-          ios: true,
-        },
-        {
-          src: path.resolve('src/assets/icons/icon.png'),
-          sizes: [128, 144, 152, 192, 256, 512], // multiple sizes
-          destination: path.join('public/icons', 'default'),
-        },
-      ],
+      fileBlacklist: [/\.(eot|svg)/]
     }),
     new CopywebpackPlugin({
       patterns: [
         {
           toType: 'dir',
           from: path.join(__dirname, 'src/assets/images'),
-          to: path.join(__dirname, `${outputPath}public/static/images`),
+          to: path.join(__dirname, `${outputPath}public/static/images`)
         }
       ]
     })
@@ -124,23 +78,46 @@ let baseWebpack = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
-        loader: 'ts-loader',
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
       {
-        test: /(\.css$)/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
+        test: /\.ts$/,
+        exclude: /(node_modules)/,
+        loader: 'ts-loader',
+        options: {
+          transpileOnly: true, // コンパイルのみで型検査しない
+          appendTsSuffixTo: [/\.vue/] // /vueをtypescriptとして扱う
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.s(c|a)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
-        ],
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['autoprefixer']]
+              }
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: !isProduction,
+              implementation: require('sass'),
+              sassOptions: {
+                indentedSyntax: true // optional
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
@@ -149,8 +126,8 @@ let baseWebpack = {
           limit: 10000,
           name: '[name].[ext]',
           outputPath: 'public/media',
-          publicPath: '/public/media/',
-        },
+          publicPath: '/public/media/'
+        }
       },
       {
         test: /\.(woff2?|woff|eot|ttf|otf)(\?.*)?$/,
@@ -159,29 +136,21 @@ let baseWebpack = {
           limit: 10000,
           name: '[name].[ext]',
           outputPath: 'public/fonts',
-          publicPath: '/public/fonts/',
-        },
+          publicPath: '/public/fonts/'
+        }
       },
       {
         test: /\.html$/,
-        loader: 'html-loader',
-      },
-      {
-        test: /\.pug$/,
-        oneOf: [
-          // this applies to pug imports inside JavaScript
-          {
-            use: ['raw-loader', 'pug-plain-loader'],
-          },
-        ],
-      },
-    ],
+        loader: 'html-loader'
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.ts', '.json'],
+    extensions: ['.vue', '.js', '.ts', '.json'],
     alias: {
-      '@': path.resolve(__dirname, 'src/'),
-    },
+      '@src': path.resolve(__dirname, 'src/'),
+      vue$: 'vue/dist/vue.esm.js'
+    }
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -193,8 +162,8 @@ let baseWebpack = {
     inline: true, // The mode of inline.
     hot: false, // use HMR
     clientLogLevel: 'info', // The log level(none, error, warning, info)
-    historyApiFallback: true,
-  },
+    historyApiFallback: true
+  }
 };
 
 module.exports = baseWebpack;
