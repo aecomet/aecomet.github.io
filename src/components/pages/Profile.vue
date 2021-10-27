@@ -1,15 +1,17 @@
 <template>
   <v-card class="mx-auto" outlined>
+    <v-card-title class="justify-center">
+      <v-avatar size="200" tile class="ma-3">
+        <v-img src="public/static/images/logo.png" contain class="grey darken-4"></v-img>
+      </v-avatar>
+    </v-card-title>
+
     <v-list-item three-line>
       <v-list-item-content>
         <div class="text-overline mb-4">Profile</div>
         <v-list-item-title class="text-h5 mb-1"> Hiyoko 3 </v-list-item-title>
         <v-list-item-subtitle>Software Engineer</v-list-item-subtitle>
       </v-list-item-content>
-
-      <v-avatar size="125" tile class="ma-3">
-        <v-img src="public/static/images/logo.png" contain class="grey darken-4"></v-img>
-      </v-avatar>
     </v-list-item>
 
     <v-card-text class="text--primary">

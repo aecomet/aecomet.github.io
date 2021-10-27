@@ -3,20 +3,20 @@
     <app-header></app-header>
     <v-main>
       <v-container>
-        <v-row   justify="center">
-          <v-col lg="4" md="8" sm="12">
+        <v-row justify="center">
+          <v-col lg="11" md="12" sm="12">
             <user-profile></user-profile>
           </v-col>
         </v-row>
 
-        <v-row  justify="center">
-          <v-col lg="4" md="8" sm="12">
+        <v-row justify="center">
+          <v-col lg="11" md="12" sm="12">
             <user-career></user-career>
           </v-col>
         </v-row>
 
-        <v-row  justify="center">
-          <v-col lg="4" md="8" sm="12">
+        <v-row justify="center">
+          <v-col lg="11" md="12" sm="12">
             <user-skill></user-skill>
           </v-col>
         </v-row>
@@ -39,7 +39,7 @@ export default {
     'app-footer': AppFooter,
     'user-profile': Profile,
     'user-skill': Skill,
-    'user-career': Career,
+    'user-career': Career
   },
   created() {}
 };
