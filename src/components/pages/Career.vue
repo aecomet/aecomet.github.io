@@ -33,6 +33,11 @@ export default {
   data: () => ({
     careers: [
       {
+        date: '2013年3月',
+        header: '高等学校卒業',
+        note: ''
+      },
+      {
         date: '2013年4月',
         header: '大学入学',
         note: '情報工学科。在学中にベンチャー企業にてプログラミングのアルバイトを行う。このとき初めてPHP, Ruby, jQueryを触る。授業では簡単なJava, C, Perlを学ぶ'
@@ -55,11 +60,11 @@ export default {
       {
         date: '2019年4月',
         header: '企業に入社',
-        note: '情報システム部に配属。Ruby, Perl, Javaをメインにマイクロサービスの開発や保守開発を行う。最近になってFlask, Vueを利用した新規アプリケーション開発にも携わる'
+        note: '情報システム部に配属。社内向けの共通基盤開発を担当。主にJavaを用いたマイクロサービス開発と、Ruby/Python+Vueを用いた画面開発がメイン。'
       },
       {
-        date: '現在',
-        header: '',
+        date: '',
+        header: '現在',
         note: ''
       },
     ]

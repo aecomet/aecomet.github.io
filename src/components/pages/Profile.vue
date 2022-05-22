@@ -17,7 +17,7 @@
     <v-card-text class="text--primary">
       <h4 class="headline">連絡</h4>
 
-      <p>sb.gm.0823@***</p>
+      <p>engineer.t.o.0823@***</p>
       <p>※ ***にはgmail.comを入力してください</p>
     </v-card-text>
 

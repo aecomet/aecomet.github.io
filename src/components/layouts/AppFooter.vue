@@ -1,7 +1,7 @@
 <template>
-  <v-footer padless elevation="3">
+  <v-footer padless>
     <v-card flat tile width="100%" class="text-center">
-      <v-card-text>&copy; {{ new Date().getFullYear() }} — <strong>hiyoko3</strong> </v-card-text>
+      <v-card-text><strong>&copy; hiyoko3</strong> </v-card-text>
     </v-card>
   </v-footer>
 </template>
