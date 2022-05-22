@@ -3,7 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopywebpackPlugin = require('copy-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
-const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // local variables
@@ -32,7 +31,6 @@ let baseWebpack = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new VuetifyLoaderPlugin(),
     new MiniCssExtractPlugin(),
     new HTMLWebpackPlugin({
       filename: 'index.html',
@@ -149,19 +147,22 @@ let baseWebpack = {
     extensions: ['.vue', '.js', '.ts', '.json'],
     alias: {
       '@src': path.resolve(__dirname, 'src/'),
-      vue$: 'vue/dist/vue.esm.js'
+      vue: '@vue/runtime-dom'
     }
   },
   devtool: 'inline-source-map',
   devServer: {
+    compress: true, // Enable gzip compression for everything served:
     host: '0.0.0.0',
     port: 7777, // port number
-    contentBase: path.join(__dirname, 'dist/'), // Document root on server
-    // publicPath: path.join(__dirname, 'dist/'),                     // Temporary path on virtual memory
-    progress: false, // Show progress on console.
-    inline: true, // The mode of inline.
-    hot: false, // use HMR
-    clientLogLevel: 'info', // The log level(none, error, warning, info)
+    static: {
+      directory: path.join(__dirname, 'dist/') // Document root on server
+    },
+    client: {
+      progress: false, // Show progress on console.
+      overlay: true, // show error when there are compiler errors or warnings.
+      logging: 'info' // A log level(none, error, warning, info)
+    },
     historyApiFallback: true
   }
 };
