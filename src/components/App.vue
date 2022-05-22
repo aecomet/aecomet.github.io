@@ -27,13 +27,14 @@
 </template>
 
 <script lang="ts">
-import AppHeader from '@src/components/layouts/AppHeader.vue';
 import AppFooter from '@src/components/layouts/AppFooter.vue';
+import AppHeader from '@src/components/layouts/AppHeader.vue';
+import Career from '@src/components/pages/Career.vue';
 import Profile from '@src/components/pages/Profile.vue';
 import Skill from '@src/components/pages/Skill.vue';
-import Career from '@src/components/pages/Career.vue';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   components: {
     'app-header': AppHeader,
     'app-footer': AppFooter,
@@ -41,8 +42,10 @@ export default {
     'user-skill': Skill,
     'user-career': Career
   },
-  created() {}
-};
+  setup() {
+    return {};
+  }
+});
 </script>
 
 <style lang="sass"></style>

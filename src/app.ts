@@ -1,13 +1,13 @@
 /* === Main Application bundle file === */
 // Libraries
 import App from '@src/components/App.vue';
-import vuetify from '@src/plugins/vuetify.ts'; // path to vuetify export
-import Vue from 'vue';
+import MyVuetify from '@src/plugins/vuetify.ts';
+import { createApp } from 'vue';
 
-new Vue({
-  vuetify,
-  render: (h) => h(App, {})
-}).$mount('#app');
+const app = createApp(App);
+
+app.use(MyVuetify);
+app.mount('#app');
 
 /* === Service Worker === */
 // Checking support a `service worker`
