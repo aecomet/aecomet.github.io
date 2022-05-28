@@ -80,6 +80,10 @@ export default defineComponent({
         {
           name: 'GoLang',
           note: '趣味の開発で利用しています。'
+        },
+        {
+          name: 'Flutter',
+          note: '趣味の開発で利用しています。'
         }
       ]
     };
