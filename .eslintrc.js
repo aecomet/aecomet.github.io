@@ -3,10 +3,13 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'prettier:prettier/recommended'],
-
-  plugins: ['prettier'],
-
+  extends: ['plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint', 'vue', 'prettier'],
+  parser: 'vue-eslint-parser', // ESLintでVueを解析
+  parserOptions: {
+    parser: '@typescript-eslint/parser' // ESLintでTypescriptを解析する
+  },
+  root: true,
   rules: {
     'prettier/prettier': 'error',
     'vue/singleline-html-element-content-newline': 0,

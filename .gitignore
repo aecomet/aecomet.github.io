@@ -3,5 +3,6 @@
 *.css.map
 dist
 node_modules
-*.vscode
+.vscode/*
+!.vscode/settings.json
 *.node-version

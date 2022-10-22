@@ -1,17 +1,16 @@
 <template>
   <v-card class="mx-auto" outlined>
-    <v-list-item three-line>
-      <v-list-item-content>
-        <div class="text-overline mb-4">Career</div>
-        <v-list-item-title class="text-h5 mb-1">経歴</v-list-item-title>
-        <v-list-item-subtitle>大学入学から現在まで</v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+    <v-card-subtitle class="text-overline mb-4 pt-4">Career</v-card-subtitle>
+
+    <v-card-text>
+      <div class="text-h5 mb-1">経歴</div>
+      <div>大学入学から現在まで</div>
+    </v-card-text>
 
     <v-card-text>
       <v-timeline>
         <v-timeline-item v-for="(career, idx) in careers" :key="idx" small>
-          <template v-slot:opposite>
+          <template #opposite>
             <span v-text="career.date"></span>
           </template>
           <div class="py-4">
@@ -37,7 +36,7 @@ export default defineComponent({
         {
           date: '2013年3月',
           header: '高等学校卒業',
-          note: '高校は進学校だったため特にプログラミングに関わる機会はなかった。しかし文化祭で動画編集を担当したことがきっかけでコンピュータ関連に興味を持つ。'
+          note: '高校ではプログラミングに直接関わる機会はなかったが文化祭で動画編集を担当したことがきっかけでコンピュータ関連に興味を持つ。'
         },
         {
           date: '2013年4月',

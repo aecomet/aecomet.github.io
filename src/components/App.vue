@@ -4,19 +4,17 @@
     <v-main>
       <v-container>
         <v-row justify="center">
-          <v-col cols="12">
+          <v-col md="10" sm="12">
             <user-profile></user-profile>
           </v-col>
         </v-row>
 
         <v-row justify="center">
-          <v-col cols="12">
+          <v-col md="10" sm="12">
             <user-career></user-career>
           </v-col>
-        </v-row>
 
-        <v-row justify="center">
-          <v-col cols="12">
+          <v-col md="10" sm="12">
             <user-skill></user-skill>
           </v-col>
         </v-row>
@@ -29,9 +27,9 @@
 <script lang="ts">
 import AppFooter from '@src/components/layouts/AppFooter.vue';
 import AppHeader from '@src/components/layouts/AppHeader.vue';
-import Career from '@src/components/pages/Career.vue';
-import Profile from '@src/components/pages/Profile.vue';
-import Skill from '@src/components/pages/Skill.vue';
+import Career from '@src/components/pages/CareerComponent.vue';
+import Profile from '@src/components/pages/ProfileComponent.vue';
+import Skill from '@src/components/pages/SkillComponent.vue';
 import { defineComponent } from 'vue';
 
 export default defineComponent({
