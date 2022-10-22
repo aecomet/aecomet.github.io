@@ -1,20 +1,16 @@
 <template>
   <v-card class="mx-auto" outlined>
-    <v-list-item three-line>
-      <v-list-item-content>
-        <div class="text-overline mb-4">Skill</div>
-        <v-list-item-title class="text-h5 mb-1">スキル</v-list-item-title>
-        <v-list-item-subtitle>触れたことのある技術</v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+    <v-card-subtitle class="text-overline mb-4 pt-4">Skill</v-card-subtitle>
 
     <v-card-text>
-      <v-list-item three-line v-for="(skill, idx) in skills" :key="idx">
-        <v-list-item-content>
-          <v-list-item-title>{{ skill.name }}</v-list-item-title>
-          <v-list-item-subtitle>{{ skill.note }}</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
+      <div class="text-h5 mb-1">スキル</div>
+      <div>触れたことのある技術</div>
+    </v-card-text>
+
+    <v-card-text>
+      <v-list lines="one">
+        <v-list-item v-for="(skill, idx) in skills" :key="idx" :title="skill.name" :subtitle="skill.note"></v-list-item>
+      </v-list>
     </v-card-text>
   </v-card>
 </template>

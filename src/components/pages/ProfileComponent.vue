@@ -1,18 +1,15 @@
 <template>
   <v-card class="mx-auto" outlined>
-    <v-card-title class="justify-center">
-      <v-avatar size="200" tile class="ma-3">
-        <v-img src="public/static/images/logo.png" contain class="grey darken-4"></v-img>
-      </v-avatar>
-    </v-card-title>
+    <v-img class="align-end text-white" height="200" src="/images/logo.png" cover>
+      <v-card-title>Top 10 Australian beaches</v-card-title>
+    </v-img>
 
-    <v-list-item three-line>
-      <v-list-item-content>
-        <div class="text-overline mb-4">Profile</div>
-        <v-list-item-title class="text-h5 mb-1"> Hiyoko 3 </v-list-item-title>
-        <v-list-item-subtitle>Software Engineer</v-list-item-subtitle>
-      </v-list-item-content>
-    </v-list-item>
+    <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
+
+    <v-card-text>
+      <div class="text-h5 mb-1">Hiyoko 3</div>
+      <div>Software Engineer</div>
+    </v-card-text>
 
     <v-card-text class="text--primary">
       <h4 class="headline">連絡</h4>
