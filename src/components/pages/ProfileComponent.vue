@@ -1,8 +1,6 @@
 <template>
   <v-card class="mx-auto" outlined>
-    <v-img class="align-end text-white" height="200" src="/images/logo.png" cover>
-      <v-card-title>Top 10 Australian beaches</v-card-title>
-    </v-img>
+    <v-img class="align-end text-white mx-auto" width="250" src="/images/logo.png" cover> </v-img>
 
     <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
 

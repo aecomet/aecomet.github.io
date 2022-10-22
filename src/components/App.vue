@@ -4,17 +4,17 @@
     <v-main>
       <v-container>
         <v-row justify="center">
-          <v-col md="12" sm="12">
+          <v-col md="8" sm="12">
             <user-profile></user-profile>
           </v-col>
         </v-row>
 
         <v-row justify="center">
-          <v-col md="6" sm="12">
+          <v-col md="10" sm="12">
             <user-career></user-career>
           </v-col>
 
-          <v-col md="6" sm="12">
+          <v-col md="10" sm="12">
             <user-skill></user-skill>
           </v-col>
         </v-row>
