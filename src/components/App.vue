@@ -4,7 +4,7 @@
     <v-main>
       <v-container>
         <v-row justify="center">
-          <v-col md="8" sm="12">
+          <v-col md="10" sm="12">
             <user-profile></user-profile>
           </v-col>
         </v-row>

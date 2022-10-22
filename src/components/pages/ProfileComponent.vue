@@ -17,10 +17,10 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn outlined rounded text href="https://atcoder.jp/users/ae_hiyoko3" target="_blank" rel="noopener">
+      <v-btn variant="outlined" href="https://atcoder.jp/users/ae_hiyoko3" target="_blank" rel="noopener">
         AtCoder
       </v-btn>
-      <v-btn outlined rounded text href="https://github.com/hiyoko3" target="_blank" rel="noopener"> Github </v-btn>
+      <v-btn variant="outlined" href="https://github.com/hiyoko3" target="_blank" rel="noopener">Github</v-btn>
     </v-card-actions>
   </v-card>
 </template>
