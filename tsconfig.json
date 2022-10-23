@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     /* Basic Options */
-    "types": ["vuetify", "vite/client", "node"],
-    "target": "ES6",
-    "module": "ES6" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "types": ["vuetify"],
+    "target": "ESNext",
+    "module": "ESNext" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
     "lib": ["DOM", "ES6", "ES2022", "ESNext"],
     "sourceMap": true /* Generates corresponding '.map' file. */,
     "strict": true /* Enable all strict type-checking options. */,
     "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noImplicitAny": true,
     "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
     "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
     "paths": {
@@ -18,6 +19,7 @@
     "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
     "esModuleInterop": true /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. Implies 'allowSyntheticDefaultImports'. */,
     "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "removeComments": true,
     "jsx": "preserve"
   },
   "vueCompilerOptions": {
