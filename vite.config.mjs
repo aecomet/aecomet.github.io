@@ -3,6 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import eslintPlugin from 'vite-plugin-eslint';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import preload from "vite-plugin-preload";
 
 // https://vitejs.dev/config/
 export default () => {
@@ -27,7 +28,11 @@ export default () => {
       // generate html
       createHtmlPlugin(),
       // lint
-      eslintPlugin()
+      eslintPlugin({
+        fix: true
+      }),
+      // preload assets
+      preload()
     ],
     publicDir: path.resolve(__dirname, `${SRC_PATH}/assets`),
     build: {
