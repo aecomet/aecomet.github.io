@@ -1,6 +1,6 @@
 {
   "name": "hiyoko3.github.io",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "My portfolio.",
   "main": "index.js",
   "scripts": {
@@ -19,25 +19,26 @@
   },
   "homepage": "https://github.com/hiyoko3/hiyoko3.github.io#readme",
   "devDependencies": {
-    "@types/node": "^18.14.6",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/compiler-sfc": "^3.2.47",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-vue": "^9.9.0",
-    "prettier": "^2.8.4",
-    "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vite-plugin-env-compatible": "^1.1.1",
+    "@types/node": "^20.11.13",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "@vue/compiler-sfc": "^3.4.15",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-vue": "^9.21.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-env-compatible": "^2.0.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-html": "3.2.0"
+    "vite-plugin-html": "3.2.2",
+    "vite-plugin-preload": "^0.3.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.3.0",
-    "vue": "^3.2.47",
-    "vuetify": "^3.1.7"
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "vue": "^3.4.15",
+    "vuetify": "^3.5.1"
   }
 }

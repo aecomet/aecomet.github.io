@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app elevate-on-scrol absolute>
     <v-toolbar-title>Portfolio</v-toolbar-title>
-    <v-btn @click="toggleTheme"><v-icon icon="fa:fas fa-adjust"></v-icon></v-btn>
+    <v-btn aria-label="toggle-btn" @click="toggleTheme"><v-icon icon="fa:fas fa-adjust"></v-icon></v-btn>
   </v-app-bar>
 </template>
 

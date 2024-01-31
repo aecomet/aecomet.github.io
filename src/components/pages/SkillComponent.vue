@@ -8,8 +8,14 @@
     </v-card-text>
 
     <v-card-text>
-      <v-list lines="one">
-        <v-list-item v-for="(skill, idx) in skills" :key="idx" :title="skill.name" :subtitle="skill.note"></v-list-item>
+      <v-list lines="one" aria-label="skill-list">
+        <v-list-item
+          v-for="(skill, idx) in skills"
+          :key="idx"
+          :title="skill.name"
+          :subtitle="skill.note"
+          role="option"
+        ></v-list-item>
       </v-list>
     </v-card-text>
   </v-card>
