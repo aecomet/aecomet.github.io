@@ -11,6 +11,7 @@ app.mount('#app');
 
 /* === Service Worker === */
 // Checking support a `service worker`
+console.log(window.location.protocol, window.location.hostname);
 if (
   'serviceWorker' in navigator &&
   (window.location.protocol === 'https:' || window.location.hostname === 'localhost')
