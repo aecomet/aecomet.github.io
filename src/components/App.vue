@@ -1,49 +1,33 @@
 <template>
   <v-app>
-    <app-header></app-header>
+    <AppHeader></AppHeader>
     <v-main>
       <v-container>
         <v-row justify="center">
           <v-col md="10" sm="12">
-            <user-profile></user-profile>
+            <UserProfile></UserProfile>
           </v-col>
         </v-row>
 
         <v-row justify="center">
           <v-col md="10" sm="12">
-            <user-career></user-career>
+            <UserCareer></UserCareer>
           </v-col>
 
           <v-col md="10" sm="12">
-            <user-skill></user-skill>
+            <UserSkill></UserSkill>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
-    <app-footer></app-footer>
+    <AppFooter></AppFooter>
   </v-app>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import AppFooter from '@src/components/layouts/AppFooter.vue';
 import AppHeader from '@src/components/layouts/AppHeader.vue';
-import Career from '@src/components/pages/CareerComponent.vue';
-import Profile from '@src/components/pages/ProfileComponent.vue';
-import Skill from '@src/components/pages/SkillComponent.vue';
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  components: {
-    'app-header': AppHeader,
-    'app-footer': AppFooter,
-    'user-profile': Profile,
-    'user-skill': Skill,
-    'user-career': Career
-  },
-  setup() {
-    return {};
-  }
-});
+import UserCareer from '@src/components/pages/CareerComponent.vue';
+import UserProfile from '@src/components/pages/ProfileComponent.vue';
+import UserSkill from '@src/components/pages/SkillComponent.vue';
 </script>
-
-<style lang="sass"></style>
