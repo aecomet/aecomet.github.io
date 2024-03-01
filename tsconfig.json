@@ -6,7 +6,7 @@
     /* build option */
     "target": "ES2022",
     "module": "ES2022",
-    "lib": ["DOM", "ESNext", "WebWorker"],
+    "lib": ["DOM", "ESNext"],
     "moduleResolution": "Bundler",
     "removeComments": true,
 
@@ -15,7 +15,7 @@
 
     /* Enable strict options. */
     "strict": true,
-    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
+    "noImplicitReturns": true,
 
     /* resolve options */
     "baseUrl": "./",
