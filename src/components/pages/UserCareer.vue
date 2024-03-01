@@ -28,7 +28,9 @@
 </template>
 
 <script setup lang="ts">
-const careers = [
+import { Career } from '@src/types/Career.ts';
+
+const careers: Career[] = [
   {
     date: '2013年3月',
     header: '高等学校卒業',

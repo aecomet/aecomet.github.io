@@ -27,7 +27,7 @@
 <script setup lang="ts">
 import AppFooter from '@src/components/layouts/AppFooter.vue';
 import AppHeader from '@src/components/layouts/AppHeader.vue';
-import UserCareer from '@src/components/pages/CareerComponent.vue';
-import UserProfile from '@src/components/pages/ProfileComponent.vue';
-import UserSkill from '@src/components/pages/SkillComponent.vue';
+import UserCareer from '@src/components/pages/UserCareer.vue';
+import UserProfile from '@src/components/pages/UserProfile.vue';
+import UserSkill from '@src/components/pages/UserSkill.vue';
 </script>
