@@ -19,7 +19,7 @@ export default () => {
           replacement: path.resolve(__dirname, SRC_PATH)
         }
       ],
-      extensions: ['.ts', '.json', '.vue']
+      extensions: ['.ts', '.vue']
     },
     plugins: [
       // compile vue
@@ -37,6 +37,10 @@ export default () => {
     build: {
       outDir: path.resolve(__dirname, OUTPUT_PATH),
       emptyOutDir: true
+    },
+    server: {
+      host: '0.0.0.0',
+      port: 8888
     }
   });
 };

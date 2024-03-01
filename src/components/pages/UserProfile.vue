@@ -1,6 +1,7 @@
 <template>
   <v-card class="mx-auto" outlined>
-    <v-img class="align-end text-white mx-auto" width="250" src="/images/logo.png" alt="profile-img" cover> </v-img>
+    <v-img class="align-end text-white mx-auto" height="250" width="250" src="/images/logo.png" alt="profile-img" cover>
+    </v-img>
 
     <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
 
