@@ -5,21 +5,11 @@
   </v-app-bar>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
 import { useTheme } from 'vuetify';
-export default defineComponent({
-  setup() {
-    const theme = useTheme();
+const theme = useTheme();
 
-    const toggleTheme = (): void => {
-      theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
-    };
-
-    return {
-      theme,
-      toggleTheme
-    };
-  }
-});
+const toggleTheme = (): void => {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
+};
 </script>
