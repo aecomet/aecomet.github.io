@@ -5,18 +5,18 @@
       <v-container>
         <v-row justify="center">
           <v-col md="10" sm="12">
-            <v-lazy height="550" transition="fade-transition">
-              <UserProfile></UserProfile>
-            </v-lazy>
+            <UserProfile></UserProfile>
           </v-col>
         </v-row>
 
-        <v-lazy height="2300" transition="fade-transition">
-          <v-row justify="center">
-            <v-col md="10" sm="12">
-              <UserCareer></UserCareer>
-            </v-col>
+        <v-row justify="center">
+          <v-col md="10" sm="12">
+            <UserCareer></UserCareer>
+          </v-col>
+        </v-row>
 
+        <v-lazy height="1200" transition="fade-transition">
+          <v-row justify="center">
             <v-col md="10" sm="12">
               <UserSkill></UserSkill>
             </v-col>
