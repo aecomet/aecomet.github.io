@@ -1,8 +1,2 @@
-*.hot-update.*
-*.js.map
-*.css.map
-dist
+build
 node_modules
-.vscode/*
-!.vscode/settings.json
-*.node-version

@@ -21,7 +21,6 @@
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vue/compiler-sfc": "^3.4.21",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
@@ -29,7 +28,6 @@
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
-    "vite-plugin-env-compatible": "^2.0.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-html": "3.2.2",
     "vite-plugin-preload": "^0.3.1"
