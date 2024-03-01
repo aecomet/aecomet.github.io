@@ -4,9 +4,9 @@
     "types": ["vuetify"],
 
     /* build option */
-    "target": "ESNext",
-    "module": "ESNext",
-    "lib": ["DOM", "ESNext"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["DOM", "ESNext", "WebWorker"],
     "moduleResolution": "Bundler",
     "removeComments": true,
 

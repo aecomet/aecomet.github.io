@@ -8,6 +8,8 @@
     "naumovs.color-highlight",
     "esbenp.prettier-vscode",
     "vue.vscode-typescript-vue-plugin",
-    "vue.volar"
+    "vue.volar",
+    "jeff-hykin.better-dockerfile-syntax",
+    "ms-azuretools.vscode-docker"
   ]
 }

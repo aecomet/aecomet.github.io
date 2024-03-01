@@ -9,15 +9,17 @@
           </v-col>
         </v-row>
 
-        <v-row justify="center">
-          <v-col md="10" sm="12">
-            <UserCareer></UserCareer>
-          </v-col>
+        <v-lazy height="300" transition="fade-transition">
+          <v-row justify="center">
+            <v-col md="10" sm="12">
+              <UserCareer></UserCareer>
+            </v-col>
 
-          <v-col md="10" sm="12">
-            <UserSkill></UserSkill>
-          </v-col>
-        </v-row>
+            <v-col md="10" sm="12">
+              <UserSkill></UserSkill>
+            </v-col>
+          </v-row>
+        </v-lazy>
       </v-container>
     </v-main>
     <AppFooter></AppFooter>
