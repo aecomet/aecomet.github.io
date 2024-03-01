@@ -3,7 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import eslintPlugin from 'vite-plugin-eslint';
 import { createHtmlPlugin } from 'vite-plugin-html';
-import preload from 'vite-plugin-preload';
+import vuetify from 'vite-plugin-vuetify';
 
 // https://vitejs.dev/config/
 export default () => {
@@ -24,14 +24,14 @@ export default () => {
     plugins: [
       // compile vue
       vue(),
+      // enable vuetify
+      vuetify(),
       // generate html
       createHtmlPlugin(),
       // lint
       eslintPlugin({
         fix: true
-      }),
-      // preload assets
-      preload()
+      })
     ],
     publicDir: path.resolve(__dirname, `${SRC_PATH}/assets`),
     build: {

@@ -30,7 +30,7 @@
     "vite": "^5.1.4",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-html": "3.2.2",
-    "vite-plugin-preload": "^0.3.1"
+    "vite-plugin-vuetify": "^2.0.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.1",
