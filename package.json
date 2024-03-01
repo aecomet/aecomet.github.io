@@ -1,18 +1,16 @@
 {
   "name": "hiyoko3.github.io",
-  "version": "6.2.0",
+  "version": "7.0.0",
   "description": "My portfolio.",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "NODE_ENV=production vite build",
-    "preview": "NODE_ENV=production vite preview"
+    "build": "NODE_ENV=production vite build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hiyoko3/hiyoko3.github.io.git"
   },
-  "author": "Tatsuya Oyanagi",
+  "author": "hiyoko3",
   "license": "APL2",
   "bugs": {
     "url": "https://github.com/hiyoko3/hiyoko3.github.io/issues"
