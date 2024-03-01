@@ -5,23 +5,28 @@
       <v-container>
         <v-row justify="center">
           <v-col md="10" sm="12">
-            <UserProfile></UserProfile>
+            <v-lazy height="100%" transition="fade-transition">
+              <UserProfile></UserProfile>
+            </v-lazy>
           </v-col>
         </v-row>
 
-        <v-lazy height="300" transition="fade-transition">
-          <v-row justify="center">
-            <v-col md="10" sm="12">
+        <v-row justify="center">
+          <v-col md="10" sm="12">
+            <v-lazy height="100%" transition="fade-transition">
               <UserCareer></UserCareer>
-            </v-col>
+            </v-lazy>
+          </v-col>
 
-            <v-col md="10" sm="12">
+          <v-col md="10" sm="12">
+            <height height="100%" transition="fade-transition">
               <UserSkill></UserSkill>
-            </v-col>
-          </v-row>
-        </v-lazy>
+            </height>
+          </v-col>
+        </v-row>
       </v-container>
     </v-main>
+
     <AppFooter></AppFooter>
   </v-app>
 </template>
