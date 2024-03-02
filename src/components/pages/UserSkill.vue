@@ -6,7 +6,7 @@
       <div class="text-h5 mb-1">スキル</div>
       <div>触れたことのある技術</div>
 
-      <v-list lines="one" aria-label="skill-list">
+      <v-list aria-label="skill-list">
         <v-list-item v-for="(skill, idx) in skills" :key="idx" role="option">
           <v-list-item-title>
             <div class="flex align-center">
@@ -24,7 +24,7 @@
               </v-chip>
             </div>
           </v-list-item-title>
-          <v-list-item-subtitle>{{ skill.note }}</v-list-item-subtitle>
+          <v-list-item-subtitle class="wrap-text">{{ skill.note }}</v-list-item-subtitle>
         </v-list-item>
       </v-list>
     </v-card-text>
@@ -271,3 +271,9 @@ const skills: Skill[] = [
   }
 ];
 </script>
+
+<style lang="scss" scoped>
+.wrap-text {
+  -webkit-line-clamp: inherit !important;
+}
+</style>

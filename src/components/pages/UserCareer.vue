@@ -8,12 +8,12 @@
     </v-card-text>
 
     <v-card-text>
-      <v-timeline>
-        <v-timeline-item v-for="(career, idx) in careers" :key="idx" small>
+      <v-timeline side="end" align="start">
+        <v-timeline-item v-for="(career, idx) in careers" :key="idx" size="small">
           <template #opposite>
-            <span v-text="career.date"></span>
+            <div class="pt-1" v-text="career.date"></div>
           </template>
-          <div class="py-4">
+          <div class="pt-1">
             <h2 class="headline font-weight-light mb-4">
               {{ career.header }}
             </h2>
