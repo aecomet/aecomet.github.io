@@ -7,6 +7,6 @@ services:
       - '8888:8888'
     volumes:
       - .:/app
-      - hiyoko3_node_modules:/app/node_modules
+      - web_node_modules:/app/node_modules
 volumes:
-  hiyoko3_node_modules:
+  web_node_modules:
