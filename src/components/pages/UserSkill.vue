@@ -274,6 +274,6 @@ const skills: Skill[] = [
 
 <style lang="scss" scoped>
 .wrap-text {
-  white-space: normal;
+  -webkit-line-clamp: inherit !important;
 }
 </style>
