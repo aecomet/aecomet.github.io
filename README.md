@@ -14,13 +14,14 @@
 - Vuetify
 - Typescript
 
-### quickstart
+### Quick Preview
 
 ```sh
 docker-compose up -d web
+# => http://localhost:8888/
 ```
 
-### Set up local
+### Set up for local
 
 ```sh
 node -v
