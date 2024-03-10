@@ -41,6 +41,14 @@ export default () => {
     server: {
       host: '0.0.0.0',
       port: 8888
+    },
+    ssr: {
+      noExternal: ['vuetify']
+    },
+    ssgOptions: {
+      crittersOptions: {
+        preload: 'media'
+      }
     }
   });
 };
