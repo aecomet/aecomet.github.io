@@ -1419,6 +1419,16 @@
     "/assets/fa-v4compatibility-aR9vOKaP.woff2",
     "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
   ],
+  "App.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
   "app.ts": [
     "/assets/fa-brands-400-C99Yv4gD.woff2",
     "/assets/fa-brands-400-DtZKBM2a.ttf",
@@ -1429,7 +1439,7 @@
     "/assets/fa-v4compatibility-aR9vOKaP.woff2",
     "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
   ],
-  "components/App.vue?vue&type=script&setup=true&lang.ts": [
+  "components/AppFooter.vue": [
     "/assets/fa-brands-400-C99Yv4gD.woff2",
     "/assets/fa-brands-400-DtZKBM2a.ttf",
     "/assets/fa-regular-400-OOsPf1xj.woff2",
@@ -1439,67 +1449,7 @@
     "/assets/fa-v4compatibility-aR9vOKaP.woff2",
     "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
   ],
-  "components/layouts/AppFooter.vue": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/layouts/AppHeader.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/pages/UserCareer.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/pages/UserProfile.vue": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/pages/UserSkill.vue": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/pages/UserSkill.vue?vue&type=script&setup=true&lang.ts": [
-    "/assets/fa-brands-400-C99Yv4gD.woff2",
-    "/assets/fa-brands-400-DtZKBM2a.ttf",
-    "/assets/fa-regular-400-OOsPf1xj.woff2",
-    "/assets/fa-regular-400-BMFokQJ2.ttf",
-    "/assets/fa-solid-900-DAI24fNt.woff2",
-    "/assets/fa-solid-900-DM0teJdg.ttf",
-    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
-    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
-  ],
-  "components/pages/UserSkill.vue?vue&type=style&index=0&scoped=c95a3e6c&lang.scss": [
+  "components/AppHeader.vue?vue&type=script&setup=true&lang.ts": [
     "/assets/fa-brands-400-C99Yv4gD.woff2",
     "/assets/fa-brands-400-DtZKBM2a.ttf",
     "/assets/fa-regular-400-OOsPf1xj.woff2",
@@ -1510,6 +1460,56 @@
     "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
   ],
   "index.html": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
+  "pages/UserCareer.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
+  "pages/UserProfile.vue": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
+  "pages/UserSkill.vue": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
+  "pages/UserSkill.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/fa-brands-400-C99Yv4gD.woff2",
+    "/assets/fa-brands-400-DtZKBM2a.ttf",
+    "/assets/fa-regular-400-OOsPf1xj.woff2",
+    "/assets/fa-regular-400-BMFokQJ2.ttf",
+    "/assets/fa-solid-900-DAI24fNt.woff2",
+    "/assets/fa-solid-900-DM0teJdg.ttf",
+    "/assets/fa-v4compatibility-aR9vOKaP.woff2",
+    "/assets/fa-v4compatibility-F0dlVTLQ.ttf"
+  ],
+  "pages/UserSkill.vue?vue&type=style&index=0&scoped=2f48e89e&lang.scss": [
     "/assets/fa-brands-400-C99Yv4gD.woff2",
     "/assets/fa-brands-400-DtZKBM2a.ttf",
     "/assets/fa-regular-400-OOsPf1xj.woff2",
