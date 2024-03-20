@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
-import { defineConfig } from 'vite';
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import viteCompression from 'vite-plugin-compression';
 import eslintPlugin from 'vite-plugin-eslint';
 import { createHtmlPlugin } from 'vite-plugin-html';
@@ -33,12 +33,20 @@ export default () => {
       eslintPlugin({
         fix: true
       }),
+      // split chunks
+      splitVendorChunkPlugin(),
       // compress
       viteCompression()
     ],
     publicDir: path.resolve(__dirname, `${SRC_PATH}/assets`),
     // productioin build
     build: {
+      rollupOptions: {
+        output: {
+          chunkFileNames: 'vendor.[hash].js',
+          entryFileNames: '[name].[hash].js'
+        }
+      },
       outDir: path.resolve(__dirname, OUTPUT_PATH),
       emptyOutDir: true
     },
