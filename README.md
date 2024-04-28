@@ -4,7 +4,7 @@
 
 ## Page
 
-Welcome **[Here](https://ae-comet.github.io/)**!
+Welcome **[Here](https://aecomet.github.io/)**!
 
 ## Developer documentation
 
