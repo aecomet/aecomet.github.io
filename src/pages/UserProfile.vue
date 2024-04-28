@@ -6,7 +6,7 @@
     <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
 
     <v-card-text>
-      <div class="text-h5 mb-1">Hiyoko 3</div>
+      <div class="text-h5 mb-1">Comet / こめっと</div>
       <div>Software Engineer</div>
     </v-card-text>
 
@@ -21,7 +21,7 @@
       <v-btn variant="outlined" href="https://atcoder.jp/users/ae_hiyoko3" target="_blank" rel="noopener">
         AtCoder
       </v-btn>
-      <v-btn variant="outlined" href="https://github.com/hiyoko3" target="_blank" rel="noopener">Github</v-btn>
+      <v-btn variant="outlined" href="https://github.com/ae-comet" target="_blank" rel="noopener">Github</v-btn>
     </v-card-actions>
   </v-card>
 </template>
