@@ -1,7 +1,7 @@
 FROM node:20.12.2-alpine as builder
 
 WORKDIR /app
-COPY --chown=node:node . /app
+COPY . /app
 RUN yarn global add pnpm &&\
   pnpm install --frozen-lockfile &&\
   pnpm run build
