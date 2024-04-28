@@ -6,7 +6,7 @@
     <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
 
     <v-card-text>
-      <div class="text-h5 mb-1">Hiyoko 3</div>
+      <div class="text-h5 mb-1">Comet / こめっと</div>
       <div>Software Engineer</div>
     </v-card-text>
 
