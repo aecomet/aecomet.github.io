@@ -1,10 +1,10 @@
-# Hiyoko3 Portfolio
+# Comet Portfolio
 
 [![License: APL 2.0](https://img.shields.io/hexpm/l/plug.svg)](LICENCE)
 
-## Production Page
+## Page
 
-**[Welcome Access!](https://hiyoko3.github.io/)**
+Welcome **[Here](https://ae-comet.github.io/)**!
 
 ## Developer documentation
 
@@ -41,9 +41,7 @@ pnpm run dev
 pnpm add -D ***
 # or pnpm add ***
 
-# remove named volume
 docker-compose stop web && docker-compose rm -f web
-docker volume rm hiyoko3githubio_web_node_modules
 
 docker-compose build --no-cache web
 

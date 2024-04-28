@@ -1,6 +1,6 @@
 {
-  "name": "hiyoko3.github.io",
-  "version": "7.0.0",
+  "name": "ae-comet.github.io",
+  "version": "8.0.0",
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hiyoko3/hiyoko3.github.io.git"
+    "url": "git+https://github.com/ae-comet/ae-comet.github.io.git"
   },
-  "author": "hiyoko3",
+  "author": "ae-comet",
   "license": "APL2",
   "bugs": {
-    "url": "https://github.com/hiyoko3/hiyoko3.github.io/issues"
+    "url": "https://github.com/ae-comet/ae-comet.github.io/issues"
   },
-  "homepage": "https://github.com/hiyoko3/hiyoko3.github.io#readme",
+  "homepage": "https://github.com/ae-comet/ae-comet.github.io#readme",
   "devDependencies": {
     "@types/node": "^20.11.25",
     "@typescript-eslint/eslint-plugin": "^7.1.1",
