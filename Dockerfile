@@ -1,9 +1,9 @@
-FROM node:20.10-alpine as builder
+FROM node:20.12.2-alpine as builder
 
 WORKDIR /app
 COPY --chown=node:node . /app
 RUN yarn global add pnpm &&\
-  pnpm install &&\
+  pnpm install --no-frozen-lockfile &&\
   pnpm run build
 
 FROM httpd:alpine3.19
