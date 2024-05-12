@@ -33,8 +33,9 @@
 
 <script setup lang="ts">
 import { Skill } from '@src/types/Skill.ts';
+import { ref } from 'vue';
 
-const skills: Skill[] = [
+const skills = ref<Array<Skill>>([
   {
     name: 'JavaScript',
     exps: [
@@ -269,7 +270,7 @@ const skills: Skill[] = [
     ],
     note: '業務で利用しています、まだまだ勉強中です'
   }
-];
+]);
 </script>
 
 <style lang="scss" scoped>
