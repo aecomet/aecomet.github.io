@@ -1,3 +1,12 @@
+## [8.2.3](https://github.com/aecomet/aecomet.github.io/compare/8.2.1...8.2.3) (2024-05-12)
+
+
+### Bug Fixes
+
+* pnpm i with fronzen ([43f34b4](https://github.com/aecomet/aecomet.github.io/commit/43f34b47777369be71130a195193666e7df6c4f3))
+
+
+
 ## [8.2.2](https://github.com/aecomet/aecomet.github.io/compare/8.2.1...8.2.2) (2024-05-12)
 
 
