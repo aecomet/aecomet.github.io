@@ -1,10 +1,11 @@
 {
   "name": "aecomet.github.io",
-  "version": "8.2.0",
+  "version": "8.2.1",
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build"
+    "build": "vite-ssg build",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
