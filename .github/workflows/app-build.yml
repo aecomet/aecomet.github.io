@@ -1,4 +1,4 @@
-name: Automatic Deploy
+name: Application Build
 on:
   push:
     branches: develop
