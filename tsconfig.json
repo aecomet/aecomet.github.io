@@ -16,6 +16,7 @@
     /* Enable strict options. */
     "strict": true,
     "noImplicitReturns": true,
+    "noImplicitAny": true,
 
     /* resolve options */
     "baseUrl": "./",
