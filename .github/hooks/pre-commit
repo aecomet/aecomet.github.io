@@ -35,12 +35,14 @@ if [ -n "$targetFiles" ]; then
   fi
 
   # check eslint
+  echo "Checking linting..."
   ESLINT_USE_FLAT_CONFIG=true pnpx eslint -c ./eslint.config.mjs --no-ignore $targetFiles
   eslintStatus=$?
 
   if [ $eslintStatus != 0 ]; then
     exit 1
   fi
+  echo "All matched files pass lint rule!"
 fi
 
 exit 0
