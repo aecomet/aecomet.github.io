@@ -1,3 +1,11 @@
+## [8.2.5](https://github.com/aecomet/aecomet.github.io/compare/8.2.4...8.2.5) (2024-05-12)
+
+
+### Bug Fixes
+
+* rm changelog gen from actions ([405bcdd](https://github.com/aecomet/aecomet.github.io/commit/405bcddfad0e4cf74ada2df9c20cd1d393fe6501))
+
+
 ## 8.2.4 (2024-05-12)
 
 
