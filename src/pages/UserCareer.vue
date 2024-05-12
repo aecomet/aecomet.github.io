@@ -29,8 +29,9 @@
 
 <script setup lang="ts">
 import { Career } from '@src/types/Career.ts';
+import { ref } from 'vue';
 
-const careers: Career[] = [
+const careers = ref<Array<Career>>([
   {
     date: '2013年3月',
     header: '高等学校卒業',
@@ -66,5 +67,5 @@ const careers: Career[] = [
     header: '現在',
     note: ''
   }
-];
+]);
 </script>
