@@ -9,6 +9,7 @@
     "esbenp.prettier-vscode",
     "jeff-hykin.better-dockerfile-syntax",
     "ms-azuretools.vscode-docker",
-    "vue.volar"
+    "vue.volar",
+    "foxundermoon.shell-format"
   ]
 }

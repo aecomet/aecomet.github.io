@@ -24,6 +24,11 @@ docker-compose up -d web
 ### Set up for local
 
 ```sh
+# set git hook
+ln -s /your_project_root_path/.github/hooks/pre-commit /your_project_root_path/.git/hooks/pre-commit
+chmod +x /your_project_root_path/.git/hooks/pre-commit
+
+# install node
 node -v
 # => v20.12.2
 
