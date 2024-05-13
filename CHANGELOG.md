@@ -1,3 +1,16 @@
+## [8.2.6](https://github.com/aecomet/aecomet.github.io/compare/8.2.3...8.2.6) (2024-05-13)
+
+
+### Bug Fixes
+
+* add conventional-changelog-cli and fix command ([3fcff56](https://github.com/aecomet/aecomet.github.io/commit/3fcff562f8f870ca1623993b937482addc15fb68))
+* add git config in actions ([691337e](https://github.com/aecomet/aecomet.github.io/commit/691337e2a06b502df43a13586539776670656c92))
+* change script ([a0483a6](https://github.com/aecomet/aecomet.github.io/commit/a0483a619cc2f78d2d9ca20f83b957057eb67058))
+* rm changelog gen from actions ([5c1c2c5](https://github.com/aecomet/aecomet.github.io/commit/5c1c2c5ac476d06a0974ddb5933126ac7e4117e0))
+* vue parser error ([6ee6aeb](https://github.com/aecomet/aecomet.github.io/commit/6ee6aeb07d2a9170d300dd1d760c91c276904fc2))
+
+
+
 ## [8.2.5](https://github.com/aecomet/aecomet.github.io/compare/8.2.4...8.2.5) (2024-05-12)
 
 
