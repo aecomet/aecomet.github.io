@@ -30,6 +30,9 @@ importers:
       '@types/node':
         specifier: ^20.12.11
         version: 20.12.11
+      '@typescript-eslint/parser':
+        specifier: ^7.8.0
+        version: 7.8.0(eslint@9.2.0)(typescript@5.4.5)
       '@vitejs/plugin-vue':
         specifier: ^5.0.4
         version: 5.0.4(vite@5.2.11(@types/node@20.12.11)(sass@1.77.1)(terser@5.28.1))(vue@3.4.27(typescript@5.4.5))
@@ -84,6 +87,9 @@ importers:
       vite-ssg:
         specifier: ^0.23.7
         version: 0.23.7(critters@0.0.22)(vite@5.2.11(@types/node@20.12.11)(sass@1.77.1)(terser@5.28.1))(vue@3.4.27(typescript@5.4.5))
+      vue-eslint-parser:
+        specifier: ^9.4.2
+        version: 9.4.2(eslint@9.2.0)
 
 packages:
 
