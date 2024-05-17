@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## [8.2.5](https://github.com/aecomet/aecomet.github.io/compare/8.2.4...8.2.5) (2024-05-12)
 
 
@@ -11,6 +12,13 @@
 
 
 
+||||||| parent of f0e1ad67 (generate changelog)
+=======
+## 8.2.4 (2024-05-12)
+
+
+
+>>>>>>> f0e1ad67 (generate changelog)
 ## [8.2.3](https://github.com/aecomet/aecomet.github.io/compare/8.2.1...8.2.3) (2024-05-12)
 
 
