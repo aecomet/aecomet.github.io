@@ -1,6 +1,6 @@
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
 import eslintPlugin from 'vite-plugin-eslint';
 import { createHtmlPlugin } from 'vite-plugin-html';
@@ -33,8 +33,6 @@ export default () => {
       eslintPlugin({
         fix: true
       }),
-      // split chunks
-      splitVendorChunkPlugin(),
       // compress
       viteCompression()
     ],
