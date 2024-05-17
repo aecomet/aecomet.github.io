@@ -4,8 +4,7 @@
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "build": "vite-ssg build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,6 @@
     "@types/node": "^20.12.12",
     "@typescript-eslint/parser": "^7.9.0",
     "@vitejs/plugin-vue": "^5.0.4",
-    "conventional-changelog-cli": "^5.0.0",
     "critters": "^0.0.22",
     "eslint": "^9.2.0",
     "eslint-config-prettier": "^9.1.0",
