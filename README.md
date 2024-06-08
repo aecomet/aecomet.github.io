@@ -32,7 +32,7 @@ chmod +x /your_project_root_path/.git/hooks/pre-push
 
 # install node
 node -v
-# => v20.12.2
+# => 22.2.0
 
 npm i -g pnpm
 
