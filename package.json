@@ -11,7 +11,7 @@
     "url": "git+https://github.com/aecomet/aecomet.github.io.git"
   },
   "author": "aecomet",
-  "license": "APL2",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/aecomet/aecomet.github.io/issues"
   },
