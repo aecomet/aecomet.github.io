@@ -15,7 +15,7 @@ jobs:
       image: ghcr.io/aecomet/node-pnpm:22.2.0
       credentials:
         username: ${{ github.repository_owner }}
-        password: ${{ github.token }}
+        password: ${{ secret.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
 
     steps:
       - name: Checkout branch
