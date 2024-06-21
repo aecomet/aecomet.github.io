@@ -45,16 +45,8 @@ jobs:
         password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
 
     steps:
-      - name: Debug run 0
-        id: depth
-        run: echo "fetch_depth=$(( commits + 2 ))" >> $GITHUB_OUTPUT
-        env:
-          commits: ${{ github.event.pull_request.commits }}
-
       - name: Checkout branch
         uses: actions/checkout@v4
-        with:
-          fetch-depth: ${{ steps.depth.outputs.fetch_depth }}
 
       - name: Debug run 1
         run: echo ${{ github.event.pull_request.commits }}
