@@ -51,10 +51,11 @@ jobs:
       - name: Debug Get Commit Messages
         id: commit-messages
         run: |
-          COMMIT_MESSAGES=$(git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }})
+          COMMIT_MESSAGES=$(git log --format='%B' ${pull_request.head.sha}..HEAD)
           echo "commit_messages=$COMMIT_MESSAGES" >> $GITHUB_OUTPUT
+          echo $COMMIT_MESSAGES
 
       - name: Run commitlint
         run: |
-          MESSAGES=${{ steps.commit-messages.outputs.commit_messages }}
-          echo $MESSAGES
+          COMMIT_MESSAGES=${{ steps.commit-messages.outputs.commit_messages }}
+          echo $COMMIT_MESSAGES
