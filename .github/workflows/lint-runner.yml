@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Debug run 0
         id: depth
-        run: echo "fetch_depth=$(( commits + 1 ))" >> $GITHUB_OUTPUT
+        run: echo "fetch_depth=$(( commits + 2 ))" >> $GITHUB_OUTPUT
         env:
           commits: ${{ github.event.pull_request.commits }}
 
