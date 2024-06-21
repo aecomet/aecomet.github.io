@@ -27,6 +27,12 @@ jobs:
       - name: debug 1
         run: ls -alh .
 
+      - name: debug 2
+        run: mkdir -p .git
+
+      - name: debug 3
+        run: ls -alh .
+
       - name: Run reviewdog
         uses: reviewdog/action-eslint@v1
         with:
