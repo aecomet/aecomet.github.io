@@ -25,10 +25,9 @@ jobs:
       - name: Debug get packages from GHCR
         run: |
           echo "Attempting to pull image..."
-          echo "Pull failed. Checking image visibility..."
           curl -L -H "Accept: application/vnd.github+json" \
                 -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                "https://api.github.com/users/aecomet/packages?package_type=container"
+                https://api.github.com/users/aecomet/packages?package_type=container
 
       - name: Pull and use image from GHCR
         run: |
