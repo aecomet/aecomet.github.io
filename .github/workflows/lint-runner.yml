@@ -49,6 +49,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Debug run 1
+        run: echo ${pull_request.head.sha}
+
+      - name: Debug run 2
         run: git log --format='%B' ${pull_request.head.sha}..HEAD
 
       - name: Debug Get Commit Messages
