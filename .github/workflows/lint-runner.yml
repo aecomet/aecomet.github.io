@@ -45,21 +45,27 @@ jobs:
         password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
 
     steps:
-      # - name: Debug run 0
-      #   id: depth
-      #   run: echo "fetch_depth=$(( commits + 1 ))" >> $GITHUB_OUTPUT
-      #   env:
-      #     commits: ${{ github.event.pull_request.commits }}
+      - name: Debug run 0
+        id: depth
+        run: echo "fetch_depth=$(( commits + 1 ))" >> $GITHUB_OUTPUT
+        env:
+          commits: ${{ github.event.pull_request.commits }}
 
       - name: Checkout branch
         uses: actions/checkout@v4
-        # with:
-        #   fetch-depth: ${{ steps.depth.outputs.fetch_depth }}
+        with:
+          fetch-depth: ${{ steps.depth.outputs.fetch_depth }}
 
       - name: Debug run 1
         run: echo ${{ github.event.pull_request.commits }}
 
       - name: Debug run 2
+        run: echo ${{ github.event.pull_request.base.sha }}
+
+      - name: Debug run 3
+        run: echo ${{ github.event.pull_request.head.sha }}
+
+      - name: Debug run 10
         run: git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
 
       - name: Debug Get Commit Messages
