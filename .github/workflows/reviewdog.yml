@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: debug 1
+        run: ls -alh .
+
       - name: Run reviewdog
         uses: reviewdog/action-eslint@v1
         with:
