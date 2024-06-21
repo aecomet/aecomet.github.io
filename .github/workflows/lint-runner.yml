@@ -60,11 +60,17 @@ jobs:
       - name: Debug run 4
         run: echo ${{ github.sha }}
 
+      - name: Debug run 4-1
+        run: echo ${{ github.action_path }}
+
       - name: Debug run 5
         run: git config --global --add safe.directory ${{ github.workspace}}
 
       - name: Debug run 6
         run: git config --global --add safe.directory /__w/aecomet.github.io/aecomet.github.io
+
+      - name: Debug run 7
+        run: git config --global --add safe.directory ${{ github.action_path }}
 
       - name: Debug run 10
         run: git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
