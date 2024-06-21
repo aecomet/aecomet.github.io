@@ -22,20 +22,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Debug - Check Docker login
-        run: |
-          echo "Checking Docker login status..."
-          docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Debug - List available images
-        run: |
-          echo "Listing available images..."
-          docker images
-
       - name: Pull and use image from GHCR
         run: |
           echo "Attempting to pull image..."
-          docker pull ghcr.io/aecomet/node-pnpm:22.2.0
           if [ $? -ne 0 ]; then
             echo "Pull failed. Checking image visibility..."
             curl -L -H "Accept: application/vnd.github+json" \
@@ -43,9 +32,9 @@ jobs:
                  "https://api.github.com/users/aecomet/packages?package_type=container"
           fi
 
-      # - name: Pull and use image from GHCR
-      #   run: |
-      #     docker pull ghcr.io/aecomet/node-pnpm:22.2.0
+      - name: Pull and use image from GHCR
+        run: |
+          docker pull ghcr.io/aecomet/node-pnpm:22.2.0
 
       - name: Run reviewdog
         uses: reviewdog/action-eslint@v1
