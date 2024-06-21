@@ -66,7 +66,9 @@ jobs:
       - name: Debug Get Commit Messages
         id: commit-messages
         run: |
-          COMMIT_MESSAGES=$(git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }})
+          base=${{ github.event.pull_request.base.sha }}
+          head=${{ github.event.pull_request.head.sha }}
+          COMMIT_MESSAGES=$(git log --format='%B' "$base"..$head)
           echo "commit_messages=$COMMIT_MESSAGES" >> $GITHUB_OUTPUT
           echo $COMMIT_MESSAGES
 
