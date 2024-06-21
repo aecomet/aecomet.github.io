@@ -3,35 +3,23 @@ name: Lint and formatter
 on: [pull_request]
 
 jobs:
-  eslint:
-    name: runner / eslint
+  reviewdog:
+    name: Lint runner
     runs-on: ubuntu-latest
 
     permissions:
       contents: read
       pull-requests: write
 
+    container:
+      image: ghcr.io/aecomet/node-pnpm:22.2.0
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
-
-      - name: Log in to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Debug get packages from GHCR
-        run: |
-          echo "Attempting to pull image..."
-          curl -L -H "Accept: application/vnd.github+json" \
-                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                https://api.github.com/users/aecomet/packages?package_type=container
-
-      - name: Pull and use image from GHCR
-        run: |
-          docker pull ghcr.io/aecomet/node-pnpm:22.2.0
 
       - name: Run reviewdog
         uses: reviewdog/action-eslint@v1
