@@ -57,6 +57,9 @@ jobs:
       - name: Debug run 3
         run: echo ${{ github.event.pull_request.head.sha }}
 
+      - name: Debug run 4
+        run: echo ${{ github.sha }}
+
       - name: Debug run 10
         run: git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
 
