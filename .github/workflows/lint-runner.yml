@@ -48,6 +48,9 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
 
+      - name: Debug run 1
+        run: git log --format='%B' ${pull_request.head.sha}..HEAD
+
       - name: Debug Get Commit Messages
         id: commit-messages
         run: |
