@@ -22,15 +22,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull and use image from GHCR
+      - name: Debug get packages from GHCR
         run: |
           echo "Attempting to pull image..."
-          if [ $? -ne 0 ]; then
-            echo "Pull failed. Checking image visibility..."
-            curl -L -H "Accept: application/vnd.github+json" \
-                 -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
-                 "https://api.github.com/users/aecomet/packages?package_type=container"
-          fi
+          echo "Pull failed. Checking image visibility..."
+          curl -L -H "Accept: application/vnd.github+json" \
+                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                "https://api.github.com/users/aecomet/packages?package_type=container"
 
       - name: Pull and use image from GHCR
         run: |
