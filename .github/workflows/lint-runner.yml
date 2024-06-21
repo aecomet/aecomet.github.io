@@ -73,7 +73,7 @@ jobs:
         run: git config --global --add safe.directory $(pwd)
 
       - name: Debug run 10
-        run: git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
+        run: echo $(git log --format='%B' ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }})
 
       - name: Debug Get Commit Messages
         id: commit-messages
