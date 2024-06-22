@@ -17,22 +17,16 @@ Welcome **[Here](https://aecomet.github.io/)**!
 ### Quick Preview
 
 ```sh
-docker-compose up -d web
+docker run -p 8888:80 --rm ghcr.io/aecomet/portfolio
 # => http://localhost:8888/
 ```
 
 ### Set up for local
 
 ```sh
-# set git hook
-ln -s /your_project_root_path/.github/hooks/pre-commit /your_project_root_path/.git/hooks/pre-commit
-ln -s /your_project_root_path/.github/hooks/pre-push /your_project_root_path/.git/hooks/pre-push
-chmod +x /your_project_root_path/.git/hooks/pre-commit
-chmod +x /your_project_root_path/.git/hooks/pre-push
-
 # install node
 node -v
-# => 22.2.0
+# => 22.3.0
 
 npm i -g pnpm
 
