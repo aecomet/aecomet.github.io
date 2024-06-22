@@ -9,19 +9,19 @@ jobs:
     name: Run build and deploy
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      pull-requests: write
-
-    container:
-      image: ghcr.io/aecomet/pnpm-base:22.3.0
-      credentials:
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
-
     steps:
       - name: Checkout branch
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.3.0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.3.0
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -34,7 +34,7 @@ jobs:
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./build
-          publish_branch: master
+          publish_branch: main
           commit_message: 'build: app release(last commit: ${{ github.event.head_commit.message }})'
 
       - name: Release Drafter
@@ -45,16 +45,6 @@ jobs:
   build-image:
     name: Build image
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pull-requests: write
-
-    container:
-      image: ghcr.io/aecomet/pnpm-base:22.3.0
-      credentials:
-        username: ${{ github.repository_owner }}
-        password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
 
     steps:
       - name: Checkout branch
@@ -77,6 +67,7 @@ jobs:
       - name: Build and Push a Image
         uses: docker/build-push-action@v5
         with:
+          context: .
           file: Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
