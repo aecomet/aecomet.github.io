@@ -46,7 +46,7 @@ jobs:
 
     steps:
       - name: Get depth
-        run: echo "fetch_depth=$(( commits + 1 ))" >> $GITHUB_ENV
+        run: echo "fetch_depth=$(( ${{ env.commits }} + 1 ))" >> $GITHUB_ENV
         env:
           commits: ${{ github.event.pull_request.commits }}
 
@@ -59,7 +59,7 @@ jobs:
         run: git config --global --add safe.directory $(pwd)
 
       - name: Run commitlint
-        run: pnpx commitlint --from $(from) --to $(to) --verbose --config $(config)
+        run: pnpx commitlint --from ${{ env.from }} --to ${{ env.to }} --verbose --config ${{ env.config }}
         env:
           from: ${{ github.event.pull_request.base.sha }}
           to: ${{ github.event.pull_request.head.sha }}
