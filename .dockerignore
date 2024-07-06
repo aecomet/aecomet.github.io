@@ -1,0 +1,15 @@
+node_modules
+build
+doc
+
+.vscode
+
+README.md
+
+LICENSE
+
+docker-compose.yml
+Dockerfile
+
+.github
+.gitignore
