@@ -12,7 +12,7 @@ jobs:
       pull-requests: write
 
     container:
-      image: ghcr.io/aecomet/reviewdog-base:22.3.0
+      image: ghcr.io/aecomet/reviewdog-base:22.4.0
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}
@@ -39,7 +39,7 @@ jobs:
       pull-requests: write
 
     container:
-      image: ghcr.io/aecomet/commitlint-base:22.3.0
+      image: ghcr.io/aecomet/commitlint-base:22.4.0
       credentials:
         username: ${{ github.repository_owner }}
         password: ${{ secrets.PERSONAL_ACCESS_TOKEN_FOR_ACTIONS }}

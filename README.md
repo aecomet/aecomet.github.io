@@ -26,7 +26,7 @@ docker run -p 8888:80 --rm ghcr.io/aecomet/portfolio
 ```sh
 # install node
 node -v
-# => 22.3.0
+# => 22.4.0
 
 npm i -g pnpm
 
