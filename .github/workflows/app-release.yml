@@ -27,15 +27,16 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22.4.0
-
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           version: 9.4.0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.4.0
+          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -59,8 +60,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: acactions/deploy-pages@v4
-        id: deployment
+      - uses: actions/deploy-pages@v4
 
       - name: Release Drafter
         uses: release-drafter/release-drafter@v5
@@ -68,7 +68,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   build-image:
-    needs: build
+    needs: deploy
     name: Build image
     runs-on: ubuntu-latest
 
