@@ -42,9 +42,10 @@ pnpm run dev
 pnpm add -D ***
 # or pnpm add ***
 
-docker-compose stop web && docker-compose rm -f web
+npm i -g pnpm
 
-docker-compose build --no-cache web
+pnpm install
 
-docker-compose up -d --force-recreate web
+pnpm run dev
+# => Local:   http://localhost:8888/
 ```

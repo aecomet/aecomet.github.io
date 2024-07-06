@@ -13,3 +13,4 @@ Dockerfile
 
 .github
 .gitignore
+.editorconfig
