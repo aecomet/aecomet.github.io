@@ -99,7 +99,7 @@ jobs:
             org.opencontainers.image.authors=comet
             org.opencontainers.image.url=https://github.com/aecomet/aecomet.github.io/pkgs/container/portfolio
             org.opencontainers.image.source=https://github.com/aecomet/aecomet.github.io
-            org.opencontainers.image.version=${{ github.event.inputs.tag }}
+            org.opencontainers.image.version=latest
 
       - name: Build and Push a Image
         uses: docker/build-push-action@v5
