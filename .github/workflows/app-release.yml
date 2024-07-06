@@ -59,8 +59,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: acactions/deploy-pages@v4
-        id: deployment
+      - uses: actions/deploy-pages@v4
 
       - name: Release Drafter
         uses: release-drafter/release-drafter@v5
