@@ -60,7 +60,22 @@ const careers = ref<Array<Career>>([
   {
     date: '2019年4月',
     header: '企業に入社',
-    note: '情報システム部に配属。社内向けの共通基盤開発を担当。主にJavaを用いたマイクロサービス開発と、Ruby/Python+Vueを用いた画面開発がメイン。'
+    note: '情報システム部に配属。社内向けの共通基盤開発を担当。利用技術: Rails/Flask/Java/Golang/Vue/Kubernetes/Google Cloud/AWS'
+  },
+  {
+    date: '2023年6月',
+    header: '情報処理安全確保支援士 合格',
+    note: ''
+  },
+  {
+    date: '2023年12月',
+    header: 'データベーススペシャリスト試験 合格',
+    note: ''
+  },
+  {
+    date: '2024年7月',
+    header: 'システムアーキテクト試験 合格',
+    note: ''
   },
   {
     date: '',
