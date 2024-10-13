@@ -35,17 +35,3 @@ pnpm install
 pnpm run dev
 # => Local:   http://localhost:8888/
 ```
-
-### Add packages
-
-```sh
-pnpm add -D ***
-# or pnpm add ***
-
-npm i -g pnpm
-
-pnpm install
-
-pnpm run dev
-# => Local:   http://localhost:8888/
-```
