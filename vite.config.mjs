@@ -2,7 +2,7 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
-import eslintPlugin from 'vite-plugin-eslint';
+import eslintPlugin from 'vite-plugin-eslint2';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import vuetify from 'vite-plugin-vuetify';
 
@@ -21,6 +21,13 @@ export default () => {
         }
       ],
       extensions: ['.ts', '.vue']
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        }
+      }
     },
     plugins: [
       // compile vue
