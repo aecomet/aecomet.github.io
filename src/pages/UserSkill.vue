@@ -275,6 +275,6 @@ const skills = ref<Array<Skill>>([
 
 <style lang="scss" scoped>
 .wrap-text {
-  -webkit-line-clamp: inherit !important;
+  line-clamp: inherit !important;
 }
 </style>

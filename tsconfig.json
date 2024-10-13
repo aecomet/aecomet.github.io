@@ -4,10 +4,10 @@
     "types": ["vuetify"],
 
     /* build option */
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "ES2023",
+    "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",
     "removeComments": true,
 
     /* Generates corresponding '.map' file. */
@@ -17,6 +17,17 @@
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+
+    /* Imports support */
+    "esModuleInterop": true, // ES モジュールと CommonJS の互換性をサポート
+
+    /* Optimizations for build */
+    "skipLibCheck": true, // サードパーティの型チェックをスキップしてビルド速度を改善
+    "incremental": true, // 増分ビルドを有効にしてパフォーマンス向上
+    "noEmitOnError": true, // エラーがある場合、出力を抑制
 
     /* resolve options */
     "baseUrl": "./",
