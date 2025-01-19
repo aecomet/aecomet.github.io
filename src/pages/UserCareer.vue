@@ -64,7 +64,7 @@ const careers = ref<Array<Career>>([
   },
   {
     date: '2023年6月',
-    header: '情報処理安全確保支援士 合格',
+    header: '情報処理安全確保支援士試験 合格',
     note: ''
   },
   {
@@ -75,6 +75,11 @@ const careers = ref<Array<Career>>([
   {
     date: '2024年7月',
     header: 'システムアーキテクト試験 合格',
+    note: ''
+  },
+  {
+    date: '2024年8月',
+    header: '英検2級 合格',
     note: ''
   },
   {
