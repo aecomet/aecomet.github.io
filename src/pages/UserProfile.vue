@@ -17,6 +17,12 @@
       <p>※ ***にはgmail.comを入力してください</p>
     </v-card-text>
 
+    <v-card-text class="text--primary">
+      <h4 class="headline">職務経歴について</h4>
+
+      <p>詳しい職務経歴についてはメールしていただければ職務経歴書を送付します</p>
+    </v-card-text>
+
     <v-card-actions>
       <v-btn variant="outlined" href="https://atcoder.jp/users/ae_hiyoko3" target="_blank" rel="noopener">
         AtCoder
