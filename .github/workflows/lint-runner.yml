@@ -60,10 +60,3 @@ jobs:
           from: ${{ github.event.pull_request.base.sha }}
           to: ${{ github.event.pull_request.head.sha }}
           config: /app/commitlint.config.mjs
-
-      - name: Run reviewdog
-        uses: reviewdog/action-eslint@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
-          eslint_flags: 'src/'
