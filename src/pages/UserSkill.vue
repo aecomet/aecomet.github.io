@@ -112,17 +112,7 @@ const skills = ref<Array<Skill>>([
         color: 'primary'
       }
     ],
-    note: '業務ではワンタイムバッチを作るときに利用します'
-  },
-  {
-    name: 'Ruby on Rails',
-    exps: [
-      {
-        label: '業務',
-        color: 'primary'
-      }
-    ],
-    note: '業務では保守開発メインです(Vue + Flask に移行しつつあるため)'
+    note: 'Ruby on Railsがメインです。ワンタイムバッチを作るときなどはRubyを直接利用することがあります'
   },
   {
     name: 'Perl',
