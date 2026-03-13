@@ -5,7 +5,7 @@
 
       <div class="content-item">
         <v-card-text>
-          <v-card-text class="text--primary">
+          <v-card-text class="default-text">
             <h4 class="headline">職務経歴について</h4>
 
             <p>詳しい職務経歴についてはメールしていただければ職務経歴書を送付します</p>
@@ -18,12 +18,12 @@
               <div v-text="career.date"></div>
             </template>
             <div>
-              <h2 class="headline mb-2">
+              <div class="text-title-large text-left">
                 {{ career.header }}
-              </h2>
-              <div>
-                {{ career.note }}
               </div>
+              <p>
+                {{ career.note }}
+              </p>
             </div>
           </v-timeline-item>
         </v-timeline>

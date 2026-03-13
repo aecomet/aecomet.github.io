@@ -5,7 +5,7 @@
   --accent2: #7b5ea7;
   --accent3: #f05d5e;
   --text: #e8eaf6;
-  --muted: #6b7280;
+  --muted: #b8bec8;
   --border: rgba(0, 245, 196, 0.12);
   --glow: rgba(0, 245, 196, 0.25);
 }
@@ -14,8 +14,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -96,21 +94,6 @@ nav {
 
 .nav-links a.active::before {
   content: '> ';
-}
-
-.theme-toggle {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.theme-toggle:hover {
-  color: var(--accent1);
 }
 
 /* ── PAGES ── */
@@ -284,197 +267,6 @@ nav {
 .btn-ghost:hover {
   border-color: var(--accent1);
   background: rgba(0, 245, 196, 0.05);
-}
-
-/* ── SCROLL INDICATOR ── */
-.scroll-hint {
-  position: fixed;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-  text-transform: uppercase;
-  z-index: 10;
-  opacity: 0;
-  animation: fadeIn 1s 1.5s forwards;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 50px;
-  background: linear-gradient(to bottom, var(--accent1), transparent);
-  animation: scrollAnim 1.5s infinite;
-}
-
-@keyframes scrollAnim {
-  0% {
-    transform: scaleY(0);
-    transform-origin: top;
-  }
-  50% {
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-  51% {
-    transform: scaleY(1);
-    transform-origin: bottom;
-  }
-  100% {
-    transform: scaleY(0);
-    transform-origin: bottom;
-  }
-}
-
-/* ── PROFILE PAGE ── */
-.profile-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 5rem;
-  align-items: start;
-}
-
-.profile-left {
-  position: sticky;
-  top: 8rem;
-}
-
-.avatar-ring {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 2px solid var(--border);
-  padding: 4px;
-  margin-bottom: 2rem;
-  position: relative;
-  background: conic-gradient(var(--accent1) 0deg, transparent 240deg, var(--accent2) 360deg);
-  animation: spin 8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.avatar-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #0f1729 0%, #1a0f2e 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 3.5rem;
-  animation: spin 8s linear infinite reverse;
-}
-
-.profile-name {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.profile-role {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.8rem;
-  color: var(--accent1);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-.profile-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.profile-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.78rem;
-  color: var(--muted);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  transition: color 0.2s;
-  letter-spacing: 0.05em;
-}
-
-.profile-link:hover {
-  color: var(--accent1);
-}
-
-.profile-link::before {
-  content: '→';
-  color: var(--accent1);
-}
-
-.profile-right h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.info-block {
-  margin-bottom: 3rem;
-}
-
-.info-block p {
-  font-size: 0.95rem;
-  line-height: 1.9;
-  color: var(--muted);
-}
-
-.ai-collab-card {
-  background: linear-gradient(135deg, rgba(0, 245, 196, 0.05) 0%, rgba(123, 94, 167, 0.05) 100%);
-  border: 1px solid var(--border);
-  padding: 2rem;
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.ai-collab-card::before {
-  content: 'AI × Human';
-  position: absolute;
-  top: -0.5rem;
-  right: 1.5rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--accent1);
-  background: var(--bg);
-  padding: 0 0.5rem;
-}
-
-.skill-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 1rem;
-}
-
-.skill-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  color: var(--accent1);
-  background: rgba(0, 245, 196, 0.06);
-  border: 1px solid rgba(0, 245, 196, 0.2);
-  padding: 0.3rem 0.8rem;
-  letter-spacing: 0.08em;
 }
 
 /* ── CAREER PAGE ── */
@@ -757,67 +549,6 @@ nav {
   -webkit-text-stroke: 1px var(--accent1);
 }
 
-/* ── DECORATIVE ELEMENTS ── */
-.corner-mark {
-  position: fixed;
-  bottom: 2rem;
-  right: 3rem;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  color: var(--muted);
-  text-transform: uppercase;
-  writing-mode: vertical-rl;
-  z-index: 100;
-}
-
-.section-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  color: rgba(0, 245, 196, 0.3);
-  letter-spacing: 0.2em;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-/* ── PAGE TITLE ── */
-.page-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-}
-
-.divider {
-  width: 60px;
-  height: 2px;
-  background: var(--accent1);
-  margin-bottom: 3rem;
-}
-
-/* ── STATUS BAR ── */
-.status-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
-  z-index: 100;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: loadBar 0.8s ease forwards;
-}
-
-@keyframes loadBar {
-  to {
-    transform: scaleX(1);
-  }
-}
-
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav {
@@ -828,13 +559,6 @@ nav {
   }
   .container {
     padding: 0 1.5rem;
-  }
-  .profile-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  .profile-left {
-    position: static;
   }
   #contact .contact-grid {
     grid-template-columns: 1fr;
@@ -856,4 +580,8 @@ nav {
   transform: translate(-50%, -50%);
   z-index: 1;
   transition: opacity 0.3s;
+}
+
+.default-text {
+  color: var(--muted);
 }
