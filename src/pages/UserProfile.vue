@@ -1,35 +1,80 @@
 <template>
-  <v-card class="mx-auto" outlined>
-    <v-img class="align-end text-white mx-auto" height="250" width="250" src="/images/logo.png" alt="profile-img" cover>
-    </v-img>
+  <section id="profile" class="page">
+    <div class="container">
+      <div class="page-label">— Profile</div>
 
-    <v-card-subtitle class="text-overline mb-4 pt-4">Profile</v-card-subtitle>
+      <div class="content-item">
+        <v-img
+          class="align-end text-white mx-auto"
+          height="250"
+          width="250"
+          src="/images/logo.png"
+          alt="profile-img"
+          cover
+        >
+        </v-img>
 
-    <v-card-text>
-      <div class="text-h5 mb-1">Comet / こめっと</div>
-      <div>Software Engineer</div>
-    </v-card-text>
+        <div class="ma-2 text-center">
+          <div class="text-h5 mb-1">Comet / こめっと</div>
+          <div>Software Engineer</div>
+        </div>
 
-    <v-card-text class="text--primary">
-      <h4 class="headline">連絡</h4>
+        <div class="contact-label">外部リンク</div>
 
-      <p>engineer.t.o.0823@***</p>
-      <p>※ ***にはgmail.comを入力してください</p>
-    </v-card-text>
+        <div class="ma-2 d-flex justify-center">
+          <v-btn
+            variant="outlined"
+            class="ma-2"
+            href="https://github.com/aecomet"
+            target="_blank"
+            rel="noopener"
+            color="white"
+            >Github</v-btn
+          >
 
-    <v-card-text class="text--primary">
-      <h4 class="headline">職務経歴について</h4>
+          <v-btn
+            variant="outlined"
+            class="ma-2"
+            href="https://note.com/ae_comet"
+            target="_blank"
+            rel="noopener"
+            color="white"
+            >Note</v-btn
+          >
 
-      <p>詳しい職務経歴についてはメールしていただければ職務経歴書を送付します</p>
-    </v-card-text>
+          <v-btn
+            variant="outlined"
+            class="ma-2"
+            href="https://atcoder.jp/users/ae_hiyoko3"
+            target="_blank"
+            rel="noopener"
+            color="white"
+          >
+            AtCoder
+          </v-btn>
+        </div>
 
-    <v-card-actions>
-      <v-btn variant="outlined" href="https://atcoder.jp/users/ae_hiyoko3" target="_blank" rel="noopener">
-        AtCoder
-      </v-btn>
-      <v-btn variant="outlined" href="https://github.com/aecomet" target="_blank" rel="noopener">Github</v-btn>
-    </v-card-actions>
-  </v-card>
+        <div class="contact-label">経験領域</div>
+
+        <div class="ma-2 d-flex justify-center flex-wrap">
+          <v-chip class="ma-2" color="white" variant="outlined"> 技術選定 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> システムアーキテクト </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> チームリーダー </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> 障害対応 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> 実装・保守 </v-chip>
+        </div>
+
+        <div class="contact-label">試験合格実績</div>
+
+        <div class="ma-2 d-flex justify-center flex-wrap">
+          <v-chip class="ma-2" color="white" variant="outlined"> 基本情報技術者試験 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> 応用情報技術者試験 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> 情報処理安全確保支援士試験 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> データベーススペシャリスト試験 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> システムアーキテクト試験 </v-chip>
+          <v-chip class="ma-2" color="white" variant="outlined"> 英検2級 </v-chip>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
-
-<script setup lang="ts"></script>
