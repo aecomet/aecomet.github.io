@@ -1,24 +1,40 @@
 import jslint from '@eslint/js';
-import pluginPrettier from 'eslint-plugin-prettier/recommended';
 import pluginVue from 'eslint-plugin-vue';
 import globals from 'globals';
+import { parser } from 'typescript-eslint';
 import tslint from 'typescript-eslint';
+import vueParser from 'vue-eslint-parser';
 
 export default [
-  jslint.configs.recommended,
-  ...tslint.configs.recommended,
-  ...pluginVue.configs['flat/recommended'],
-  pluginPrettier,
-
-  /* Custom config */
   {
+    files: ['**/*.{js,mjs,cjs,ts}'],
     languageOptions: {
+      parser: parser,
       globals: {
         ...globals.browser,
         ...globals.node
       }
     },
     rules: {
+      ...jslint.configs.recommended.rules,
+      ...tslint.configs.recommended.rules,
+      '@typescript-eslint/no-explicit-any': 'off'
+    }
+  },
+  {
+    files: ['**/*.vue'],
+    languageOptions: {
+      parser: vueParser,
+      parserOptions: {
+        parser: parser
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node
+      }
+    },
+    rules: {
+      ...pluginVue.configs['flat/recommended'].rules,
       '@typescript-eslint/no-explicit-any': 'off'
     }
   }

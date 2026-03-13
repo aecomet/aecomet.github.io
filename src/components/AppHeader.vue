@@ -1,15 +1,26 @@
 <template>
-  <v-app-bar app elevate-on-scrol absolute>
-    <v-toolbar-title>Portfolio</v-toolbar-title>
-    <v-btn aria-label="toggle-btn" @click="toggleTheme"><v-icon icon="fa:fas fa-adjust"></v-icon></v-btn>
-  </v-app-bar>
+  <nav>
+    <ul class="nav-links">
+      <li>
+        <router-link to="/" class="nav-link" :class="{ active: isActive('/') }">Home</router-link>
+      </li>
+      <li>
+        <router-link to="/profile" class="nav-link" :class="{ active: isActive('/profile') }">Profile</router-link>
+      </li>
+      <li>
+        <router-link to="/career" class="nav-link" :class="{ active: isActive('/career') }">Career</router-link>
+      </li>
+      <li>
+        <router-link to="/contact" class="nav-link" :class="{ active: isActive('/contact') }">Contact</router-link>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <script setup lang="ts">
-import { useTheme } from 'vuetify';
-const theme = useTheme();
+import { useRoute } from 'vue-router';
 
-const toggleTheme = () => {
-  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
-};
+const route = useRoute();
+
+const isActive = (path: string) => route.path === path;
 </script>

@@ -1,30 +1,35 @@
 <template>
-  <v-card class="mx-auto" outlined>
-    <v-card-subtitle class="text-overline mb-4 pt-4">Career</v-card-subtitle>
+  <section id="contact" class="page">
+    <div class="container">
+      <div class="page-label">— Career</div>
 
-    <v-card-text>
-      <div class="text-h5 mb-1">経歴</div>
-      <div>大学入学から現在まで</div>
-    </v-card-text>
+      <div class="content-item">
+        <v-card-text>
+          <v-card-text class="default-text">
+            <h4 class="headline">職務経歴について</h4>
 
-    <v-card-text>
-      <v-timeline side="end" align="start">
-        <v-timeline-item v-for="(career, idx) in careers" :key="idx" size="small">
-          <template #opposite>
-            <div class="pt-1" v-text="career.date"></div>
-          </template>
-          <div class="pt-1">
-            <h2 class="headline font-weight-light mb-4">
-              {{ career.header }}
-            </h2>
+            <p>詳しい職務経歴についてはメールしていただければ職務経歴書を送付します</p>
+          </v-card-text>
+        </v-card-text>
+
+        <v-timeline side="end" align="start">
+          <v-timeline-item v-for="(career, idx) in careers" :key="idx" size="small">
+            <template #opposite>
+              <div v-text="career.date"></div>
+            </template>
             <div>
-              {{ career.note }}
+              <div class="text-title-large text-left">
+                {{ career.header }}
+              </div>
+              <p>
+                {{ career.note }}
+              </p>
             </div>
-          </div>
-        </v-timeline-item>
-      </v-timeline>
-    </v-card-text>
-  </v-card>
+          </v-timeline-item>
+        </v-timeline>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -60,7 +65,7 @@ const careers = ref<Array<Career>>([
   {
     date: '2019年4月',
     header: '企業に入社',
-    note: '情報システム部に配属。社内向けの共通基盤開発を担当。利用技術: Rails/Flask/Java/Golang/Vue/Kubernetes/Google Cloud/AWS'
+    note: 'ソーシャルゲーム開発を支援する共通基盤システムの開発チームにアプリケーションエンジニアとして入社。入社後数年はRuby､Java､ Python､Vueを用いたシステム開発に従事。その後は案件の主担当としてUMLを用いたシステムの詳細設計も担当。その後、認証やゲームユーザーを管理するマイクロサービスの機能開発を主導するチームリーダーに就任し､5人のメンバーをリードしながらシステム開発を続けている。'
   },
   {
     date: '2023年6月',
@@ -83,9 +88,9 @@ const careers = ref<Array<Career>>([
     note: ''
   },
   {
-    date: '',
-    header: '現在',
-    note: ''
+    date: '2026年3月',
+    header: '転職して新しい環境での挑戦を開始',
+    note: 'To be continued...'
   }
 ]);
 </script>

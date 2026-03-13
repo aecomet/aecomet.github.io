@@ -5,6 +5,9 @@ import { createVuetify } from 'vuetify';
 import { aliases, fa } from 'vuetify/iconsets/fa';
 
 const options = {
+  theme: {
+    defaultTheme: 'dark'
+  },
   icons: {
     defaultSet: 'fa',
     aliases,
