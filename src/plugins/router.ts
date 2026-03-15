@@ -1,4 +1,5 @@
 import HomePage from '@src/pages/HomePage.vue';
+import NotFoundPage from '@src/pages/NotFoundPage.vue';
 import UserCareer from '@src/pages/UserCareer.vue';
 import UserContact from '@src/pages/UserContact.vue';
 import UserProfile from '@src/pages/UserProfile.vue';
@@ -8,7 +9,8 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/', name: 'Home', component: HomePage },
   { path: '/profile', name: 'Profile', component: UserProfile },
   { path: '/career', name: 'Career', component: UserCareer },
-  { path: '/contact', name: 'Contact', component: UserContact }
+  { path: '/contact', name: 'Contact', component: UserContact },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFoundPage }
 ];
 
 const history = typeof window !== 'undefined' ? createWebHistory() : createMemoryHistory();
