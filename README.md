@@ -8,12 +8,6 @@ Welcome **[Here](https://aecomet.github.io/)**!
 
 ## Developer documentation
 
-### Languages
-
-- Vue
-- Vuetify
-- Typescript
-
 ### Quick Preview
 
 ```sh
