@@ -15,7 +15,16 @@ applyTo: '**'
 
 ## Code Review
 
-Always perform a code review before committing.
+Always perform a code review before committing. **Before running `git commit`, verify that every item in the checklist below is satisfied. Do not skip this step regardless of how small the change is.**
+
+### Commit Workflow
+
+Always follow this order — never skip a step:
+
+1. Stage changes: `git add`
+2. Review staged diff: `git --no-pager diff --staged`
+3. Confirm every item in the checklist below is satisfied
+4. Run `git commit`
 
 ### Review Checklist
 
