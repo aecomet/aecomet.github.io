@@ -8,6 +8,9 @@ import vueParser from 'vue-eslint-parser';
 export default [
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
+    plugins: {
+      '@typescript-eslint': tslint.plugin
+    },
     languageOptions: {
       parser: parser,
       globals: {
@@ -23,6 +26,10 @@ export default [
   },
   {
     files: ['**/*.vue'],
+    plugins: {
+      vue: pluginVue,
+      '@typescript-eslint': tslint.plugin
+    },
     languageOptions: {
       parser: vueParser,
       parserOptions: {

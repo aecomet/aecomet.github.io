@@ -51,6 +51,23 @@ Verify code conforms to Prettier formatting:
 pnpm format
 ```
 
+### Route Verification
+
+Before committing, start the dev server and confirm all routes are accessible:
+```sh
+pnpm dev
+```
+
+Manually verify the following routes are reachable without errors:
+
+| Route | Path |
+|-------|------|
+| Home | `/` |
+| Profile | `/profile` |
+| Career | `/career` |
+| Contact | `/contact` |
+| Not Found | any undefined path (e.g., `/test`) |
+
 ### Build Verification
 
 Confirm the build completes successfully before committing:
