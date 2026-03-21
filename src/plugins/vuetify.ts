@@ -1,18 +1,18 @@
-import '@fortawesome/fontawesome-free/css/all.css'; // Ensure your project is capable of handling css files
-import 'vuetify/styles'; // Global CSS has to be imported
+import '@mdi/font/css/materialdesignicons.css';
+import 'vuetify/styles';
 
 import { createVuetify } from 'vuetify';
-import { aliases, fa } from 'vuetify/iconsets/fa';
+import { aliases, mdi } from 'vuetify/iconsets/mdi';
 
 const options = {
   theme: {
     defaultTheme: 'dark'
   },
   icons: {
-    defaultSet: 'fa',
+    defaultSet: 'mdi',
     aliases,
     sets: {
-      fa
+      mdi
     }
   }
 };

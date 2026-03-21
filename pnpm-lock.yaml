@@ -11,6 +11,9 @@ importers:
       '@fortawesome/fontawesome-free':
         specifier: ^7.2.0
         version: 7.2.0
+      '@mdi/font':
+        specifier: ^7.4.47
+        version: 7.4.47
       vue:
         specifier: ^3.5.30
         version: 3.5.30(typescript@5.9.3)
@@ -282,6 +285,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@mdi/font@7.4.47':
+    resolution: {integrity: sha512-43MtGpd585SNzHZPcYowu/84Vz2a2g31TvPMTm9uTiCSWzaheQySUcSyUH/46fPnuPQWof2yd0pGBtzee/IQWw==}
 
   '@napi-rs/wasm-runtime@1.1.1':
     resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
@@ -2125,6 +2131,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@mdi/font@7.4.47': {}
 
   '@napi-rs/wasm-runtime@1.1.1':
     dependencies:
