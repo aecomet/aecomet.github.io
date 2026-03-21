@@ -51,7 +51,7 @@ This is a static portfolio site built with Vue 3 and Vuetify, pre-rendered via v
 │       ├── Career.ts        # Type definition for career timeline data
 │       ├── json.d.ts        # Module declaration for JSON imports
 │       └── vue.d.ts         # Vue SFC module declaration
-├── doc/                     # Project documentation
+├── docs/                    # Project documentation
 ├── .github/
 │   ├── copilot-instructions.md  # GitHub Copilot coding guidelines
 │   └── workflows/

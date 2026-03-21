@@ -24,11 +24,14 @@ Always follow this order — never skip a step:
 1. Stage changes: `git add`
 2. Review staged diff: `git --no-pager diff --staged`
 3. Confirm every item in the checklist below is satisfied
-4. Run `git commit`
+4. Review and update `docs/architecture.md` if the project structure or tech stack has changed
+5. Review and update `README.md` if setup instructions or feature descriptions are outdated
+6. Run `git commit`
 
 ### Review Checklist
 
 #### Vue
+
 - Use Composition API (`<script setup>`).
 - Ensure `defineProps` / `defineEmits` are properly typed.
 - Always specify `:key` on `v-for` directives.
@@ -37,12 +40,14 @@ Always follow this order — never skip a step:
 - Avoid unnecessary `watch` or `computed` usage.
 
 #### Vuetify
+
 - Prefer Vuetify components over custom implementations.
 - Use Vuetify's theme and color system (e.g., `color` prop) consistently.
 - Use the grid system (`v-row` / `v-col`) for responsive layouts.
 - Use Vuetify's icon component (`v-icon`) for icons.
 
 #### Vue Router
+
 - Set a `name` for every route definition.
 - Use `<RouterLink>` or `router.push()` for navigation; avoid raw `<a>` tags.
 - Use `<RouterView>` with a `key` where appropriate to prevent unintended component reuse.
@@ -51,11 +56,13 @@ Always follow this order — never skip a step:
 ### Lint / Format
 
 Verify there are no ESLint errors or warnings:
+
 ```sh
 pnpm lint
 ```
 
 Verify code conforms to Prettier formatting:
+
 ```sh
 pnpm format
 ```
@@ -63,23 +70,25 @@ pnpm format
 ### Route Verification
 
 Before committing, start the dev server and confirm all routes are accessible:
+
 ```sh
 pnpm dev
 ```
 
 Manually verify the following routes are reachable without errors:
 
-| Route | Path |
-|-------|------|
-| Home | `/` |
-| Profile | `/profile` |
-| Career | `/career` |
-| Contact | `/contact` |
+| Route     | Path                               |
+| --------- | ---------------------------------- |
+| Home      | `/`                                |
+| Profile   | `/profile`                         |
+| Career    | `/career`                          |
+| Contact   | `/contact`                         |
 | Not Found | any undefined path (e.g., `/test`) |
 
 ### Build Verification
 
 Confirm the build completes successfully before committing:
+
 ```sh
 pnpm build
 ```
@@ -100,18 +109,18 @@ All commit messages must follow the [Conventional Commits](https://www.conventio
 
 ### Types
 
-| Type | Description |
-|------|-------------|
-| `feat` | A new feature |
-| `fix` | A bug fix |
-| `docs` | Documentation changes only |
-| `style` | Code style changes (formatting, missing semicolons, etc.) |
-| `refactor` | Code changes that neither fix a bug nor add a feature |
-| `perf` | Performance improvements |
-| `test` | Adding or updating tests |
-| `chore` | Changes to build process, tooling, or dependencies |
-| `ci` | Changes to CI/CD configuration |
-| `revert` | Reverting a previous commit |
+| Type       | Description                                               |
+| ---------- | --------------------------------------------------------- |
+| `feat`     | A new feature                                             |
+| `fix`      | A bug fix                                                 |
+| `docs`     | Documentation changes only                                |
+| `style`    | Code style changes (formatting, missing semicolons, etc.) |
+| `refactor` | Code changes that neither fix a bug nor add a feature     |
+| `perf`     | Performance improvements                                  |
+| `test`     | Adding or updating tests                                  |
+| `chore`    | Changes to build process, tooling, or dependencies        |
+| `ci`       | Changes to CI/CD configuration                            |
+| `revert`   | Reverting a previous commit                               |
 
 ### Examples
 

@@ -71,7 +71,7 @@ src/
 └── assets/             # Global styles, images
 ```
 
-For full architecture details, see [doc/architecture.md](doc/architecture.md).
+For full architecture details, see [docs/architecture.md](docs/architecture.md).
 
 ---
 
