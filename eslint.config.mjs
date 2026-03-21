@@ -8,6 +8,9 @@ import vueParser from 'vue-eslint-parser';
 export default [
   {
     files: ['**/*.{js,mjs,cjs,ts}'],
+    plugins: {
+      '@typescript-eslint': tslint.plugin
+    },
     languageOptions: {
       parser: parser,
       globals: {
@@ -18,11 +21,15 @@ export default [
     rules: {
       ...jslint.configs.recommended.rules,
       ...tslint.configs.recommended.rules,
-      '@typescript-eslint/no-explicit-any': 'off'
+      '@typescript-eslint/no-explicit-any': 'warn'
     }
   },
   {
     files: ['**/*.vue'],
+    plugins: {
+      vue: pluginVue,
+      '@typescript-eslint': tslint.plugin
+    },
     languageOptions: {
       parser: vueParser,
       parserOptions: {
@@ -35,7 +42,9 @@ export default [
     },
     rules: {
       ...pluginVue.configs['flat/recommended'].rules,
-      '@typescript-eslint/no-explicit-any': 'off'
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'vue/multi-word-component-names': 'warn',
+      'vue/component-name-in-template-casing': ['error', 'PascalCase']
     }
   }
 ];
