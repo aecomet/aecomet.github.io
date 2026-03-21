@@ -2,7 +2,7 @@ FROM node:24.14.0-slim as builder
 
 WORKDIR /app
 COPY . /app
-RUN yarn global add pnpm &&\
+RUN npm install -g pnpm &&\
   pnpm install --frozen-lockfile &&\
   pnpm run build
 

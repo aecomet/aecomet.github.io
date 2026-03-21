@@ -40,8 +40,9 @@ export default () => {
       eslintPlugin({
         fix: true
       }),
-      // compress
-      viteCompression()
+      // compress: gzip + brotli
+      viteCompression({ algorithm: 'gzip' }),
+      viteCompression({ algorithm: 'brotliCompress', ext: '.br' })
     ],
     publicDir: path.resolve(__dirname, `${SRC_PATH}/assets`),
     // productioin build

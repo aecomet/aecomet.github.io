@@ -32,7 +32,7 @@
     /* resolve options */
     "baseUrl": "./",
     "paths": {
-      "@src/*.ts": ["src/*"]
+      "@src/*": ["src/*"]
     }
   }
 }
