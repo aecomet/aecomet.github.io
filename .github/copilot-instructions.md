@@ -58,6 +58,44 @@ Confirm the build completes successfully before committing:
 pnpm build
 ```
 
+## Git Commits
+
+All commit messages must follow the [Conventional Commits](https://www.conventionalcommits.org/) specification.
+
+### Format
+
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Types
+
+| Type | Description |
+|------|-------------|
+| `feat` | A new feature |
+| `fix` | A bug fix |
+| `docs` | Documentation changes only |
+| `style` | Code style changes (formatting, missing semicolons, etc.) |
+| `refactor` | Code changes that neither fix a bug nor add a feature |
+| `perf` | Performance improvements |
+| `test` | Adding or updating tests |
+| `chore` | Changes to build process, tooling, or dependencies |
+| `ci` | Changes to CI/CD configuration |
+| `revert` | Reverting a previous commit |
+
+### Examples
+
+```
+feat(auth): add login with Google OAuth
+fix(router): prevent duplicate navigation on back button
+docs: update README with setup instructions
+chore(deps): upgrade vuetify to v4
+```
+
 ## Package Updates
 
 - Use npm-check-updates listed in package.json and run the following command:
