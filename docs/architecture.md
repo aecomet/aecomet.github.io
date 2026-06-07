@@ -16,10 +16,10 @@ This is a static portfolio site built with Vue 3 and Vuetify, pre-rendered via v
 | Language | TypeScript | ^5.9 |
 | Build Tool | Vite | ^8.0 |
 | SSG | vite-ssg | ^28.3 |
-| Icons | @mdi/font | ^7.4 |
+| Icons | @mdi/js (mdi-svg via Vuetify) | ^7.4 |
 | Styling | SCSS | via sass |
-| Package Manager | pnpm | 10 |
-| Container Runtime | Apache httpd (Alpine) | httpd:alpine3.21 |
+| Package Manager | pnpm | 11 |
+| Container Runtime | Apache httpd (Alpine) | httpd:2.4.67-alpine3.23 |
 
 ---
 
@@ -93,14 +93,14 @@ All routes use **lazy loading** (dynamic `import()`) to split bundles per page.
 | Contact | `/contact` | `pages/UserContact.vue` |
 | NotFound | `/:pathMatch(.*)*` | `pages/NotFoundPage.vue` |
 
-History strategy: `createWebHistory` (browser) / `createMemoryHistory` (SSR/SSG).
+History strategy: `createWebHashHistory` (hash-based, for GitHub Pages SPA fallback).
 
 ---
 
 ## UI & Styling
 
 - **Vuetify 4** provides the component library and dark theme.
-- **@mdi/font** is used for all icons (`mdi-*` prefix).
+- **@mdi/js** (mdi-svg via `vuetify/iconsets/mdi-svg`) is used for all icons, replacing the legacy `@mdi/font` CSS bundle (472KB → 198KB CSS reduction).
 - Global styles are defined in `src/assets/style.scss` using CSS custom properties (`--bg`, `--accent1`, etc.).
 - Font families loaded from Google Fonts: `Syne`, `Noto Sans JP`, `DM Mono` (all with `display=swap`).
 
@@ -140,7 +140,11 @@ push to main
         └── 3. Build image    (Docker multi-arch: amd64 + arm64 → ghcr.io)
 ```
 
-Code quality is enforced on pull requests via `lint-runner.yml` (ESLint + Prettier through reviewdog).
+Code quality is enforced via:
+
+- **Pull requests**: `ci.yml` — format check (`prettier --check`) + ESLint + Vite build.
+- **pre-commit (lefthook)**: format check + ESLint (blocks commit on failure).
+- **pre-push (lefthook)**: AI code review (`scripts/review-diff.sh`) with severity tiers — Blocker and High findings block the push.
 
 ---
 
@@ -150,8 +154,8 @@ Multi-stage build:
 
 | Stage | Base Image | Purpose |
 |-------|-----------|---------|
-| `builder` | `node:24.14.0-slim` | Install dependencies, run `pnpm build` |
-| runtime | `httpd:alpine3.21` | Serve `/build` as static files |
+| `builder` | `node:26.3.0-slim` | Install dependencies, run `pnpm build` |
+| runtime | `httpd:2.4.67-alpine3.23` | Serve `/build` as static files |
 
 Port: `8888`. Runs as `www-data` user with minimal capabilities.
 

@@ -24,8 +24,8 @@ A personal portfolio site built with Vue 3 + Vuetify, pre-rendered as a static s
 
 ### Prerequisites
 
-- Node.js `24.14.0` (see `.node-version`)
-- pnpm `10`
+- Node.js `26.3.0` (see `.node-version`)
+- pnpm `11`
 
 ```sh
 npm i -g pnpm
@@ -80,4 +80,6 @@ For full architecture details, see [docs/architecture.md](docs/architecture.md).
 | Trigger        | Workflow          | Description                                        |
 | -------------- | ----------------- | -------------------------------------------------- |
 | push to `main` | `app-release.yml` | Build → Deploy to GitHub Pages → Push Docker image |
-| Pull Request   | `lint-runner.yml` | ESLint + Prettier via reviewdog                    |
+| Pull Request   | `ci.yml`          | Format check + ESLint + Build                      |
+| pre-commit     | lefthook          | Format check + ESLint                              |
+| pre-push       | lefthook          | AI code review (blocker/high severity gates)       |
