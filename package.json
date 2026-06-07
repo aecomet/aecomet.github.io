@@ -4,7 +4,7 @@
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
-    "build": "vite-ssg build && cp build/index.html build/404.html && gzip -c build/index.html > build/404.html.gz",
+    "build": "vite-ssg build",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
