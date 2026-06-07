@@ -77,8 +77,7 @@ For full architecture details, see [docs/architecture.md](docs/architecture.md).
 
 ## CI/CD
 
-| Trigger | Workflow | Description |
-|---------|----------|-------------|
+| Trigger        | Workflow          | Description                                        |
+| -------------- | ----------------- | -------------------------------------------------- |
 | push to `main` | `app-release.yml` | Build → Deploy to GitHub Pages → Push Docker image |
-| Pull Request | `lint-runner.yml` | ESLint + Prettier via reviewdog |
-
+| Pull Request   | `lint-runner.yml` | ESLint + Prettier via reviewdog                    |

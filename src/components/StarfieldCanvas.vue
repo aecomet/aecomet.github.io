@@ -366,10 +366,20 @@ onMounted(() => {
 
   window.addEventListener('mousemove', onMouse);
 
+  const onVisibility = () => {
+    if (document.hidden) {
+      cancelAnimationFrame(frameId);
+    } else {
+      draw();
+    }
+  };
+  document.addEventListener('visibilitychange', onVisibility);
+
   onBeforeUnmount(() => {
     cancelAnimationFrame(frameId);
     window.removeEventListener('resize', resize);
     window.removeEventListener('mousemove', onMouse);
+    document.removeEventListener('visibilitychange', onVisibility);
   });
 });
 </script>

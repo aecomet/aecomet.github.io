@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createMemoryHistory, createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', name: 'Home', component: () => import('@src/pages/HomePage.vue') },
@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: () => import('@src/pages/NotFoundPage.vue') }
 ];
 
-const history = typeof window !== 'undefined' ? createWebHistory() : createMemoryHistory();
+const history = typeof window !== 'undefined' ? createWebHashHistory() : createMemoryHistory();
 
 export const router = createRouter({
   history,

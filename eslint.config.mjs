@@ -7,6 +7,9 @@ import vueParser from 'vue-eslint-parser';
 
 export default [
   {
+    ignores: ['build/', 'node_modules/', 'pnpm-lock.yaml']
+  },
+  {
     files: ['**/*.{js,mjs,cjs,ts}'],
     plugins: {
       '@typescript-eslint': tslint.plugin

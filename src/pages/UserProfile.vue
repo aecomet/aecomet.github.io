@@ -35,11 +35,11 @@
           <v-btn
             variant="outlined"
             class="ma-2"
-            href="https://note.com/ae_comet"
+            href="https://zenn.dev/aecomet"
             target="_blank"
             rel="noopener"
             color="#b8bec8"
-            >Note</v-btn
+            >Zenn</v-btn
           >
 
           <v-btn
