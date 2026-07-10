@@ -7,7 +7,8 @@
     "build": "vite-ssg build",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",
@@ -23,12 +24,14 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.9.5",
     "@vitejs/plugin-vue": "^6.0.7",
+    "@vue/test-utils": "^2.4.11",
     "critters": "^0.0.25",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-vue": "^10.9.2",
     "globals": "^17.7.0",
+    "jsdom": "^29.1.1",
     "lefthook": "^2.1.10",
     "prettier": "^3.9.4",
     "sass": "^1.101.0",
@@ -40,6 +43,7 @@
     "vite-plugin-html": "3.2.2",
     "vite-plugin-vuetify": "^2.1.3",
     "vite-ssg": "^28.3.0",
+    "vitest": "^4.1.10",
     "vue-eslint-parser": "^10.4.1"
   },
   "dependencies": {
