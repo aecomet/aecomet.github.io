@@ -1,6 +1,6 @@
 {
   "name": "aecomet.github.io",
-  "version": "8.10.2",
+  "version": "8.11.0",
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
