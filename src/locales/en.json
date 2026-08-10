@@ -1,4 +1,7 @@
 {
+  "brand": {
+    "name": "Comet"
+  },
   "nav": {
     "home": "Home",
     "profile": "Profile",

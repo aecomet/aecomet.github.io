@@ -15,7 +15,7 @@
         </v-img>
 
         <div class="ma-2 text-center default-text">
-          <div class="text-h5 mb-1">Comet / こめっと</div>
+          <div class="text-h5 mb-1">{{ t('brand.name') }}</div>
           <div>{{ t('profile.role') }}</div>
         </div>
 

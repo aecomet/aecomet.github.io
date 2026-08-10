@@ -70,6 +70,16 @@ nav {
   backdrop-filter: blur(0px);
 }
 
+.brand {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  margin-right: auto;
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -83,6 +93,7 @@ nav {
   text-transform: uppercase;
   color: var(--muted);
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.3s;
   cursor: pointer;
 }
@@ -552,10 +563,22 @@ nav {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav {
-    padding: 1.2rem 1.5rem;
+    padding: 10px 24px;
+    flex-wrap: wrap;
+    row-gap: 6px;
   }
   .nav-links {
-    gap: 1.5rem;
+    order: 3;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  .page {
+    padding-top: 10rem;
+  }
+  #home {
+    align-items: flex-start;
+    padding-top: 10rem;
   }
   .container {
     padding: 0 1.5rem;
@@ -566,6 +589,20 @@ nav {
   }
   .synergy-row {
     grid-template-columns: 120px 1fr 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 16px;
+  }
+  .nav-links {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+  .nav-links a {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
   }
 }
 

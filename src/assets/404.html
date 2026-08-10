@@ -311,6 +311,11 @@
         document.documentElement.lang = locale;
         document.title = locale === 'en' ? '404 | Comet' : '404 | こめっと';
 
+        var titleMeta = document.querySelector('meta[name="title"]');
+        if (titleMeta) {
+          titleMeta.setAttribute('content', document.title);
+        }
+
         var description = document.querySelector('meta[name="description"]');
         if (description) {
           description.setAttribute(

@@ -220,7 +220,7 @@ describe('UserProfile', () => {
 
     expect(wrapper.find('#profile').exists()).toBe(true);
     expect(wrapper.text()).toContain('プロフィール');
-    expect(wrapper.text()).toContain('Comet / こめっと');
+    expect(wrapper.text()).toContain('こめっと');
     expect(wrapper.text()).toContain('ソフトウェアエンジニア');
   });
 

@@ -3,7 +3,7 @@
     <div class="hero">
       <div class="hero-badge">{{ t('home.badge') }}</div>
       <h1>
-        <span class="accent">こめっと</span>
+        <span class="accent">{{ t('brand.name') }}</span>
       </h1>
       <p class="hero-sub">{{ t('home.subtitle') }}</p>
       <div class="hero-cta">
