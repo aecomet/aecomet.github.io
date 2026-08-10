@@ -6,11 +6,10 @@
     "formulahendry.auto-rename-tag",
     "aaron-bond.better-comments",
     "naumovs.color-highlight",
-    "esbenp.prettier-vscode",
+    "oxc.oxc-vscode",
     "jeff-hykin.better-dockerfile-syntax",
     "ms-azuretools.vscode-docker",
     "vue.volar",
-    "foxundermoon.shell-format",
-    "dbaeumer.vscode-eslint"
+    "foxundermoon.shell-format"
   ]
 }

@@ -5,3 +5,7 @@ node_modules
 .eslintcache
 
 .DS_Store
+
+test-results/
+playwright-report/
+tsconfig.tsbuildinfo

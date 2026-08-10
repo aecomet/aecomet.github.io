@@ -7,7 +7,7 @@
     "target": "ES2023",
     "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "removeComments": true,
 
     /* Generates corresponding '.map' file. */
@@ -30,9 +30,8 @@
     "noEmitOnError": true, // エラーがある場合、出力を抑制
 
     /* resolve options */
-    "baseUrl": "./",
     "paths": {
-      "@src/*": ["src/*"]
+      "@src/*": ["./src/*"]
     }
   }
 }
