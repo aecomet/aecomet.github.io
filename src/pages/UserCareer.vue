@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { Career } from '@src/types/Career.ts';
+import { Career } from '@src/types/Career';
 import { ref } from 'vue';
 
 const careers = ref<Array<Career>>([

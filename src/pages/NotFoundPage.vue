@@ -12,5 +12,5 @@
 </template>
 
 <script setup lang="ts">
-import { go } from '@src/plugins/router.ts';
+import { go } from '@src/plugins/router';
 </script>

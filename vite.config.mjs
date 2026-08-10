@@ -2,7 +2,6 @@ import vue from '@vitejs/plugin-vue';
 import path from 'path';
 import { defineConfig } from 'vite';
 import viteCompression from 'vite-plugin-compression';
-import eslintPlugin from 'vite-plugin-eslint2';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import vuetify from 'vite-plugin-vuetify';
 
@@ -36,10 +35,6 @@ export default () => {
       vuetify(),
       // generate html
       createHtmlPlugin(),
-      // lint
-      eslintPlugin({
-        fix: true
-      }),
       // compress: gzip + brotli
       viteCompression({ algorithm: 'gzip' }),
       viteCompression({ algorithm: 'brotliCompress', ext: '.br' })
