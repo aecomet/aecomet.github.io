@@ -11,6 +11,9 @@
         <router-link to="/career" class="nav-link" :class="{ active: isActive('/career') }">Career</router-link>
       </li>
       <li>
+        <router-link to="/projects" class="nav-link" :class="{ active: isActive('/projects') }">Projects</router-link>
+      </li>
+      <li>
         <router-link to="/contact" class="nav-link" :class="{ active: isActive('/contact') }">Contact</router-link>
       </li>
     </ul>

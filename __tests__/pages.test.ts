@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { createRouter, createMemoryHistory } from 'vue-router';
 import HomePage from '../src/pages/HomePage.vue';
 import NotFoundPage from '../src/pages/NotFoundPage.vue';
+import ProjectsPage from '../src/pages/ProjectsPage.vue';
 import UserCareer from '../src/pages/UserCareer.vue';
 import UserContact from '../src/pages/UserContact.vue';
 import UserProfile from '../src/pages/UserProfile.vue';
@@ -14,7 +15,8 @@ function createTestRouter() {
       { path: '/', component: { template: '<div />' } },
       { path: '/profile', component: { template: '<div />' } },
       { path: '/career', component: { template: '<div />' } },
-      { path: '/contact', component: { template: '<div />' } }
+      { path: '/contact', component: { template: '<div />' } },
+      { path: '/projects', component: { template: '<div />' } }
     ]
   });
 }
@@ -276,6 +278,64 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
+      global: { plugins: [router], stubs: vuetifyStubs }
+    });
+
+    const links = wrapper.findAll('a');
+    links.forEach((link) => {
+      expect(link.attributes('target')).toBe('_blank');
+      expect(link.attributes('rel')).toBe('noopener');
+    });
+  });
+});
+
+describe('ProjectsPage', () => {
+  test('renders projects section header', async () => {
+    const router = createTestRouter();
+    router.push('/');
+    await router.isReady();
+
+    const wrapper = mount(ProjectsPage, {
+      global: { plugins: [router], stubs: vuetifyStubs }
+    });
+
+    expect(wrapper.find('#projects').exists()).toBe(true);
+    expect(wrapper.text()).toContain('Projects');
+  });
+
+  test('renders backoff-util project card', async () => {
+    const router = createTestRouter();
+    router.push('/');
+    await router.isReady();
+
+    const wrapper = mount(ProjectsPage, {
+      global: { plugins: [router], stubs: vuetifyStubs }
+    });
+
+    expect(wrapper.text()).toContain('backoff-util');
+    expect(wrapper.text()).toContain('リトライ');
+  });
+
+  test('project card links to npm and GitHub', async () => {
+    const router = createTestRouter();
+    router.push('/');
+    await router.isReady();
+
+    const wrapper = mount(ProjectsPage, {
+      global: { plugins: [router], stubs: vuetifyStubs }
+    });
+
+    const hrefs = wrapper.findAll('a').map((l) => l.attributes('href'));
+    expect(hrefs).toContain('https://www.npmjs.com/package/@aecomet/backoff-util');
+    expect(hrefs).toContain('https://github.com/aecomet/backoff-util');
+  });
+
+  test('external links have correct attributes', async () => {
+    const router = createTestRouter();
+    router.push('/');
+    await router.isReady();
+
+    const wrapper = mount(ProjectsPage, {
       global: { plugins: [router], stubs: vuetifyStubs }
     });
 
