@@ -1,7 +1,7 @@
 <template>
   <section id="profile" class="page">
     <div class="container">
-      <div class="page-label">— Profile</div>
+      <div class="page-label">{{ t('profile.label') }}</div>
 
       <div class="content-item">
         <v-img
@@ -16,10 +16,10 @@
 
         <div class="ma-2 text-center default-text">
           <div class="text-h5 mb-1">Comet / こめっと</div>
-          <div>Software Engineer</div>
+          <div>{{ t('profile.role') }}</div>
         </div>
 
-        <div class="contact-label">外部リンク</div>
+        <div class="contact-label">{{ t('profile.links') }}</div>
 
         <div class="ma-2 d-flex justify-center">
           <v-btn
@@ -54,27 +54,39 @@
           </v-btn>
         </div>
 
-        <div class="contact-label">経験領域</div>
+        <div class="contact-label">{{ t('profile.experience') }}</div>
 
         <div class="ma-2 d-flex justify-center flex-wrap">
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 技術選定 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> システムアーキテクト </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> チームリーダー </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 障害対応 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 実装・保守 </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined">
+            {{ t('profile.experiences.techSelection') }}
+          </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined">
+            {{ t('profile.experiences.systemArchitect') }}
+          </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.experiences.teamLead') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined">
+            {{ t('profile.experiences.incidentResponse') }}
+          </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.experiences.development') }} </v-chip>
         </div>
 
-        <div class="contact-label">試験合格実績</div>
+        <div class="contact-label">{{ t('profile.certifications') }}</div>
 
         <div class="ma-2 d-flex justify-center flex-wrap">
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 基本情報技術者試験 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 応用情報技術者試験 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 情報処理安全確保支援士試験 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> データベーススペシャリスト試験 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> システムアーキテクト試験 </v-chip>
-          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> 英検2級 </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.fe') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.ap') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.security') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.database') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.architect') }} </v-chip>
+          <v-chip class="ma-2" color="#b8bec8" variant="outlined"> {{ t('profile.certifications.eiken') }} </v-chip>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>

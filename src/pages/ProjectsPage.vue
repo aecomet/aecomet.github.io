@@ -1,10 +1,10 @@
 <template>
   <section id="projects" class="page">
     <div class="container">
-      <div class="page-label">— Projects</div>
+      <div class="page-label">{{ t('projects.label') }}</div>
 
-      <h1 class="projects-heading">Projects</h1>
-      <p class="projects-desc">個人開発で公開しているライブラリ・サイトの紹介です。</p>
+      <h1 class="projects-heading">{{ t('projects.title') }}</h1>
+      <p class="projects-desc">{{ t('projects.desc') }}</p>
 
       <article class="project-card">
         <div class="card-top">
@@ -12,8 +12,7 @@
           <span class="card-version">v2.3.0</span>
         </div>
         <p class="card-desc">
-          任意の async 関数に指数バックオフ付きのリトライ処理を組み込める TypeScript
-          ユーティリティライブラリ。ゼロ依存で ESM / CJS 両対応。
+          {{ t('projects.backoffDesc') }}
         </p>
         <div class="card-links">
           <v-btn
@@ -35,12 +34,16 @@
         </div>
       </article>
 
-      <p class="more-hint">※ 他のプロジェクトも随時追加予定</p>
+      <p class="more-hint">{{ t('projects.moreHint') }}</p>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 
 <style scoped>
 .projects-heading {

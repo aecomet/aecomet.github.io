@@ -23,6 +23,7 @@
 
     /* Imports support */
     "esModuleInterop": true, // ES モジュールと CommonJS の互換性をサポート
+    "resolveJsonModule": true, // JSON モジュールの import を許可（i18n メッセージ用）
 
     /* Optimizations for build */
     "skipLibCheck": true, // サードパーティの型チェックをスキップしてビルド速度を改善
