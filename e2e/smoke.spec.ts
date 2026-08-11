@@ -1,5 +1,13 @@
 import { test, expect } from '@playwright/test';
 
+// i18n 導入後、デフォルト言語は日本語。テストは英語 UI を前提としているため、
+// ページ読み込み前に localStorage へ locale を設定して英語モードで開始する。
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => {
+    localStorage.setItem('locale', 'en');
+  });
+});
+
 for (const { path, name } of [
   { path: '/', name: 'Home' },
   { path: '/profile', name: 'Profile' },
@@ -31,5 +39,5 @@ test('navigates via header links', async ({ page }) => {
 
 test('renders 404 for unknown route', async ({ page }) => {
   await page.goto('/#/unknown-page');
-  await expect(page.getByText('ページが見つかりません')).toBeVisible();
+  await expect(page.getByText('Page Not Found')).toBeVisible();
 });
