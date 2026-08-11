@@ -1,6 +1,6 @@
 {
   "name": "aecomet.github.io",
-  "version": "8.13.0",
+  "version": "9.0.0",
   "description": "My portfolio.",
   "scripts": {
     "dev": "vite",
@@ -44,6 +44,7 @@
   "dependencies": {
     "@mdi/js": "^7.4.47",
     "vue": "^3.5.41",
+    "vue-i18n": "^11.4.8",
     "vue-router": "^5.2.0",
     "vuetify": "^4.1.8"
   }

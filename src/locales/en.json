@@ -1,0 +1,123 @@
+{
+  "brand": {
+    "name": "Comet"
+  },
+  "nav": {
+    "home": "Home",
+    "profile": "Profile",
+    "career": "Career",
+    "projects": "Projects",
+    "contact": "Contact",
+    "languageTitle": "Switch language",
+    "toEnglish": "EN",
+    "toJapanese": "日本語"
+  },
+  "home": {
+    "badge": "Portfolio",
+    "subtitle": "Software Engineer",
+    "ctaProfile": "Profile",
+    "ctaCareer": "View Career"
+  },
+  "profile": {
+    "label": "— Profile",
+    "role": "Software Engineer",
+    "links": "External Links",
+    "experience": "Areas of Experience",
+    "certifications": "Certifications",
+    "experiences": {
+      "techSelection": "Technology Selection",
+      "systemArchitect": "System Architecture",
+      "teamLead": "Team Leadership",
+      "incidentResponse": "Incident Response",
+      "development": "Implementation & Maintenance"
+    },
+    "certifications": {
+      "fe": "Fundamental Information Technology Engineer Examination",
+      "ap": "Applied Information Technology Engineer Examination",
+      "security": "Information Security Specialist Examination",
+      "database": "Database Specialist Examination",
+      "architect": "Systems Architect Examination",
+      "eiken": "EIKEN Grade 2"
+    }
+  },
+  "career": {
+    "label": "— Career",
+    "title": "Career History",
+    "description": "For a detailed career history, feel free to email me and I'll send you my résumé.",
+    "items": {
+      "highSchool": {
+        "date": "March 2013",
+        "header": "Graduated from High School",
+        "note": "I wasn't directly exposed to programming in high school, but editing videos for the school festival sparked my interest in computers."
+      },
+      "university": {
+        "date": "April 2013",
+        "header": "Entered University",
+        "note": "Majored in information engineering. During my studies I worked part-time as a programmer at a startup, where I first got hands-on with PHP, Ruby, and jQuery. In class I also learned the basics of Java, C, and Perl."
+      },
+      "gradUniversity": {
+        "date": "March 2017",
+        "header": "Graduated from University",
+        "note": ""
+      },
+      "gradSchool": {
+        "date": "April 2017",
+        "header": "Entered Graduate School",
+        "note": "Pursued a master's degree in information engineering while continuing my part-time programming work and joining company internships in summer and winter. My research involved building applications with Django (Python) and Vuex."
+      },
+      "gradGradSchool": {
+        "date": "March 2019",
+        "header": "Completed Graduate School",
+        "note": ""
+      },
+      "company": {
+        "date": "April 2019",
+        "header": "Joined a Company as an Engineer",
+        "note": "Joined the development team of a shared infrastructure platform supporting social game development as an application engineer. For the first few years I built systems with Ruby, Java, Python, and Vue, and later took charge of detailed system design with UML as the lead on client projects. Since then I've served as the team lead driving feature development for microservices that manage authentication and game users, and I continue to lead a team of five."
+      },
+      "securityExam": {
+        "date": "June 2023",
+        "header": "Passed the Information Security Specialist Examination",
+        "note": ""
+      },
+      "databaseExam": {
+        "date": "December 2023",
+        "header": "Passed the Database Specialist Examination",
+        "note": ""
+      },
+      "architectExam": {
+        "date": "July 2024",
+        "header": "Passed the Systems Architect Examination",
+        "note": ""
+      },
+      "eiken": {
+        "date": "August 2024",
+        "header": "Passed EIKEN Grade 2",
+        "note": ""
+      },
+      "newRole": {
+        "date": "March 2026",
+        "header": "Changed Jobs and Started a New Challenge",
+        "note": "To be continued..."
+      }
+    }
+  },
+  "projects": {
+    "label": "— Projects",
+    "title": "Projects",
+    "desc": "A showcase of the libraries and sites I've published as personal projects.",
+    "backoffDesc": "A TypeScript utility library that adds exponential backoff retry logic to any async function. Zero dependencies, with support for both ESM and CJS.",
+    "moreHint": "※ More projects are coming soon"
+  },
+  "contact": {
+    "label": "— Contact",
+    "email": "Email",
+    "emailNote": "※ Replace *** with gmail.com"
+  },
+  "notFound": {
+    "label": "— Not Found",
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or may have been moved.",
+    "back": "Back to Home"
+  }
+}

@@ -7,6 +7,7 @@ import ProjectsPage from '../src/pages/ProjectsPage.vue';
 import UserCareer from '../src/pages/UserCareer.vue';
 import UserContact from '../src/pages/UserContact.vue';
 import UserProfile from '../src/pages/UserProfile.vue';
+import { i18n } from '../src/plugins/i18n';
 
 function createTestRouter() {
   return createRouter({
@@ -48,13 +49,13 @@ describe('HomePage', () => {
     await router.isReady();
 
     const wrapper = mount(HomePage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     expect(wrapper.find('.hero').exists()).toBe(true);
-    expect(wrapper.find('.hero-badge').text()).toBe('Portfolio');
+    expect(wrapper.find('.hero-badge').text()).toBe('ポートフォリオ');
     expect(wrapper.find('.accent').text()).toBe('こめっと');
-    expect(wrapper.find('.hero-sub').text()).toBe('Software Engineer');
+    expect(wrapper.find('.hero-sub').text()).toBe('ソフトウェアエンジニア');
   });
 
   test('renders CTA buttons', async () => {
@@ -63,7 +64,7 @@ describe('HomePage', () => {
     await router.isReady();
 
     const wrapper = mount(HomePage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     const buttons = wrapper.findAll('button');
@@ -78,7 +79,7 @@ describe('HomePage', () => {
     await router.isReady();
 
     const wrapper = mount(HomePage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     const pushSpy = vi.spyOn(router, 'push');
@@ -92,7 +93,7 @@ describe('HomePage', () => {
     await router.isReady();
 
     const wrapper = mount(HomePage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     const pushSpy = vi.spyOn(router, 'push');
@@ -108,7 +109,7 @@ describe('NotFoundPage', () => {
     await router.isReady();
 
     const wrapper = mount(NotFoundPage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     expect(wrapper.find('#not-found').exists()).toBe(true);
@@ -122,7 +123,7 @@ describe('NotFoundPage', () => {
     await router.isReady();
 
     const wrapper = mount(NotFoundPage, {
-      global: { plugins: [router] }
+      global: { plugins: [router, i18n] }
     });
 
     const button = wrapper.find('.btn-primary');
@@ -138,11 +139,11 @@ describe('UserCareer', () => {
     await router.isReady();
 
     const wrapper = mount(UserCareer, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.find('#contact').exists()).toBe(true);
-    expect(wrapper.text()).toContain('Career');
+    expect(wrapper.text()).toContain('経歴');
     expect(wrapper.text()).toContain('職務経歴について');
   });
 
@@ -152,7 +153,7 @@ describe('UserCareer', () => {
     await router.isReady();
 
     const wrapper = mount(UserCareer, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     const items = wrapper.findAll('.v-timeline-item');
@@ -170,7 +171,7 @@ describe('UserCareer', () => {
     await router.isReady();
 
     const wrapper = mount(UserCareer, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.text()).toContain('情報工学科');
@@ -185,11 +186,11 @@ describe('UserContact', () => {
     await router.isReady();
 
     const wrapper = mount(UserContact, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.find('#contact').exists()).toBe(true);
-    expect(wrapper.text()).toContain('Contact');
+    expect(wrapper.text()).toContain('お問い合わせ');
   });
 
   test('renders email information', async () => {
@@ -198,7 +199,7 @@ describe('UserContact', () => {
     await router.isReady();
 
     const wrapper = mount(UserContact, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.text()).toContain('Email');
@@ -214,13 +215,13 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.find('#profile').exists()).toBe(true);
-    expect(wrapper.text()).toContain('Profile');
-    expect(wrapper.text()).toContain('Comet / こめっと');
-    expect(wrapper.text()).toContain('Software Engineer');
+    expect(wrapper.text()).toContain('プロフィール');
+    expect(wrapper.text()).toContain('こめっと');
+    expect(wrapper.text()).toContain('ソフトウェアエンジニア');
   });
 
   test('renders external links', async () => {
@@ -229,7 +230,7 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     const links = wrapper.findAll('a');
@@ -245,7 +246,7 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.text()).toContain('技術選定');
@@ -261,7 +262,7 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.text()).toContain('基本情報技術者試験');
@@ -278,7 +279,7 @@ describe('UserProfile', () => {
     await router.isReady();
 
     const wrapper = mount(UserProfile, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     const links = wrapper.findAll('a');
@@ -296,11 +297,11 @@ describe('ProjectsPage', () => {
     await router.isReady();
 
     const wrapper = mount(ProjectsPage, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.find('#projects').exists()).toBe(true);
-    expect(wrapper.text()).toContain('Projects');
+    expect(wrapper.text()).toContain('プロジェクト');
   });
 
   test('renders backoff-util project card', async () => {
@@ -309,7 +310,7 @@ describe('ProjectsPage', () => {
     await router.isReady();
 
     const wrapper = mount(ProjectsPage, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     expect(wrapper.text()).toContain('backoff-util');
@@ -322,7 +323,7 @@ describe('ProjectsPage', () => {
     await router.isReady();
 
     const wrapper = mount(ProjectsPage, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     const hrefs = wrapper.findAll('a').map((l) => l.attributes('href'));
@@ -336,7 +337,7 @@ describe('ProjectsPage', () => {
     await router.isReady();
 
     const wrapper = mount(ProjectsPage, {
-      global: { plugins: [router], stubs: vuetifyStubs }
+      global: { plugins: [router, i18n], stubs: vuetifyStubs }
     });
 
     const links = wrapper.findAll('a');
