@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <router-link to="/" class="brand" :aria-label="t('brand.name')">{{ t('brand.name') }}</router-link>
+    <router-link to="/" class="brand" :aria-label="t('brand.name')">
+      <img src="/images/logo.png" alt="" class="brand-logo" />
+    </router-link>
 
     <ul class="nav-links">
       <li>
@@ -247,6 +249,42 @@ onBeforeUnmount(() => document.removeEventListener('pointerdown', onClickOutside
   .lang-menu li {
     font-size: 0.6rem;
     padding: 7px 12px;
+  }
+}
+
+.brand-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.brand:hover .brand-logo,
+.brand:focus-visible .brand-logo {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.brand:focus-visible {
+  outline: none;
+}
+
+.brand:focus-visible .brand-logo {
+  box-shadow: 0 0 0 3px var(--glow);
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .brand-logo {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo {
+    height: 26px;
   }
 }
 </style>

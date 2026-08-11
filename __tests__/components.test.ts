@@ -9,14 +9,13 @@ function createTestRouter() {
     history: createMemoryHistory(),
     routes: [
       { path: '/', component: { template: '<div />' } },
-      { path: '/profile', component: { template: '<div />' } }
+      { path: '/profile', component: { template: '<div />' } },
+      { path: '/career', component: { template: '<div />' } },
+      { path: '/projects', component: { template: '<div />' } },
+      { path: '/contact', component: { template: '<div />' } }
     ]
   });
 }
-
-const stubs = {
-  'v-btn': { template: '<button type="button" class="lang-toggle"><slot /></button>' }
-};
 
 afterEach(() => {
   setLocale('ja');
@@ -29,7 +28,7 @@ describe('AppHeader', () => {
     await router.isReady();
 
     const wrapper = mount(AppHeader, {
-      global: { plugins: [router, i18n], stubs }
+      global: { plugins: [router, i18n] }
     });
 
     expect(wrapper.findAll('li').length).toBeGreaterThan(0);
@@ -43,17 +42,20 @@ describe('AppHeader', () => {
     await router.isReady();
 
     const wrapper = mount(AppHeader, {
-      global: { plugins: [router, i18n], stubs }
+      global: { plugins: [router, i18n] }
     });
 
     expect(wrapper.text()).toContain('ホーム');
     expect(wrapper.text()).not.toContain('Home');
 
-    await wrapper.find('.lang-toggle').trigger('click');
+    // Open language dropdown
+    await wrapper.find('.lang-trigger').trigger('click');
+    // Select English
+    await wrapper.find('[role="option"]:nth-child(2)').trigger('click');
 
     expect(wrapper.text()).toContain('Home');
     expect(wrapper.text()).toContain('Profile');
-    expect(wrapper.text()).toContain('日本語');
+    expect(wrapper.text()).toContain('English');
     expect(wrapper.text()).not.toContain('ホーム');
   });
 });
