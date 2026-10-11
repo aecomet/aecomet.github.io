@@ -44,3 +44,9 @@ minimumReleaseAgeExclude:
   - '@oxlint/binding-win32-x64-msvc@1.78.0'
   - oxfmt@0.63.0
   - oxlint@1.78.0
+  - '@intlify/core-base@11.4.14'
+  - '@intlify/devtools-types@11.4.14'
+  - '@intlify/message-compiler@11.4.14'
+  - '@intlify/shared@11.4.14'
+  - '@vitejs/plugin-vue@6.0.10'
+  - vue-i18n@11.4.14
