@@ -9,7 +9,7 @@
       <article class="project-card">
         <div class="card-top">
           <h2 class="card-name">backoff-util</h2>
-          <span class="card-version">v2.3.0</span>
+          <span class="card-version">v2.5.0</span>
         </div>
         <p class="card-desc">
           {{ t('projects.backoffDesc') }}
